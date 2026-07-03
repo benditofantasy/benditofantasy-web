@@ -1,0 +1,96 @@
+/* ============================================================================
+   BENDITO FANTASY — DESIGN TOKENS
+   ----------------------------------------------------------------------------
+   Every brand decision lives in this file (+ the font loading in app/fonts.ts).
+   Full 10-color brand palette + role mapping confirmed by owner 2026-07-03
+   (see DESIGN_TOKENS.md for the source sheets and the psychology rationale
+   behind each role assignment). One item remains a placeholder pending owner
+   confirmation: the display/headline face.
+
+   Page background stays LIGHT THEME per SPEC §0/§7A (owner-confirmed) — the
+   brand's dark navy surfaces are reserved for component-level surfaces
+   (cards, panels, stat blocks), not the page shell or lightbox background.
+   ============================================================================ */
+
+:root {
+  /* ---- Brand palette — full 10-color set (source: DESIGN_TOKENS.md) ---- */
+  --bf-navy-deep: #012340;   /* near-black navy — deepest dark surface        */
+  --bf-navy: #204f59;        /* dark teal-navy — general dark card surface    */
+  --bf-teal: #025e73;        /* analytical/stats color                       */
+  --bf-cyan: #04c4d9;        /* info / secondary CTA                         */
+  --bf-turquoise: #02ebae;   /* success / active state                       */
+  --bf-salmon: #f27a5e;      /* warm secondary accent                        */
+  --bf-coral: #f2594b;       /* THE primary accent                           */
+  --bf-crimson: #d9042b;     /* danger / alert / hardest-difficulty          */
+  --bf-gold: #f2c572;        /* pricing / premium (lightest of the gold ladder)*/
+  --bf-mustard: #bf8d30;     /* caution — deeper gold                        */
+  --bf-brown: #8c5e26;       /* muted editorial tone — darkest gold ladder step*/
+  --bf-gray: #aba9ac;        /* neutral: kickers, hairlines, metadata        */
+
+  /* ---- Page-level palette — LIGHT THEME (scoped per owner, page never goes dark) ---- */
+  --color-bg: #ffffff;          /* page background, pure white               */
+  --color-surface: #ffffff;     /* lightbox / overlay surface                */
+  --color-ink: var(--bf-navy-deep); /* near-black-equivalent: quotes, body   */
+  --color-ink-mid: var(--bf-navy);     /* mid-tone: stat/description lines   */
+  --color-ink-soft: var(--bf-gray);    /* light: kickers, metadata           */
+  --color-line: rgba(171, 169, 172, 0.35); /* hairline rules, derived from --bf-gray */
+  --color-accent: var(--bf-coral);      /* THE loud accent                   */
+  --color-accent-ink: #ffffff;          /* text on top of the accent         */
+
+  /* ---- Status colors ---- */
+  --color-success: var(--bf-turquoise);
+  --color-warning: var(--bf-mustard);
+  --color-error: var(--bf-crimson);
+  --color-info: var(--bf-cyan);
+
+  /* ---- FDR scale (1 easy → 5 hard), cool-to-hot threat gradient ---- */
+  --fdr-1: var(--bf-turquoise);
+  --fdr-2: var(--bf-cyan);
+  --fdr-3: var(--bf-gold);
+  --fdr-4: var(--bf-salmon);
+  --fdr-5: var(--bf-crimson);
+  --fdr-unknown: var(--bf-gray);
+
+  /* ---- Component-level dark surfaces (cards/panels/stat blocks only —
+     NOT the page shell or lightbox background, per owner scoping). Two
+     depths: --surface-card for general dark panels, --surface-deep reserved
+     for the most serious UI (footer, gated/premium content backdrops). ---- */
+  --surface-card: var(--bf-navy);
+  --surface-deep: var(--bf-navy-deep);
+  --surface-card-ink: #ffffff;
+  --surface-card-ink-mid: rgba(255, 255, 255, 0.7);
+  --surface-card-border: rgba(171, 169, 172, 0.25);
+
+  /* ---- Category tag colors (owner-approved psychology mapping) ---- */
+  --tag-podcast: var(--bf-coral);   /* featured type — loudest accent        */
+  --tag-article: var(--bf-teal);    /* editorial trust                       */
+  --tag-data: var(--bf-cyan);       /* analytical                            */
+  --tag-chart: var(--bf-navy);      /* serious / technical                   */
+  --tag-video: var(--bf-salmon);    /* warm media                            */
+  --tag-social: var(--bf-turquoise);/* energetic / active                    */
+  --tag-quote: var(--bf-brown);     /* muted editorial gravitas              */
+
+  /* ---- Typography ---- */
+  /* Display: ultra-bold condensed ALL-CAPS — PLACEHOLDER, no brand display
+     face was supplied (Barlow below is specified as the body sans only). */
+  --font-display: var(--font-anton), "Arial Narrow", sans-serif; /* PLACEHOLDER */
+  --font-sans: var(--font-barlow), "Segoe UI", sans-serif;       /* brand primary sans */
+
+  --tracking-display: -0.01em;
+  --tracking-kicker: 0.18em;
+
+  /* ---- Shape / elevation ---- */
+  --radius-pill: 9999px;
+  --radius-tile: 2px;           /* reference tiles are sharp — layout choice, not brand */
+  --shadow-tile: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-lifted: 0 8px 30px rgb(0 0 0 / 0.12);
+  --shadow-accent: 0 4px 16px rgba(242, 89, 75, 0.25);
+
+  /* ---- Motion (source: DESIGN_TOKENS.md) ---- */
+  --motion-fast: 200ms;
+  --motion-base: 300ms;
+  --motion-slow: 400ms;
+  --motion-xslow: 500ms;
+  --motion-ease: cubic-bezier(0.4, 0, 0.2, 1);   /* ease-smooth */
+  --motion-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}

@@ -1,0 +1,122 @@
+@import "../styles/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Strips scroll horizontally inside their own containers; the page never does. */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Hide horizontal scrollbars on tile strips (scroll affordance = edge bleed + arrows) */
+.strip-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+.strip-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Visible focus everywhere (SPEC §15) */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Reduced motion: kill zoom/parallax/smooth scroll (SPEC §15) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---- Editorial prose for MDX article bodies ---- */
+.prose-editorial {
+  max-width: 42rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-ink);
+}
+.prose-editorial > * + * {
+  margin-top: 1.25em;
+}
+.prose-editorial h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  margin-top: 2em;
+}
+.prose-editorial h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-top: 1.75em;
+}
+.prose-editorial a {
+  color: var(--color-ink-mid);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-editorial a:hover {
+  color: var(--color-accent);
+}
+.prose-editorial blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1.25rem;
+  color: var(--color-ink-mid);
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+.prose-editorial ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+.prose-editorial ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+.prose-editorial strong {
+  font-weight: 700;
+}
+.prose-editorial table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.prose-editorial th {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-kicker);
+  font-size: 0.7rem;
+  color: var(--color-ink-soft);
+  border-bottom: 1px solid var(--color-line);
+  padding: 0.5rem 0.75rem;
+}
+.prose-editorial td {
+  border-bottom: 1px solid var(--color-line);
+  padding: 0.5rem 0.75rem;
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,117 @@
+{
+  "_recipe": "COPY THIS FILE to gw-NN.json, fill it in, delete every _comment/_recipe key. Tile order = strip order; the podcast goes first with featured: true. Cover images go in /public/media/. Article bodies go in /content/articles/<slug>.mdx. See README.md §'Añadir una jornada'.",
+  "gw": 6,
+  "label": { "es": "Jornada 6", "en": "Gameweek 6" },
+  "date": "2025-09-27",
+  "tiles": [
+    {
+      "_comment": "PODCAST — always first, always featured",
+      "id": "gw6-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": { "es": "…", "en": "…" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "podcast",
+      "cover": "/media/gw6-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "XXXXXXXXXXX",
+        "duration": "50:00",
+        "hook": { "es": "\"…\"", "en": "\"…\"" }
+      }
+    },
+    {
+      "_comment": "ARTICLE — link.href must match the MDX slug",
+      "id": "gw6-articulo",
+      "type": "article",
+      "title": { "es": "…", "en": "…" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "article",
+      "cover": "/media/gw6-articulo.jpg",
+      "credit": "Leo · Bendito Fantasy",
+      "link": { "href": "/articulo/mi-slug", "label": { "es": "Leer más", "en": "Read more" } },
+      "payload": { "slug": "mi-slug" }
+    },
+    {
+      "_comment": "DATA TABLE — paste the week's numbers as rows",
+      "id": "gw6-datos",
+      "type": "data",
+      "title": { "es": "…", "en": "…" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "data",
+      "cover": "/media/gw6-datos.jpg",
+      "credit": "Datos: FPL oficial",
+      "payload": {
+        "columns": [{ "es": "Jugador", "en": "Player" }, { "es": "Puntos", "en": "Points" }],
+        "rows": [["…", 0]]
+      }
+    },
+    {
+      "_comment": "CHART — chartType: line | bar",
+      "id": "gw6-grafico",
+      "type": "chart",
+      "title": { "es": "…", "en": "…" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "chart",
+      "cover": "/media/gw6-grafico.jpg",
+      "credit": "Gráfico: Bendito Fantasy",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": { "es": "…", "en": "…" },
+        "labels": ["A", "B"],
+        "values": [1, 2],
+        "unit": "%"
+      }
+    },
+    {
+      "_comment": "VIDEO — non-podcast YouTube clip",
+      "id": "gw6-video",
+      "type": "video",
+      "title": { "es": "…", "en": "…" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "video",
+      "cover": "/media/gw6-video.jpg",
+      "credit": "Vídeo: Bendito Fantasy",
+      "payload": { "youtubeId": "XXXXXXXXXXX", "duration": "1:00" }
+    },
+    {
+      "_comment": "TWEET — text is the fallback rendering",
+      "id": "gw6-tweet",
+      "type": "tweet",
+      "title": { "es": "…", "en": "…" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "social",
+      "cover": "/media/gw6-tweet.jpg",
+      "credit": "@BenditoFantasy",
+      "payload": {
+        "tweetUrl": "https://x.com/BenditoFantasy/status/…",
+        "text": { "es": "…", "en": "…" },
+        "author": "Bendito Fantasy",
+        "handle": "@BenditoFantasy"
+      }
+    },
+    {
+      "_comment": "IMAGE — full-bleed image + caption",
+      "id": "gw6-imagen",
+      "type": "image",
+      "title": { "es": "…", "en": "…" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "social",
+      "cover": "/media/gw6-imagen.jpg",
+      "credit": "Foto: …",
+      "payload": { "src": "/media/gw6-imagen.jpg", "caption": { "es": "…", "en": "…" } }
+    },
+    {
+      "_comment": "QUOTE — closing-slide treatment",
+      "id": "gw6-cita",
+      "type": "quote",
+      "title": { "es": "La frase de la semana", "en": "Quote of the week" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "quote",
+      "cover": "/media/gw6-cita.jpg",
+      "credit": "Bendito Fantasy",
+      "link": { "href": "/?item=gw6-podcast", "label": { "es": "Escuchar el pódcast", "en": "Listen to the podcast" } },
+      "payload": { "quote": { "es": "…", "en": "…" }, "attribution": "…" }
+    }
+  ]
+}

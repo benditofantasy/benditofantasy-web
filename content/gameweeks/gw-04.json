@@ -1,0 +1,129 @@
+{
+  "gw": 4,
+  "label": { "es": "Jornada 4", "en": "Gameweek 4" },
+  "date": "2025-09-13",
+  "tiles": [
+    {
+      "id": "gw4-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Wildcard: ¿ahora o nunca?",
+        "en": "Wildcard: now or never?"
+      },
+      "description": {
+        "es": "Episodio de la Jornada 4: cuándo quemar la wildcard, los precios que se disparan y la lesión de Rodri.",
+        "en": "The Gameweek 4 episode: when to burn the wildcard, runaway price rises and the Rodri injury."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw4-podcast.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "PLACEHOLDER_GW4_POD",
+        "duration": "48:41",
+        "hook": {
+          "es": "\"La wildcard perfecta no existe; la wildcard a tiempo, sí\"",
+          "en": "\"The perfect wildcard doesn't exist; a well-timed one does\""
+        }
+      }
+    },
+    {
+      "id": "gw4-articulo",
+      "type": "article",
+      "title": {
+        "es": "La plantilla wildcard que no depende de Haaland",
+        "en": "The wildcard squad that doesn't depend on Haaland"
+      },
+      "description": {
+        "es": "Un borrador completo de 100.0£ construido alrededor de Salah y el mediocampo del Arsenal. Con plan B por posición.",
+        "en": "A full £100.0 draft built around Salah and Arsenal's midfield. With a plan B for every position."
+      },
+      "tag": "article",
+      "cover": "/media/gw4-articulo.svg",
+      "credit": "Leo · Bendito Fantasy",
+      "link": {
+        "href": "/articulo/plantilla-wildcard-jornada-4",
+        "label": { "es": "Leer más", "en": "Read more" }
+      },
+      "payload": { "slug": "plantilla-wildcard-jornada-4" }
+    },
+    {
+      "id": "gw4-datos",
+      "type": "data",
+      "title": {
+        "es": "Los más fichados y vendidos de la semana",
+        "en": "Most transferred in and out this week"
+      },
+      "description": {
+        "es": "Movimientos de mercado antes del cierre de la Jornada 4.",
+        "en": "Market moves before the Gameweek 4 deadline."
+      },
+      "tag": "data",
+      "cover": "/media/gw4-datos.svg",
+      "credit": "Datos: FPL oficial",
+      "payload": {
+        "columns": [
+          { "es": "Jugador", "en": "Player" },
+          { "es": "Movimiento", "en": "Move" },
+          { "es": "Traspasos", "en": "Transfers" },
+          { "es": "Precio", "en": "Price" }
+        ],
+        "rows": [
+          ["Antoine Semenyo", "IN ↑", "612.402", "£6.1"],
+          ["João Pedro", "IN ↑", "488.917", "£7.7"],
+          ["Nick Wood", "IN ↑", "301.554", "£7.3"],
+          ["Florian Wirtz", "OUT ↓", "-355.208", "£8.3"],
+          ["Rodri", "OUT ↓", "-289.663", "£6.4"]
+        ]
+      }
+    },
+    {
+      "id": "gw4-imagen",
+      "type": "image",
+      "title": {
+        "es": "El banquillo más caro de la historia",
+        "en": "The most expensive bench in history"
+      },
+      "description": {
+        "es": "La imagen que resume la Jornada 4: 28.5£ sentados en el banquillo del equipo líder de la mini-liga.",
+        "en": "The image that sums up Gameweek 4: £28.5 sitting on the bench of the mini-league leader."
+      },
+      "tag": "social",
+      "cover": "/media/gw4-imagen.svg",
+      "credit": "Foto: comunidad Bendito",
+      "payload": {
+        "src": "/media/gw4-imagen.svg",
+        "caption": {
+          "es": "Cuando tu banquillo puntúa más que tu once: 31 puntos sentados.",
+          "en": "When your bench outscores your XI: 31 points left sitting."
+        }
+      }
+    },
+    {
+      "id": "gw4-cita",
+      "type": "quote",
+      "title": {
+        "es": "La frase de la semana",
+        "en": "Quote of the week"
+      },
+      "description": {
+        "es": "Del episodio de esta semana del pódcast.",
+        "en": "From this week's podcast episode."
+      },
+      "tag": "quote",
+      "cover": "/media/gw4-cita.svg",
+      "credit": "Bendito Fantasy",
+      "link": {
+        "href": "/?item=gw4-podcast",
+        "label": { "es": "Escuchar el pódcast", "en": "Listen to the podcast" }
+      },
+      "payload": {
+        "quote": {
+          "es": "Tu equipo de la Jornada 38 empieza a construirse en la wildcard de septiembre.",
+          "en": "Your Gameweek 38 team starts being built with the September wildcard."
+        },
+        "attribution": "Invitado del pódcast, Jornada 4"
+      }
+    }
+  ]
+}
