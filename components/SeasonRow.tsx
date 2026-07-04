@@ -75,17 +75,17 @@ export default function SeasonRow({ season }: { season: Season }) {
       <div className="relative mx-auto max-w-[1600px]">
         <div className="pointer-events-none absolute left-4 top-1/2 z-20 -translate-y-1/2 sm:left-6 lg:left-8">
           <h2 className="font-display uppercase tracking-display">
-            <span className="block text-lg leading-none text-ink-soft sm:text-2xl xl:text-3xl">
+            <span className="block text-lg leading-none text-accent drop-shadow-[0_1px_3px_rgba(1,35,64,0.85)] sm:text-2xl xl:text-3xl">
               {t("season")}
             </span>
-            <span className="block leading-[0.82] text-ink [font-size:clamp(2.5rem,6vw,5rem)] lg:[font-size:6rem] xl:[font-size:7rem]">
+            <span className="block leading-[0.82] text-ink drop-shadow-[0_1px_4px_rgba(255,255,255,0.7)] [font-size:clamp(2.5rem,6vw,5rem)] lg:[font-size:6rem] xl:[font-size:7rem]">
               {labelWord}
               {labelRest.length > 0 && (
-                <span className="text-[0.55em] text-ink-soft">/{labelRest.join("/")}</span>
+                <span className="text-[0.55em] text-accent">/{labelRest.join("/")}</span>
               )}
             </span>
           </h2>
-          <p className="mt-2 text-[11px] font-semibold uppercase tracking-kicker text-ink-soft">
+          <p className="mt-2 text-[11px] font-semibold uppercase tracking-kicker text-accent drop-shadow-[0_1px_2px_rgba(1,35,64,0.85)]">
             {season.tiles.length} {t("entries")}
           </p>
         </div>
