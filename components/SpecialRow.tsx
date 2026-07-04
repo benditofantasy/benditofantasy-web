@@ -77,7 +77,7 @@ export default function SpecialRow({ special }: { special: Special }) {
             <span className="block text-lg leading-none text-ink-soft sm:text-2xl xl:text-3xl">
               {labelWord}
             </span>
-            <span className="block leading-[0.82] text-accent [font-size:clamp(5rem,14vw,12rem)] lg:[font-size:16rem] xl:[font-size:18rem]">
+            <span className="block leading-[0.82] text-accent [font-size:clamp(2.5rem,6vw,5rem)] lg:[font-size:6rem] xl:[font-size:7rem]">
               {labelRest.join(" ")}
             </span>
           </h2>
