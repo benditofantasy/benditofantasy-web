@@ -5,11 +5,12 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, type JSX } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLang } from "@/lib/i18n";
-import { getSlides, type Gameweek, type Slide } from "@/lib/types";
+import { getSlides, type Row, type Slide } from "@/lib/types";
 import ChartSlide from "./slides/ChartSlide";
 import CoverSlide from "./slides/CoverSlide";
 import DataSlide from "./slides/DataSlide";
 import MediaSlide from "./slides/MediaSlide";
+import MvpSlide from "./slides/MvpSlide";
 import QuoteSlide from "./slides/QuoteSlide";
 import TweetSlide from "./slides/TweetSlide";
 import VideoSlide from "./slides/VideoSlide";
@@ -17,7 +18,7 @@ import { ChevronLeftIcon, ChevronRightIcon, CloseIcon } from "./icons";
 
 export interface SlideProps {
   tile: Slide["tile"];
-  gameweek: Gameweek;
+  gameweek: Row;
   /** true when this slide's media shares its layoutId with the grid tile
    *  (the "explode" travel) — only the tile the lightbox was opened from. */
   shared: boolean;
@@ -31,6 +32,7 @@ const SLIDE_RENDERERS: Record<Slide["layout"], (props: SlideProps) => JSX.Elemen
   chart: ChartSlide,
   quote: QuoteSlide,
   tweet: TweetSlide,
+  mvp: MvpSlide,
 };
 
 const SWIPE_THRESHOLD = 60;
@@ -43,7 +45,13 @@ const SWIPE_THRESHOLD = 60;
  * flattened slides of the current gameweek only; on the last slide, → closes
  * and returns to the gameweek row. Mobile: swipe + edge tap zones (SPEC §12).
  */
-export default function Lightbox({ gameweeks }: { gameweeks: Gameweek[] }) {
+export default function Lightbox({
+  gameweeks,
+  seasons = [],
+}: {
+  gameweeks: Row[];
+  seasons?: Row[];
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const itemId = searchParams.get("item");
@@ -60,16 +68,28 @@ export default function Lightbox({ gameweeks }: { gameweeks: Gameweek[] }) {
   const lookup = useMemo(() => {
     const map = new Map<
       string,
-      { gameweek: Gameweek; slides: Slide[]; index: number }
+      { gameweek: Row; slides: Slide[]; index: number }
     >();
+    // Live gameweeks: ←/→ traverses the whole week (unchanged, SPEC §10).
     for (const gameweek of gameweeks) {
       const slides = gameweek.tiles.flatMap(getSlides);
       slides.forEach((slide, index) => {
         map.set(slide.tile.id, { gameweek, slides, index });
       });
     }
+    // Rolled-up seasons: ←/→ flows through the whole year — each mvp tile's
+    // nested slides, then straight into the next gameweek's mvp tile — and
+    // only closes at the season's last slide (owner-confirmed: scrolling a
+    // season should read start-to-end like a year in review, not stop at
+    // each gameweek boundary the way a live gameweek row does).
+    for (const season of seasons) {
+      const slides = season.tiles.flatMap(getSlides);
+      slides.forEach((slide, index) => {
+        map.set(slide.tile.id, { gameweek: season, slides, index });
+      });
+    }
     return map;
-  }, [gameweeks]);
+  }, [gameweeks, seasons]);
 
   const current = itemId ? (lookup.get(itemId) ?? null) : null;
 

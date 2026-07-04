@@ -1,0 +1,1074 @@
+{
+  "season": "2023-24",
+  "label": {
+    "es": "2023/24",
+    "en": "2023/24"
+  },
+  "date": "2024-05-19",
+  "tiles": [
+    {
+      "id": "s2324-gw1-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 1",
+        "en": "Gameweek 1"
+      },
+      "description": {
+        "es": "Arranque 2023/24: la guía completa para nuevos managers y la serie de mejores jugadores por posición.",
+        "en": "2023/24 kickoff: the complete newcomers' guide and the best-players-by-position series."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw1-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 1,
+        "season": "2023-24",
+        "playerName": "La Guía FPL",
+        "statLine": {
+          "es": "Qué es el FPL, cómo armar tu equipo y los mejores por posición para la Jornada 1.",
+          "en": "What FPL is, how to build your team and the best picks by position for Gameweek 1."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw1-a1",
+          "type": "article",
+          "title": {
+            "es": "¿Qué es el Fantasy Premier League (FPL) ?",
+            "en": "What is Fantasy Premier League (FPL)?"
+          },
+          "description": {
+            "es": "El juego explicado desde cero: qué es el FPL y cómo se compite.",
+            "en": "The game explained from scratch: what FPL is and how you compete."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw1-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/que-es-el-fantasy-premier-league-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "que-es-el-fantasy-premier-league-fpl"
+          }
+        },
+        {
+          "id": "s2324-gw1-a2",
+          "type": "article",
+          "title": {
+            "es": "¿Cómo elegir tu equipo en FPL?",
+            "en": "How to pick your FPL team"
+          },
+          "description": {
+            "es": "Paso a paso para armar tu primer equipo de FPL.",
+            "en": "Step by step to building your first FPL squad."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw1-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/como-elegir-tu-equipo-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "como-elegir-tu-equipo-fpl"
+          }
+        },
+        {
+          "id": "s2324-gw1-a3",
+          "type": "article",
+          "title": {
+            "es": "Cómo dirigir tu equipo de fpl",
+            "en": "How to manage your FPL team"
+          },
+          "description": {
+            "es": "Titulares, banca y brazalete: cómo dirigir tu equipo antes de cada jornada.",
+            "en": "Starters, bench and armband: how to run your team before each gameweek."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw1-a3.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/como-dirigir-tu-equipo-de-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "como-dirigir-tu-equipo-de-fpl"
+          }
+        },
+        {
+          "id": "s2324-gw1-a4",
+          "type": "article",
+          "title": {
+            "es": "Cómo realizar transferencias en tu equipo de FPL",
+            "en": "How to make transfers in your FPL team"
+          },
+          "description": {
+            "es": "El mercado dentro del juego: cómo funcionan las transferencias en FPL.",
+            "en": "The in-game market: how transfers work in FPL."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw1-a4.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/como-hacer-transferencias-equipo-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "como-hacer-transferencias-equipo-fpl"
+          }
+        },
+        {
+          "id": "s2324-gw1-a5",
+          "type": "article",
+          "title": {
+            "es": "Cómo se consiguen los puntos en FANTASY PREMIER LEAGUE (FPL)",
+            "en": "How points are scored in Fantasy Premier League (FPL)"
+          },
+          "description": {
+            "es": "Goles, asistencias, porterías a cero y bonus: así se suman los puntos.",
+            "en": "Goals, assists, clean sheets and bonus: how the points add up."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw1-a5.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/como-se-consiguen-puntos-en-fantasy-premier-league-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "como-se-consiguen-puntos-en-fantasy-premier-league-fpl"
+          }
+        },
+        {
+          "id": "s2324-gw1-a6",
+          "type": "article",
+          "title": {
+            "es": "Mejores Porteros Fantasy Premier League (FPL) Gameweek 1 - 2023/2024",
+            "en": "Best FPL Goalkeepers — Gameweek 1, 2023/24"
+          },
+          "description": {
+            "es": "La serie Los Mejores Jugadores arranca la 2023/24 desde la portería.",
+            "en": "The Best Players series opens 2023/24 from between the posts."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw1-a6.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejores-porteros-fpl-gw1-2023",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejores-porteros-fpl-gw1-2023"
+          }
+        },
+        {
+          "id": "s2324-gw1-a7",
+          "type": "article",
+          "title": {
+            "es": "Mejores Defensores Fantasy Premier League (FPL) Gameweek 1 - 2023/2024",
+            "en": "Best FPL Defenders — Gameweek 1, 2023/24"
+          },
+          "description": {
+            "es": "Los defensores que aportan al ataque para arrancar la 2023/24.",
+            "en": "The attack-minded defenders to start 2023/24 with."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw1-a7.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejores-defensores-fantasy-premier-league-gameweek-1-defensores-2023",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejores-defensores-fantasy-premier-league-gameweek-1-defensores-2023"
+          }
+        },
+        {
+          "id": "s2324-gw1-a8",
+          "type": "article",
+          "title": {
+            "es": "Mejores Mediocampistas FANTASY PREMIER LEAGUE (FPL) Gameweek 1 - 2023/2024",
+            "en": "Best FPL Midfielders — Gameweek 1, 2023/24"
+          },
+          "description": {
+            "es": "Los mediocampistas más versátiles para el once de la Jornada 1.",
+            "en": "The most versatile midfielders for your Gameweek 1 eleven."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw1-a8.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejores-mediocampistas-fantasy-premier-league-gameweek-1-2023",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejores-mediocampistas-fantasy-premier-league-gameweek-1-2023"
+          }
+        },
+        {
+          "id": "s2324-gw1-a9",
+          "type": "article",
+          "title": {
+            "es": "Mejores Delanteros Fantasy Premier League (FPL) Gameweek 1 - 2023/2024",
+            "en": "Best FPL Forwards — Gameweek 1, 2023/24"
+          },
+          "description": {
+            "es": "Héroes si anotan, villanos si no: los delanteros para la Jornada 1.",
+            "en": "Heroes if they score, villains if they don't: the forwards for Gameweek 1."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw1-a9.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejoresdelanteros-fantasy-premier-league-gameweek-1-2023",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejoresdelanteros-fantasy-premier-league-gameweek-1-2023"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw2-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 2",
+        "en": "Gameweek 2"
+      },
+      "description": {
+        "es": "Arranca la FPL 2023 con el desafío de Bendito Fantasy y una clase de teoría de juegos.",
+        "en": "FPL 2023 kicks off with the Bendito Fantasy challenge and a game theory class."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw2-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 2,
+        "season": "2023-24",
+        "playerName": "El desafío 2023",
+        "statLine": {
+          "es": "«Únete a Bendito Fantasy y supera el desafío» — y los tipos de juego del FPL.",
+          "en": "\"Join Bendito Fantasy and beat the challenge\" — plus FPL's types of games."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw2-a1",
+          "type": "article",
+          "title": {
+            "es": "Arranca la FPL 2023: ¡Únete a bendito fantasy y supera el desafio!",
+            "en": "FPL 2023 kicks off: join Bendito Fantasy and beat the challenge!"
+          },
+          "description": {
+            "es": "El verano se apaga y la verdadera adrenalina comienza: el desafío de Bendito Fantasy.",
+            "en": "Summer fades and the real adrenaline begins: the Bendito Fantasy challenge."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw2-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/arranca-la-fpl-2023-unete-a-bendito-fantasy-y-supera-el-desafio",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "arranca-la-fpl-2023-unete-a-bendito-fantasy-y-supera-el-desafio"
+          }
+        },
+        {
+          "id": "s2324-gw2-a2",
+          "type": "article",
+          "title": {
+            "es": "Teoría de Juegos en el Fantasy Football (FPL) - Tipos de Juego",
+            "en": "Game theory in Fantasy Football (FPL) — Types of games"
+          },
+          "description": {
+            "es": "No hay una única forma de jugar FPL: los tipos de juego según la teoría de juegos.",
+            "en": "There's no single way to play FPL: the types of games according to game theory."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw2-a2.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/teoria-de-juegos-tipos-de-juegos-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "teoria-de-juegos-tipos-de-juegos-fpl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw3-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 3",
+        "en": "Gameweek 3"
+      },
+      "description": {
+        "es": "La clase de teoría de juegos, parte 2: el equilibrio de Nash en el FPL.",
+        "en": "The game theory class, part 2: Nash equilibrium in FPL."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw3-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 3,
+        "season": "2023-24",
+        "playerName": "Equilibrio de Nash",
+        "statLine": {
+          "es": "Teoría de juegos aplicada a tus decisiones de fantasy.",
+          "en": "Game theory applied to your fantasy decisions."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw3-a1",
+          "type": "article",
+          "title": {
+            "es": "Equilibrio de Nash y Teoría de Juegos en el Fantasy Football (Fpl)",
+            "en": "Nash equilibrium and game theory in Fantasy Football (FPL)"
+          },
+          "description": {
+            "es": "Segunda parte de la clase: el equilibrio de Nash aplicado al FPL.",
+            "en": "Part two of the class: Nash equilibrium applied to FPL."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw3-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/la-clase-teoria-de-juegos-parte-2-equilibrio-de-nash",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "la-clase-teoria-de-juegos-parte-2-equilibrio-de-nash"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw4-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 4",
+        "en": "Gameweek 4"
+      },
+      "description": {
+        "es": "Son lidera la goleada 5-2 del Tottenham en Turf Moor, en los partidos de la semana.",
+        "en": "Son leads Tottenham's 5-2 rout at Turf Moor, in the week's standout matches."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw4-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 4,
+        "season": "2023-24",
+        "playerName": "Son Heung-min",
+        "statLine": {
+          "es": "«Son lidera la masacre en Turf Moor»: el protagonista de la jornada, según la columna.",
+          "en": "\"Son leads the rout at Turf Moor\": the gameweek's protagonist, per the column."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw4-a1",
+          "type": "article",
+          "title": {
+            "es": "3 partidos que me llamaron la atención de la jornada - FPL",
+            "en": "3 matches that caught my eye this gameweek — FPL"
+          },
+          "description": {
+            "es": "Son lidera la masacre 5-2 en Turf Moor: los tres partidos de la semana.",
+            "en": "Son leads the 5-2 rout at Turf Moor: the week's three standout matches."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw4-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/resumen-jornada-partidos-destacados-gw4-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "resumen-jornada-partidos-destacados-gw4-fpl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw6-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 6",
+        "en": "Gameweek 6"
+      },
+      "description": {
+        "es": "Jornada 6: derbis, goleadas y estrellas a considerar, más teoría de juegos en inglés.",
+        "en": "Gameweek 6: derbies, routs and stars to consider, plus game theory in English."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw6-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 6,
+        "season": "2023-24",
+        "playerName": "Derbis y goleadas",
+        "statLine": {
+          "es": "Los tres partidos que dejaron marcadores y emociones fuertes en la J6.",
+          "en": "The three matches that left big scorelines and strong emotions in GW6."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw6-a1",
+          "type": "article",
+          "title": {
+            "es": "Game Theory in Fantasy Football (FPL) - Types of games",
+            "en": "Game Theory in Fantasy Football (FPL) - Types of games"
+          },
+          "description": {
+            "es": "Versión en inglés: los tipos de juego del FPL según la teoría de juegos.",
+            "en": "FPL is a competitive game: the types of games according to game theory."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw6-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/game-theory-fpl-types-of-games",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "game-theory-fpl-types-of-games"
+          }
+        },
+        {
+          "id": "s2324-gw6-a2",
+          "type": "article",
+          "title": {
+            "es": "Jornada 6: Derbis, Goleadas y Estrellas  a Considerar",
+            "en": "Gameweek 6: derbies, routs and stars to consider"
+          },
+          "description": {
+            "es": "Lo más destacado de la Jornada 6: derbis, goleadas y estrellas a considerar.",
+            "en": "Gameweek 6's highlights: derbies, routs and stars to consider."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw6-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/resumen-de-la-jornada-6",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "resumen-de-la-jornada-6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw7-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 7",
+        "en": "Gameweek 7"
+      },
+      "description": {
+        "es": "El escándalo arbitral del fin de semana y el valor oculto de los recién ascendidos.",
+        "en": "The weekend's refereeing scandal and the hidden value of the newly promoted."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw7-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 7,
+        "season": "2023-24",
+        "playerName": "El día que el VAR falló",
+        "statLine": {
+          "es": "Drama, frustración e incomprensión: análisis de un escándalo.",
+          "en": "Drama, frustration and disbelief: anatomy of a scandal."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw7-a1",
+          "type": "article",
+          "title": {
+            "es": "Putting Bias Aside: Players From Newly Promoted Teams Can Offer Value In Fpl",
+            "en": "Putting Bias Aside: Players From Newly Promoted Teams Can Offer Value In FPL"
+          },
+          "description": {
+            "es": "Versión en inglés: las joyas ocultas de los equipos recién ascendidos.",
+            "en": "Beyond the big-team hype: the hidden gems of newly promoted sides."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw7-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/never-rule-out-a-player-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "never-rule-out-a-player-fpl"
+          }
+        },
+        {
+          "id": "s2324-gw7-a2",
+          "type": "article",
+          "title": {
+            "es": "Dejando a un lado los prejuicios: Los jugadores de los equipos recién ascendidos pueden ofrecer valor en FPL",
+            "en": "Putting bias aside: newly promoted players can offer FPL value"
+          },
+          "description": {
+            "es": "Más allá de los equipos grandes: joyas ocultas entre los recién ascendidos.",
+            "en": "Beyond the big clubs: hidden gems among the newly promoted."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw7-a2.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/nunca-descartes-un-jugador-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "nunca-descartes-un-jugador-fpl"
+          }
+        },
+        {
+          "id": "s2324-gw7-a3",
+          "type": "article",
+          "title": {
+            "es": "Nash Equilibrium and Game Theory in Fantasy Football (Fpl)",
+            "en": "Nash Equilibrium and Game Theory in Fantasy Football (FPL)"
+          },
+          "description": {
+            "es": "Versión en inglés: el equilibrio de Nash aplicado al FPL.",
+            "en": "Nash equilibrium applied to your FPL decision-making."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw7-a3.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/game-theory-fpl-nash-equilibrium",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "game-theory-fpl-nash-equilibrium"
+          }
+        },
+        {
+          "id": "s2324-gw7-a4",
+          "type": "article",
+          "title": {
+            "es": "El Día que el VAR Falló: Análisis de un Escándalo",
+            "en": "The day VAR failed: anatomy of a scandal"
+          },
+          "description": {
+            "es": "Drama, frustración e incomprensión: análisis del escándalo arbitral del fin de semana.",
+            "en": "Drama, frustration and disbelief: analysis of the weekend's refereeing scandal."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw7-a4.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/el-dia-que-el-var-fallo-analisis-de-un-escandalo",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "el-dia-que-el-var-fallo-analisis-de-un-escandalo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw8-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 8",
+        "en": "Gameweek 8"
+      },
+      "description": {
+        "es": "El manual de las double gameweeks: qué son y cómo aprovecharlas.",
+        "en": "The double gameweek manual: what they are and how to exploit them."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw8-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 8,
+        "season": "2023-24",
+        "playerName": "Jornadas dobles",
+        "statLine": {
+          "es": "Cómo funcionan las jornadas dobles en FPL, explicado para la 2023/24.",
+          "en": "How double gameweeks work in FPL, explained for 2023/24."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw8-a1",
+          "type": "article",
+          "title": {
+            "es": "Como funcionan las jornadas dobles en fpl - 2023-24",
+            "en": "How double gameweeks work in FPL — 2023/24"
+          },
+          "description": {
+            "es": "Qué son las jornadas dobles y cómo aprovecharlas en FPL.",
+            "en": "What double gameweeks are and how to make the most of them in FPL."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw8-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/como-funciona-double-gameweek-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "como-funciona-double-gameweek-fpl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw11-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 11",
+        "en": "Gameweek 11"
+      },
+      "description": {
+        "es": "El silencio del goleador y el dominio del Arsenal, camino al parón internacional.",
+        "en": "The striker's silence and Arsenal's dominance, heading into the international break."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw11-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 11,
+        "season": "2023-24",
+        "playerName": "¿Dónde está Haaland?",
+        "statLine": {
+          "es": "El goleador calla y el Arsenal domina: la pregunta de la semana.",
+          "en": "The striker goes quiet and Arsenal dominate: the question of the week."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw11-a1",
+          "type": "article",
+          "title": {
+            "es": "¿Dónde está Haaland? El silencio del goleador y el dominio de Arsenal",
+            "en": "Where is Haaland? The striker's silence and Arsenal's dominance"
+          },
+          "description": {
+            "es": "El silencio del goleador noruego y el dominio del Arsenal, rumbo al parón.",
+            "en": "The Norwegian striker's silence and Arsenal's dominance, heading into the break."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw11-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/donde-esta-haaland",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "donde-esta-haaland"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw12-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 12",
+        "en": "Gameweek 12"
+      },
+      "description": {
+        "es": "Los capitanes de la Jornada 12: Saka y Son con calendario, Salah en la mejor forma.",
+        "en": "Gameweek 12's captains: Saka and Son on fixtures, Salah in the best form."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw12-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 12,
+        "season": "2023-24",
+        "playerName": "Mohamed Salah",
+        "statLine": {
+          "es": "«Salah es el de mejor forma y mayor cantidad de puntos», según la comparación de la columna.",
+          "en": "\"Salah has the best form and the most points,\" per the column's comparison."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw12-a1",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 12 - 2023/2024",
+            "en": "Best FPL captains — Gameweek 12, 2023/24"
+          },
+          "description": {
+            "es": "Saka y Son con mejor calendario, Salah en mejor forma: los capitanes de la J12.",
+            "en": "Saka and Son with the better fixtures, Salah in the best form: GW12's captains."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw12-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-gameweek-12-2023",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-gameweek-12-2023"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw14-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 14",
+        "en": "Gameweek 14"
+      },
+      "description": {
+        "es": "Los candidatos a capitán de la Jornada 14, con datos de forma y calendario.",
+        "en": "Gameweek 14's captaincy candidates, with form and fixture data."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw14-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 14,
+        "season": "2023-24",
+        "playerName": "El brazalete",
+        "statLine": {
+          "es": "La matriz de capitanes de la J14: forma, calendario y probabilidad de anotar.",
+          "en": "GW14's captaincy matrix: form, fixtures and scoring probability."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw14-a1",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 14 - 2023/2024",
+            "en": "Best FPL captains — Gameweek 14, 2023/24"
+          },
+          "description": {
+            "es": "Los candidatos al brazalete de la Jornada 14, con datos de forma y calendario.",
+            "en": "The armband candidates for Gameweek 14, with form and fixture data."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw14-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-gameweek-14-2023",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-gameweek-14-2023"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw21-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 21",
+        "en": "Gameweek 21"
+      },
+      "description": {
+        "es": "Dos delanteros en el centro de la expectativa goleadora y el extraño caso del precio de Haaland.",
+        "en": "Two forwards at the heart of the goalscoring expectations and the strange case of Haaland's price."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw21-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 21,
+        "season": "2023-24",
+        "playerName": "¿Darwin o Solanke?",
+        "statLine": {
+          "es": "El duelo goleador de la jornada 21 — y una conspiración de precios en el aire.",
+          "en": "Gameweek 21's goalscoring duel — and a price conspiracy in the air."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw21-a1",
+          "type": "article",
+          "title": {
+            "es": "¿Conspiración en el FPL? El extraño caso del precio de Haaland",
+            "en": "Conspiracy in FPL? The strange case of Haaland's price"
+          },
+          "description": {
+            "es": "El extraño caso de los precios en FPL, con Haaland en el centro de la controversia.",
+            "en": "The strange case of FPL prices, with Haaland at the centre of the controversy."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw21-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/1cmiol65r2rz8029ikf2xrm8ywkm02",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "1cmiol65r2rz8029ikf2xrm8ywkm02"
+          }
+        },
+        {
+          "id": "s2324-gw21-a2",
+          "type": "article",
+          "title": {
+            "es": "¿Darwin o Solanke? ¿Quién brillará más esta jornada?",
+            "en": "Darwin or Solanke? Who shines brightest this gameweek?"
+          },
+          "description": {
+            "es": "Dos delanteros en el centro de la expectativa goleadora de la jornada 21.",
+            "en": "Two forwards at the heart of gameweek 21's goalscoring expectations."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw21-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/darwin-o-solanke-quin-brillar-ms-esta-jornada",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "darwin-o-solanke-quin-brillar-ms-esta-jornada"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw22-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 22",
+        "en": "Gameweek 22"
+      },
+      "description": {
+        "es": "KDB brilla y Saka decae: la encrucijada de la Jornada 22.",
+        "en": "KDB shines and Saka fades: Gameweek 22's crossroads."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw22-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 22,
+        "season": "2023-24",
+        "playerName": "Kevin De Bruyne",
+        "statLine": {
+          "es": "«KDB brilla, Saka decae»: ¿hora de un cambio en tu equipo?",
+          "en": "\"KDB shines, Saka fades\": time for a change in your team?"
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw22-a1",
+          "type": "article",
+          "title": {
+            "es": "KDB Brilla, Saka Decae: ¿Hora de un Cambio en tu equipo de FPL?",
+            "en": "KDB shines, Saka fades: time for a change in your FPL team?"
+          },
+          "description": {
+            "es": "La encrucijada de Saka tras la jornada 21: ¿es hora de cambiarlo por De Bruyne?",
+            "en": "Saka's crossroads after gameweek 21: time to swap him for De Bruyne?"
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw22-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/li0lrnqfd4tb2iladbp8sa8uxmtksg",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "li0lrnqfd4tb2iladbp8sa8uxmtksg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw25-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 25",
+        "en": "Gameweek 25"
+      },
+      "description": {
+        "es": "La esperada doble jornada de la fecha 25, con su guía esencial.",
+        "en": "The long-awaited double gameweek 25, with its essential guide."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw25-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 25,
+        "season": "2023-24",
+        "playerName": "La Jornada Doble",
+        "statLine": {
+          "es": "El evento marcado en rojo por todos los managers: la guía esencial de la DGW25.",
+          "en": "The event every manager circled in red: the essential DGW25 guide."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw25-a1",
+          "type": "article",
+          "title": {
+            "es": "FPL: Tu Guía Esencial para la Jornada Doble",
+            "en": "FPL: your essential guide to the double gameweek"
+          },
+          "description": {
+            "es": "La esperada jornada doble de la fecha 25: la guía esencial.",
+            "en": "The long-awaited double gameweek 25: the essential guide."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw25-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/ndetz1uis25dvop4cxgv1i6772e7ea",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "ndetz1uis25dvop4cxgv1i6772e7ea"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw38-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 38",
+        "en": "Gameweek 38"
+      },
+      "description": {
+        "es": "Cierre de temporada con Wolverhampton proponiendo formalmente eliminar el VAR.",
+        "en": "Season close with Wolverhampton formally proposing to scrap VAR."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw38-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 38,
+        "season": "2023-24",
+        "playerName": "Wolves vs VAR",
+        "statLine": {
+          "es": "La resolución de los Wolves para eliminar el VAR desde la 2024/25.",
+          "en": "Wolves' resolution to scrap VAR from 2024/25."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2324-gw38-a1",
+          "type": "article",
+          "title": {
+            "es": "Los Wolves cargan contra el VAR",
+            "en": "Wolves take aim at VAR"
+          },
+          "description": {
+            "es": "Wolverhampton propone formalmente eliminar el VAR desde la 2024/25.",
+            "en": "Wolverhampton formally propose scrapping VAR from 2024/25."
+          },
+          "tag": "article",
+          "cover": "/media/s2324-gw38-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/wolves-cargan-contra-el-var",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "wolves-cargan-contra-el-var"
+          }
+        }
+      ]
+    }
+  ]
+}

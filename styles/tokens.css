@@ -69,6 +69,7 @@
   --tag-video: var(--bf-salmon);    /* warm media                            */
   --tag-social: var(--bf-turquoise);/* energetic / active                    */
   --tag-quote: var(--bf-brown);     /* muted editorial gravitas              */
+  --tag-mvp: var(--bf-gold);        /* king of the gameweek — premium ladder */
 
   /* ---- Typography ---- */
   /* Display: ultra-bold condensed ALL-CAPS — PLACEHOLDER, no brand display

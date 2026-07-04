@@ -1,0 +1,1250 @@
+{
+  "season": "2024-25",
+  "label": {
+    "es": "2024/25",
+    "en": "2024/25"
+  },
+  "date": "2025-05-25",
+  "tiles": [
+    {
+      "id": "s2425-gw1-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 1",
+        "en": "Gameweek 1"
+      },
+      "description": {
+        "es": "Pretemporada 2024/25: de Mario Kart al FPL, consejos para principiantes, chips y la serie de mejores por posición.",
+        "en": "2024/25 pre-season: from Mario Kart to FPL, beginner tips, chips and the best-by-position series."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw1-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 1,
+        "season": "2024-25",
+        "playerName": "Lecciones de Mario Kart",
+        "statLine": {
+          "es": "«De Mario Kart al FPL»: lecciones de juego para un fantasy más emocionante.",
+          "en": "\"From Mario Kart to FPL\": gaming lessons for a more exciting fantasy."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw1-a1",
+          "type": "article",
+          "title": {
+            "es": "From Mario Kart to FPL: Gaming Lessons for a More Exciting Fantasy",
+            "en": "From Mario Kart to FPL: Gaming Lessons for a More Exciting Fantasy"
+          },
+          "description": {
+            "es": "Versión en inglés: lecciones de los videojuegos para un fantasy más emocionante.",
+            "en": "Gaming lessons for a more exciting fantasy season, from Mario Kart to FPL."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw1-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/de-mario-kart-al-fpl-lecciones-de-juego-para-un-fantasy-ms-emocionante",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "de-mario-kart-al-fpl-lecciones-de-juego-para-un-fantasy-ms-emocionante"
+          }
+        },
+        {
+          "id": "s2425-gw1-a2",
+          "type": "article",
+          "title": {
+            "es": "De Mario Kart al FPL: Lecciones de Juego para un Fantasy Más Emocionante",
+            "en": "From Mario Kart to FPL: gaming lessons for a more exciting fantasy"
+          },
+          "description": {
+            "es": "Lecciones de los videojuegos, de Mario Kart al FPL, para un fantasy más emocionante.",
+            "en": "Spanish version: gaming lessons, from Mario Kart to FPL, for a more exciting fantasy."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw1-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/de-mario-kart-al-fpl-lecciones-de-juego-para-un-fantasy-ms-emocionante-7yz4c",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "de-mario-kart-al-fpl-lecciones-de-juego-para-un-fantasy-ms-emocionante-7yz4c"
+          }
+        },
+        {
+          "id": "s2425-gw1-a3",
+          "type": "article",
+          "title": {
+            "es": "10 Consejos para un Jugador Principiante de Fantasy Premier League",
+            "en": "10 tips for a beginner Fantasy Premier League manager"
+          },
+          "description": {
+            "es": "Diez consejos para empezar bien tu primera temporada de FPL.",
+            "en": "Ten tips to start your first FPL season on the right foot."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw1-a3.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/10-consejos-principiantes-fpl-fantasy-premier-league",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "10-consejos-principiantes-fpl-fantasy-premier-league"
+          }
+        },
+        {
+          "id": "s2425-gw1-a4",
+          "type": "article",
+          "title": {
+            "es": "¿Qué son los \"Chips\" en Fantasy Premier League (FPL) y cómo funcionan?",
+            "en": "What are \"chips\" in Fantasy Premier League (FPL) and how do they work?"
+          },
+          "description": {
+            "es": "Wildcard, Bench Boost y compañía: las herramientas especiales del FPL.",
+            "en": "Wildcard, Bench Boost and friends: FPL's special tools."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw1-a4.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/que-son-los-chips-en-fantasy-premier-league-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "que-son-los-chips-en-fantasy-premier-league-fpl"
+          }
+        },
+        {
+          "id": "s2425-gw1-a5",
+          "type": "article",
+          "title": {
+            "es": "Mejores Porteros Fantasy Premier League (FPL) Gameweek 1-5 - 2024/2025",
+            "en": "Best FPL Goalkeepers — Gameweeks 1-5, 2024/25"
+          },
+          "description": {
+            "es": "La serie Los Mejores Jugadores abre la 2024/25 con los porteros para las jornadas 1 a 5.",
+            "en": "The Best Players series opens 2024/25 with the goalkeepers for gameweeks 1-5."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw1-a5.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejores-porteros-fantasy-premier-league-fpl-gw1-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejores-porteros-fantasy-premier-league-fpl-gw1-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw1-a6",
+          "type": "article",
+          "title": {
+            "es": "Mejores Defensores Fantasy Premier League (FPL) Gameweek 1-5 - 2024/2025",
+            "en": "Best FPL Defenders — Gameweeks 1-5, 2024/25"
+          },
+          "description": {
+            "es": "Los defensores con vocación ofensiva para el arranque 2024/25.",
+            "en": "The attack-minded defenders for the 2024/25 opening stretch."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw1-a6.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejores-defensores-fantasy-premier-league-fpl-gw1-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejores-defensores-fantasy-premier-league-fpl-gw1-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw1-a7",
+          "type": "article",
+          "title": {
+            "es": "Mejores Mediocampistas FANTASY PREMIER LEAGUE (FPL) Gameweek 1-5 - 2024/2025",
+            "en": "Best FPL Midfielders — Gameweeks 1-5, 2024/25"
+          },
+          "description": {
+            "es": "Los mediocampistas para las jornadas 1 a 5 de la nueva temporada.",
+            "en": "The midfielders for gameweeks 1-5 of the new season."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw1-a7.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejores-mediocampistas-fantasy-premier-league-fpl-gw1-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejores-mediocampistas-fantasy-premier-league-fpl-gw1-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw1-a8",
+          "type": "article",
+          "title": {
+            "es": "Mejores Delanteros Fantasy Premier League (FPL) Gameweek 1-5 - 2024/2025",
+            "en": "Best FPL Forwards — Gameweeks 1-5, 2024/25"
+          },
+          "description": {
+            "es": "Los delanteros que viven del gol, para las jornadas 1 a 5.",
+            "en": "The forwards who live off goals, for gameweeks 1-5."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw1-a8.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/delanteros-fantasy-premier-league-fpl-gw1-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "delanteros-fantasy-premier-league-fpl-gw1-2024-2025"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw2-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 2",
+        "en": "Gameweek 2"
+      },
+      "description": {
+        "es": "La primera gran decisión del año: ¿usar ya el Triple Capitán en Haaland?",
+        "en": "The year's first big decision: play the Triple Captain on Haaland already?"
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw2-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 2,
+        "season": "2024-25",
+        "playerName": "Erling Haaland",
+        "statLine": {
+          "es": "El debate más caliente de la semana: el chip de Triple Capitán en Haaland.",
+          "en": "The week's hottest debate: the Triple Captain chip on Haaland."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw2-a1",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 2 - 2024/2025",
+            "en": "Best FPL captains — Gameweek 2, 2024/25"
+          },
+          "description": {
+            "es": "Los candidatos al brazalete para la Jornada 2 de la 2024/25.",
+            "en": "The armband candidates for Gameweek 2 of 2024/25."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw2-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-capitan-gameweek-2-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-2-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw2-a2",
+          "type": "article",
+          "title": {
+            "es": "¿Es el Momento de Usar el Chip de Triple Capitán en Haaland? FPL Gameweek 2 - 2024/2025",
+            "en": "Time to play the Triple Captain chip on Haaland? FPL Gameweek 2, 2024/25"
+          },
+          "description": {
+            "es": "El debate de la semana: ¿usar ya el Triple Capitán en Haaland?",
+            "en": "The week's debate: burn the Triple Captain on Haaland already?"
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw2-a2.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/triple-capitan-haaland-fantasy-premier-league-gameweek-2-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "triple-capitan-haaland-fantasy-premier-league-gameweek-2-2024-2025"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw3-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 3",
+        "en": "Gameweek 3"
+      },
+      "description": {
+        "es": "El EO entra en la conversación del brazalete de la Jornada 3.",
+        "en": "EO enters Gameweek 3's armband conversation."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw3-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 3,
+        "season": "2024-25",
+        "playerName": "Effective Ownership",
+        "statLine": {
+          "es": "Cómo el Effective Ownership afecta la elección del capitán.",
+          "en": "How Effective Ownership shapes the captaincy pick."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw3-a1",
+          "type": "article",
+          "title": {
+            "es": "Cómo el Effective Ownership (EO) Afecta la Elección del Capitán en FPL",
+            "en": "How Effective Ownership (EO) shapes your FPL captaincy pick"
+          },
+          "description": {
+            "es": "Qué es el Effective Ownership y cómo cambia la elección de tu capitán.",
+            "en": "What Effective Ownership is and how it changes your captaincy call."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw3-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/eleccion-capitan-effective-ownership-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "eleccion-capitan-effective-ownership-fpl"
+          }
+        },
+        {
+          "id": "s2425-gw3-a2",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 3 - 2024/2025",
+            "en": "Best FPL captains — Gameweek 3, 2024/25"
+          },
+          "description": {
+            "es": "Los candidatos al brazalete para la Jornada 3 de la 2024/25.",
+            "en": "The armband candidates for Gameweek 3 of 2024/25."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw3-a2.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-capitan-gameweek-3-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-3-2024-2025"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw4-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 4",
+        "en": "Gameweek 4"
+      },
+      "description": {
+        "es": "Las nuevas dinámicas de la 2024/25 y los capitanes de la Jornada 4.",
+        "en": "2024/25's new dynamics and Gameweek 4's captains."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw4-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 4,
+        "season": "2024-25",
+        "playerName": "Nuevas reglas",
+        "statLine": {
+          "es": "Todo lo que necesitas saber para adaptar tus estrategias a la 2024/25.",
+          "en": "Everything you need to adapt your strategies to 2024/25."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw4-a1",
+          "type": "article",
+          "title": {
+            "es": "Nuevas Dinámicas en Fantasy Premier League 2024/25: Todo lo que Necesitas Saber para Adaptar tus Estrategias",
+            "en": "New dynamics in FPL 2024/25: everything you need to adapt your strategies"
+          },
+          "description": {
+            "es": "Las novedades de la 2024/25 que cambian radicalmente cómo se planifica.",
+            "en": "The 2024/25 changes that radically alter how managers plan."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw4-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/nuevas-reglas-fpl-fantasy-premier-league-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "nuevas-reglas-fpl-fantasy-premier-league-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw4-a2",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 4 - 2024/2025",
+            "en": "Best FPL captains — Gameweek 4, 2024/25"
+          },
+          "description": {
+            "es": "Los candidatos al brazalete para la Jornada 4 de la 2024/25.",
+            "en": "The armband candidates for Gameweek 4 of 2024/25."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw4-a2.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-capitan-gameweek4-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek4-2024-2025"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw5-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 5",
+        "en": "Gameweek 5"
+      },
+      "description": {
+        "es": "La estrategia del capitán permanente en dos partes y el titán noruego ante la muralla londinense.",
+        "en": "The permanent-captain strategy in two parts, and the Norwegian titan against the London wall."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw5-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 5,
+        "season": "2024-25",
+        "playerName": "El Perma Capitán",
+        "statLine": {
+          "es": "El caso de Salah, sus desafíos y alternativas — y Haaland ante el Arsenal.",
+          "en": "The Salah case, its challenges and alternatives — and Haaland against Arsenal."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw5-a1",
+          "type": "article",
+          "title": {
+            "es": "La Estrategia del Perma Capitán en FPL - Parte 1: El Caso de Salah",
+            "en": "The Perma-Captain strategy in FPL — Part 1: the Salah case"
+          },
+          "description": {
+            "es": "El capitán permanente a examen, parte 1: el caso de Salah.",
+            "en": "The permanent captain under the microscope, part 1: the Salah case."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw5-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/perma-captain-fpl-parte-1",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "perma-captain-fpl-parte-1"
+          }
+        },
+        {
+          "id": "s2425-gw5-a2",
+          "type": "article",
+          "title": {
+            "es": "La Estrategia del Perma Capitán en FPL - Desafíos y Alternativas - Parte 2",
+            "en": "The Perma-Captain strategy in FPL — Part 2: challenges and alternatives"
+          },
+          "description": {
+            "es": "Cuándo el perma capitán deja de funcionar: desafíos y alternativas.",
+            "en": "When the perma-captain stops working: challenges and alternatives."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw5-a2.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/perma-captain-fpl-parte-2",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "perma-captain-fpl-parte-2"
+          }
+        },
+        {
+          "id": "s2425-gw5-a3",
+          "type": "article",
+          "title": {
+            "es": "El titán noruego frente a la muralla londinense - FPL 2024 - 2025",
+            "en": "The Norwegian titan against the London wall — FPL 2024/25"
+          },
+          "description": {
+            "es": "Haaland contra la defensa del Arsenal: el duelo del City-Arsenal en clave FPL.",
+            "en": "Haaland against Arsenal's defence: the City-Arsenal clash in FPL terms."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw5-a3.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/fantasy-premier-league-fpl-titan-vs-muralla-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "fantasy-premier-league-fpl-titan-vs-muralla-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw5-a4",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 5 - 2024/2025",
+            "en": "Best FPL captains — Gameweek 5, 2024/25"
+          },
+          "description": {
+            "es": "Haaland y Salah se perfilan como favoritos al brazalete de la Jornada 5.",
+            "en": "Haaland and Salah shape up as Gameweek 5's armband favourites."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw5-a4.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-capitan-gameweek-5-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-5-2024-2025"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw6-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 6",
+        "en": "Gameweek 6"
+      },
+      "description": {
+        "es": "Crónica de una jornada de emociones fuertes y dramas inesperados.",
+        "en": "Chronicle of a gameweek of strong emotions and unexpected drama."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw6-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 6,
+        "season": "2024-25",
+        "playerName": "Al borde de la toalla",
+        "statLine": {
+          "es": "«Managers al borde de lanzar la toalla»: la crónica de la Jornada 6.",
+          "en": "\"Managers on the verge of throwing in the towel\": the Gameweek 6 chronicle."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw6-a1",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 6 - 2024/2025",
+            "en": "Best FPL captains — Gameweek 6, 2024/25"
+          },
+          "description": {
+            "es": "Capitanear al mejor te sube en el ranking: los candidatos de la Jornada 6.",
+            "en": "Captaining the best moves you up the ranks: Gameweek 6's candidates."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw6-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-capitan-gameweek-6-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-6-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw6-a2",
+          "type": "article",
+          "title": {
+            "es": "Crónica de la Jornada - Gameweek 6 (FPL) 2024/25",
+            "en": "Gameweek chronicle — Gameweek 6 (FPL) 2024/25"
+          },
+          "description": {
+            "es": "Emociones fuertes, dramas inesperados y managers al borde de lanzar la toalla.",
+            "en": "Strong emotions, unexpected drama and managers on the verge of throwing in the towel."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw6-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/cronica-jornada-fantasy-premier-league-gw6-24-25",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "cronica-jornada-fantasy-premier-league-gw6-24-25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw7-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 7",
+        "en": "Gameweek 7"
+      },
+      "description": {
+        "es": "La jornada del promedio de puntuación más bajo de la temporada.",
+        "en": "The gameweek with the season's lowest points average."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw7-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 7,
+        "season": "2024-25",
+        "playerName": "Festival de frustraciones",
+        "statLine": {
+          "es": "«Un verdadero festival de frustraciones», según la crónica de la J7.",
+          "en": "\"A true festival of frustrations,\" per the GW7 chronicle."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw7-a1",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 7 - 2024/2025",
+            "en": "Best FPL captains — Gameweek 7, 2024/25"
+          },
+          "description": {
+            "es": "Los candidatos al brazalete para la Jornada 7 de la 2024/25.",
+            "en": "The armband candidates for Gameweek 7 of 2024/25."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw7-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-capitan-gameweek-7-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-7-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw7-a2",
+          "type": "article",
+          "title": {
+            "es": "Crónica de la Jornada - Gameweek 7 (FPL) 2024/25",
+            "en": "Gameweek chronicle — Gameweek 7 (FPL) 2024/25"
+          },
+          "description": {
+            "es": "Un festival de frustraciones: el promedio de puntos más bajo de la temporada.",
+            "en": "A festival of frustrations: the season's lowest points average."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw7-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/cronica-jornada-fantasy-premier-league-gw7-24-25",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "cronica-jornada-fantasy-premier-league-gw7-24-25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw8-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 8",
+        "en": "Gameweek 8"
+      },
+      "description": {
+        "es": "La J8 dejó una triste marca: el promedio más bajo hasta ahora.",
+        "en": "GW8 left a sad milestone: the lowest average yet."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw8-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 8,
+        "season": "2024-25",
+        "playerName": "36 puntos",
+        "statLine": {
+          "es": "Apenas 36 puntos de promedio, el más bajo hasta ahora — sí, lo leíste bien.",
+          "en": "A mere 36-point average, the lowest yet — yes, you read that right."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw8-a1",
+          "type": "article",
+          "title": {
+            "es": "Crónica de la Jornada - Gameweek 8 (FPL) 2024/25",
+            "en": "Gameweek chronicle — Gameweek 8 (FPL) 2024/25"
+          },
+          "description": {
+            "es": "Triste marca en la J8: apenas 36 puntos de promedio, el más bajo hasta ahora.",
+            "en": "A sad milestone in GW8: a mere 36-point average, the lowest yet."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw8-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/cronica-jornada-fantasy-premier-league-gw8-24-25",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "cronica-jornada-fantasy-premier-league-gw8-24-25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw9-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 9",
+        "en": "Gameweek 9"
+      },
+      "description": {
+        "es": "De esperanzas rotas a alegrías inesperadas: la crónica de la Jornada 9.",
+        "en": "From broken hopes to unexpected joys: the Gameweek 9 chronicle."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw9-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 9,
+        "season": "2024-25",
+        "playerName": "Montaña rusa",
+        "statLine": {
+          "es": "La mezcla de emociones alucinante que vivimos cada fin de semana.",
+          "en": "The mind-bending mix of emotions we live through every weekend."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw9-a1",
+          "type": "article",
+          "title": {
+            "es": "Crónica de la Jornada - Gameweek 9 (FPL) 2024/25",
+            "en": "Gameweek chronicle — Gameweek 9 (FPL) 2024/25"
+          },
+          "description": {
+            "es": "De esperanzas rotas a alegrías inesperadas: la montaña rusa de la Jornada 9.",
+            "en": "From broken hopes to unexpected joys: Gameweek 9's rollercoaster."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw9-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/cronica-jornada-fantasy-premier-league-gw9-24-25",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "cronica-jornada-fantasy-premier-league-gw9-24-25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw10-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 10",
+        "en": "Gameweek 10"
+      },
+      "description": {
+        "es": "La elección del brazalete se complica entre tres nombres, y la crónica deja capitanes que decepcionaron.",
+        "en": "The armband call gets complicated between three names, and the chronicle logs disappointing captains."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw10-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 10,
+        "season": "2024-25",
+        "playerName": "Haaland, Salah o Palmer",
+        "statLine": {
+          "es": "La elección se complica entre Erling Haaland, Mohamed Salah y Cole Palmer.",
+          "en": "The call gets complicated between Erling Haaland, Mohamed Salah and Cole Palmer."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw10-a1",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 10 - 2024/2025",
+            "en": "Best FPL captains — Gameweek 10, 2024/25"
+          },
+          "description": {
+            "es": "La elección se complica entre Haaland, Salah y Cole Palmer.",
+            "en": "The call gets complicated between Haaland, Salah and Cole Palmer."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw10-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-capitan-gameweek-10-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-10-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw10-a2",
+          "type": "article",
+          "title": {
+            "es": "Crónica de la Jornada - Gameweek 10 (FPL) 2024/25",
+            "en": "Gameweek chronicle — Gameweek 10 (FPL) 2024/25"
+          },
+          "description": {
+            "es": "Capitanes que decepcionaron, héroes inesperados y un par de sorpresas.",
+            "en": "Disappointing captains, unexpected heroes and a couple of surprises."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw10-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/cronica-jornada-fantasy-premier-league-gw10-24-25",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "cronica-jornada-fantasy-premier-league-gw10-24-25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw11-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 11",
+        "en": "Gameweek 11"
+      },
+      "description": {
+        "es": "Análisis a fondo de los candidatos principales de la Jornada 11.",
+        "en": "An in-depth look at Gameweek 11's main candidates."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw11-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 11,
+        "season": "2024-25",
+        "playerName": "El brazalete",
+        "statLine": {
+          "es": "Los candidatos principales al brazalete, analizados a fondo.",
+          "en": "The main armband candidates, analysed in depth."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw11-a1",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 11 - 2024/2025",
+            "en": "Best FPL captains — Gameweek 11, 2024/25"
+          },
+          "description": {
+            "es": "Análisis a fondo de los candidatos principales al brazalete de la Jornada 11.",
+            "en": "An in-depth look at Gameweek 11's main armband candidates."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw11-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-capitan-gameweek-11-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-11-2024-2025"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw12-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 12",
+        "en": "Gameweek 12"
+      },
+      "description": {
+        "es": "Vuelve la Premier tras el parón: Salah lidera la tabla, Arsenal y Chelsea con calendario amable, y el blog se muda a Bluesky.",
+        "en": "The Premier League returns from the break: Salah tops the table, kind fixtures for Arsenal and Chelsea, and the blog moves to Bluesky."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw12-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 12,
+        "season": "2024-25",
+        "playerName": "Mohamed Salah",
+        "statLine": {
+          "es": "«Salah sigue encendido y lidera la tabla con la mayor cantidad de puntos.»",
+          "en": "\"Salah is still on fire and leads the table with the most points.\""
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw12-a1",
+          "type": "article",
+          "title": {
+            "es": "¿Es Gabriel Martinelli una Alternativa Viable a Bukayo Saka en FPL?",
+            "en": "Is Gabriel Martinelli a viable alternative to Bukayo Saka in FPL?"
+          },
+          "description": {
+            "es": "El calendario favorable del Arsenal y la vía barata: ¿Martinelli por Saka?",
+            "en": "Arsenal's kind fixtures and the budget route: Martinelli instead of Saka?"
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw12-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/fantasy-premier-league-saka-martinelli-arsenal-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "fantasy-premier-league-saka-martinelli-arsenal-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw12-a2",
+          "type": "article",
+          "title": {
+            "es": "Adiós Twitter, Hola Bluesky",
+            "en": "Goodbye Twitter, hello Bluesky"
+          },
+          "description": {
+            "es": "La nueva casa del FPL: Bendito Fantasy se muda a Bluesky.",
+            "en": "FPL's new home: Bendito Fantasy moves to Bluesky."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw12-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/yq6ggg17bilutklqf27voxakxxk7t4",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "yq6ggg17bilutklqf27voxakxxk7t4"
+          }
+        },
+        {
+          "id": "s2425-gw12-a3",
+          "type": "article",
+          "title": {
+            "es": "Calendario Azul: Jugadores de Chelsea en FPL que no puedes ignorar - PREMIER LEAGUE 2024/2025",
+            "en": "Blue fixtures: the Chelsea players you can't ignore in FPL 2024/25"
+          },
+          "description": {
+            "es": "El calendario extremadamente favorable del Chelsea y sus jugadores imprescindibles.",
+            "en": "Chelsea's extremely kind fixture run and their must-have players."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw12-a3.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/fantasy-premier-league-calendario-chelsea-fpl-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "fantasy-premier-league-calendario-chelsea-fpl-2024-2025"
+          }
+        },
+        {
+          "id": "s2425-gw12-a4",
+          "type": "article",
+          "title": {
+            "es": "Mejores capitanes Fantasy Premier League (FPL) Gameweek 12 - 2024/2025",
+            "en": "Best FPL captains — Gameweek 12, 2024/25"
+          },
+          "description": {
+            "es": "Vuelve la Premier tras el parón: Salah encendido lidera la tabla de puntos.",
+            "en": "The Premier League returns from the break: a red-hot Salah leads the points table."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw12-a4.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejor-capitan-fantasy-premier-league-capitan-gameweek-12-2024-2025",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-12-2024-2025"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw19-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 19",
+        "en": "Gameweek 19"
+      },
+      "description": {
+        "es": "Una liga imaginaria de 20 equipos para entender el valor relativo en FPL.",
+        "en": "An imaginary 20-team league for understanding relative value in FPL."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw19-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 19,
+        "season": "2024-25",
+        "playerName": "Blanquilandia",
+        "statLine": {
+          "es": "En algún lugar del universo de los escenarios hipotéticos existe Blanquilandia.",
+          "en": "Somewhere in the universe of hypothetical scenarios lies Blanquilandia."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw19-a1",
+          "type": "article",
+          "title": {
+            "es": "Blanquilandia y el Valor Relativo de los Jugadores en el Fantasy Premier League (FPL) 2024/25",
+            "en": "Blanquilandia and relative player value in FPL 2024/25"
+          },
+          "description": {
+            "es": "Blanquilandia: una liga imaginaria para entender el valor relativo de los jugadores.",
+            "en": "Blanquilandia: an imaginary league for understanding relative player value."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw19-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/fantasy-premier-league-valor-jugadores-blanquilandia",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "fantasy-premier-league-valor-jugadores-blanquilandia"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw20-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 20",
+        "en": "Gameweek 20"
+      },
+      "description": {
+        "es": "FPL suelta la noticia esperada desde agosto: llega el chip de assistant manager.",
+        "en": "FPL drops the news awaited since August: the assistant manager chip arrives."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw20-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 20,
+        "season": "2024-25",
+        "playerName": "El Mystery Chip",
+        "statLine": {
+          "es": "Todos los detalles del chip de assistant manager, recién anunciado.",
+          "en": "All the details of the freshly announced assistant manager chip."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw20-a1",
+          "type": "article",
+          "title": {
+            "es": "todos los detalles del chip de assistant manager",
+            "en": "All the details of the assistant manager chip"
+          },
+          "description": {
+            "es": "La espera terminó: el Mystery Chip del FPL es el assistant manager.",
+            "en": "The wait is over: FPL's Mystery Chip is the assistant manager."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw20-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/yj9cvlp8smz3id2kjwt9cll9on849a",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "yj9cvlp8smz3id2kjwt9cll9on849a"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw21-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 21",
+        "en": "Gameweek 21"
+      },
+      "description": {
+        "es": "«Haaland destruyó mi temporada»: las lecciones psicológicas de las decisiones caras.",
+        "en": "\"Haaland destroyed my season\": the psychological lessons of costly decisions."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw21-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 21,
+        "season": "2024-25",
+        "playerName": "Lecciones dolorosas",
+        "statLine": {
+          "es": "Una serie de decisiones carísimas, miradas en retrospectiva y sin anestesia.",
+          "en": "A string of very costly decisions, reviewed in hindsight with no anaesthesia."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2425-gw21-a1",
+          "type": "article",
+          "title": {
+            "es": "Haaland destruyó mi temporada",
+            "en": "Haaland destroyed my season"
+          },
+          "description": {
+            "es": "Las lecciones psicológicas de una serie de decisiones carísimas.",
+            "en": "The psychological lessons of a string of very costly decisions."
+          },
+          "tag": "article",
+          "cover": "/media/s2425-gw21-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/ktnp611ol36w67f2h6gapmh01tq5p6",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "ktnp611ol36w67f2h6gapmh01tq5p6"
+          }
+        }
+      ]
+    }
+  ]
+}

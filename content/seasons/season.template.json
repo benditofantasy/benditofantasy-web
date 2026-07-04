@@ -1,0 +1,39 @@
+{
+  "_recipe": "Produced by scripts/close-season.mjs when a season ends — don't hand-edit this shape from scratch. COPY THIS FILE to <season>.json only as a starting point for a season that predates the close-season script (e.g. migrated Squarespace history). One mvp tile per gameweek that season; its slides[] are that week's real tiles (same shapes as content/gameweeks/gameweek.template.json). Delete every _comment/_recipe key when done.",
+  "season": "2024-25",
+  "label": { "es": "2024/25", "en": "2024/25" },
+  "date": "2025-05-25",
+  "tiles": [
+    {
+      "_comment": "One of these per gameweek that season, oldest→newest. cover = that week's podcast YouTube thumbnail (stand-in photography, no player-imagery rights).",
+      "id": "s2024-25-gw1-mvp",
+      "type": "mvp",
+      "title": { "es": "Jornada 1", "en": "Gameweek 1" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "mvp",
+      "cover": "/media/s2024-25-gw1-mvp.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 1,
+        "season": "2024-25",
+        "playerName": "…",
+        "points": 0,
+        "statLine": { "es": "…", "en": "…" }
+      },
+      "slides": [
+        {
+          "_comment": "That week's original tiles, unchanged — copied verbatim from its old gw-01.json before archiving it.",
+          "id": "gw1-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": { "es": "…", "en": "…" },
+          "description": { "es": "…", "en": "…" },
+          "tag": "podcast",
+          "cover": "/media/gw1-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": { "youtubeId": "XXXXXXXXXXX", "duration": "50:00" }
+        }
+      ]
+    }
+  ]
+}

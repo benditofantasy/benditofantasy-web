@@ -41,6 +41,7 @@ export const STRINGS = {
   },
   dataTable: { es: "Tabla de datos", en: "Data table" },
   chartFigure: { es: "Gráfico", en: "Chart" },
+  season: { es: "Temporada", en: "Season" },
 } satisfies Record<string, Localized>;
 
 export type StringKey = keyof typeof STRINGS;
@@ -54,6 +55,7 @@ export const TAG_NAMES: Record<TagKey, Localized> = {
   video: { es: "Vídeo", en: "Video" },
   social: { es: "Social", en: "Social" },
   quote: { es: "Cita", en: "Quote" },
+  mvp: { es: "MVP", en: "MVP" },
 };
 
 const STORAGE_KEY = "bendito-lang";

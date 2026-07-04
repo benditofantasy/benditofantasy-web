@@ -1,0 +1,99 @@
+---
+title: "De Mario Kart al FPL: Lecciones de Juego para un Fantasy Más Emocionante"
+description: "Lecciones de los videojuegos, de Mario Kart al FPL, para un fantasy más emocionante."
+date: "2024-07-09"
+gw: 1
+author: "Leo · Bendito Fantasy"
+cover: "/media/s2425-gw1-a2.svg"
+column: "la-pizarra-tactica"
+---
+_Read the English version_ [_here_](https://www.benditofantasy.com/la-pizarra-tactica/de-mario-kart-al-fpl-lecciones-de-juego-para-un-fantasy-ms-emocionante)
+
+## Introducción
+
+Hola, espero que estés disfrutando del verano, divirtiéndote y siguiendo el fútbol de selecciones, ya sea la Eurocopa o la Copa América. En Bendito Fantasy, te hemos acompañado a cada paso durante este verano de fútbol internacional, pero ya estamos a nada de regresar al servicio común de FPL de acuerdo con un post en redes desde la cuenta oficial de la Premier League y de Fantasy.
+
+En el mensaje que subieron a redes, las “torres FPL” dan indicios de que algo cambiará para esta temporada. Y las especulaciones ya comenzaron, algunos creen que será la incorporación de más puntos ganables, como por ejemplo por recuperación de balones, y otros van más allá, yo soy uno de esos. En las siguientes líneas les mando este mensaje e idea a las mencionadas "torres" de FPL.
+
+Expreso una idea que, aunque no es original, tiene un elemento de sorpresa que no se ha explorado en las miniligas de fantasy. Desde hace semanas, he mencionado que los creadores del FPL han tropezado con una solución a un problema grave: la formación de un "template" que hace el juego más difícil y monótono. La monotonía mata la esperanza muchas veces. Cada año vemos un número récord de suscriptores a FPL, superando los 11 millones en las últimas temporadas. Sin embargo, hay jugadores que se desentienden después de crear su equipo y dejan de participar.
+
+El problema es que el "template" hace que los equipos se parezcan tanto que muchos pierden el interés ya entrada la temporada porque los primeros puestos se alejan sustancialmente y mantener la atención se vuelve inútil. Este artículo explora cómo mantener el interés durante las 38 jornadas del FPL y cómo las torres FPL pueden mejorar la experiencia del juego.
+
+## La Solución Oculta en el Challenge
+
+El nuevo formato de Challenge, lanzado como piloto en la temporada 23-24, podría ser la solución que buscamos. Aunque es divertido por una semana, pierde encanto rápidamente porque no tiene una forma de acumular y competir a largo plazo. Sin embargo, si un programador inteligente adapta las ideas de Challenge al juego principal, podría darle un giro completo a la temporada.
+
+## Desafiando al Algoritmo: Un Enfoque Radical
+
+El uso de modelos para predecir alineaciones, puntos y resultados ha tomado fuerza en las últimas temporadas, pero Challenge podría romper estos modelos. Para explicar esto, quiero adentrarme en un concepto de teoría de juegos y cómo puede aplicarse al FPL de una manera innovadora.
+
+### Equilibrio de Nash y su Relación con el FPL
+
+Un ejemplo clásico de teoría de juegos es el equilibrio de Nash, que ocurre cuando ningún jugador puede mejorar su situación cambiando su estrategia si los demás mantienen las suyas. Para poner un ejemplo que probablemente sea fácil de entender para todos, en el juego clásico "Mario Kart", esto podría manifestarse en cómo los jugadores usan los ítems (como caparazones rojos, plátanos y estrellas). Si todos los jugadores usan sus ítems de manera óptima, cualquier cambio en la estrategia individual de un jugador (sin cambiar las de los demás) no mejoraría su posición. Esto es exactamente lo que nos sucede con el "template" en FPL.
+
+En "Mario Kart", los ítems que obtienes de las cajas dependen en gran medida de tu posición en la carrera. Los jugadores que están en posiciones más rezagadas tienen más probabilidades de obtener ítems poderosos como el rayo o el caparazón azul, mientras que los jugadores en las primeras posiciones obtienen ítems defensivos o menos impactantes como plátanos o caparazones verdes.
+
+### Aplicación en el FPL: Rompiendo el Equilibrio Estático
+
+Imagina un escenario en el que estás en el último lugar de tu miniliga y se activa un chip solo para los últimos puestos o cierto porcentaje de suscriptores. Este nuevo chip podría ser algo como lo que vimos en Challenge, donde todos tus jugadores de un partido derbi hagan puntos dobles. En este escenario, los modelos predictivos actuales se romperían, ya que no podrías predecir con tanta exactitud cuándo usar ese chip.
+
+Los jugadores más rezagados tendrían la oportunidad de mejorar su puntaje sustancialmente y acelerar en el ranking general. Claro, siempre y cuando tengan a los jugadores correctos en el momento correcto. Esto añade un nivel de incertidumbre y emoción, rompiendo con las estrategias clásicas que muchos creadores de contenido ya conocen de memoria.
+
+#### Beneficios de Romper el Equilibrio
+
+1.  **Esperanza y Anticipación**: La posibilidad de obtener ítems poderosos crea una sensación de esperanza y anticipación, crucial para mantener el interés y el engagement del jugador. Saber que podrías obtener un ítem que cambie drásticamente tu posición actual añade emoción y una dinámica de "nunca rendirse", manteniendo a los jugadores comprometidos hasta el final de la temporada.
+    
+2.  **Percepción de Justicia**: La distribución de ítems también ayuda a mantener una percepción de justicia en el juego. Los jugadores en las últimas posiciones tienen la oportunidad de remontar, lo que puede reducir la frustración y aumentar la satisfacción general. Esta mecánica asegura que el juego no se sienta injusto o sesgado a favor de los jugadores que siempre están en la delantera, que utilizan modelos o que tienen suerte a la hora de elegir jugadores.
+    
+3.  **Variabilidad y Rejugabilidad**: La aleatoriedad en la obtención de ítems añade variabilidad a cada jornada, asegurando que ninguna partida sea exactamente igual a otra. Esta variabilidad aumenta la rejugabilidad, ya que los jugadores siempre enfrentan nuevas situaciones y desafíos que deben adaptarse y superar.
+    
+
+### Ejemplo Detallado: Implementación del Chip Dinámico
+
+**Escenario: Activación del Chip de Desafío**
+
+-   **Condición**: Jugadores que están en el 10% inferior del ranking de la tabla general.
+    
+-   **Chip**: Todos los jugadores de un partido derbi hacen puntos dobles o alguna de las otras variantes implementadas en Challenge.
+    
+-   **Impacto en Modelos**: Los modelos predictivos no podrán anticipar cuándo se activará este chip ni cómo afectará a los jugadores específicos que lo utilicen. Esto introduce una nueva variable que no puede ser fácilmente modelada o prevista.
+    
+
+**Estrategia del Jugador**:
+
+-   Los jugadores deben planificar estratégicamente a quién alinear en función de la posibilidad de que el chip se active.
+    
+-   Se incentiva a los jugadores a mantener un ojo en los derbis locales o partidos relevantes en la temporada y a considerar jugadores de equipos menos populares que podrían beneficiarse de este boost inesperado.
+    
+
+**Resultados Potenciales**:
+
+-   **Interés Renovado**: Los jugadores que están rezagados en sus ligas verán una nueva oportunidad para remontar.
+    
+-   **Decisiones Más Dinámicas**: Los managers de FPL tendrán que adaptarse constantemente a nuevas variables, haciendo el juego más dinámico y menos predecible.
+    
+-   **Engagement Continuo**: Con la posibilidad de que estos chips se activen en momentos cruciales, más jugadores estarán motivados a seguir participando activamente durante toda la temporada.
+    
+
+### Comparativa con Otros Sistemas de Puntaje
+
+En los juegos de fantasy de la UEFA, los sistemas de puntaje son más granulares, integrando a más futbolistas en nuestras plantillas. Por ejemplo, los mediocampistas defensivos y los defensas no dependen abrumadoramente de las porterías en cero. Este tipo de puntaje hace que los jugadores menos populares sean viables y atractivos, añadiendo más profundidad y variabilidad a las estrategias de los managers.
+
+**Propuesta de Implementación en FPL**:
+
+-   **Puntaje Granular**: Implementar un sistema de puntaje más detallado que valore las contribuciones defensivas y ofensivas de todos los jugadores, no solo de los más destacados.
+    
+-   **Chips Secretos**: Introducir chips que se revelen una jornada antes para permitir a los jugadores ajustar sus estrategias.
+    
+-   **Frecuencia de Chips**: Distribuir estos chips a lo largo de la temporada, cada 5 partidos, creando hasta 7 ocasiones en las que todo se pone interesante.
+    
+
+## Conclusión
+
+El mecanismo ya está implementado en Challenge. Lo que sigue es hacerlo accesible al juego general, hacerlo aleatorio, y decidir su frecuencia. Espero que estas ideas encuentren el eco necesario para sacudir a nuestro querido juego que tiene rato de no tener una revolución interesante de esta envergadura.
+
+**Síguenos en nuestras redes sociales**
+
+[**YouTube**](https://www.youtube.com/c/BenditoFantasy) | [**Twitter**](https://twitter.com/BenditoFantasy) | [**Facebook**](https://www.facebook.com/BenditoFantasy) | | [**Instagram**](https://www.instagram.com/benditofantasy/) | [**Tiktok**](https://www.tiktok.com/@benditofantasy)
+
+Para que siempre tengas la mejor información y consejos de la casa del Fútbol Fantasy en español.

@@ -2,9 +2,10 @@ import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import type { Gameweek, Tile } from "./types";
+import { getSlides, type Gameweek, type Row, type Season, type Tile } from "./types";
 
 const GAMEWEEKS_DIR = path.join(process.cwd(), "content", "gameweeks");
+const SEASONS_DIR = path.join(process.cwd(), "content", "seasons");
 const ARTICLES_DIR = path.join(process.cwd(), "content", "articles");
 
 /** All gameweeks, newest first (SPEC §7: newest gameweek on top). */
@@ -23,13 +24,38 @@ export function getGameweek(gw: number): Gameweek | undefined {
   return getGameweeks().find((week) => week.gw === gw);
 }
 
-/** Find a tile (and its gameweek) by its deep-link id. */
+/** Rolled-up past seasons (one row per season), newest first. */
+export function getSeasons(): Season[] {
+  if (!fs.existsSync(SEASONS_DIR)) return [];
+  const files = fs
+    .readdirSync(SEASONS_DIR)
+    .filter((f) => f.endsWith(".json") && !f.includes("template"));
+  const seasons = files.map((file) => {
+    const raw = fs.readFileSync(path.join(SEASONS_DIR, file), "utf8");
+    return JSON.parse(raw) as Season;
+  });
+  return seasons.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+/**
+ * Find a tile (and its row) by its deep-link id — searches every slide,
+ * including tiles nested under an `mvp` tile's `slides[]` (SPEC §6). Season
+ * rows are searched as one continuous sequence across all their gameweeks,
+ * matching the lightbox's own season-wide navigation (owner-confirmed:
+ * scrolling a season flows gameweek to gameweek, only closing at the end).
+ */
 export function findTile(
   id: string,
-): { gameweek: Gameweek; tile: Tile; index: number } | undefined {
+): { gameweek: Row; tile: Tile; index: number } | undefined {
   for (const gameweek of getGameweeks()) {
-    const index = gameweek.tiles.findIndex((tile) => tile.id === id);
-    if (index !== -1) return { gameweek, tile: gameweek.tiles[index], index };
+    const slides = gameweek.tiles.flatMap(getSlides);
+    const index = slides.findIndex((slide) => slide.tile.id === id);
+    if (index !== -1) return { gameweek, tile: slides[index].tile, index };
+  }
+  for (const season of getSeasons()) {
+    const slides = season.tiles.flatMap(getSlides);
+    const index = slides.findIndex((slide) => slide.tile.id === id);
+    if (index !== -1) return { gameweek: season, tile: slides[index].tile, index };
   }
   return undefined;
 }

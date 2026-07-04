@@ -11,6 +11,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const GAMEWEEKS = path.join(ROOT, "content", "gameweeks");
+const SEASONS = path.join(ROOT, "content", "seasons");
 const MEDIA = path.join(ROOT, "public", "media");
 
 const TONES = ["#c8ccd0", "#b9bfc6", "#d3d0cb", "#c2c7c3", "#cdc9d2", "#bfc6cc"];
@@ -24,6 +25,7 @@ const TYPE_WORD = {
   tweet: "SOCIAL",
   image: "IMAGEN",
   quote: "CITA",
+  mvp: "MVP",
 };
 
 function esc(text) {
@@ -61,4 +63,20 @@ for (const file of fs.readdirSync(GAMEWEEKS)) {
     count += 1;
   });
 }
+if (fs.existsSync(SEASONS)) {
+  for (const file of fs.readdirSync(SEASONS)) {
+    if (!file.endsWith(".json") || file.includes("template")) continue;
+    const season = JSON.parse(fs.readFileSync(path.join(SEASONS, file), "utf8"));
+    season.tiles.forEach((mvpTile, index) => {
+      const gw = mvpTile.payload.gw;
+      fs.writeFileSync(path.join(MEDIA, `${mvpTile.id}.svg`), coverSvg(mvpTile, gw, index));
+      count += 1;
+      (mvpTile.slides ?? []).forEach((tile, slideIndex) => {
+        fs.writeFileSync(path.join(MEDIA, `${tile.id}.svg`), coverSvg(tile, gw, slideIndex));
+        count += 1;
+      });
+    });
+  }
+}
+
 console.log(`Wrote ${count} placeholder covers to public/media/`);

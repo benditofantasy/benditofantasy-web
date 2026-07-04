@@ -1,7 +1,7 @@
 "use client";
 
 import { formatDate, useLang } from "@/lib/i18n";
-import type { Gameweek, Tile } from "@/lib/types";
+import type { Row, Tile } from "@/lib/types";
 import CategoryTag from "../CategoryTag";
 import ShareButtons from "../ShareButtons";
 
@@ -15,7 +15,7 @@ export default function SlideMeta({
   align = "left",
 }: {
   tile: Tile;
-  gameweek: Gameweek;
+  gameweek: Row;
   align?: "left" | "center";
 }) {
   const { lang, l } = useLang();

@@ -28,6 +28,7 @@ const config: Config = {
         "tag-video": "var(--tag-video)",
         "tag-social": "var(--tag-social)",
         "tag-quote": "var(--tag-quote)",
+        "tag-mvp": "var(--tag-mvp)",
         success: "var(--color-success)",
         warning: "var(--color-warning)",
         error: "var(--color-error)",

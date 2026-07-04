@@ -11,6 +11,7 @@ const TAG_COLOR_VAR: Record<TagKey, string> = {
   video: "var(--tag-video)",
   social: "var(--tag-social)",
   quote: "var(--tag-quote)",
+  mvp: "var(--tag-mvp)",
 };
 
 export function tagColor(tag: TagKey): string {

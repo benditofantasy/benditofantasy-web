@@ -1,0 +1,2133 @@
+{
+  "season": "2022-23",
+  "label": {
+    "es": "2022/23",
+    "en": "2022/23"
+  },
+  "date": "2023-05-28",
+  "tiles": [
+    {
+      "id": "s2223-gw1-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 1",
+        "en": "Gameweek 1"
+      },
+      "description": {
+        "es": "Pretemporada y Jornada 1: el artículo inaugural del blog, guías por posición y las primeras grandes dudas.",
+        "en": "Pre-season and Gameweek 1: the blog's inaugural article, position-by-position guides and the first big dilemmas."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw1-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 1,
+        "season": "2022-23",
+        "playerName": "El arranque 2022/23",
+        "statLine": {
+          "es": "«Bienvenidos a Bendito Fantasy» — y la primera decisión difícil: Kane vs Haaland.",
+          "en": "\"Welcome to Bendito Fantasy\" — and the first hard call: Kane vs Haaland."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw1-a1",
+          "type": "article",
+          "title": {
+            "es": "¿El primer diferencial de la temporada?",
+            "en": "The season's first differential?"
+          },
+          "description": {
+            "es": "Cómo Darwin Núñez puede llenar el vacío de Mané en el Liverpool, por El Profe FPL.",
+            "en": "How Darwin Núñez can fill the gap Mané left at Liverpool, by El Profe FPL."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/fichajes",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "fichajes"
+          }
+        },
+        {
+          "id": "s2223-gw1-a2",
+          "type": "article",
+          "title": {
+            "es": "5 consejos para tu primer equipo del torneo",
+            "en": "5 tips for your first squad of the season"
+          },
+          "description": {
+            "es": "Cinco consejos para armar tu primer once antes del arranque del 5 de agosto.",
+            "en": "Five tips for building your first squad before the August 5 kickoff."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/5-consejos-para-tu-draft",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "5-consejos-para-tu-draft"
+          }
+        },
+        {
+          "id": "s2223-gw1-a3",
+          "type": "article",
+          "title": {
+            "es": "Echando Mezcla",
+            "en": "Echando Mezcla"
+          },
+          "description": {
+            "es": "Arena, agua y cemento: la presentación de la columna de Ferñil, donde el fantasy se mezcla a mano.",
+            "en": "Sand, water and cement: the introduction to Ferñil's column, where fantasy gets mixed by hand."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a3.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/75vqs51lzlhlu97jjsdvesuqqvykd5",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "75vqs51lzlhlu97jjsdvesuqqvykd5"
+          }
+        },
+        {
+          "id": "s2223-gw1-a4",
+          "type": "article",
+          "title": {
+            "es": "Bienvenidos a Bendito Fantasy",
+            "en": "Welcome to Bendito Fantasy"
+          },
+          "description": {
+            "es": "El artículo inaugural: lo que Bendito Fantasy fue y hacia dónde va.",
+            "en": "The inaugural article: what Bendito Fantasy was and where it's headed."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a4.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/fichajes-wbhlw-kgfja-aeypf",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "fichajes-wbhlw-kgfja-aeypf"
+          }
+        },
+        {
+          "id": "s2223-gw1-a5",
+          "type": "article",
+          "title": {
+            "es": "Glosario de términos: Effective Ownership (EO%)",
+            "en": "Glossary: Effective Ownership (EO%)"
+          },
+          "description": {
+            "es": "Qué significa el Effective Ownership y por qué importa desde la primera jornada.",
+            "en": "What Effective Ownership means and why it matters from gameweek one."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a5.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/glosario-de-terminos",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "glosario-de-terminos"
+          }
+        },
+        {
+          "id": "s2223-gw1-a6",
+          "type": "article",
+          "title": {
+            "es": "Análisis de datos Aplicado al Fantasy Football",
+            "en": "Data analysis applied to Fantasy Football"
+          },
+          "description": {
+            "es": "De la serie Glosario de términos: cómo el análisis de datos entra al Fantasy Football.",
+            "en": "From the Glossary series: how data analysis enters Fantasy Football."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a6.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/analisisdedatosaplicadoalfantasyfootball",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "analisisdedatosaplicadoalfantasyfootball"
+          }
+        },
+        {
+          "id": "s2223-gw1-a7",
+          "type": "article",
+          "title": {
+            "es": "Partidos Clave Gameweek 1 - Fantasy Premier League 2022/2023",
+            "en": "Key Fixtures Gameweek 1 - Fantasy Premier League 2022/23"
+          },
+          "description": {
+            "es": "Datos clave de los partidos con más valor fantasy para el estreno de la temporada.",
+            "en": "Key data on the fixtures with the most fantasy value for the season opener."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a7.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/partidos-clave-gw-1",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "partidos-clave-gw-1"
+          }
+        },
+        {
+          "id": "s2223-gw1-a8",
+          "type": "article",
+          "title": {
+            "es": "Mejores Mediocampistas FANTASY PREMIER LEAGUE GAMEWEEK 1",
+            "en": "Best FPL Midfielders — Gameweek 1"
+          },
+          "description": {
+            "es": "La serie Los Mejores Jugadores repasa los mediocampistas para arrancar la temporada.",
+            "en": "The Best Players series reviews the midfielders to start the season with."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a8.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejores-mediocampistas-fantasy-premier-league-gameweek-1",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejores-mediocampistas-fantasy-premier-league-gameweek-1"
+          }
+        },
+        {
+          "id": "s2223-gw1-a9",
+          "type": "article",
+          "title": {
+            "es": "Mejores Porteros Fantasy Premier League Gameweek 1",
+            "en": "Best FPL Goalkeepers — Gameweek 1"
+          },
+          "description": {
+            "es": "\"Los equipos se construyen desde atrás\": los porteros para la Jornada 1.",
+            "en": "\"Teams are built from the back\": the goalkeepers for Gameweek 1."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a9.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejores-porteros-gw1",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejores-porteros-gw1"
+          }
+        },
+        {
+          "id": "s2223-gw1-a10",
+          "type": "article",
+          "title": {
+            "es": "¿Recuerdas tu primera vez?",
+            "en": "Do you remember your first time?"
+          },
+          "description": {
+            "es": "Sobre la primera vez que uno arma un equipo fantasy y esa extraña sensación de no saber qué hacer.",
+            "en": "On the first time you build a fantasy team and that strange feeling of not knowing what to do."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a10.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/recuerdas-tu-primera-vez",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "recuerdas-tu-primera-vez"
+          }
+        },
+        {
+          "id": "s2223-gw1-a11",
+          "type": "article",
+          "title": {
+            "es": "Análisis Jornada 1 a 5: Ofensivos y defensivos",
+            "en": "Gameweeks 1-5 analysis: attack and defence"
+          },
+          "description": {
+            "es": "El arranque de calendario de cada equipo, visto desde lo ofensivo y lo defensivo.",
+            "en": "Every team's opening fixtures, seen from the attacking and defensive side."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a11.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/analisis-jornada-1",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "analisis-jornada-1"
+          }
+        },
+        {
+          "id": "s2223-gw1-a12",
+          "type": "article",
+          "title": {
+            "es": "Mejores Defensores Fantasy Premier League Gameweek 1",
+            "en": "Best FPL Defenders — Gameweek 1"
+          },
+          "description": {
+            "es": "Los defensores que aportan al ataque: la mejor defensa para tu FPL.",
+            "en": "Defenders who contribute going forward: the best defence for your FPL side."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a12.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mejores-defensores-fantasy-premier-league-gameweek-1",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mejores-defensores-fantasy-premier-league-gameweek-1"
+          }
+        },
+        {
+          "id": "s2223-gw1-a13",
+          "type": "article",
+          "title": {
+            "es": "APUNTES DE FERÑIL PARA LA JORNADA 1",
+            "en": "Ferñil's notes for Gameweek 1"
+          },
+          "description": {
+            "es": "Los partidos de la GW1 desmenuzados uno a uno para tu primer once.",
+            "en": "GW1's fixtures broken down one by one for your first squad."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a13.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/apuntes-de-feril-para-la-jornada-1",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "apuntes-de-feril-para-la-jornada-1"
+          }
+        },
+        {
+          "id": "s2223-gw1-a14",
+          "type": "article",
+          "title": {
+            "es": "Análisis de Capitanes para la Jornada 1",
+            "en": "Captaincy analysis for Gameweek 1"
+          },
+          "description": {
+            "es": "El Mirrey abre la temporada con el primer análisis de capitanes del año.",
+            "en": "El Mirrey opens the season with the year's first captaincy analysis."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a14.svg",
+          "credit": "El Mirrey · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/anlisis-de-capitanes-para-la-jornada-1",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "anlisis-de-capitanes-para-la-jornada-1"
+          }
+        },
+        {
+          "id": "s2223-gw1-a15",
+          "type": "article",
+          "title": {
+            "es": "La primera decisión difícil del torneo: harry kane vs erling haaland",
+            "en": "The season's first hard call: Harry Kane vs Erling Haaland"
+          },
+          "description": {
+            "es": "La gran duda de la pretemporada: ¿Kane o Haaland como delantero premium?",
+            "en": "Pre-season's big dilemma: Kane or Haaland as your premium forward?"
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw1-a15.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/la-primera-decisin-difcil-del-torneo-harry-kane-vs-erling-haaland",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "la-primera-decisin-difcil-del-torneo-harry-kane-vs-erling-haaland"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw2-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 2",
+        "en": "Gameweek 2"
+      },
+      "description": {
+        "es": "Semana de capitanías: el método de El Profe, diferenciales y las primeras lecciones del torneo.",
+        "en": "Captaincy week: El Profe's method, differentials and the season's first lessons."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw2-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 2,
+        "season": "2022-23",
+        "playerName": "La Matriz del Capitán",
+        "statLine": {
+          "es": "Un método de elección para el brazalete mientras medio mundo libera fondos para Haaland.",
+          "en": "A method for picking the armband while half the world frees up funds for Haaland."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw2-a1",
+          "type": "article",
+          "title": {
+            "es": "Glosario de términos: Template",
+            "en": "Glossary: Template"
+          },
+          "description": {
+            "es": "Qué es el famoso \"template\" y por qué todos hablan de él en las primeras jornadas.",
+            "en": "What the famous \"template\" is and why everyone talks about it in the early weeks."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw2-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/glosario-de-terminos-template",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "glosario-de-terminos-template"
+          }
+        },
+        {
+          "id": "s2223-gw2-a2",
+          "type": "article",
+          "title": {
+            "es": "Partidos Clave Gameweek 2 - Fantasy Premier League 2022/2023",
+            "en": "Key Fixtures Gameweek 2 - Fantasy Premier League 2022/23"
+          },
+          "description": {
+            "es": "Los datos clave de la segunda fecha de la Premier desde el punto de vista FPL.",
+            "en": "Key data on the Premier League's second round from an FPL point of view."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw2-a2.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/partidos-clave-gw-2",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "partidos-clave-gw-2"
+          }
+        },
+        {
+          "id": "s2223-gw2-a3",
+          "type": "article",
+          "title": {
+            "es": "¿Cómo funciona la capitanía en el Fantasy Premier League ?",
+            "en": "How does captaincy work in Fantasy Premier League?"
+          },
+          "description": {
+            "es": "La decisión que duplica puntos cada semana, explicada desde cero.",
+            "en": "The decision that doubles your points every week, explained from scratch."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw2-a3.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/cmo-funciona-la-capitana-en-el-fantasy-premier-league",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "cmo-funciona-la-capitana-en-el-fantasy-premier-league"
+          }
+        },
+        {
+          "id": "s2223-gw2-a4",
+          "type": "article",
+          "title": {
+            "es": "5 Jugadores diferenciales para la Jornada 2",
+            "en": "5 differential players for Gameweek 2"
+          },
+          "description": {
+            "es": "Cinco diferenciales para la Jornada 2 mientras todos buscan fondos para Haaland.",
+            "en": "Five differentials for Gameweek 2 while everyone frees up funds for Haaland."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw2-a4.svg",
+          "credit": "El Mirrey · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/5-jugadores-diferenciales-para-esta-jornada2",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "5-jugadores-diferenciales-para-esta-jornada2"
+          }
+        },
+        {
+          "id": "s2223-gw2-a5",
+          "type": "article",
+          "title": {
+            "es": "La Matriz del Capitán - Un Método de Elección para el Fantasy Premier League",
+            "en": "The Captain's Matrix — a selection method for FPL"
+          },
+          "description": {
+            "es": "Un método de El Profe para elegir capitán cuando la decisión no es obvia.",
+            "en": "El Profe's method for picking a captain when the call isn't obvious."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw2-a5.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/la-matriz-del-capitan-metodo-de-eleccion-fantasy-premier-league",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "la-matriz-del-capitan-metodo-de-eleccion-fantasy-premier-league"
+          }
+        },
+        {
+          "id": "s2223-gw2-a6",
+          "type": "article",
+          "title": {
+            "es": "Apuntes de ferñil para la gw2",
+            "en": "Ferñil's notes for GW2"
+          },
+          "description": {
+            "es": "La segunda fecha abre con Villa-Everton: los apuntes de Ferñil partido a partido.",
+            "en": "The second round opens with Villa-Everton: Ferñil's notes match by match."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw2-a6.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/anlisis-de-la-jornada-2",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "anlisis-de-la-jornada-2"
+          }
+        },
+        {
+          "id": "s2223-gw2-a7",
+          "type": "article",
+          "title": {
+            "es": "5 lecciones de la jornada 2",
+            "en": "5 lessons from Gameweek 2"
+          },
+          "description": {
+            "es": "Lo que la Jornada 2 empieza a aclarar sobre equipos y jugadores.",
+            "en": "What Gameweek 2 starts making clear about teams and players."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw2-a7.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/5-lecciones-de-la-jornada-2",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "5-lecciones-de-la-jornada-2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw3-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 3",
+        "en": "Gameweek 3"
+      },
+      "description": {
+        "es": "Los tipos de manager de fantasy según cómo toman decisiones.",
+        "en": "The types of fantasy manager according to how they make decisions."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw3-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 3,
+        "season": "2022-23",
+        "playerName": "¿Datos o intuición?",
+        "statLine": {
+          "es": "Cada manager decide distinto: los datos contra el instinto.",
+          "en": "Every manager decides differently: data versus gut feeling."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw3-a1",
+          "type": "article",
+          "title": {
+            "es": "Tipos de Manager de Fantasy football Según la Toma de Decisiones: ¿Datos o Intuición?",
+            "en": "Types of fantasy manager: data or intuition?"
+          },
+          "description": {
+            "es": "Cómo decide cada tipo de manager: los datos contra el instinto.",
+            "en": "How each type of manager decides: data versus gut feeling."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw3-a1.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/tipos-de-manager-segun-decisiones",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "tipos-de-manager-segun-decisiones"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw4-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 4",
+        "en": "Gameweek 4"
+      },
+      "description": {
+        "es": "El United venció a Liverpool en Old Trafford y la columna lo tenía claro: congruencia, no casualidad.",
+        "en": "United beat Liverpool at Old Trafford and the column was clear: consistency, not luck."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw4-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 4,
+        "season": "2022-23",
+        "playerName": "Ten Hag",
+        "statLine": {
+          "es": "«No fue casualidad, es congruencia»: la declaración de guerra del United a la Premier.",
+          "en": "\"It wasn't luck, it's consistency\": United's declaration of war on the Premier League."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw4-a1",
+          "type": "article",
+          "title": {
+            "es": "Bajo Reflectores: Rodrigo Moreno",
+            "en": "Under the spotlight: Rodrigo Moreno"
+          },
+          "description": {
+            "es": "Leeds amanece tercero de la Premier y Rodrigo pide un lugar en tu equipo.",
+            "en": "Leeds wake up third in the Premier League and Rodrigo demands a spot in your team."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw4-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/bajoreflectores-rodrigo",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "bajoreflectores-rodrigo"
+          }
+        },
+        {
+          "id": "s2223-gw4-a2",
+          "type": "article",
+          "title": {
+            "es": "NO fue CASUALIDAD, ES CONGRUENCIA",
+            "en": "It was NOT luck, it's consistency"
+          },
+          "description": {
+            "es": "Liverpool visitó Old Trafford y lo que se vio no fue casualidad.",
+            "en": "Liverpool visited Old Trafford and what we saw was no accident."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw4-a2.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/no-es-casualidad-es-congruencia",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "no-es-casualidad-es-congruencia"
+          }
+        },
+        {
+          "id": "s2223-gw4-a3",
+          "type": "article",
+          "title": {
+            "es": "FUE CONGRUENCIA NO CASUALIDAD",
+            "en": "It was consistency, not luck"
+          },
+          "description": {
+            "es": "El United de Ten Hag venció a Liverpool: una declaración de guerra a la Premier.",
+            "en": "Ten Hag's United beat Liverpool: a declaration of war on the Premier League."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw4-a3.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/fue-congruencia-no-casualidad",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "fue-congruencia-no-casualidad"
+          }
+        },
+        {
+          "id": "s2223-gw4-a4",
+          "type": "article",
+          "title": {
+            "es": "Partidos Clave Gameweek 4 - Fantasy Premier League 2022/2023",
+            "en": "Key Fixtures Gameweek 4 - Fantasy Premier League 2022/23"
+          },
+          "description": {
+            "es": "Los datos clave de la cuarta fecha desde el punto de vista fantasy.",
+            "en": "Key data on round four from a fantasy point of view."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw4-a4.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/partidos-clave-gw-4",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "partidos-clave-gw-4"
+          }
+        },
+        {
+          "id": "s2223-gw4-a5",
+          "type": "article",
+          "title": {
+            "es": "LAS CLAVES de la jornada 4",
+            "en": "The keys to Gameweek 4"
+          },
+          "description": {
+            "es": "Última semana sin ruletas europeas: las claves de Ferñil para la GW4.",
+            "en": "The last week before European rotation roulette: Ferñil's keys for GW4."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw4-a5.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/las-claves-de-la-jornada-4",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "las-claves-de-la-jornada-4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw6-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 6",
+        "en": "Gameweek 6"
+      },
+      "description": {
+        "es": "Everton recibe a Liverpool y los delanteros de 7 millones se roban el foco.",
+        "en": "Everton host Liverpool and the £7m forwards steal the spotlight."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw6-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 6,
+        "season": "2022-23",
+        "playerName": "El derbi de Merseyside",
+        "statLine": {
+          "es": "Las claves de la GW6 y el duelo por ser el mejor delantero de 7 millones.",
+          "en": "The keys to GW6 and the shootout for best £7m forward."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw6-a1",
+          "type": "article",
+          "title": {
+            "es": "las claves de la GW6",
+            "en": "The keys to GW6"
+          },
+          "description": {
+            "es": "Everton recibe a Liverpool en el clásico de Merseyside: las claves de la jornada.",
+            "en": "Everton host Liverpool in the Merseyside derby: the keys to the gameweek."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw6-a1.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/las-claves-de-la-gw6",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "las-claves-de-la-gw6"
+          }
+        },
+        {
+          "id": "s2223-gw6-a2",
+          "type": "article",
+          "title": {
+            "es": "¿Quién es el mejor delantero de 7 millones?",
+            "en": "Who is the best £7m forward?"
+          },
+          "description": {
+            "es": "Por primera vez en mucho tiempo los delanteros se roban el foco: el duelo de los 7 millones.",
+            "en": "For the first time in ages forwards are stealing the show: the £7m shootout."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw6-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/quin-es-el-mejor-delantero-de-7-millones",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "quin-es-el-mejor-delantero-de-7-millones"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw7-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 7",
+        "en": "Gameweek 7"
+      },
+      "description": {
+        "es": "Semana sin Premier pero con fantasy fuera de la cancha: el Fantasy Football Fest llegó a Nueva York.",
+        "en": "A week without Premier League but with fantasy off the pitch: the Fantasy Football Fest hit New York."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw7-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 7,
+        "season": "2022-23",
+        "playerName": "Fantasy Fest NYC",
+        "statLine": {
+          "es": "El Fantasy Football Fest cruzó el charco por primera vez en su historia.",
+          "en": "The Fantasy Football Fest crossed the pond for the first time in its history."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw7-a1",
+          "type": "article",
+          "title": {
+            "es": "Fantasy Football Fest NYC",
+            "en": "Fantasy Football Fest NYC"
+          },
+          "description": {
+            "es": "El Fantasy Football Fest cruzó el charco por primera vez y aterrizó en Nueva York.",
+            "en": "The Fantasy Football Fest crossed the pond for the first time and landed in New York."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw7-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/fantasy-football-fest-nyc",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "fantasy-football-fest-nyc"
+          }
+        },
+        {
+          "id": "s2223-gw7-a2",
+          "type": "article",
+          "title": {
+            "es": "LAS CLAVES DE LA JORNADA EPISODIO 7 (8)",
+            "en": "The keys to the gameweek — episode 7 (8)"
+          },
+          "description": {
+            "es": "La fecha 7 que en realidad es la 8: solo siete partidos y muchas trampas.",
+            "en": "Round 7 that's actually round 8: only seven fixtures and plenty of traps."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw7-a2.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/las-claves-de-la-jornada-episodio-7-8",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "las-claves-de-la-jornada-episodio-7-8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw8-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 8",
+        "en": "Gameweek 8"
+      },
+      "description": {
+        "es": "Una jornada al borde del abismo, contada desde Goodison Park.",
+        "en": "A gameweek on the edge of the abyss, told from Goodison Park."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw8-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 8,
+        "season": "2022-23",
+        "playerName": "Goodison Park",
+        "statLine": {
+          "es": "«El abismo de Goodison Park»: de Théoden y los Rohirrim al fantasy.",
+          "en": "\"The abyss of Goodison Park\": from Théoden and the Rohirrim to fantasy."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw8-a1",
+          "type": "article",
+          "title": {
+            "es": "EL ABISMO DE GOODISON PARK",
+            "en": "The abyss of Goodison Park"
+          },
+          "description": {
+            "es": "De Theodem y los Rohirrim a Goodison Park: una jornada al borde del abismo.",
+            "en": "From Théoden and the Rohirrim to Goodison Park: a gameweek on the edge of the abyss."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw8-a1.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/el-abismo-de-goodison-park",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "el-abismo-de-goodison-park"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw9-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 9",
+        "en": "Gameweek 9"
+      },
+      "description": {
+        "es": "Vuelve la Premier tras el parón y las aguas cambian: semana de wildcard.",
+        "en": "The Premier League returns after the break and the tide turns: wildcard week."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw9-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 9,
+        "season": "2022-23",
+        "playerName": "Hora del Wildcard",
+        "statLine": {
+          "es": "10 opciones diferentes para tu wildcard en la fecha donde todo cambia.",
+          "en": "10 different options for your wildcard in the week everything changes."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw9-a1",
+          "type": "article",
+          "title": {
+            "es": "10 OPCIONES DIFERENTES PARA TU WILDCARD",
+            "en": "10 different options for your wildcard"
+          },
+          "description": {
+            "es": "La fecha donde las aguas cambian: diez nombres distintos para tu wildcard.",
+            "en": "The week the tide turns: ten different names for your wildcard."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw9-a1.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/10-opciones-diferentes-para-tu-wildcard",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "10-opciones-diferentes-para-tu-wildcard"
+          }
+        },
+        {
+          "id": "s2223-gw9-a2",
+          "type": "article",
+          "title": {
+            "es": "análisis de la jornada 9",
+            "en": "Gameweek 9 analysis"
+          },
+          "description": {
+            "es": "Vuelve la Premier tras el parón internacional: análisis de la Jornada 9.",
+            "en": "The Premier League returns after the international break: Gameweek 9 analysis."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw9-a2.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/anlisis-de-la-jornada-9",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "anlisis-de-la-jornada-9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw10-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 10",
+        "en": "Gameweek 10"
+      },
+      "description": {
+        "es": "El dilema del tercer jugador del City y las claves de una jornada que marca un cuarto del torneo.",
+        "en": "The third-City-player dilemma and the keys to a gameweek that marks a quarter of the season."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw10-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 10,
+        "season": "2022-23",
+        "playerName": "¿Cancelo o Foden?",
+        "statLine": {
+          "es": "Cancelo contra Foden como tercer citizen, con números sobre la mesa.",
+          "en": "Cancelo versus Foden as your third Citizen, with the numbers on the table."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw10-a1",
+          "type": "article",
+          "title": {
+            "es": "¿A quién elegir entre Cancelo y Foden como tercer jugador del M. City?",
+            "en": "Cancelo or Foden as your third Man City player?"
+          },
+          "description": {
+            "es": "El dilema del tercer citizen: Cancelo contra Foden, con números.",
+            "en": "The third-Citizen dilemma: Cancelo versus Foden, with numbers."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw10-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/a-quin-elegir-entre-cancelo-y-foden-como-tercer-jugador-del-m-city",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "a-quin-elegir-entre-cancelo-y-foden-como-tercer-jugador-del-m-city"
+          }
+        },
+        {
+          "id": "s2223-gw10-a2",
+          "type": "article",
+          "title": {
+            "es": "CLAVES DE LA JORNADA 10",
+            "en": "Keys to Gameweek 10"
+          },
+          "description": {
+            "es": "Un cuarto del torneo se fue: las claves de Ferñil para la Jornada 10.",
+            "en": "A quarter of the season gone: Ferñil's keys for Gameweek 10."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw10-a2.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/claves-de-la-jornada-10",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "claves-de-la-jornada-10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw11-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 11",
+        "en": "Gameweek 11"
+      },
+      "description": {
+        "es": "El fenómeno noruego rompe otro récord y encabeza los candidatos a dobles dígitos.",
+        "en": "The Norwegian phenomenon breaks another record and leads the double-digit candidates."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw11-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 11,
+        "season": "2022-23",
+        "playerName": "Erling Haaland",
+        "statLine": {
+          "es": "Primer jugador en llegar a 100 puntos en la temporada, según la propia columna.",
+          "en": "First player to reach 100 points this season, as the column itself noted."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw11-a1",
+          "type": "article",
+          "title": {
+            "es": "La posada de los muertos",
+            "en": "The inn of the dead"
+          },
+          "description": {
+            "es": "De Mago de Oz a la Premier: una jornada para brindar entre muertos fantasy.",
+            "en": "From Mago de Oz to the Premier League: a gameweek to toast among fantasy dead."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw11-a1.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/la-posada-de-los-muertos",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "la-posada-de-los-muertos"
+          }
+        },
+        {
+          "id": "s2223-gw11-a2",
+          "type": "article",
+          "title": {
+            "es": "Candidatos a dobles dígitos en la jornada 11",
+            "en": "Double-digit candidates for Gameweek 11"
+          },
+          "description": {
+            "es": "Haaland, primer jugador en llegar a 100 puntos, encabeza los candidatos a dobles dígitos.",
+            "en": "Haaland, first player to hit 100 points, leads the double-digit candidates."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw11-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/6fdq8d8wdv22n2ejwqbjw1bbru489s",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "6fdq8d8wdv22n2ejwqbjw1bbru489s"
+          }
+        },
+        {
+          "id": "s2223-gw11-a3",
+          "type": "article",
+          "title": {
+            "es": "CLAVES DE LA JORNADA 11",
+            "en": "Keys to Gameweek 11"
+          },
+          "description": {
+            "es": "La Premier vuelve al horario de viernes: claves bajo presión para la J11.",
+            "en": "The Premier League is back to Friday kickoffs: keys under pressure for GW11."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw11-a3.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/claves-de-la-jornada-11",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "claves-de-la-jornada-11"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw13-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 13",
+        "en": "Gameweek 13"
+      },
+      "description": {
+        "es": "La narrativa del mal Liverpool, puesta a prueba contra los datos.",
+        "en": "The bad-Liverpool narrative, tested against the data."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw13-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 13,
+        "season": "2022-23",
+        "playerName": "El espejismo",
+        "statLine": {
+          "es": "«El espejismo de Liverpool»: Jürgen desesperado en la banda… ¿o no tanto?",
+          "en": "\"The Liverpool mirage\": a desperate Jürgen on the touchline… or is he?"
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw13-a1",
+          "type": "article",
+          "title": {
+            "es": "El espejismo de Liverpool",
+            "en": "The Liverpool mirage"
+          },
+          "description": {
+            "es": "Tiros afuera, centros largos y Jürgen desesperado: la narrativa del Liverpool, revisada.",
+            "en": "Shots off target, long crosses and a desperate Jürgen: Liverpool's narrative, revisited."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw13-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/el-espejismo-de-liverpool",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "el-espejismo-de-liverpool"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw14-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 14",
+        "en": "Gameweek 14"
+      },
+      "description": {
+        "es": "Nace el Bendito Panel: el equipo debate diferenciales, con la Champions de fondo.",
+        "en": "The Bendito Panel is born: the team debates differentials, with the Champions League in the background."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw14-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 14,
+        "season": "2022-23",
+        "playerName": "Bendito Panel",
+        "statLine": {
+          "es": "El panel debuta con diferenciales para la J14 y para el Matchday 6 europeo.",
+          "en": "The panel debuts with differentials for GW14 and Europe's Matchday 6."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw14-a1",
+          "type": "article",
+          "title": {
+            "es": "BENDITO PANEL FANTASY PREMIER LEAGUE - JORNADA 14",
+            "en": "Bendito Panel FPL — Gameweek 14"
+          },
+          "description": {
+            "es": "Nace el Bendito Panel: el equipo debate diferenciales para la Jornada 14.",
+            "en": "The Bendito Panel is born: the team debates differentials for Gameweek 14."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw14-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/bendito-panel-fantasy-premier-league-jornada-14",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "bendito-panel-fantasy-premier-league-jornada-14"
+          }
+        },
+        {
+          "id": "s2223-gw14-a2",
+          "type": "article",
+          "title": {
+            "es": "Diferenciales Fantasy Football - Champions League – Matchday 6",
+            "en": "Fantasy Football differentials — Champions League Matchday 6"
+          },
+          "description": {
+            "es": "Diferenciales para la última jornada de grupos de la Champions League.",
+            "en": "Differentials for the final Champions League group-stage matchday."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw14-a2.svg",
+          "credit": "El Profe FPL · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/diferenciales-fantasy-football-champions-league-matchday6",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "diferenciales-fantasy-football-champions-league-matchday6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw15-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 15",
+        "en": "Gameweek 15"
+      },
+      "description": {
+        "es": "Semana de nervios por Haaland y un panel dividido entre Almirón y Trossard.",
+        "en": "A nervy week over Haaland and a panel split between Almirón and Trossard."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw15-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 15,
+        "season": "2022-23",
+        "playerName": "Erling Haaland",
+        "statLine": {
+          "es": "«Haaland nos ha tenido con los nervios de punta»: crisis en el fantasy.",
+          "en": "\"Haaland has had us on edge\": crisis in fantasy."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw15-a1",
+          "type": "article",
+          "title": {
+            "es": "Bendito Panel Fantasy Premier League - Jornada 15",
+            "en": "Bendito Panel FPL — Gameweek 15"
+          },
+          "description": {
+            "es": "El panel debate: con una sola transferencia, ¿Almirón o Trossard?",
+            "en": "The panel debates: with a single transfer, Almirón or Trossard?"
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw15-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/bendito-panel-fantasy-premier-league-jornada-15",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "bendito-panel-fantasy-premier-league-jornada-15"
+          }
+        },
+        {
+          "id": "s2223-gw15-a2",
+          "type": "article",
+          "title": {
+            "es": "Crísis en el fantasy",
+            "en": "Crisis in fantasy"
+          },
+          "description": {
+            "es": "Haaland nos tiene con los nervios de punta: cómo manejar la crisis.",
+            "en": "Haaland has us on edge: how to handle the crisis."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw15-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/crsis-en-el-fantasy",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "crsis-en-el-fantasy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw16-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 16",
+        "en": "Gameweek 16"
+      },
+      "description": {
+        "es": "La última jornada de Premier antes de la Copa del Mundo de Qatar 2022.",
+        "en": "The last Premier League gameweek before the Qatar 2022 World Cup."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw16-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 16,
+        "season": "2022-23",
+        "playerName": "Rumbo a Qatar",
+        "statLine": {
+          "es": "El Bendito Panel cierra la etapa liguera antes del mundial.",
+          "en": "The Bendito Panel closes the league chapter before the World Cup."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw16-a1",
+          "type": "article",
+          "title": {
+            "es": "Bendito Panel Fantasy Premier League - Jornada 16",
+            "en": "Bendito Panel FPL — Gameweek 16"
+          },
+          "description": {
+            "es": "La última jornada antes de la Copa del Mundo de Qatar 2022, según el panel.",
+            "en": "The last gameweek before the Qatar 2022 World Cup, according to the panel."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw16-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/bendito-panel-fantasy-premier-league-jornada-16",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "bendito-panel-fantasy-premier-league-jornada-16"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw17-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 17",
+        "en": "Gameweek 17"
+      },
+      "description": {
+        "es": "El mundial en horas inhumanas: así se vivió el partido de Argentina desde América.",
+        "en": "A World Cup at inhuman hours: living Argentina's match from the Americas."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw17-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 17,
+        "season": "2022-23",
+        "playerName": "Argentina",
+        "statLine": {
+          "es": "Crónica personal de madrugada en pleno Qatar 2022.",
+          "en": "A personal small-hours chronicle in the middle of Qatar 2022."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw17-a1",
+          "type": "article",
+          "title": {
+            "es": "Así viví el partido de argentina",
+            "en": "How I lived Argentina's match"
+          },
+          "description": {
+            "es": "Mundial en horas inhumanas: así se vivió el partido de Argentina desde América.",
+            "en": "A World Cup at inhuman hours: living Argentina's match from the Americas."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw17-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/as-viv-el-partido-de-argentina",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "as-viv-el-partido-de-argentina"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw20-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 20",
+        "en": "Gameweek 20"
+      },
+      "description": {
+        "es": "Semifinales del mundial, caballos negros y la primera doble jornada del año en la Premier.",
+        "en": "World Cup semi-finals, dark horses and the Premier League's first double gameweek of the year."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw20-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 20,
+        "season": "2022-23",
+        "playerName": "Doble Jornada 20",
+        "statLine": {
+          "es": "United-Palace reprogramado: llega la doble Jornada 20.",
+          "en": "United-Palace rescheduled: Double Gameweek 20 arrives."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw20-a1",
+          "type": "article",
+          "title": {
+            "es": "Bendito Panel Copa Del Mundo 2022 - Semifinales",
+            "en": "Bendito Panel — Qatar 2022 World Cup semi-finals"
+          },
+          "description": {
+            "es": "El panel repasa las sorpresas del mundial camino a las semifinales.",
+            "en": "The panel reviews the World Cup's surprises on the road to the semi-finals."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw20-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/bendito-panel-fantasy-football-copa-mundo-qatar-semifinales",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "bendito-panel-fantasy-football-copa-mundo-qatar-semifinales"
+          }
+        },
+        {
+          "id": "s2223-gw20-a2",
+          "type": "article",
+          "title": {
+            "es": "El famoso caballo negro",
+            "en": "The famous dark horse"
+          },
+          "description": {
+            "es": "Qué es un caballo negro y quiénes lo fueron en este mundial.",
+            "en": "What a dark horse is and who played that role at this World Cup."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw20-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/el-famoso-caballo-negro",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "el-famoso-caballo-negro"
+          }
+        },
+        {
+          "id": "s2223-gw20-a3",
+          "type": "article",
+          "title": {
+            "es": "lo que debes saber sobre la doble Jornada 20",
+            "en": "What you need to know about Double Gameweek 20"
+          },
+          "description": {
+            "es": "United-Palace reprogramado: todo lo que debes saber de la doble Jornada 20.",
+            "en": "United-Palace rescheduled: everything you need to know about Double Gameweek 20."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw20-a3.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/doble-jornada-20",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "doble-jornada-20"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw21-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 21",
+        "en": "Gameweek 21"
+      },
+      "description": {
+        "es": "La mejor final que hemos visto y los jugadores con más minutos del mundial.",
+        "en": "The best final we've ever seen and the World Cup's most-played players."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw21-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 21,
+        "season": "2022-23",
+        "playerName": "La final de Qatar",
+        "statLine": {
+          "es": "«La mejor final que he visto»: el maravilloso caos de Qatar 2022.",
+          "en": "\"The best final I've ever seen\": the wonderful chaos of Qatar 2022."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw21-a1",
+          "type": "article",
+          "title": {
+            "es": "¿Quiénes son los jugadores con más minutos en el mundial?",
+            "en": "Who played the most minutes at the World Cup?"
+          },
+          "description": {
+            "es": "De Marruecos a Croacia: los jugadores con más minutos en Qatar 2022.",
+            "en": "From Morocco to Croatia: the players with the most minutes at Qatar 2022."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw21-a1.svg",
+          "credit": "El Mirrey · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/quines-son-los-jugadores-con-mas-minutos-en-el-mundial",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "quines-son-los-jugadores-con-mas-minutos-en-el-mundial"
+          }
+        },
+        {
+          "id": "s2223-gw21-a2",
+          "type": "article",
+          "title": {
+            "es": "la mejor final que he visto (análisis)",
+            "en": "The best final I've ever seen (analysis)"
+          },
+          "description": {
+            "es": "Análisis de la final del mundial: el maravilloso caos de Qatar 2022.",
+            "en": "Analysis of the World Cup final: the wonderful chaos of Qatar 2022."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw21-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/analisis-de-la-final-del-mudial",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "analisis-de-la-final-del-mudial"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw22-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 22",
+        "en": "Gameweek 22"
+      },
+      "description": {
+        "es": "Los jugadores que brillan en la Jornada 22, con análisis y números.",
+        "en": "Gameweek 22's shining players, with analysis and numbers."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw22-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 22,
+        "season": "2022-23",
+        "playerName": "Los números de la J22",
+        "statLine": {
+          "es": "Análisis con números de los jugadores que brillan en plena temporada.",
+          "en": "A numbers-driven look at the players shining at the season's peak."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw22-a1",
+          "type": "article",
+          "title": {
+            "es": "Jugadores de la Jornada 22 que Brillan: Análisis con Números",
+            "en": "Gameweek 22's shining players: analysis with numbers"
+          },
+          "description": {
+            "es": "Los jugadores que brillan en la Jornada 22, con números sobre la mesa.",
+            "en": "The players shining in Gameweek 22, with the numbers on the table."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw22-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/propsitos-kllag-tkwwa",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "propsitos-kllag-tkwwa"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw23-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 23",
+        "en": "Gameweek 23"
+      },
+      "description": {
+        "es": "Propósitos de año nuevo y el episodio 191 del pódcast repasando la DGW23.",
+        "en": "New year's resolutions and podcast episode 191 reviewing DGW23."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw23-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 23,
+        "season": "2022-23",
+        "playerName": "Viajeros en el tiempo",
+        "statLine": {
+          "es": "Leo, Luis y El Profe repasan la doble jornada 23 en el episodio 191.",
+          "en": "Leo, Luis and El Profe review Double Gameweek 23 in episode 191."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw23-a1",
+          "type": "article",
+          "title": {
+            "es": "Propósitos de año nuevo",
+            "en": "New year's resolutions"
+          },
+          "description": {
+            "es": "Propósitos de enero para tu FPL y para ponerse al día tras las fiestas.",
+            "en": "January resolutions for your FPL and for catching up after the holidays."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw23-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/propsitos",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "propsitos"
+          }
+        },
+        {
+          "id": "s2223-gw23-a2",
+          "type": "article",
+          "title": {
+            "es": "191 – Bendito Fantasy FPL – (Viajeros en el tiempo) – DGW23 - transcript",
+            "en": "191 – Bendito Fantasy FPL – (Time travellers) – DGW23 - transcript"
+          },
+          "description": {
+            "es": "Transcripción del episodio 191 del pódcast: Leo, Luis y El Profe repasan la DGW23.",
+            "en": "Transcript of podcast episode 191: Leo, Luis and El Profe review DGW23."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw23-a2.svg",
+          "credit": "Ferñil · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/191-bendito-fantasy-fpl-viajeros-en-el-tiempo-dgw23-transcript",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "191-bendito-fantasy-fpl-viajeros-en-el-tiempo-dgw23-transcript"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw27-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 27",
+        "en": "Gameweek 27"
+      },
+      "description": {
+        "es": "El mercado de enero más loco que se recuerde, el hokey cokey y la doble jornada de Brighton.",
+        "en": "The craziest January window in memory, the hokey cokey and Brighton's double gameweek."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw27-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 27,
+        "season": "2022-23",
+        "playerName": "Mercado invernal",
+        "statLine": {
+          "es": "Los fichajes más impactantes del invierno y su efecto en el fantasy.",
+          "en": "Winter's most impactful signings and their fantasy effect."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw27-a1",
+          "type": "article",
+          "title": {
+            "es": "\"Invierno caliente: los fichajes más impactantes en la Premier League y su impacto en Fantasy\"",
+            "en": "Hot winter: the Premier League's most impactful signings and their fantasy effect"
+          },
+          "description": {
+            "es": "El mercado invernal más loco que se recuerde y su impacto en el fantasy.",
+            "en": "The craziest winter transfer window in memory and its fantasy impact."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw27-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/mercadoinvernal",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "mercadoinvernal"
+          }
+        },
+        {
+          "id": "s2223-gw27-a2",
+          "type": "article",
+          "title": {
+            "es": "15 términos en español para describir la estrategia del 'hokey cokey' en Fantasy Premier League",
+            "en": "15 Spanish terms for the 'hokey cokey' strategy in FPL"
+          },
+          "description": {
+            "es": "Quince maneras muy nuestras de llamar a la estrategia del hokey cokey.",
+            "en": "Fifteen very Spanish ways to name the hokey cokey strategy."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw27-a2.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/alternativas-para-el-hokey-cokey",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "alternativas-para-el-hokey-cokey"
+          }
+        },
+        {
+          "id": "s2223-gw27-a3",
+          "type": "article",
+          "title": {
+            "es": "Brighton en la doble jornada: ¿Esperanza o decepción?",
+            "en": "Brighton in the double gameweek: hope or letdown?"
+          },
+          "description": {
+            "es": "La doble jornada 27 y la gran duda: ¿los de Brighton son esperanza o decepción?",
+            "en": "Double Gameweek 27 and the big question: are Brighton assets hope or a letdown?"
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw27-a3.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/propsitos-kllag-ynlg2",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "propsitos-kllag-ynlg2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw30-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 30",
+        "en": "Gameweek 30"
+      },
+      "description": {
+        "es": "Los enfrentamientos más desequilibrados de la Jornada 30.",
+        "en": "Gameweek 30's most lopsided matchups."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw30-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 30,
+        "season": "2022-23",
+        "playerName": "Los favoritos",
+        "statLine": {
+          "es": "«Apuesta por los favoritos»: los duelos con marcador abultado a la vista.",
+          "en": "\"Back the favourites\": the matchups with a big scoreline in sight."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw30-a1",
+          "type": "article",
+          "title": {
+            "es": "FPL Gameweek 30: Los enfrentamientos más interesantes",
+            "en": "FPL Gameweek 30: the most interesting matchups"
+          },
+          "description": {
+            "es": "Apuesta por los favoritos: los enfrentamientos desequilibrados de la GW30.",
+            "en": "Back the favourites: GW30's most lopsided matchups."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw30-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/analisisjornada30",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "analisisjornada30"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw31-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 31",
+        "en": "Gameweek 31"
+      },
+      "description": {
+        "es": "Rashford se lesiona en plena racha y hay que buscarle reemplazo.",
+        "en": "Rashford gets injured mid-streak and a replacement must be found."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw31-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 31,
+        "season": "2022-23",
+        "playerName": "La baja de Rashford",
+        "statLine": {
+          "es": "Los reemplazos para la baja de Rashford, en gran forma hasta esta semana.",
+          "en": "The replacements for Rashford, in great form until this week."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw31-a1",
+          "type": "article",
+          "title": {
+            "es": "¿Qué hacer con La baja de Rashford por lesión",
+            "en": "What to do about Rashford's injury"
+          },
+          "description": {
+            "es": "Rashford se lesiona en plena racha: los reemplazos para la jornada 31.",
+            "en": "Rashford injured mid-hot-streak: the replacements for gameweek 31."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw31-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/reemplazos-para-rashford",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "reemplazos-para-rashford"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2223-gw38-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 38",
+        "en": "Gameweek 38"
+      },
+      "description": {
+        "es": "Cierre de temporada con la lección más repetida y menos aplicada del FPL.",
+        "en": "Season close with FPL's most repeated and least applied lesson."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2223-gw38-mvp.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 38,
+        "season": "2022-23",
+        "playerName": "La paciencia",
+        "statLine": {
+          "es": "«La virtud olvidada del FPL»: la paciencia como lección de la 2022/23.",
+          "en": "\"FPL's forgotten virtue\": patience as 2022/23's lesson."
+        }
+      },
+      "slides": [
+        {
+          "id": "s2223-gw38-a1",
+          "type": "article",
+          "title": {
+            "es": "La virtud olvidada en el FPL: ¿La conoces?",
+            "en": "FPL's forgotten virtue: do you know it?"
+          },
+          "description": {
+            "es": "Fin de temporada y una lección por encima de todas: la paciencia.",
+            "en": "Season's end and one lesson above all: patience."
+          },
+          "tag": "article",
+          "cover": "/media/s2223-gw38-a1.svg",
+          "credit": "Leo · Bendito Fantasy",
+          "link": {
+            "href": "/articulo/la-virtud-olvidada-en-el-fpl",
+            "label": {
+              "es": "Leer más",
+              "en": "Read more"
+            }
+          },
+          "payload": {
+            "slug": "la-virtud-olvidada-en-el-fpl"
+          }
+        }
+      ]
+    }
+  ]
+}
