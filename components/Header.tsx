@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useLang } from "@/lib/i18n";
 import LanguageToggle from "./LanguageToggle";
@@ -19,9 +20,14 @@ export default function Header() {
           className="flex items-baseline gap-2"
           aria-label="Bendito Fantasy"
         >
-          <span className="inline-flex h-8 w-8 items-center justify-center bg-accent font-display text-lg leading-none text-accent-ink">
-            B
-          </span>
+          <Image
+            src="/brand/lion-logo.png"
+            alt=""
+            width={32}
+            height={32}
+            className="h-8 w-8"
+            priority
+          />
           <span className="font-display text-xl uppercase tracking-display text-ink">
             Bendito Fantasy
           </span>
