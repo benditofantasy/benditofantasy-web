@@ -15,7 +15,19 @@ const SEASONS = path.join(ROOT, "content", "seasons");
 const SPECIALS = path.join(ROOT, "content", "specials");
 const MEDIA = path.join(ROOT, "public", "media");
 
-const TONES = ["#c8ccd0", "#b9bfc6", "#d3d0cb", "#c2c7c3", "#cdc9d2", "#bfc6cc"];
+// Brand palette (source: styles/tokens.css) — one color per category tag, the
+// same mapping CategoryTag.tsx uses for the pill, so a placeholder cover
+// already reads as "podcast" / "article" / etc. by color before any text loads.
+const TAG_HEX = {
+  podcast: "#f2594b", // --bf-coral
+  article: "#025e73", // --bf-teal
+  data: "#04c4d9", // --bf-cyan
+  chart: "#204f59", // --bf-navy
+  video: "#f27a5e", // --bf-salmon
+  social: "#02ebae", // --bf-turquoise
+  quote: "#8c5e26", // --bf-brown
+  mvp: "#f2c572", // --bf-gold
+};
 
 const TYPE_WORD = {
   podcast: "PODCAST",
@@ -33,15 +45,30 @@ function esc(text) {
   return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+function mix(hex, target, amount) {
+  const c = parseInt(hex.slice(1), 16);
+  const t = parseInt(target.slice(1), 16);
+  const channel = (shift) => {
+    const a = (c >> shift) & 0xff;
+    const b = (t >> shift) & 0xff;
+    return Math.round(a + (b - a) * amount);
+  };
+  return `#${[16, 8, 0].map((shift) => channel(shift).toString(16).padStart(2, "0")).join("")}`;
+}
+
 function coverSvg(tile, gw, index) {
-  const tone = TONES[index % TONES.length];
+  const base = TAG_HEX[tile.tag] ?? TAG_HEX[tile.type] ?? "#025e73";
+  // subtle per-index jitter so a row of same-tag tiles isn't perfectly flat
+  const jitter = 0.08 * (index % 3);
+  const light = mix(base, "#ffffff", 0.32 + jitter);
+  const dark = mix(base, "#012340", 0.4);
   const word = TYPE_WORD[tile.type] ?? "MEDIA";
   const bigLabel = gw === null ? "" : `J${gw}`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="0.6" y2="1">
-      <stop offset="0" stop-color="${tone}"/>
-      <stop offset="1" stop-color="#8f959b"/>
+      <stop offset="0" stop-color="${light}"/>
+      <stop offset="1" stop-color="${dark}"/>
     </linearGradient>
   </defs>
   <rect width="600" height="800" fill="url(#g)"/>
