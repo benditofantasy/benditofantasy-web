@@ -55,7 +55,7 @@ export default async function ArticlePage({ params }: PageProps) {
             alt={article.title}
             fill
             sizes="(max-width: 896px) 100vw, 896px"
-            className="object-cover"
+            className="object-cover object-[center_25%]"
             priority
           />
         </div>
