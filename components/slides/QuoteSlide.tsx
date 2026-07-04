@@ -32,7 +32,7 @@ export default function QuoteSlide({ tile, gameweek }: SlideProps) {
         {tile.link && (
           <Link
             href={tile.link.href}
-            className="mt-8 inline-block text-sm font-semibold uppercase tracking-kicker text-ink-mid underline underline-offset-4 transition-colors duration-fast hover:text-accent"
+            className="relative z-10 mt-8 inline-block text-sm font-semibold uppercase tracking-kicker text-ink-mid underline underline-offset-4 transition-colors duration-fast hover:text-accent"
           >
             {l(tile.link.label)}
           </Link>

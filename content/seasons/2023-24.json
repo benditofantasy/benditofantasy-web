@@ -23,11 +23,12 @@
       "payload": {
         "gw": 1,
         "season": "2023-24",
-        "playerName": "La Guía FPL",
+        "playerName": "R.Varane",
         "statLine": {
-          "es": "Qué es el FPL, cómo armar tu equipo y los mejores por posición para la Jornada 1.",
-          "en": "What FPL is, how to build your team and the best picks by position for Gameweek 1."
-        }
+          "es": "1 gol, portería a cero, 2 puntos de bonificación · MUN",
+          "en": "1 goal, clean sheet, 2 bonus points · MUN"
+        },
+        "points": 14
       },
       "slides": [
         {
@@ -274,11 +275,12 @@
       "payload": {
         "gw": 2,
         "season": "2023-24",
-        "playerName": "El desafío 2023",
+        "playerName": "Mbeumo",
         "statLine": {
-          "es": "«Únete a Bendito Fantasy y supera el desafío» — y los tipos de juego del FPL.",
-          "en": "\"Join Bendito Fantasy and beat the challenge\" — plus FPL's types of games."
-        }
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · BRE",
+          "en": "2 goals, clean sheet, 3 bonus points · BRE"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -350,11 +352,12 @@
       "payload": {
         "gw": 3,
         "season": "2023-24",
-        "playerName": "Equilibrio de Nash",
+        "playerName": "Sterling",
         "statLine": {
-          "es": "Teoría de juegos aplicada a tus decisiones de fantasy.",
-          "en": "Game theory applied to your fantasy decisions."
-        }
+          "es": "2 goles, 1 asistencia, portería a cero, 3 puntos de bonificación · CHE",
+          "en": "2 goals, 1 assist, clean sheet, 3 bonus points · CHE"
+        },
+        "points": 19
       },
       "slides": [
         {
@@ -401,11 +404,12 @@
       "payload": {
         "gw": 4,
         "season": "2023-24",
-        "playerName": "Son Heung-min",
+        "playerName": "Son",
         "statLine": {
-          "es": "«Son lidera la masacre en Turf Moor»: el protagonista de la jornada, según la columna.",
-          "en": "\"Son leads the rout at Turf Moor\": the gameweek's protagonist, per the column."
-        }
+          "es": "3 goles, 3 puntos de bonificación · TOT",
+          "en": "3 goals, 3 bonus points · TOT"
+        },
+        "points": 20
       },
       "slides": [
         {
@@ -452,11 +456,12 @@
       "payload": {
         "gw": 6,
         "season": "2023-24",
-        "playerName": "Derbis y goleadas",
+        "playerName": "Trippier",
         "statLine": {
-          "es": "Los tres partidos que dejaron marcadores y emociones fuertes en la J6.",
-          "en": "The three matches that left big scorelines and strong emotions in GW6."
-        }
+          "es": "3 asistencias, portería a cero, 3 puntos de bonificación · NEW",
+          "en": "3 assists, clean sheet, 3 bonus points · NEW"
+        },
+        "points": 18
       },
       "slides": [
         {
@@ -528,11 +533,12 @@
       "payload": {
         "gw": 7,
         "season": "2023-24",
-        "playerName": "El día que el VAR falló",
+        "playerName": "Watkins",
         "statLine": {
-          "es": "Drama, frustración e incomprensión: análisis de un escándalo.",
-          "en": "Drama, frustration and disbelief: anatomy of a scandal."
-        }
+          "es": "3 goles, 2 asistencias, 3 puntos de bonificación · AVL",
+          "en": "3 goals, 2 assists, 3 bonus points · AVL"
+        },
+        "points": 23
       },
       "slides": [
         {
@@ -654,11 +660,12 @@
       "payload": {
         "gw": 8,
         "season": "2023-24",
-        "playerName": "Jornadas dobles",
+        "playerName": "Sterling",
         "statLine": {
-          "es": "Cómo funcionan las jornadas dobles en FPL, explicado para la 2023/24.",
-          "en": "How double gameweeks work in FPL, explained for 2023/24."
-        }
+          "es": "1 gol, 2 asistencias, 3 puntos de bonificación · CHE",
+          "en": "1 goal, 2 assists, 3 bonus points · CHE"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -705,11 +712,12 @@
       "payload": {
         "gw": 11,
         "season": "2023-24",
-        "playerName": "¿Dónde está Haaland?",
+        "playerName": "Doku",
         "statLine": {
-          "es": "El goleador calla y el Arsenal domina: la pregunta de la semana.",
-          "en": "The striker goes quiet and Arsenal dominate: the question of the week."
-        }
+          "es": "1 gol, 4 asistencias, 3 puntos de bonificación · MCI",
+          "en": "1 goal, 4 assists, 3 bonus points · MCI"
+        },
+        "points": 22
       },
       "slides": [
         {
@@ -756,11 +764,12 @@
       "payload": {
         "gw": 12,
         "season": "2023-24",
-        "playerName": "Mohamed Salah",
+        "playerName": "Haaland",
         "statLine": {
-          "es": "«Salah es el de mejor forma y mayor cantidad de puntos», según la comparación de la columna.",
-          "en": "\"Salah has the best form and the most points,\" per the column's comparison."
-        }
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · MCI",
+          "en": "2 goals, 1 assist, 3 bonus points · MCI"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -807,11 +816,12 @@
       "payload": {
         "gw": 14,
         "season": "2023-24",
-        "playerName": "El brazalete",
+        "playerName": "Enzo",
         "statLine": {
-          "es": "La matriz de capitanes de la J14: forma, calendario y probabilidad de anotar.",
-          "en": "GW14's captaincy matrix: form, fixtures and scoring probability."
-        }
+          "es": "2 goles, 3 puntos de bonificación · CHE",
+          "en": "2 goals, 3 bonus points · CHE"
+        },
+        "points": 14
       },
       "slides": [
         {
@@ -858,11 +868,12 @@
       "payload": {
         "gw": 21,
         "season": "2023-24",
-        "playerName": "¿Darwin o Solanke?",
+        "playerName": "Diogo J.",
         "statLine": {
-          "es": "El duelo goleador de la jornada 21 — y una conspiración de precios en el aire.",
-          "en": "Gameweek 21's goalscoring duel — and a price conspiracy in the air."
-        }
+          "es": "2 goles, 1 asistencia, portería a cero, 3 puntos de bonificación · LIV",
+          "en": "2 goals, 1 assist, clean sheet, 3 bonus points · LIV"
+        },
+        "points": 19
       },
       "slides": [
         {
@@ -934,11 +945,12 @@
       "payload": {
         "gw": 22,
         "season": "2023-24",
-        "playerName": "Kevin De Bruyne",
+        "playerName": "Bradley",
         "statLine": {
-          "es": "«KDB brilla, Saka decae»: ¿hora de un cambio en tu equipo?",
-          "en": "\"KDB shines, Saka fades\": time for a change in your team?"
-        }
+          "es": "1 gol, 2 asistencias, portería a cero, 3 puntos de bonificación · LIV",
+          "en": "1 goal, 2 assists, clean sheet, 3 bonus points · LIV"
+        },
+        "points": 21
       },
       "slides": [
         {
@@ -985,11 +997,12 @@
       "payload": {
         "gw": 25,
         "season": "2023-24",
-        "playerName": "La Jornada Doble",
+        "playerName": "Adingra",
         "statLine": {
-          "es": "El evento marcado en rojo por todos los managers: la guía esencial de la DGW25.",
-          "en": "The event every manager circled in red: the essential DGW25 guide."
-        }
+          "es": "2 goles, portería a cero, 2 puntos de bonificación · BHA",
+          "en": "2 goals, clean sheet, 2 bonus points · BHA"
+        },
+        "points": 15
       },
       "slides": [
         {
@@ -1036,11 +1049,12 @@
       "payload": {
         "gw": 38,
         "season": "2023-24",
-        "playerName": "Wolves vs VAR",
+        "playerName": "Mateta",
         "statLine": {
-          "es": "La resolución de los Wolves para eliminar el VAR desde la 2024/25.",
-          "en": "Wolves' resolution to scrap VAR from 2024/25."
-        }
+          "es": "3 goles, 1 asistencia, 3 puntos de bonificación · CRY",
+          "en": "3 goals, 1 assist, 3 bonus points · CRY"
+        },
+        "points": 20
       },
       "slides": [
         {

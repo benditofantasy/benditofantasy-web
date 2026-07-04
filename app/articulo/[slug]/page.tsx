@@ -42,7 +42,7 @@ export default async function ArticlePage({ params }: PageProps) {
   return (
     <main className="mx-auto max-w-4xl px-4 pb-20 pt-28 sm:px-8 sm:pt-36">
       <p className="text-xs font-semibold uppercase tracking-kicker text-ink-soft">
-        Jornada {article.gw} · {article.author}
+        {article.section ?? `Jornada ${article.gw}`} · {article.author}
       </p>
       <h1 className="mt-4 font-display uppercase leading-[0.9] tracking-display text-accent [font-size:clamp(2.5rem,7vw,5.5rem)]">
         {article.title}

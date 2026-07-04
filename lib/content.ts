@@ -2,10 +2,11 @@ import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { getSlides, type Gameweek, type Row, type Season, type Tile } from "./types";
+import { getSlides, type Gameweek, type Row, type Season, type Special, type Tile } from "./types";
 
 const GAMEWEEKS_DIR = path.join(process.cwd(), "content", "gameweeks");
 const SEASONS_DIR = path.join(process.cwd(), "content", "seasons");
+const SPECIALS_DIR = path.join(process.cwd(), "content", "specials");
 const ARTICLES_DIR = path.join(process.cwd(), "content", "articles");
 
 /** All gameweeks, newest first (SPEC §7: newest gameweek on top). */
@@ -22,6 +23,18 @@ export function getGameweeks(): Gameweek[] {
 
 export function getGameweek(gw: number): Gameweek | undefined {
   return getGameweeks().find((week) => week.gw === gw);
+}
+
+/** One-off editorial rows outside the FPL weekly cycle (e.g. World Cup coverage). */
+export function getSpecialRows(): Special[] {
+  if (!fs.existsSync(SPECIALS_DIR)) return [];
+  const files = fs
+    .readdirSync(SPECIALS_DIR)
+    .filter((f) => f.endsWith(".json") && !f.includes("template"));
+  return files.map((file) => {
+    const raw = fs.readFileSync(path.join(SPECIALS_DIR, file), "utf8");
+    return JSON.parse(raw) as Special;
+  });
 }
 
 /** Rolled-up past seasons (one row per season), newest first. */
@@ -52,6 +65,11 @@ export function findTile(
     const index = slides.findIndex((slide) => slide.tile.id === id);
     if (index !== -1) return { gameweek, tile: slides[index].tile, index };
   }
+  for (const special of getSpecialRows()) {
+    const slides = special.tiles.flatMap(getSlides);
+    const index = slides.findIndex((slide) => slide.tile.id === id);
+    if (index !== -1) return { gameweek: special, tile: slides[index].tile, index };
+  }
   for (const season of getSeasons()) {
     const slides = season.tiles.flatMap(getSlides);
     const index = slides.findIndex((slide) => slide.tile.id === id);
@@ -66,6 +84,8 @@ export interface Article {
   description: string;
   date: string;
   gw: number;
+  /** overrides the "Jornada N" byline for content outside the FPL gameweek cycle. */
+  section?: string;
   author: string;
   cover?: string;
   body: string;
@@ -88,6 +108,7 @@ export function getArticle(slug: string): Article | undefined {
     description: data.description ?? "",
     date: data.date ?? "",
     gw: data.gw ?? 0,
+    section: data.section,
     author: data.author ?? "Bendito Fantasy",
     cover: data.cover,
     body: content,

@@ -20,6 +20,12 @@ import SlideMeta from "./SlideMeta";
 export default function MvpSlide({ tile, gameweek, shared }: SlideProps) {
   const { l } = useLang();
   const payload = tile.payload as MvpPayload;
+  // Migrated Squarespace seasons have no verified "who scored X points" data —
+  // `playerName` there is just the week's post title, not a real crowned
+  // player. Showing the trophy/"King of the gameweek" marker on those would
+  // be a false claim, so it only appears once a season is closed with real
+  // stats (owner-confirmed: no marker at all if there's no actual MVP).
+  const hasRealMvp = typeof payload.points === "number";
 
   return (
     <div data-backdrop="true" className="relative flex h-full items-center overflow-hidden">
@@ -40,14 +46,20 @@ export default function MvpSlide({ tile, gameweek, shared }: SlideProps) {
           ease: [0.22, 1, 0.36, 1],
         }}
       >
-        <span className="inline-flex items-center gap-1.5 rounded-pill bg-tag-mvp px-3 py-1 text-[11px] font-bold uppercase tracking-kicker text-surface-deep">
-          <TrophyIcon className="h-3.5 w-3.5" />
-          {l({ es: "Rey de la jornada", en: "King of the gameweek" })}
-        </span>
+        {hasRealMvp ? (
+          <span className="inline-flex items-center gap-1.5 rounded-pill bg-tag-mvp px-3 py-1 text-[11px] font-bold uppercase tracking-kicker text-surface-deep">
+            <TrophyIcon className="h-3.5 w-3.5" />
+            {l({ es: "Rey de la jornada", en: "King of the gameweek" })}
+          </span>
+        ) : (
+          <p className="text-xs font-semibold uppercase tracking-kicker text-ink-soft">
+            {l({ es: "Resumen de la jornada", en: "Gameweek recap" })}
+          </p>
+        )}
         <h2 className="mt-4 font-display uppercase leading-[0.9] tracking-display text-ink [font-size:clamp(2.5rem,7vw,6.5rem)]">
           {payload.playerName}
         </h2>
-        {typeof payload.points === "number" && (
+        {hasRealMvp && (
           <p className="mt-4 text-lg font-bold text-tag-mvp sm:text-xl">
             {payload.points} {l({ es: "puntos", en: "points" })}
           </p>

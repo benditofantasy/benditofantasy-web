@@ -12,6 +12,7 @@ import path from "node:path";
 const ROOT = process.cwd();
 const GAMEWEEKS = path.join(ROOT, "content", "gameweeks");
 const SEASONS = path.join(ROOT, "content", "seasons");
+const SPECIALS = path.join(ROOT, "content", "specials");
 const MEDIA = path.join(ROOT, "public", "media");
 
 const TONES = ["#c8ccd0", "#b9bfc6", "#d3d0cb", "#c2c7c3", "#cdc9d2", "#bfc6cc"];
@@ -35,6 +36,7 @@ function esc(text) {
 function coverSvg(tile, gw, index) {
   const tone = TONES[index % TONES.length];
   const word = TYPE_WORD[tile.type] ?? "MEDIA";
+  const bigLabel = gw === null ? "" : `J${gw}`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="0.6" y2="1">
@@ -45,7 +47,7 @@ function coverSvg(tile, gw, index) {
   <rect width="600" height="800" fill="url(#g)"/>
   <circle cx="470" cy="180" r="220" fill="#ffffff" opacity="0.08"/>
   <circle cx="90" cy="700" r="260" fill="#111111" opacity="0.10"/>
-  <text x="300" y="460" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="190" font-weight="900" fill="#ffffff" opacity="0.5">J${gw}</text>
+  <text x="300" y="460" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="190" font-weight="900" fill="#ffffff" opacity="0.5">${bigLabel}</text>
   <text x="52" y="770" transform="rotate(-90 52 770)" font-family="Arial Black, Arial, sans-serif" font-size="34" font-weight="900" fill="#ffffff" opacity="0.85" letter-spacing="3">${esc(word)}</text>
   <text x="300" y="766" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" opacity="0.6">placeholder</text>
 </svg>
@@ -62,6 +64,16 @@ for (const file of fs.readdirSync(GAMEWEEKS)) {
     fs.writeFileSync(target, coverSvg(tile, week.gw, index));
     count += 1;
   });
+}
+if (fs.existsSync(SPECIALS)) {
+  for (const file of fs.readdirSync(SPECIALS)) {
+    if (!file.endsWith(".json") || file.includes("template")) continue;
+    const special = JSON.parse(fs.readFileSync(path.join(SPECIALS, file), "utf8"));
+    special.tiles.forEach((tile, index) => {
+      fs.writeFileSync(path.join(MEDIA, `${tile.id}.svg`), coverSvg(tile, null, index));
+      count += 1;
+    });
+  }
 }
 if (fs.existsSync(SEASONS)) {
   for (const file of fs.readdirSync(SEASONS)) {

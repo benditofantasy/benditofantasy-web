@@ -144,8 +144,21 @@ export interface Season {
   tiles: Tile[];
 }
 
-/** Anything that renders as a homepage row: a live gameweek or a rolled-up season. */
-export type Row = Gameweek | Season;
+/**
+ * A one-off editorial row outside the FPL weekly cycle (e.g. World Cup
+ * coverage) — same shape and lightbox behavior as a live gameweek row (SPEC
+ * §10: bounded navigation, closes at the row's last tile), just not tied to
+ * a Premier League gameweek number.
+ */
+export interface Special {
+  id: string;
+  label: Localized;
+  date: string;
+  tiles: Tile[];
+}
+
+/** Anything that renders as a homepage row: a live gameweek, a special editorial row, or a rolled-up season. */
+export type Row = Gameweek | Season | Special;
 
 /**
  * Slide abstraction (SPEC §6 "design for evolution"): originally every tile

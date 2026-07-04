@@ -4,7 +4,8 @@ import GameweekRow from "@/components/GameweekRow";
 import Hero from "@/components/Hero";
 import Lightbox from "@/components/Lightbox";
 import SeasonRow from "@/components/SeasonRow";
-import { findTile, getGameweeks, getSeasons } from "@/lib/content";
+import SpecialRow from "@/components/SpecialRow";
+import { findTile, getGameweeks, getSeasons, getSpecialRows } from "@/lib/content";
 
 interface PageProps {
   searchParams: Promise<{ item?: string }>;
@@ -33,6 +34,7 @@ export async function generateMetadata({
 
 export default function HomePage() {
   const gameweeks = getGameweeks();
+  const specials = getSpecialRows();
   const seasons = getSeasons();
   return (
     <main>
@@ -40,6 +42,9 @@ export default function HomePage() {
       <div>
         {gameweeks.map((gameweek) => (
           <GameweekRow key={gameweek.gw} gameweek={gameweek} />
+        ))}
+        {specials.map((special) => (
+          <SpecialRow key={special.id} special={special} />
         ))}
         {seasons.map((season) => (
           <SeasonRow key={season.season} season={season} />
@@ -49,7 +54,7 @@ export default function HomePage() {
         © {new Date().getFullYear()} Bendito Fantasy
       </footer>
       <Suspense fallback={null}>
-        <Lightbox gameweeks={gameweeks} seasons={seasons} />
+        <Lightbox gameweeks={[...gameweeks, ...specials]} seasons={seasons} />
       </Suspense>
     </main>
   );

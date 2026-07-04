@@ -1,0 +1,27 @@
+{
+  "id": "m2026",
+  "label": { "es": "Mundial 2026", "en": "World Cup 2026" },
+  "date": "2026-07-04",
+  "tiles": [
+    {
+      "id": "m2026-argentina-cabo-verde",
+      "type": "article",
+      "title": {
+        "es": "Argentina sufrió mucho más de lo esperado, pero terminó eliminando a Cabo Verde",
+        "en": "Argentina suffered far more than expected, but still eliminated Cabo Verde"
+      },
+      "description": {
+        "es": "Argentina venció 3-2 a Cabo Verde en un partido mucho más complicado de lo previsto, con Messi como protagonista y Cabo Verde como una de las revelaciones del Mundial.",
+        "en": "Argentina beat Cabo Verde 3-2 in a match far tougher than expected, with Messi as the protagonist and Cabo Verde as one of the World Cup's revelations."
+      },
+      "tag": "article",
+      "cover": "/media/m2026-argentina-cabo-verde.svg",
+      "credit": "Bendito Fantasy",
+      "link": {
+        "href": "/articulo/argentina-cabo-verde",
+        "label": { "es": "Leer más", "en": "Read more" }
+      },
+      "payload": { "slug": "argentina-cabo-verde" }
+    }
+  ]
+}

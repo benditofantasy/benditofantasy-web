@@ -23,11 +23,12 @@
       "payload": {
         "gw": 1,
         "season": "2022-23",
-        "playerName": "El arranque 2022/23",
+        "playerName": "Schär",
         "statLine": {
-          "es": "«Bienvenidos a Bendito Fantasy» — y la primera decisión difícil: Kane vs Haaland.",
-          "en": "\"Welcome to Bendito Fantasy\" — and the first hard call: Kane vs Haaland."
-        }
+          "es": "1 gol, portería a cero, 3 puntos de bonificación · NEW",
+          "en": "1 goal, clean sheet, 3 bonus points · NEW"
+        },
+        "points": 15
       },
       "slides": [
         {
@@ -424,11 +425,12 @@
       "payload": {
         "gw": 2,
         "season": "2022-23",
-        "playerName": "La Matriz del Capitán",
+        "playerName": "Jesus",
         "statLine": {
-          "es": "Un método de elección para el brazalete mientras medio mundo libera fondos para Haaland.",
-          "en": "A method for picking the armband while half the world frees up funds for Haaland."
-        }
+          "es": "2 goles, 2 asistencias, 3 puntos de bonificación · ARS",
+          "en": "2 goals, 2 assists, 3 bonus points · ARS"
+        },
+        "points": 19
       },
       "slides": [
         {
@@ -625,11 +627,12 @@
       "payload": {
         "gw": 3,
         "season": "2022-23",
-        "playerName": "¿Datos o intuición?",
+        "playerName": "Ødegaard",
         "statLine": {
-          "es": "Cada manager decide distinto: los datos contra el instinto.",
-          "en": "Every manager decides differently: data versus gut feeling."
-        }
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · ARS",
+          "en": "2 goals, clean sheet, 3 bonus points · ARS"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -676,11 +679,12 @@
       "payload": {
         "gw": 4,
         "season": "2022-23",
-        "playerName": "Ten Hag",
+        "playerName": "Firmino",
         "statLine": {
-          "es": "«No fue casualidad, es congruencia»: la declaración de guerra del United a la Premier.",
-          "en": "\"It wasn't luck, it's consistency\": United's declaration of war on the Premier League."
-        }
+          "es": "2 goles, 3 asistencias, 3 puntos de bonificación · LIV",
+          "en": "2 goals, 3 assists, 3 bonus points · LIV"
+        },
+        "points": 22
       },
       "slides": [
         {
@@ -827,11 +831,12 @@
       "payload": {
         "gw": 6,
         "season": "2022-23",
-        "playerName": "El derbi de Merseyside",
+        "playerName": "Rashford",
         "statLine": {
-          "es": "Las claves de la GW6 y el duelo por ser el mejor delantero de 7 millones.",
-          "en": "The keys to GW6 and the shootout for best £7m forward."
-        }
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · MUN",
+          "en": "2 goals, 1 assist, 3 bonus points · MUN"
+        },
+        "points": 18
       },
       "slides": [
         {
@@ -979,11 +984,12 @@
       "payload": {
         "gw": 8,
         "season": "2022-23",
-        "playerName": "Goodison Park",
+        "playerName": "Son",
         "statLine": {
-          "es": "«El abismo de Goodison Park»: de Théoden y los Rohirrim al fantasy.",
-          "en": "\"The abyss of Goodison Park\": from Théoden and the Rohirrim to fantasy."
-        }
+          "es": "3 goles, 3 puntos de bonificación · TOT",
+          "en": "3 goals, 3 bonus points · TOT"
+        },
+        "points": 19
       },
       "slides": [
         {
@@ -1030,11 +1036,12 @@
       "payload": {
         "gw": 9,
         "season": "2022-23",
-        "playerName": "Hora del Wildcard",
+        "playerName": "Haaland",
         "statLine": {
-          "es": "10 opciones diferentes para tu wildcard en la fecha donde todo cambia.",
-          "en": "10 different options for your wildcard in the week everything changes."
-        }
+          "es": "3 goles, 2 asistencias, 3 puntos de bonificación · MCI",
+          "en": "3 goals, 2 assists, 3 bonus points · MCI"
+        },
+        "points": 23
       },
       "slides": [
         {
@@ -1106,11 +1113,12 @@
       "payload": {
         "gw": 10,
         "season": "2022-23",
-        "playerName": "¿Cancelo o Foden?",
+        "playerName": "Cancelo",
         "statLine": {
-          "es": "Cancelo contra Foden como tercer citizen, con números sobre la mesa.",
-          "en": "Cancelo versus Foden as your third Citizen, with the numbers on the table."
-        }
+          "es": "1 gol, 1 asistencia, portería a cero, 3 puntos de bonificación · MCI",
+          "en": "1 goal, 1 assist, clean sheet, 3 bonus points · MCI"
+        },
+        "points": 18
       },
       "slides": [
         {
@@ -1182,11 +1190,12 @@
       "payload": {
         "gw": 11,
         "season": "2022-23",
-        "playerName": "Erling Haaland",
+        "playerName": "Mount",
         "statLine": {
-          "es": "Primer jugador en llegar a 100 puntos en la temporada, según la propia columna.",
-          "en": "First player to reach 100 points this season, as the column itself noted."
-        }
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · CHE",
+          "en": "2 goals, clean sheet, 3 bonus points · CHE"
+        },
+        "points": 15
       },
       "slides": [
         {
@@ -1283,11 +1292,12 @@
       "payload": {
         "gw": 13,
         "season": "2022-23",
-        "playerName": "El espejismo",
+        "playerName": "Zouma",
         "statLine": {
-          "es": "«El espejismo de Liverpool»: Jürgen desesperado en la banda… ¿o no tanto?",
-          "en": "\"The Liverpool mirage\": a desperate Jürgen on the touchline… or is he?"
-        }
+          "es": "1 gol, portería a cero, 3 puntos de bonificación · WHU",
+          "en": "1 goal, clean sheet, 3 bonus points · WHU"
+        },
+        "points": 15
       },
       "slides": [
         {
@@ -1334,11 +1344,12 @@
       "payload": {
         "gw": 14,
         "season": "2022-23",
-        "playerName": "Bendito Panel",
+        "playerName": "Wilson",
         "statLine": {
-          "es": "El panel debuta con diferenciales para la J14 y para el Matchday 6 europeo.",
-          "en": "The panel debuts with differentials for GW14 and Europe's Matchday 6."
-        }
+          "es": "2 goles, 2 asistencias, 3 puntos de bonificación · NEW",
+          "en": "2 goals, 2 assists, 3 bonus points · NEW"
+        },
+        "points": 19
       },
       "slides": [
         {
@@ -1410,11 +1421,12 @@
       "payload": {
         "gw": 15,
         "season": "2022-23",
-        "playerName": "Erling Haaland",
+        "playerName": "Tavernier",
         "statLine": {
-          "es": "«Haaland nos ha tenido con los nervios de punta»: crisis en el fantasy.",
-          "en": "\"Haaland has had us on edge\": crisis in fantasy."
-        }
+          "es": "1 gol, 2 asistencias, 3 puntos de bonificación · BOU",
+          "en": "1 goal, 2 assists, 3 bonus points · BOU"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -1486,11 +1498,12 @@
       "payload": {
         "gw": 16,
         "season": "2022-23",
-        "playerName": "Rumbo a Qatar",
+        "playerName": "Ødegaard",
         "statLine": {
-          "es": "El Bendito Panel cierra la etapa liguera antes del mundial.",
-          "en": "The Bendito Panel closes the league chapter before the World Cup."
-        }
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · ARS",
+          "en": "2 goals, clean sheet, 3 bonus points · ARS"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -1537,11 +1550,12 @@
       "payload": {
         "gw": 17,
         "season": "2022-23",
-        "playerName": "Argentina",
+        "playerName": "Mitrović",
         "statLine": {
-          "es": "Crónica personal de madrugada en pleno Qatar 2022.",
-          "en": "A personal small-hours chronicle in the middle of Qatar 2022."
-        }
+          "es": "1 gol, 2 asistencias, 3 puntos de bonificación · FUL",
+          "en": "1 goal, 2 assists, 3 bonus points · FUL"
+        },
+        "points": 15
       },
       "slides": [
         {
@@ -1588,11 +1602,12 @@
       "payload": {
         "gw": 20,
         "season": "2022-23",
-        "playerName": "Doble Jornada 20",
+        "playerName": "March",
         "statLine": {
-          "es": "United-Palace reprogramado: llega la doble Jornada 20.",
-          "en": "United-Palace rescheduled: Double Gameweek 20 arrives."
-        }
+          "es": "2 goles, 1 asistencia, portería a cero, 3 puntos de bonificación · BHA",
+          "en": "2 goals, 1 assist, clean sheet, 3 bonus points · BHA"
+        },
+        "points": 19
       },
       "slides": [
         {
@@ -1689,11 +1704,12 @@
       "payload": {
         "gw": 21,
         "season": "2022-23",
-        "playerName": "La final de Qatar",
+        "playerName": "Haaland",
         "statLine": {
-          "es": "«La mejor final que he visto»: el maravilloso caos de Qatar 2022.",
-          "en": "\"The best final I've ever seen\": the wonderful chaos of Qatar 2022."
-        }
+          "es": "3 goles, 3 puntos de bonificación · MCI",
+          "en": "3 goals, 3 bonus points · MCI"
+        },
+        "points": 17
       },
       "slides": [
         {
@@ -1765,11 +1781,12 @@
       "payload": {
         "gw": 22,
         "season": "2022-23",
-        "playerName": "Los números de la J22",
+        "playerName": "Iheanacho",
         "statLine": {
-          "es": "Análisis con números de los jugadores que brillan en plena temporada.",
-          "en": "A numbers-driven look at the players shining at the season's peak."
-        }
+          "es": "1 gol, 2 asistencias, 3 puntos de bonificación · LEI",
+          "en": "1 goal, 2 assists, 3 bonus points · LEI"
+        },
+        "points": 15
       },
       "slides": [
         {
@@ -1816,11 +1833,12 @@
       "payload": {
         "gw": 23,
         "season": "2022-23",
-        "playerName": "Viajeros en el tiempo",
+        "playerName": "De Bruyne",
         "statLine": {
-          "es": "Leo, Luis y El Profe repasan la doble jornada 23 en el episodio 191.",
-          "en": "Leo, Luis and El Profe review Double Gameweek 23 in episode 191."
-        }
+          "es": "1 gol, 1 asistencia, 3 puntos de bonificación · MCI",
+          "en": "1 goal, 1 assist, 3 bonus points · MCI"
+        },
+        "points": 13
       },
       "slides": [
         {
@@ -1892,11 +1910,12 @@
       "payload": {
         "gw": 27,
         "season": "2022-23",
-        "playerName": "Mercado invernal",
+        "playerName": "Trossard",
         "statLine": {
-          "es": "Los fichajes más impactantes del invierno y su efecto en el fantasy.",
-          "en": "Winter's most impactful signings and their fantasy effect."
-        }
+          "es": "3 asistencias, portería a cero, 3 puntos de bonificación · ARS",
+          "en": "3 assists, clean sheet, 3 bonus points · ARS"
+        },
+        "points": 15
       },
       "slides": [
         {
@@ -1993,11 +2012,12 @@
       "payload": {
         "gw": 30,
         "season": "2022-23",
-        "playerName": "Los favoritos",
+        "playerName": "Olise",
         "statLine": {
-          "es": "«Apuesta por los favoritos»: los duelos con marcador abultado a la vista.",
-          "en": "\"Back the favourites\": the matchups with a big scoreline in sight."
-        }
+          "es": "3 asistencias, 3 puntos de bonificación · CRY",
+          "en": "3 assists, 3 bonus points · CRY"
+        },
+        "points": 14
       },
       "slides": [
         {
@@ -2044,11 +2064,12 @@
       "payload": {
         "gw": 31,
         "season": "2022-23",
-        "playerName": "La baja de Rashford",
+        "playerName": "Diogo Jota",
         "statLine": {
-          "es": "Los reemplazos para la baja de Rashford, en gran forma hasta esta semana.",
-          "en": "The replacements for Rashford, in great form until this week."
-        }
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · LIV",
+          "en": "2 goals, 1 assist, 3 bonus points · LIV"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -2095,11 +2116,12 @@
       "payload": {
         "gw": 38,
         "season": "2022-23",
-        "playerName": "La paciencia",
+        "playerName": "Kane",
         "statLine": {
-          "es": "«La virtud olvidada del FPL»: la paciencia como lección de la 2022/23.",
-          "en": "\"FPL's forgotten virtue\": patience as 2022/23's lesson."
-        }
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · TOT",
+          "en": "2 goals, 1 assist, 3 bonus points · TOT"
+        },
+        "points": 16
       },
       "slides": [
         {

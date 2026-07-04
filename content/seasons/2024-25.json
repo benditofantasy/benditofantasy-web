@@ -23,11 +23,12 @@
       "payload": {
         "gw": 1,
         "season": "2024-25",
-        "playerName": "Lecciones de Mario Kart",
+        "playerName": "M.Salah",
         "statLine": {
-          "es": "«De Mario Kart al FPL»: lecciones de juego para un fantasy más emocionante.",
-          "en": "\"From Mario Kart to FPL\": gaming lessons for a more exciting fantasy."
-        }
+          "es": "1 gol, 1 asistencia, portería a cero, 3 puntos de bonificación · LIV",
+          "en": "1 goal, 1 assist, clean sheet, 3 bonus points · LIV"
+        },
+        "points": 14
       },
       "slides": [
         {
@@ -249,11 +250,12 @@
       "payload": {
         "gw": 2,
         "season": "2024-25",
-        "playerName": "Erling Haaland",
+        "playerName": "Madueke",
         "statLine": {
-          "es": "El debate más caliente de la semana: el chip de Triple Capitán en Haaland.",
-          "en": "The week's hottest debate: the Triple Captain chip on Haaland."
-        }
+          "es": "3 goles, 3 puntos de bonificación · CHE",
+          "en": "3 goals, 3 bonus points · CHE"
+        },
+        "points": 20
       },
       "slides": [
         {
@@ -325,11 +327,12 @@
       "payload": {
         "gw": 3,
         "season": "2024-25",
-        "playerName": "Effective Ownership",
+        "playerName": "M.Salah",
         "statLine": {
-          "es": "Cómo el Effective Ownership afecta la elección del capitán.",
-          "en": "How Effective Ownership shapes the captaincy pick."
-        }
+          "es": "1 gol, 2 asistencias, portería a cero, 3 puntos de bonificación · LIV",
+          "en": "1 goal, 2 assists, clean sheet, 3 bonus points · LIV"
+        },
+        "points": 17
       },
       "slides": [
         {
@@ -401,11 +404,12 @@
       "payload": {
         "gw": 4,
         "season": "2024-25",
-        "playerName": "Nuevas reglas",
+        "playerName": "Sánchez",
         "statLine": {
-          "es": "Todo lo que necesitas saber para adaptar tus estrategias a la 2024/25.",
-          "en": "Everything you need to adapt your strategies to 2024/25."
-        }
+          "es": "7 atajadas, portería a cero, 3 puntos de bonificación · CHE",
+          "en": "7 saves, clean sheet, 3 bonus points · CHE"
+        },
+        "points": 15
       },
       "slides": [
         {
@@ -477,11 +481,12 @@
       "payload": {
         "gw": 5,
         "season": "2024-25",
-        "playerName": "El Perma Capitán",
+        "playerName": "N.Jackson",
         "statLine": {
-          "es": "El caso de Salah, sus desafíos y alternativas — y Haaland ante el Arsenal.",
-          "en": "The Salah case, its challenges and alternatives — and Haaland against Arsenal."
-        }
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · CHE",
+          "en": "2 goals, 1 assist, 3 bonus points · CHE"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -603,11 +608,12 @@
       "payload": {
         "gw": 6,
         "season": "2024-25",
-        "playerName": "Al borde de la toalla",
+        "playerName": "Palmer",
         "statLine": {
-          "es": "«Managers al borde de lanzar la toalla»: la crónica de la Jornada 6.",
-          "en": "\"Managers on the verge of throwing in the towel\": the Gameweek 6 chronicle."
-        }
+          "es": "4 goles, 3 puntos de bonificación · CHE",
+          "en": "4 goals, 3 bonus points · CHE"
+        },
+        "points": 25
       },
       "slides": [
         {
@@ -679,11 +685,12 @@
       "payload": {
         "gw": 7,
         "season": "2024-25",
-        "playerName": "Festival de frustraciones",
+        "playerName": "Antonio",
         "statLine": {
-          "es": "«Un verdadero festival de frustraciones», según la crónica de la J7.",
-          "en": "\"A true festival of frustrations,\" per the GW7 chronicle."
-        }
+          "es": "1 gol, 3 asistencias, 3 puntos de bonificación · WHU",
+          "en": "1 goal, 3 assists, 3 bonus points · WHU"
+        },
+        "points": 18
       },
       "slides": [
         {
@@ -755,11 +762,12 @@
       "payload": {
         "gw": 8,
         "season": "2024-25",
-        "playerName": "36 puntos",
+        "playerName": "Keane",
         "statLine": {
-          "es": "Apenas 36 puntos de promedio, el más bajo hasta ahora — sí, lo leíste bien.",
-          "en": "A mere 36-point average, the lowest yet — yes, you read that right."
-        }
+          "es": "1 gol, portería a cero, 3 puntos de bonificación · EVE",
+          "en": "1 goal, clean sheet, 3 bonus points · EVE"
+        },
+        "points": 14
       },
       "slides": [
         {
@@ -806,11 +814,12 @@
       "payload": {
         "gw": 9,
         "season": "2024-25",
-        "playerName": "Montaña rusa",
+        "playerName": "Mbeumo",
         "statLine": {
-          "es": "La mezcla de emociones alucinante que vivimos cada fin de semana.",
-          "en": "The mind-bending mix of emotions we live through every weekend."
-        }
+          "es": "2 goles, 3 puntos de bonificación · BRE",
+          "en": "2 goals, 3 bonus points · BRE"
+        },
+        "points": 15
       },
       "slides": [
         {
@@ -857,11 +866,12 @@
       "payload": {
         "gw": 10,
         "season": "2024-25",
-        "playerName": "Haaland, Salah o Palmer",
+        "playerName": "Solanke",
         "statLine": {
-          "es": "La elección se complica entre Erling Haaland, Mohamed Salah y Cole Palmer.",
-          "en": "The call gets complicated between Erling Haaland, Mohamed Salah and Cole Palmer."
-        }
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · TOT",
+          "en": "2 goals, 1 assist, 3 bonus points · TOT"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -933,11 +943,12 @@
       "payload": {
         "gw": 11,
         "season": "2024-25",
-        "playerName": "El brazalete",
+        "playerName": "B.Fernandes",
         "statLine": {
-          "es": "Los candidatos principales al brazalete, analizados a fondo.",
-          "en": "The main armband candidates, analysed in depth."
-        }
+          "es": "1 gol, 2 asistencias, portería a cero, 3 puntos de bonificación · MUN",
+          "en": "1 goal, 2 assists, clean sheet, 3 bonus points · MUN"
+        },
+        "points": 17
       },
       "slides": [
         {
@@ -984,11 +995,12 @@
       "payload": {
         "gw": 12,
         "season": "2024-25",
-        "playerName": "Mohamed Salah",
+        "playerName": "Maddison",
         "statLine": {
-          "es": "«Salah sigue encendido y lidera la tabla con la mayor cantidad de puntos.»",
-          "en": "\"Salah is still on fire and leads the table with the most points.\""
-        }
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · TOT",
+          "en": "2 goals, clean sheet, 3 bonus points · TOT"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -1110,11 +1122,12 @@
       "payload": {
         "gw": 19,
         "season": "2024-25",
-        "playerName": "Blanquilandia",
+        "playerName": "M.Salah",
         "statLine": {
-          "es": "En algún lugar del universo de los escenarios hipotéticos existe Blanquilandia.",
-          "en": "Somewhere in the universe of hypothetical scenarios lies Blanquilandia."
-        }
+          "es": "1 gol, 2 asistencias, portería a cero, 2 puntos de bonificación · LIV",
+          "en": "1 goal, 2 assists, clean sheet, 2 bonus points · LIV"
+        },
+        "points": 16
       },
       "slides": [
         {
@@ -1161,11 +1174,12 @@
       "payload": {
         "gw": 20,
         "season": "2024-25",
-        "playerName": "El Mystery Chip",
+        "playerName": "Mbeumo",
         "statLine": {
-          "es": "Todos los detalles del chip de assistant manager, recién anunciado.",
-          "en": "All the details of the freshly announced assistant manager chip."
-        }
+          "es": "2 goles, 1 asistencia, portería a cero, 3 puntos de bonificación · BRE",
+          "en": "2 goals, 1 assist, clean sheet, 3 bonus points · BRE"
+        },
+        "points": 19
       },
       "slides": [
         {
@@ -1212,11 +1226,12 @@
       "payload": {
         "gw": 21,
         "season": "2024-25",
-        "playerName": "Lecciones dolorosas",
+        "playerName": "Amad",
         "statLine": {
-          "es": "Una serie de decisiones carísimas, miradas en retrospectiva y sin anestesia.",
-          "en": "A string of very costly decisions, reviewed in hindsight with no anaesthesia."
-        }
+          "es": "3 goles, 3 puntos de bonificación · MUN",
+          "en": "3 goals, 3 bonus points · MUN"
+        },
+        "points": 20
       },
       "slides": [
         {

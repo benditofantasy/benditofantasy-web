@@ -1,0 +1,26 @@
+{
+  "gw": 1,
+  "label": { "es": "Jornada 1", "en": "Gameweek 1" },
+  "date": "2026-07-04",
+  "tiles": [
+    {
+      "id": "gw1-pretemporada",
+      "type": "quote",
+      "title": { "es": "Pretemporada 2026/27", "en": "Preseason 2026/27" },
+      "description": {
+        "es": "Estamos preparando el contenido de la nueva temporada.",
+        "en": "We're preparing content for the new season."
+      },
+      "tag": "quote",
+      "cover": "/media/gw1-pretemporada.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "quote": {
+          "es": "La pretemporada ya está en marcha. Aquí iremos publicando análisis, fichajes y guías a medida que se acerque la Jornada 1.",
+          "en": "Preseason is under way. Analysis, transfer news, and guides will land here as Gameweek 1 approaches."
+        },
+        "attribution": "Bendito Fantasy"
+      }
+    }
+  ]
+}
