@@ -4,6 +4,26 @@
   "date": "2026-07-04",
   "tiles": [
     {
+      "id": "m2026-canada-marruecos",
+      "type": "article",
+      "title": {
+        "es": "Marruecos ya no es el caballo negro: es un candidato que impone respeto",
+        "en": "Morocco is no longer the dark horse: it is a candidate that commands respect"
+      },
+      "description": {
+        "es": "Marruecos venció 3-0 a Canadá, confirmó su solidez como candidato del Mundial y abrió una nueva lectura fantasy tras la lesión de Saibari.",
+        "en": "Morocco beat Canada 3-0, confirmed its strength as a World Cup contender, and opened a new fantasy angle after Saibari's injury."
+      },
+      "tag": "article",
+      "cover": "/media/m2026-canada-marruecos.svg",
+      "credit": "Bendito Fantasy",
+      "link": {
+        "href": "/articulo/canada-marruecos",
+        "label": { "es": "Leer más", "en": "Read more" }
+      },
+      "payload": { "slug": "canada-marruecos" }
+    },
+    {
       "id": "m2026-argentina-cabo-verde",
       "type": "article",
       "title": {
