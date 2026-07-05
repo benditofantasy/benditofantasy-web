@@ -53,6 +53,22 @@ background.
    deepest surface, gold ladder → FDR-3/warning/premium, etc.) and owner-approved as a full set
    — including the category tag color reassignment. This is the version now live in
    `styles/tokens.css`.
+4. **2026-07-05, legacy Squarespace panels ported**: owner surfaced four settings panels from the
+   prior Squarespace build that had no equivalent yet — Animations (Style: Fade/Scale/Slide/Clip/
+   Flex, Speed: Slow/Medium/Fast), Site Styles color themes (Lightest/Light/Bright/Dark/Darkest ×
+   1/2), Fonts (Headings/Paragraphs/Buttons/Miscellaneous roles + Base Size), and Image Blocks
+   (Poster/Card/Overlap/Collage/Stack layout percentages). Added as `--anim-*`, `--theme-*-bg`/
+   `--theme-*-ink`, `--font-buttons`/`--font-misc`/`--font-size-base`, and `--imgblock-*` tokens in
+   `styles/tokens.css`, plus `[data-animate]` keyframes in `app/globals.css`. The color themes were
+   deliberately built as reusable bg/ink *pairs* from the existing brand palette rather than a
+   page-level theme switcher, since the light-only page shell was an explicit owner decision
+   (scoping note above) — no component wiring for switching themes exists yet, just the tokens.
+5. **Same day, animation wiring**: the `[data-animate]` scroll-reveal system was wired into
+   `GameweekRow`/`SpecialRow`/`SeasonRow` via a shared `useReveal` hook (IntersectionObserver,
+   fires once) — each row now slides in on scroll using the legacy default Style/Speed
+   (Slide/Medium). Theme color-pairs, font-buttons/font-misc, and Image Blocks remain tokens-only;
+   the site has no generic content-block builder for them to plug into yet (owner call, scope
+   deferred).
 
 Related: `SPEC.md` §4 (brand & design system), §19 item 1 (brand identity — now resolved except
 the display face).

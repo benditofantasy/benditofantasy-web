@@ -103,4 +103,95 @@
   --motion-xslow: 500ms;
   --motion-ease: cubic-bezier(0.4, 0, 0.2, 1);   /* ease-smooth */
   --motion-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---- Scroll-in animations (ported from the legacy Squarespace "Animations"
+     panel: Style = None/Fade/Scale/Slide/Clip/Flex, Speed = Slow/Medium/Fast).
+     Distinct from --motion-* above, which governs hover/UI transitions —
+     these durations are for one-shot on-scroll reveals and were tuned
+     longer. Consumed via [data-animate] + [data-animate-speed] in
+     app/globals.css. Legacy default was Style: Slide, Speed: Medium. ---- */
+  --anim-duration-slow: 700ms;
+  --anim-duration-medium: 500ms;
+  --anim-duration-fast: 300ms;
+  --anim-ease: var(--motion-ease);
+  --anim-default-style: slide;
+  --anim-default-speed: medium;
+
+  /* ---- Theme color pairs (ported from the legacy Squarespace "Site Styles"
+     panel: Lightest 1/2, Light 1/2, Bright 1/2, Dark 1/2, Darkest 1/2).
+     Built entirely from the existing brand palette above — these are
+     reusable bg+ink pairs for section/card backgrounds, NOT a page-level
+     theme switcher (page shell stays LIGHT THEME per SPEC §0/§7A). Each
+     "1" is the neutral/ink variant, each "2" is the accent-colored variant,
+     matching the legacy pairing pattern. ---- */
+  --theme-lightest-1-bg: #ffffff;
+  --theme-lightest-1-ink: var(--bf-navy-deep);
+  --theme-lightest-2-bg: #ffffff;
+  --theme-lightest-2-ink: var(--bf-coral);
+
+  --theme-light-1-bg: #e7dfc9;         /* tinted neutral, off the gold ladder */
+  --theme-light-1-ink: var(--bf-navy-deep);
+  --theme-light-2-bg: #e7dfc9;
+  --theme-light-2-ink: var(--bf-coral);
+
+  --theme-bright-1-bg: #ffffff;
+  --theme-bright-1-ink: var(--bf-coral);
+  --theme-bright-2-bg: var(--bf-coral);
+  --theme-bright-2-ink: #ffffff;
+
+  --theme-dark-1-bg: var(--bf-navy);
+  --theme-dark-1-ink: #ffffff;
+  --theme-dark-2-bg: var(--bf-navy);
+  --theme-dark-2-ink: var(--bf-coral);
+
+  --theme-darkest-1-bg: var(--bf-navy-deep);
+  --theme-darkest-1-ink: #ffffff;
+  --theme-darkest-2-bg: var(--bf-navy-deep);
+  --theme-darkest-2-ink: var(--bf-coral);
+
+  /* ---- Typography roles (legacy "Fonts" panel: Headings, Paragraphs,
+     Buttons, Miscellaneous, Base Size). Headings/Paragraphs already existed
+     as --font-display/--font-sans; Buttons and Miscellaneous were missing,
+     as was a base-size token. ---- */
+  --font-buttons: var(--font-sans);
+  --font-misc: var(--font-sans);
+  --font-size-base: 16px; /* legacy sheet showed 12px, but that was the
+     Squarespace base for a 100%-zoomed desktop text block, not a mobile-
+     first root size — kept at the standard 16px root pending owner call */
+
+  /* ---- Image Blocks (legacy "Miscellaneous" panel, Poster/Card/Overlap/
+     Collage/Stack layouts). All missing previously; values ported directly
+     from the legacy sheet as percentages for use in component layout calc(). ---- */
+  --imgblock-poster-text-align: center;
+  --imgblock-poster-content-width: 70%;
+  --imgblock-poster-title-separation: 5%;
+  --imgblock-poster-button-separation: 6%;
+
+  --imgblock-card-content-position: center;
+  --imgblock-card-text-align: left;
+  --imgblock-card-image-width: 50%;
+  --imgblock-card-image-separation: 10%;
+  --imgblock-card-title-separation: 5%;
+  --imgblock-card-button-separation: 5%;
+
+  --imgblock-overlap-content-position: center;
+  --imgblock-overlap-text-align: left;
+  --imgblock-overlap-image-width: 55%;
+  --imgblock-overlap-title-overlap: 35%;
+  --imgblock-overlap-title-separation: 3%;
+  --imgblock-overlap-button-separation: 5%;
+
+  --imgblock-collage-content-position: center;
+  --imgblock-collage-text-align: left;
+  --imgblock-collage-image-width: 70%;
+  --imgblock-collage-content-width: 50%;
+  --imgblock-collage-content-offset: 5%;
+  --imgblock-collage-content-padding: 10%;
+  --imgblock-collage-title-separation: 4%;
+  --imgblock-collage-button-separation: 5%;
+
+  --imgblock-stack-text-align: left;
+  --imgblock-stack-image-separation: 7%;
+  --imgblock-stack-title-separation: 4%;
+  --imgblock-stack-button-separation: 4%;
 }

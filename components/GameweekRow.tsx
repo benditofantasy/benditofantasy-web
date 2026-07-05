@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useReveal } from "@/hooks/useReveal";
 import { useLang } from "@/lib/i18n";
 import type { Gameweek } from "@/lib/types";
 import TileCard from "./TileCard";
@@ -24,6 +25,7 @@ export default function GameweekRow({ gameweek }: { gameweek: Gameweek }) {
   const stripRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const { ref: revealRef, visible } = useReveal<HTMLElement>();
 
   const updateArrows = useCallback(() => {
     const strip = stripRef.current;
@@ -79,8 +81,11 @@ export default function GameweekRow({ gameweek }: { gameweek: Gameweek }) {
 
   return (
     <section
+      ref={revealRef}
       id={`jornada-${gameweek.gw}`}
       aria-label={l(gameweek.label)}
+      data-animate="slide"
+      data-animate-visible={visible || undefined}
       className="py-10 sm:py-12 lg:py-16"
     >
       <div className="relative mx-auto max-w-[1600px]">

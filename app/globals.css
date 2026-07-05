@@ -52,6 +52,103 @@ body {
   }
 }
 
+/* ---- On-scroll reveal animations (legacy "Animations" panel: Style +
+   Speed). Apply data-animate="fade|scale|slide|clip|flex" to an element and
+   toggle the [data-animate-visible] attribute (e.g. via IntersectionObserver)
+   to play it; data-animate-speed="slow|medium|fast" controls duration,
+   defaulting to the tokens' medium. Elements are hidden pre-reveal so
+   content doesn't flash before JS toggles visibility. ---- */
+[data-animate] {
+  opacity: 0;
+  animation-duration: var(--anim-duration-medium);
+  animation-timing-function: var(--anim-ease);
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+[data-animate][data-animate-visible] {
+  animation-play-state: running;
+}
+[data-animate="fade"] {
+  animation-name: bf-anim-fade;
+}
+[data-animate="scale"] {
+  animation-name: bf-anim-scale;
+}
+[data-animate="slide"] {
+  animation-name: bf-anim-slide;
+}
+[data-animate="clip"] {
+  animation-name: bf-anim-clip;
+}
+[data-animate="flex"] {
+  animation-name: bf-anim-flex;
+}
+[data-animate-speed="slow"] {
+  animation-duration: var(--anim-duration-slow);
+}
+[data-animate-speed="fast"] {
+  animation-duration: var(--anim-duration-fast);
+}
+
+@keyframes bf-anim-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bf-anim-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes bf-anim-slide {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bf-anim-clip {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes bf-anim-flex {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  60% {
+    transform: translateY(-4px) scale(1.01);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    opacity: 1;
+    animation: none !important;
+  }
+}
+
 /* ---- Editorial prose for MDX article bodies ---- */
 .prose-editorial {
   max-width: 42rem;
