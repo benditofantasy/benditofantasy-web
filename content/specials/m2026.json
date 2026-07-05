@@ -1,8 +1,71 @@
 {
   "id": "m2026",
-  "label": { "es": "Mundial 2026", "en": "World Cup 2026" },
+  "label": {
+    "es": "Mundial 2026",
+    "en": "World Cup 2026"
+  },
   "date": "2026-07-04",
   "tiles": [
+    {
+      "id": "m2026-podcast-e325",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Inglaterra preocupa y estos son los jugadores que debes tener",
+        "en": "England worry, and these are the players you need"
+      },
+      "description": {
+        "es": "Los cruces de cuartos de final: el gran momento de México y Colombia, las dudas de Inglaterra y Harry Kane como pick premium.",
+        "en": "The quarter-final ties: Mexico and Colombia's great run, England's doubts and Harry Kane as a premium pick."
+      },
+      "tag": "podcast",
+      "cover": "/media/m2026-podcast-e325.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "fAzLZ312Frw",
+        "duration": "57:04"
+      }
+    },
+    {
+      "id": "m2026-podcast-e324",
+      "type": "podcast",
+      "featured": false,
+      "title": {
+        "es": "México clasifica, Haaland explota y se viene la Wildcard",
+        "en": "Mexico advance, Haaland erupts and the Wildcard looms"
+      },
+      "description": {
+        "es": "Conclusiones de la primera ronda con México ya clasificado, los premium que se consolidan y la Wildcard rumbo a una tercera fecha de rotaciones.",
+        "en": "First-round takeaways with Mexico already through, the premiums cementing their place and the Wildcard ahead of a rotation-heavy Matchday 3."
+      },
+      "tag": "podcast",
+      "cover": "/media/m2026-podcast-e324.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "zaknauLw6-A",
+        "duration": "53:13"
+      }
+    },
+    {
+      "id": "m2026-podcast-e323",
+      "type": "podcast",
+      "featured": false,
+      "title": {
+        "es": "Prepara tu equipo para la primera ronda del Mundial",
+        "en": "Get your team ready for the World Cup's first round"
+      },
+      "description": {
+        "es": "Arranca el Fantasy del Mundial: reglas, diferencias con el FPL, chips y los primeros borradores de equipo para la jornada 1.",
+        "en": "World Cup Fantasy kicks off: the rules, how it differs from FPL, chips and the first team drafts for Matchday 1."
+      },
+      "tag": "podcast",
+      "cover": "/media/m2026-podcast-e323.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "fS-uRrpGcuU",
+        "duration": "1:05:59"
+      }
+    },
     {
       "id": "m2026-canada-marruecos",
       "type": "article",
@@ -16,13 +79,21 @@
       },
       "tag": "article",
       "cover": "/media/players/rahimi-morocco.png",
-      "badge": { "es": "Marruecos", "en": "Morocco" },
+      "badge": {
+        "es": "Marruecos",
+        "en": "Morocco"
+      },
       "credit": "Bendito Fantasy",
       "link": {
         "href": "/articulo/canada-marruecos",
-        "label": { "es": "Leer más", "en": "Read more" }
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
       },
-      "payload": { "slug": "canada-marruecos" }
+      "payload": {
+        "slug": "canada-marruecos"
+      }
     },
     {
       "id": "m2026-argentina-cabo-verde",
@@ -37,13 +108,21 @@
       },
       "tag": "article",
       "cover": "/media/players/martinez-argentina.png",
-      "badge": { "es": "Argentina", "en": "Argentina" },
+      "badge": {
+        "es": "Argentina",
+        "en": "Argentina"
+      },
       "credit": "Bendito Fantasy",
       "link": {
         "href": "/articulo/argentina-cabo-verde",
-        "label": { "es": "Leer más", "en": "Read more" }
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
       },
-      "payload": { "slug": "argentina-cabo-verde" }
+      "payload": {
+        "slug": "argentina-cabo-verde"
+      }
     }
   ]
 }

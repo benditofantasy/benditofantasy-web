@@ -284,6 +284,26 @@
       },
       "slides": [
         {
+          "id": "s2324-gw2-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Salah Pilgrim vs Haaland el mundo",
+            "en": "Salah Pilgrim vs. Haaland the World"
+          },
+          "description": {
+            "es": "Primeras impresiones de la temporada: los equipos y jugadores que llamaron la atención de inmediato.",
+            "en": "First impressions of the season: the teams and players that immediately caught the eye."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw2-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "uQSzusUDSPE",
+            "duration": "1:05:29"
+          }
+        },
+        {
           "id": "s2324-gw2-a1",
           "type": "article",
           "title": {
@@ -361,6 +381,26 @@
       },
       "slides": [
         {
+          "id": "s2324-gw3-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Saca la cartera como Leo DiCaprio",
+            "en": "Pull out your wallet like Leo DiCaprio"
+          },
+          "description": {
+            "es": "Los fichajes más populares de la semana, quiénes son relevantes de verdad y el calendario que favorece a cada equipo.",
+            "en": "The week's most popular transfers, who is genuinely relevant, and the fixture list favouring each team."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw3-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "IMo70-wxWnQ",
+            "duration": "1:00:30"
+          }
+        },
+        {
           "id": "s2324-gw3-a1",
           "type": "article",
           "title": {
@@ -413,6 +453,26 @@
       },
       "slides": [
         {
+          "id": "s2324-gw4-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Flechitas verdes en mi viaje",
+            "en": "Little green arrows on my journey"
+          },
+          "description": {
+            "es": "Los jugadores de precio medio y bajo que están rindiendo, más los traspasos populares y el panorama del calendario.",
+            "en": "The mid- and budget-priced players delivering, plus the popular transfers and the fixture outlook."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw4-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "hesdnJsqQes",
+            "duration": "1:13:57"
+          }
+        },
+        {
           "id": "s2324-gw4-a1",
           "type": "article",
           "title": {
@@ -435,6 +495,53 @@
           },
           "payload": {
             "slug": "resumen-jornada-partidos-destacados-gw4-fpl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw5-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 5",
+        "en": "Gameweek 5"
+      },
+      "description": {
+        "es": "Cuatro jornadas de evidencia: los equipos que más rematan y más conceden, y hacia dónde mover tus fichas.",
+        "en": "Four gameweeks of evidence: the teams creating and conceding the most shots, and where to move your pieces."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw5-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 5,
+        "season": "2023-24",
+        "playerName": "Bernardo",
+        "statLine": {
+          "es": "1 gol, 1 asistencia, 3 puntos de bonificación · MCI",
+          "en": "1 goal, 1 assist, 3 bonus points · MCI"
+        },
+        "points": 13
+      },
+      "slides": [
+        {
+          "id": "s2324-gw5-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "El Porschecoglu",
+            "en": "The Porschecoglu"
+          },
+          "description": {
+            "es": "Cuatro jornadas de evidencia: los equipos que más rematan y más conceden, y hacia dónde mover tus fichas.",
+            "en": "Four gameweeks of evidence: the teams creating and conceding the most shots, and where to move your pieces."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw5-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "_HPT5h1cA6s",
+            "duration": "1:15:46"
           }
         }
       ]
@@ -464,6 +571,26 @@
         "points": 18
       },
       "slides": [
+        {
+          "id": "s2324-gw6-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "El general del imperio romano",
+            "en": "The general of the Roman Empire"
+          },
+          "description": {
+            "es": "Repaso posición por posición, los traspasos más populares y el calendario que favorece a cada equipo.",
+            "en": "A position-by-position review, the most popular transfers and the fixture swing team by team."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw6-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "Y6zgdMtxSGQ",
+            "duration": "1:11:52"
+          }
+        },
         {
           "id": "s2324-gw6-a1",
           "type": "article",
@@ -696,6 +823,53 @@
       ]
     },
     {
+      "id": "s2324-gw10-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 10",
+        "en": "Gameweek 10"
+      },
+      "description": {
+        "es": "Los líderes en puntos que le están ganando a Haaland y el repaso por posición, con los traspasos de la semana.",
+        "en": "The point-scorers outpacing Haaland and the position-by-position review, plus the week's transfers."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw10-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 10,
+        "season": "2023-24",
+        "playerName": "Nketiah",
+        "statLine": {
+          "es": "3 goles, 3 puntos de bonificación · ARS",
+          "en": "3 goals, 3 bonus points · ARS"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2324-gw10-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Súbete a la Kaoruneta",
+            "en": "Hop on the Kaoru bus"
+          },
+          "description": {
+            "es": "Los líderes en puntos que le están ganando a Haaland y el repaso por posición, con los traspasos de la semana.",
+            "en": "The point-scorers outpacing Haaland and the position-by-position review, plus the week's transfers."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw10-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "AAapgKeGEBw",
+            "duration": "1:02:20"
+          }
+        }
+      ]
+    },
+    {
       "id": "s2324-gw11-mvp",
       "type": "mvp",
       "title": {
@@ -720,6 +894,26 @@
         "points": 22
       },
       "slides": [
+        {
+          "id": "s2324-gw11-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Callando detractores",
+            "en": "Silencing the doubters"
+          },
+          "description": {
+            "es": "Quiénes cumplieron y quiénes no dieron el ancho, más la posible capitanía total sobre Haaland.",
+            "en": "Who delivered and who fell short, plus the case for going all-in on the Haaland captaincy."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw11-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "xBhE7hLbAu0",
+            "duration": "1:11:57"
+          }
+        },
         {
           "id": "s2324-gw11-a1",
           "type": "article",
@@ -773,6 +967,26 @@
       },
       "slides": [
         {
+          "id": "s2324-gw12-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Jornada 12",
+            "en": "Gameweek 12"
+          },
+          "description": {
+            "es": "Repaso por posición, los traspasos más populares y el calendario, con la miniliga y preguntas de la comunidad.",
+            "en": "Position-by-position review, the most popular transfers and the fixtures, plus the mini-league and community questions."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw12-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "4DM4Tnvabx8",
+            "duration": "1:09:04"
+          }
+        },
+        {
           "id": "s2324-gw12-a1",
           "type": "article",
           "title": {
@@ -795,6 +1009,53 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-gameweek-12-2023"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw13-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 13",
+        "en": "Gameweek 13"
+      },
+      "description": {
+        "es": "Lo que dejó la fecha FIFA: lesionados, regresos, diferenciales y las estadísticas defensivas y ofensivas recientes.",
+        "en": "The international break fallout: injuries, returns, differentials and the recent defensive and attacking numbers."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw13-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 13,
+        "season": "2023-24",
+        "playerName": "Tavernier",
+        "statLine": {
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · BOU",
+          "en": "2 goals, clean sheet, 3 bonus points · BOU"
+        },
+        "points": 16
+      },
+      "slides": [
+        {
+          "id": "s2324-gw13-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "La lista negra",
+            "en": "The blacklist"
+          },
+          "description": {
+            "es": "Lo que dejó la fecha FIFA: lesionados, regresos, diferenciales y las estadísticas defensivas y ofensivas recientes.",
+            "en": "The international break fallout: injuries, returns, differentials and the recent defensive and attacking numbers."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw13-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "FO42Q5gOLU8",
+            "duration": "1:17:29"
           }
         }
       ]
@@ -825,6 +1086,26 @@
       },
       "slides": [
         {
+          "id": "s2324-gw14-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Jornada 14",
+            "en": "Gameweek 14"
+          },
+          "description": {
+            "es": "Regresos y lesionados tras la fecha FIFA, jugadores diferenciales y el análisis de los equipos en las últimas jornadas.",
+            "en": "Returns and injuries after the international break, differential picks and how teams have trended in recent gameweeks."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw14-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "M-TpCW-67qA",
+            "duration": "1:00:09"
+          }
+        },
+        {
           "id": "s2324-gw14-a1",
           "type": "article",
           "title": {
@@ -847,6 +1128,147 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-gameweek-14-2023"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw16-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 16",
+        "en": "Gameweek 16"
+      },
+      "description": {
+        "es": "Semana corta con lesiones de por medio (Mbeumo y quizá Son), el calendario del Chelsea y traspasos de porteros.",
+        "en": "A quick turnaround with injuries in the mix (Mbeumo, maybe Son), Chelsea's fixture run and goalkeeper moves."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw16-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 16,
+        "season": "2023-24",
+        "playerName": "Son",
+        "statLine": {
+          "es": "1 gol, 2 asistencias, portería a cero, 3 puntos de bonificación · TOT",
+          "en": "1 goal, 2 assists, clean sheet, 3 bonus points · TOT"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2324-gw16-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Beben y beben",
+            "en": "And they drink and they drink"
+          },
+          "description": {
+            "es": "Semana corta con lesiones de por medio (Mbeumo y quizá Son), el calendario del Chelsea y traspasos de porteros.",
+            "en": "A quick turnaround with injuries in the mix (Mbeumo, maybe Son), Chelsea's fixture run and goalkeeper moves."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw16-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "d1pMneetg_k",
+            "duration": "58:23"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw17-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 17",
+        "en": "Gameweek 17"
+      },
+      "description": {
+        "es": "Solanke y Raúl Jiménez en racha, el debate sobre vender a Haaland y los equipos con menos rotación.",
+        "en": "Solanke and Raúl Jiménez in form, the sell-Haaland debate and the teams least likely to rotate."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw17-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 17,
+        "season": "2023-24",
+        "playerName": "Kudus",
+        "statLine": {
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · WHU",
+          "en": "2 goals, clean sheet, 3 bonus points · WHU"
+        },
+        "points": 16
+      },
+      "slides": [
+        {
+          "id": "s2324-gw17-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Puntos en binario 1010",
+            "en": "Points in binary 1010"
+          },
+          "description": {
+            "es": "Solanke y Raúl Jiménez en racha, el debate sobre vender a Haaland y los equipos con menos rotación.",
+            "en": "Solanke and Raúl Jiménez in form, the sell-Haaland debate and the teams least likely to rotate."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw17-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "snKEm_WbS_o",
+            "duration": "1:05:27"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw18-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 18",
+        "en": "Gameweek 18"
+      },
+      "description": {
+        "es": "Equipos sin partido, la duda con los puntos de Bournemouth y los traspasos con miras a las salidas por selecciones.",
+        "en": "Blanking teams, the Bournemouth points question and transfers ahead of international call-ups."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw18-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 18,
+        "season": "2023-24",
+        "playerName": "Solanke",
+        "statLine": {
+          "es": "3 goles, 3 puntos de bonificación · BOU",
+          "en": "3 goals, 3 bonus points · BOU"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2324-gw18-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Tengo los millones",
+            "en": "I've got the millions"
+          },
+          "description": {
+            "es": "Equipos sin partido, la duda con los puntos de Bournemouth y los traspasos con miras a las salidas por selecciones.",
+            "en": "Blanking teams, the Bournemouth points question and transfers ahead of international call-ups."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw18-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "UuKBdrgFrJw",
+            "duration": "1:01:39"
           }
         }
       ]
@@ -876,6 +1298,26 @@
         "points": 19
       },
       "slides": [
+        {
+          "id": "s2324-gw21-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿Con quién reemplazo a mis premiums?",
+            "en": "Who do I replace my premiums with?"
+          },
+          "description": {
+            "es": "Salidas por selecciones y lesiones: quiénes son los mejores candidatos para reemplazar a tus premium.",
+            "en": "International departures and injuries: the best candidates to replace your premium players."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw21-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "Ankn2Q-kW6s",
+            "duration": "1:13:11"
+          }
+        },
         {
           "id": "s2324-gw21-a1",
           "type": "article",
@@ -954,6 +1396,26 @@
       },
       "slides": [
         {
+          "id": "s2324-gw22-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Diogo Jota en la mira",
+            "en": "Diogo Jota in the crosshairs"
+          },
+          "description": {
+            "es": "El calendario empieza a acomodar blanks y dobles, y Diogo Jota llama la atención: ¿ya tocó su techo de puntos?",
+            "en": "Blanks and doubles start taking shape, and Diogo Jota draws attention: has he hit his points ceiling?"
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw22-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "RgNAXjdetLE",
+            "duration": "1:19:54"
+          }
+        },
+        {
           "id": "s2324-gw22-a1",
           "type": "article",
           "title": {
@@ -976,6 +1438,53 @@
           },
           "payload": {
             "slug": "li0lrnqfd4tb2iladbp8sa8uxmtksg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw24-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 24",
+        "en": "Gameweek 24"
+      },
+      "description": {
+        "es": "La fecha con más goles de los últimos años: los mejores números ofensivos y el estudio de defensas y ataques.",
+        "en": "The highest-scoring gameweek in years: the best attacking numbers and the defence-and-attack study."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw24-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 24,
+        "season": "2023-24",
+        "playerName": "Rice",
+        "statLine": {
+          "es": "1 gol, 2 asistencias, portería a cero, 3 puntos de bonificación · ARS",
+          "en": "1 goal, 2 assists, clean sheet, 3 bonus points · ARS"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2324-gw24-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "El juguete favorito de Pep",
+            "en": "Pep's favourite toy"
+          },
+          "description": {
+            "es": "La fecha con más goles de los últimos años: los mejores números ofensivos y el estudio de defensas y ataques.",
+            "en": "The highest-scoring gameweek in years: the best attacking numbers and the defence-and-attack study."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw24-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "JzUZva5eTQQ",
+            "duration": "1:20:38"
           }
         }
       ]
@@ -1006,6 +1515,26 @@
       },
       "slides": [
         {
+          "id": "s2324-gw25-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Haaland Terminator",
+            "en": "Haaland Terminator"
+          },
+          "description": {
+            "es": "La doble jornada 25: los jugadores con mejores probabilidades de puntuar alto y el top 10 por posición.",
+            "en": "Double Gameweek 25: the players most likely to haul and the top ten in every position."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw25-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "g1UESAnTs2A",
+            "duration": "1:18:05"
+          }
+        },
+        {
           "id": "s2324-gw25-a1",
           "type": "article",
           "title": {
@@ -1028,6 +1557,429 @@
           },
           "payload": {
             "slug": "ndetz1uis25dvop4cxgv1i6772e7ea"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw27-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 27",
+        "en": "Gameweek 27"
+      },
+      "description": {
+        "es": "Lo que dejó la blank 26 y la estrategia para la 29, con el debate sobre vender a De Bruyne y el plan de chips.",
+        "en": "The Blank 26 fallout and the strategy for 29, with the sell-De-Bruyne debate and the chip plan."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw27-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 27,
+        "season": "2023-24",
+        "playerName": "Foden",
+        "statLine": {
+          "es": "2 goles, 3 puntos de bonificación · MCI",
+          "en": "2 goals, 3 bonus points · MCI"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2324-gw27-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Watkins es el nuevo rey de FPL",
+            "en": "Watkins is the new king of FPL"
+          },
+          "description": {
+            "es": "Lo que dejó la blank 26 y la estrategia para la 29, con el debate sobre vender a De Bruyne y el plan de chips.",
+            "en": "The Blank 26 fallout and the strategy for 29, with the sell-De-Bruyne debate and the chip plan."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw27-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "p1_tzALw_0M",
+            "duration": "1:10:12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw28-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 28",
+        "en": "Gameweek 28"
+      },
+      "description": {
+        "es": "La tan mencionada doble jornada 28, el momento de los equipos involucrados y la estrategia para la blank 29.",
+        "en": "The much-hyped Double Gameweek 28, the form of the teams involved and the strategy for Blank 29."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw28-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 28,
+        "season": "2023-24",
+        "playerName": "Son",
+        "statLine": {
+          "es": "1 gol, 2 asistencias, portería a cero, 3 puntos de bonificación · TOT",
+          "en": "1 goal, 2 assists, clean sheet, 3 bonus points · TOT"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2324-gw28-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Salsita pal' partido",
+            "en": "A little salsa for the match"
+          },
+          "description": {
+            "es": "La tan mencionada doble jornada 28, el momento de los equipos involucrados y la estrategia para la blank 29.",
+            "en": "The much-hyped Double Gameweek 28, the form of the teams involved and the strategy for Blank 29."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw28-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "980yrf2qzR8",
+            "duration": "1:27:45"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw29-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 29",
+        "en": "Gameweek 29"
+      },
+      "description": {
+        "es": "Cómo levantarse de la dolorosa jornada 28 y atacar la blank 29: calendario, chips y quiénes sí juegan.",
+        "en": "Bouncing back from a painful Gameweek 28 and attacking Blank 29: fixtures, chips and who actually plays."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw29-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 29,
+        "season": "2023-24",
+        "playerName": "Muniz",
+        "statLine": {
+          "es": "2 goles, 3 puntos de bonificación · FUL",
+          "en": "2 goals, 3 bonus points · FUL"
+        },
+        "points": 13
+      },
+      "slides": [
+        {
+          "id": "s2324-gw29-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿El diferencial de blanco?",
+            "en": "The blank-week differential?"
+          },
+          "description": {
+            "es": "Cómo levantarse de la dolorosa jornada 28 y atacar la blank 29: calendario, chips y quiénes sí juegan.",
+            "en": "Bouncing back from a painful Gameweek 28 and attacking Blank 29: fixtures, chips and who actually plays."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw29-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "zQIsT-P1AyM",
+            "duration": "1:12:26"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw30-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 30",
+        "en": "Gameweek 30"
+      },
+      "description": {
+        "es": "La jornada 29 pasó a la historia como la peor de todos los tiempos; repasamos el daño y las dobles que quedan.",
+        "en": "Gameweek 29 went down as the worst of all time; we survey the damage and the doubles still to come."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw30-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 30,
+        "season": "2023-24",
+        "playerName": "Brereton Díaz",
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · SHU",
+          "en": "2 goals, 1 assist, 3 bonus points · SHU"
+        },
+        "points": 18
+      },
+      "slides": [
+        {
+          "id": "s2324-gw30-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "El free hit fue un chorro de babas",
+            "en": "The Free Hit was a slobbering mess"
+          },
+          "description": {
+            "es": "La jornada 29 pasó a la historia como la peor de todos los tiempos; repasamos el daño y las dobles que quedan.",
+            "en": "Gameweek 29 went down as the worst of all time; we survey the damage and the doubles still to come."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw30-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "by_HPezFH6I",
+            "duration": "1:20:56"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw32-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 32",
+        "en": "Gameweek 32"
+      },
+      "description": {
+        "es": "La jornada 32 y la próxima doble 34, con los diez mejores por posición y las compras y ventas de la gente.",
+        "en": "Gameweek 32 and the upcoming Double 34, with the top ten per position and what everyone is buying and selling."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw32-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 32,
+        "season": "2023-24",
+        "playerName": "De Bruyne",
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · MCI",
+          "en": "2 goals, 1 assist, 3 bonus points · MCI"
+        },
+        "points": 18
+      },
+      "slides": [
+        {
+          "id": "s2324-gw32-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "La fábula Gunner",
+            "en": "The Gunner fable"
+          },
+          "description": {
+            "es": "La jornada 32 y la próxima doble 34, con los diez mejores por posición y las compras y ventas de la gente.",
+            "en": "Gameweek 32 and the upcoming Double 34, with the top ten per position and what everyone is buying and selling."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw32-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "4EQwT9JPc7k",
+            "duration": "1:03:47"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw33-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 33",
+        "en": "Gameweek 33"
+      },
+      "description": {
+        "es": "El episodio semanal rumbo a la jornada 33, con transferencias, capitanías y el repaso de la miniliga.",
+        "en": "The weekly episode heading into Gameweek 33, with transfers, captaincy and the mini-league round-up."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw33-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 33,
+        "season": "2023-24",
+        "playerName": "Palmer",
+        "statLine": {
+          "es": "4 goles, portería a cero, 3 puntos de bonificación · CHE",
+          "en": "4 goals, clean sheet, 3 bonus points · CHE"
+        },
+        "points": 26
+      },
+      "slides": [
+        {
+          "id": "s2324-gw33-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "El ogro y su garrote",
+            "en": "The ogre and his club"
+          },
+          "description": {
+            "es": "El episodio semanal rumbo a la jornada 33, con transferencias, capitanías y el repaso de la miniliga.",
+            "en": "The weekly episode heading into Gameweek 33, with transfers, captaincy and the mini-league round-up."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw33-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "AzXozKEzOws",
+            "duration": "1:11:13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw34-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 34",
+        "en": "Gameweek 34"
+      },
+      "description": {
+        "es": "La doble jornada 34 y el eco de la Champions: estrategias de chips y la opción correcta en Liverpool, Arsenal y City.",
+        "en": "Double Gameweek 34 and the Champions League ripple: chip strategy and the right pick at Liverpool, Arsenal and City."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw34-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 34,
+        "season": "2023-24",
+        "playerName": "White",
+        "statLine": {
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · ARS",
+          "en": "2 goals, clean sheet, 3 bonus points · ARS"
+        },
+        "points": 20
+      },
+      "slides": [
+        {
+          "id": "s2324-gw34-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "En vivo",
+            "en": "Live"
+          },
+          "description": {
+            "es": "La doble jornada 34 y el eco de la Champions: estrategias de chips y la opción correcta en Liverpool, Arsenal y City.",
+            "en": "Double Gameweek 34 and the Champions League ripple: chip strategy and the right pick at Liverpool, Arsenal and City."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw34-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "BrHptGr5Uec",
+            "duration": "1:17:15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw35-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 35",
+        "en": "Gameweek 35"
+      },
+      "description": {
+        "es": "La doble jornada 35: por qué no comprar Chelsea, por qué Newcastle sí tiene sentido y una Wildcard propuesta.",
+        "en": "Double Gameweek 35: why not to buy Chelsea, why Newcastle makes sense, and a proposed Wildcard draft."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw35-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 35,
+        "season": "2023-24",
+        "playerName": "Chalobah",
+        "statLine": {
+          "es": "1 gol, portería a cero, 3 puntos de bonificación · CHE",
+          "en": "1 goal, clean sheet, 3 bonus points · CHE"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2324-gw35-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "No irse con la plebada",
+            "en": "Don't follow the crowd"
+          },
+          "description": {
+            "es": "La doble jornada 35: por qué no comprar Chelsea, por qué Newcastle sí tiene sentido y una Wildcard propuesta.",
+            "en": "Double Gameweek 35: why not to buy Chelsea, why Newcastle makes sense, and a proposed Wildcard draft."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw35-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "dfwdUhYS-O8",
+            "duration": "1:13:13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2324-gw36-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 36",
+        "en": "Gameweek 36"
+      },
+      "description": {
+        "es": "La doble jornada 36 y el plan para el cierre: qué comprar para la doble 37 y qué equipos terminan mejor.",
+        "en": "Double Gameweek 36 and the endgame plan: what to buy for Double 37 and which teams finish strongest."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2324-gw36-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 36,
+        "season": "2023-24",
+        "playerName": "Haaland",
+        "statLine": {
+          "es": "4 goles, 3 puntos de bonificación · MCI",
+          "en": "4 goals, 3 bonus points · MCI"
+        },
+        "points": 21
+      },
+      "slides": [
+        {
+          "id": "s2324-gw36-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿El último baile?",
+            "en": "The last dance?"
+          },
+          "description": {
+            "es": "La doble jornada 36 y el plan para el cierre: qué comprar para la doble 37 y qué equipos terminan mejor.",
+            "en": "Double Gameweek 36 and the endgame plan: what to buy for Double 37 and which teams finish strongest."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw36-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "79MWaNf7bMo",
+            "duration": "1:12:49"
           }
         }
       ]
@@ -1057,6 +2009,26 @@
         "points": 20
       },
       "slides": [
+        {
+          "id": "s2324-gw38-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "El McLaren vs el carrito de paletas",
+            "en": "The McLaren vs. the ice-cream cart"
+          },
+          "description": {
+            "es": "La última jornada y las predicciones del campeonato, con City–West Ham y Arsenal–Everton bajo la lupa.",
+            "en": "The final gameweek and title predictions, with City–West Ham and Arsenal–Everton under the microscope."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2324-gw38-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "rpUdd_sAfJg",
+            "duration": "1:18:19"
+          }
+        },
         {
           "id": "s2324-gw38-a1",
           "type": "article",
