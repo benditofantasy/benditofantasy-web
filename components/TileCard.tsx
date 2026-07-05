@@ -50,11 +50,13 @@ export default function TileCard({ tile }: { tile: Tile }) {
           </span>
         )}
         {tile.badge && (
-          <span className="absolute bottom-3 left-3 font-badge text-sm font-bold uppercase tracking-wide text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">
-            {l(tile.badge)}
-          </span>
+          <div className="absolute inset-x-0 bottom-0 flex items-end bg-gradient-to-t from-black/75 via-black/30 to-transparent px-3 pb-3 pt-14">
+            <span className="font-badge text-2xl font-extrabold uppercase leading-none tracking-wide text-white sm:text-3xl">
+              {l(tile.badge)}
+            </span>
+          </div>
         )}
-        <span className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-pill bg-surface/90 px-2.5 py-1 text-[11px] font-bold text-ink backdrop-blur-sm">
+        <span className="absolute bottom-3 right-3 z-10 inline-flex items-center gap-1.5 rounded-pill bg-surface/90 px-2.5 py-1 text-[11px] font-bold text-ink backdrop-blur-sm">
           01
           <TypeIcon type={tile.type} className="h-3.5 w-3.5" />
         </span>

@@ -13,8 +13,8 @@ import type { Lang, Localized, TagKey } from "./types";
 /** UI chrome strings. Add a key here + both translations = done (SPEC §5). */
 export const STRINGS = {
   tagline: {
-    es: "Fantasy Premier League en español, cada jornada.",
-    en: "Fantasy Premier League in Spanish, every gameweek.",
+    es: "La casa del fantasy en español.",
+    en: "The home of fantasy football in Spanish.",
   },
   thisWeek: { es: "Esta semana", en: "This week" },
   entries: { es: "ENTRADAS", en: "ITEMS" },
