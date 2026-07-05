@@ -1,0 +1,1205 @@
+{
+  "season": "2025-26",
+  "label": {
+    "es": "2025/26",
+    "en": "2025/26"
+  },
+  "date": "2026-05-24",
+  "tiles": [
+    {
+      "id": "s2526-gw1-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 1",
+        "en": "Gameweek 1"
+      },
+      "description": {
+        "es": "A días del arranque: repaso de todos los partidos, transferencias y estrategias de chips para las últimas decisiones.",
+        "en": "Days before kickoff: a run through every fixture, the transfers and the chip strategies for those final calls."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw1-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 1,
+        "season": "2025-26",
+        "playerName": "Ballard",
+        "statLine": {
+          "es": "1 gol, portería a cero, 14 contribuciones defensivas, 3 puntos de bonificación · SUN",
+          "en": "1 goal, clean sheet, 14 defensive contributions, 3 bonus points · SUN"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2526-gw1-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Resuelto: si tuvieras que elegir a un jugador de cada equipo, ¿quién sería?",
+            "en": "Solved: if you had to pick one player from every team, who would it be?"
+          },
+          "description": {
+            "es": "A días del arranque: repaso de todos los partidos, transferencias y estrategias de chips para las últimas decisiones.",
+            "en": "Days before kickoff: a run through every fixture, the transfers and the chip strategies for those final calls."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw1-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "VdLyeWsWUAQ",
+            "duration": "1:28:04"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw2-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 2",
+        "en": "Gameweek 2"
+      },
+      "description": {
+        "es": "Primeras impresiones tras el arranque: titulares que se despejan, los ascendidos y las nuevas contrataciones.",
+        "en": "First impressions after the opening round: starting XIs clearing up, the promoted sides and the new signings."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw2-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 2,
+        "season": "2025-26",
+        "playerName": "J.Timber",
+        "statLine": {
+          "es": "2 goles, 1 asistencia, portería a cero, 6 contribuciones defensivas, 3 puntos de bonificación · ARS",
+          "en": "2 goals, 1 assist, clean sheet, 6 defensive contributions, 3 bonus points · ARS"
+        },
+        "points": 24
+      },
+      "slides": [
+        {
+          "id": "s2526-gw2-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Sorpresas que nos dejó el arranque de la Premier League",
+            "en": "The surprises from the Premier League's opening week"
+          },
+          "description": {
+            "es": "Primeras impresiones tras el arranque: titulares que se despejan, los ascendidos y las nuevas contrataciones.",
+            "en": "First impressions after the opening round: starting XIs clearing up, the promoted sides and the new signings."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw2-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "2YtI5f8W31M",
+            "duration": "1:22:40"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw3-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 3",
+        "en": "Gameweek 3"
+      },
+      "description": {
+        "es": "Los grandes cambios de percepción de algunos equipos, las lesiones y los movimientos que hay que empezar a considerar.",
+        "en": "Big shifts in how teams are perceived, the injuries and the moves worth starting to consider."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw3-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 3,
+        "season": "2025-26",
+        "playerName": "Guéhi",
+        "statLine": {
+          "es": "1 gol, portería a cero, 9 contribuciones defensivas, 3 puntos de bonificación · MCI",
+          "en": "1 goal, clean sheet, 9 defensive contributions, 3 bonus points · MCI"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2526-gw3-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Nuevas narrativas en la Premier League y el FPL",
+            "en": "New narratives in the Premier League and FPL"
+          },
+          "description": {
+            "es": "Los grandes cambios de percepción de algunos equipos, las lesiones y los movimientos que hay que empezar a considerar.",
+            "en": "Big shifts in how teams are perceived, the injuries and the moves worth starting to consider."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw3-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "1fg4Qafm8gs",
+            "duration": "1:12:26"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw4-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 4",
+        "en": "Gameweek 4"
+      },
+      "description": {
+        "es": "El boom de Grealish, los 600 mil managers que compran a Semenyo y el dilema del ataque del Liverpool: ¿Isak, Ekitike o Gakpo?",
+        "en": "The Grealish boom, the 600k managers buying Semenyo and Liverpool's attacking dilemma: Isak, Ekitike or Gakpo?"
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw4-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 4,
+        "season": "2025-26",
+        "playerName": "Zubimendi",
+        "statLine": {
+          "es": "2 goles, portería a cero, 2 contribuciones defensivas, 3 puntos de bonificación · ARS",
+          "en": "2 goals, clean sheet, 2 defensive contributions, 3 bonus points · ARS"
+        },
+        "points": 16
+      },
+      "slides": [
+        {
+          "id": "s2526-gw4-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Grealish se dispara, ¿Semenyo la puede romper? y miles de wildcards",
+            "en": "Grealish takes off, can Semenyo blow up? And wildcards by the thousands"
+          },
+          "description": {
+            "es": "El boom de Grealish, los 600 mil managers que compran a Semenyo y el dilema del ataque del Liverpool: ¿Isak, Ekitike o Gakpo?",
+            "en": "The Grealish boom, the 600k managers buying Semenyo and Liverpool's attacking dilemma: Isak, Ekitike or Gakpo?"
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw4-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "kQMK_bacExw",
+            "duration": "1:00:01"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw5-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 5",
+        "en": "Gameweek 5"
+      },
+      "description": {
+        "es": "Palmer reaparece con gol, Wirtz no convence y Haaland llega lanzado: ¿Triple Capitán a la vista? Además, la última llamada de Watkins.",
+        "en": "Palmer returns with a goal, Wirtz isn't convincing and Haaland arrives flying — Triple Captain in sight? Plus Watkins' last call."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw5-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 5,
+        "season": "2025-26",
+        "playerName": "Stach",
+        "statLine": {
+          "es": "1 gol, 1 asistencia, 15 contribuciones defensivas, 3 puntos de bonificación · LEE",
+          "en": "1 goal, 1 assist, 15 defensive contributions, 3 bonus points · LEE"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2526-gw5-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿Volver a comprar a Palmer? ¿Qué hacer con Haaland? y la última llamada de Watkins",
+            "en": "Buy Palmer back? What to do with Haaland? And Watkins' last call"
+          },
+          "description": {
+            "es": "Palmer reaparece con gol, Wirtz no convence y Haaland llega lanzado: ¿Triple Capitán a la vista? Además, la última llamada de Watkins.",
+            "en": "Palmer returns with a goal, Wirtz isn't convincing and Haaland arrives flying — Triple Captain in sight? Plus Watkins' last call."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw5-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "rj6p8iJNgsI",
+            "duration": "1:12:12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw6-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 6",
+        "en": "Gameweek 6"
+      },
+      "description": {
+        "es": "Haaland con seis goles y Burnley regalando remates: el debate del Triple Capitán, más Donnarumma y Calvert-Lewin como alternativas.",
+        "en": "Haaland on six goals with Burnley leaking shots: the Triple Captain debate, plus Donnarumma and Calvert-Lewin as alternatives."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw6-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 6,
+        "season": "2025-26",
+        "playerName": "Alderete",
+        "statLine": {
+          "es": "1 gol, portería a cero, 11 contribuciones defensivas, 3 puntos de bonificación · SUN",
+          "en": "1 goal, clean sheet, 11 defensive contributions, 3 bonus points · SUN"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2526-gw6-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿Es hora del triple capitán con Haaland o alguno de los capitanes sorpresa?",
+            "en": "Time for the Haaland Triple Captain, or one of the surprise picks?"
+          },
+          "description": {
+            "es": "Haaland con seis goles y Burnley regalando remates: el debate del Triple Capitán, más Donnarumma y Calvert-Lewin como alternativas.",
+            "en": "Haaland on six goals with Burnley leaking shots: the Triple Captain debate, plus Donnarumma and Calvert-Lewin as alternatives."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw6-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "QPi-zmUJ-IA",
+            "duration": "1:03:57"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw7-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 7",
+        "en": "Gameweek 7"
+      },
+      "description": {
+        "es": "El gran calendario del Arsenal y los diferenciales baratos: Pope, Rice, Senesi, Anthony y Bowen bajo la lupa.",
+        "en": "Arsenal's great fixture run and the cheap differentials: Pope, Rice, Senesi, Anthony and Bowen under the microscope."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw7-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 7,
+        "season": "2025-26",
+        "playerName": "Semenyo",
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 9 contribuciones defensivas, 3 puntos de bonificación · MCI",
+          "en": "2 goals, 1 assist, 9 defensive contributions, 3 bonus points · MCI"
+        },
+        "points": 18
+      },
+      "slides": [
+        {
+          "id": "s2526-gw7-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Viene el momento del Arsenal, diferenciales baratos y capitanes en duda",
+            "en": "Arsenal's moment arrives, cheap differentials and captains in doubt"
+          },
+          "description": {
+            "es": "El gran calendario del Arsenal y los diferenciales baratos: Pope, Rice, Senesi, Anthony y Bowen bajo la lupa.",
+            "en": "Arsenal's great fixture run and the cheap differentials: Pope, Rice, Senesi, Anthony and Bowen under the microscope."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw7-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "aoCzshqoBTU",
+            "duration": "1:04:01"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw8-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 8",
+        "en": "Gameweek 8"
+      },
+      "description": {
+        "es": "Los premium quedan a deber y los baratos son protagonistas: ¿toca apostar por el valor en lugar del nombre?",
+        "en": "The premiums underdeliver while the budget picks star: time to bet on value over name?"
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw8-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 8,
+        "season": "2025-26",
+        "playerName": "James",
+        "statLine": {
+          "es": "1 gol, 1 asistencia, portería a cero, 3 contribuciones defensivas, 3 puntos de bonificación · CHE",
+          "en": "1 goal, 1 assist, clean sheet, 3 defensive contributions, 3 bonus points · CHE"
+        },
+        "points": 18
+      },
+      "slides": [
+        {
+          "id": "s2526-gw8-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Si la respuesta es 2016, ¿cuál es la pregunta?",
+            "en": "If the answer is 2016, what's the question?"
+          },
+          "description": {
+            "es": "Los premium quedan a deber y los baratos son protagonistas: ¿toca apostar por el valor en lugar del nombre?",
+            "en": "The premiums underdeliver while the budget picks star: time to bet on value over name?"
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw8-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "iNNcCbBPoBI",
+            "duration": "1:07:01",
+            "hook": {
+              "es": "Los precios no cuentan la historia completa",
+              "en": "Prices don't tell the full story"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw10-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 10",
+        "en": "Gameweek 10"
+      },
+      "description": {
+        "es": "Una jornada de pocos puntos con dos excepciones: Mbeumo y Van de Ven. Repasamos quién está en forma antes de la GW11.",
+        "en": "A low-scoring week with two exceptions: Mbeumo and Van de Ven. We review who's in form heading into Gameweek 11."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw10-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 10,
+        "season": "2025-26",
+        "playerName": "Gomez",
+        "statLine": {
+          "es": "2 goles, portería a cero, 8 contribuciones defensivas, 3 puntos de bonificación · BHA",
+          "en": "2 goals, clean sheet, 8 defensive contributions, 3 bonus points · BHA"
+        },
+        "points": 16
+      },
+      "slides": [
+        {
+          "id": "s2526-gw10-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Cuando todos fallan, Mbeumo aparece",
+            "en": "When everyone fails, Mbeumo shows up"
+          },
+          "description": {
+            "es": "Una jornada de pocos puntos con dos excepciones: Mbeumo y Van de Ven. Repasamos quién está en forma antes de la GW11.",
+            "en": "A low-scoring week with two exceptions: Mbeumo and Van de Ven. We review who's in form heading into Gameweek 11."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw10-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "D7DvBkm187A",
+            "duration": "1:05:29",
+            "hook": {
+              "es": "Pocos puntos, muchas historias",
+              "en": "Few points, plenty of stories"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw11-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 11",
+        "en": "Gameweek 11"
+      },
+      "description": {
+        "es": "Arsenal sigue perfecto y West Ham da señales de vida: Rice contra Saka, el xG de Mateta y la consistencia de Szoboszlai.",
+        "en": "Arsenal stay perfect and West Ham show signs of life: Rice vs Saka, Mateta's xG and Szoboszlai's consistency."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw11-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 11,
+        "season": "2025-26",
+        "playerName": "Gusto",
+        "statLine": {
+          "es": "1 gol, portería a cero, 3 contribuciones defensivas, 3 puntos de bonificación · CHE",
+          "en": "1 goal, clean sheet, 3 defensive contributions, 3 bonus points · CHE"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2526-gw11-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Me arrepentí y volví a comprar a este jugador",
+            "en": "I changed my mind and bought this player back"
+          },
+          "description": {
+            "es": "Arsenal sigue perfecto y West Ham da señales de vida: Rice contra Saka, el xG de Mateta y la consistencia de Szoboszlai.",
+            "en": "Arsenal stay perfect and West Ham show signs of life: Rice vs Saka, Mateta's xG and Szoboszlai's consistency."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw11-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "w0H9DX0bqII",
+            "duration": "57:54"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw12-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 12",
+        "en": "Gameweek 12"
+      },
+      "description": {
+        "es": "Lesiones, sustitutos obligados y la planeación por la AFCON, con el reloj corriendo para los chips de primera ronda.",
+        "en": "Injuries, forced replacements and planning around AFCON, with the clock ticking on first-half chips."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw12-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 12,
+        "season": "2025-26",
+        "playerName": "Eze",
+        "statLine": {
+          "es": "3 goles, 8 contribuciones defensivas, 3 puntos de bonificación · ARS",
+          "en": "3 goals, 8 defensive contributions, 3 bonus points · ARS"
+        },
+        "points": 20
+      },
+      "slides": [
+        {
+          "id": "s2526-gw12-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿Cómo sobrevivir a la AFCON y las bajas clave?",
+            "en": "How to survive AFCON and the key absences?"
+          },
+          "description": {
+            "es": "Lesiones, sustitutos obligados y la planeación por la AFCON, con el reloj corriendo para los chips de primera ronda.",
+            "en": "Injuries, forced replacements and planning around AFCON, with the clock ticking on first-half chips."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw12-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "igX3mmoelqI",
+            "duration": "1:04:35"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw13-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 13",
+        "en": "Gameweek 13"
+      },
+      "description": {
+        "es": "Nombres inesperados entre los máximos anotadores —Eze, Minteh, Welbeck— y el análisis de quién es sostenible según xG y calendario.",
+        "en": "Unexpected names among the top scorers — Eze, Minteh, Welbeck — and who's sustainable according to xG and fixtures."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw13-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 13,
+        "season": "2025-26",
+        "playerName": "Thiaw",
+        "statLine": {
+          "es": "2 goles, 6 contribuciones defensivas, 2 puntos de bonificación · NEW",
+          "en": "2 goals, 6 defensive contributions, 2 bonus points · NEW"
+        },
+        "points": 16
+      },
+      "slides": [
+        {
+          "id": "s2526-gw13-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿Triple Capitán en la GW13? Las mejores apuestas y los errores a evitar",
+            "en": "Triple Captain in GW13? The best bets and the mistakes to avoid"
+          },
+          "description": {
+            "es": "Nombres inesperados entre los máximos anotadores —Eze, Minteh, Welbeck— y el análisis de quién es sostenible según xG y calendario.",
+            "en": "Unexpected names among the top scorers — Eze, Minteh, Welbeck — and who's sustainable according to xG and fixtures."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw13-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "FdbDadlCgnM",
+            "duration": "1:05:56"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw22-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 22",
+        "en": "Gameweek 22"
+      },
+      "description": {
+        "es": "Igor Thiago, Semenyo, Foden y Bruno a fondo, más el dato histórico de Elliot Anderson: 22 contribuciones defensivas en un solo partido.",
+        "en": "Igor Thiago, Semenyo, Foden and Bruno in depth, plus Elliot Anderson's historic 22 defensive contributions in a single match."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw22-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 22,
+        "season": "2025-26",
+        "playerName": "Dorgu",
+        "statLine": {
+          "es": "1 gol, portería a cero, 6 contribuciones defensivas, 3 puntos de bonificación · MUN",
+          "en": "1 goal, clean sheet, 6 defensive contributions, 3 bonus points · MUN"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2526-gw22-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Diferenciales reales, capitanes en duda y datos que cambian decisiones",
+            "en": "Real differentials, captains in doubt and data that changes decisions"
+          },
+          "description": {
+            "es": "Igor Thiago, Semenyo, Foden y Bruno a fondo, más el dato histórico de Elliot Anderson: 22 contribuciones defensivas en un solo partido.",
+            "en": "Igor Thiago, Semenyo, Foden and Bruno in depth, plus Elliot Anderson's historic 22 defensive contributions in a single match."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw22-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "uN4ccBAzx-Q",
+            "duration": "1:08:26"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw23-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 23",
+        "en": "Gameweek 23"
+      },
+      "description": {
+        "es": "La crisis del City pone en duda la capitanía automática de Haaland, y Semenyo asoma como alternativa seria.",
+        "en": "City's crisis casts doubt on the automatic Haaland armband, and Semenyo emerges as a serious alternative."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw23-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 23,
+        "season": "2025-26",
+        "playerName": "Szoboszlai",
+        "statLine": {
+          "es": "1 gol, 1 asistencia, 7 contribuciones defensivas, 3 puntos de bonificación · LIV",
+          "en": "1 goal, 1 assist, 7 defensive contributions, 3 bonus points · LIV"
+        },
+        "points": 13
+      },
+      "slides": [
+        {
+          "id": "s2526-gw23-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Capitanía imposible: ¿apostar contra Erling Haaland?",
+            "en": "An impossible captaincy: bet against Erling Haaland?"
+          },
+          "description": {
+            "es": "La crisis del City pone en duda la capitanía automática de Haaland, y Semenyo asoma como alternativa seria.",
+            "en": "City's crisis casts doubt on the automatic Haaland armband, and Semenyo emerges as a serious alternative."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw23-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "xwr8MKXP_mE",
+            "duration": "1:03:53"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw24-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 24",
+        "en": "Gameweek 24"
+      },
+      "description": {
+        "es": "El fixture swing que empuja a muchos a la Wildcard, el calendario soñado del Chelsea y el debate 3-5-2 contra 3-4-3.",
+        "en": "The fixture swing pushing many toward the Wildcard, Chelsea's dream run and the 3-5-2 vs 3-4-3 debate."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw24-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 24,
+        "season": "2025-26",
+        "playerName": "Madueke",
+        "statLine": {
+          "es": "1 gol, 1 asistencia, portería a cero, 2 contribuciones defensivas, 3 puntos de bonificación · ARS",
+          "en": "1 goal, 1 assist, clean sheet, 2 defensive contributions, 3 bonus points · ARS"
+        },
+        "points": 14
+      },
+      "slides": [
+        {
+          "id": "s2526-gw24-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Cómo adelantarte al cambio de calendario que viene",
+            "en": "How to get ahead of the fixture swing that's coming"
+          },
+          "description": {
+            "es": "El fixture swing que empuja a muchos a la Wildcard, el calendario soñado del Chelsea y el debate 3-5-2 contra 3-4-3.",
+            "en": "The fixture swing pushing many toward the Wildcard, Chelsea's dream run and the 3-5-2 vs 3-4-3 debate."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw24-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "xINI5bRdNd4",
+            "duration": "1:03:07"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw25-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 25",
+        "en": "Gameweek 25"
+      },
+      "description": {
+        "es": "La doble jornada del Arsenal como foco: qué jugadores elegir, a quién dar el brazalete y el eterno debate Haaland.",
+        "en": "Arsenal's double gameweek in focus: which players to pick, who gets the armband, and the eternal Haaland debate."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw25-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 25,
+        "season": "2025-26",
+        "playerName": "Palmer",
+        "statLine": {
+          "es": "3 goles, 1 contribución defensiva, 3 puntos de bonificación · CHE",
+          "en": "3 goals, 1 defensive contribution, 3 bonus points · CHE"
+        },
+        "points": 20
+      },
+      "slides": [
+        {
+          "id": "s2526-gw25-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "La doble del Arsenal y capitanías incómodas",
+            "en": "Arsenal's double and uncomfortable captaincy calls"
+          },
+          "description": {
+            "es": "La doble jornada del Arsenal como foco: qué jugadores elegir, a quién dar el brazalete y el eterno debate Haaland.",
+            "en": "Arsenal's double gameweek in focus: which players to pick, who gets the armband, and the eternal Haaland debate."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw25-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "YjPcDPcPFUU",
+            "duration": "1:13:32",
+            "hook": {
+              "es": "Una doble que puede definir la temporada",
+              "en": "A double that could define the season"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw27-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 27",
+        "en": "Gameweek 27"
+      },
+      "description": {
+        "es": "Semenyo como el fichaje estructural de la semana, la decepción del Arsenal y el gran calendario del Brentford.",
+        "en": "Semenyo as the week's structural signing, Arsenal's letdown and Brentford's great fixture run."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw27-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 27,
+        "season": "2025-26",
+        "playerName": "O'Reilly",
+        "statLine": {
+          "es": "2 goles, 1 contribución defensiva, 3 puntos de bonificación · MCI",
+          "en": "2 goals, 1 defensive contribution, 3 bonus points · MCI"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2526-gw27-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¡No esperes más! Semenyo es el fichaje clave",
+            "en": "Don't wait any longer! Semenyo is the key signing"
+          },
+          "description": {
+            "es": "Semenyo como el fichaje estructural de la semana, la decepción del Arsenal y el gran calendario del Brentford.",
+            "en": "Semenyo as the week's structural signing, Arsenal's letdown and Brentford's great fixture run."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw27-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "7tnPCydse84",
+            "duration": "1:07:24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw28-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 28",
+        "en": "Gameweek 28"
+      },
+      "description": {
+        "es": "Ajustes estructurales, calendario cambiante y las decisiones que empiezan a definir el tramo final de la temporada.",
+        "en": "Structural tweaks, a shifting calendar and the decisions that start to define the season's final stretch."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw28-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 28,
+        "season": "2025-26",
+        "playerName": "Damsgaard",
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 6 contribuciones defensivas, 3 puntos de bonificación · BRE",
+          "en": "2 goals, 1 assist, 6 defensive contributions, 3 bonus points · BRE"
+        },
+        "points": 18
+      },
+      "slides": [
+        {
+          "id": "s2526-gw28-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "El giro estratégico que puede cambiar tu temporada",
+            "en": "The strategic turn that can change your season"
+          },
+          "description": {
+            "es": "Ajustes estructurales, calendario cambiante y las decisiones que empiezan a definir el tramo final de la temporada.",
+            "en": "Structural tweaks, a shifting calendar and the decisions that start to define the season's final stretch."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw28-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "xjXNo67T-gg",
+            "duration": "1:02:43",
+            "hook": {
+              "es": "No es una jornada más: es un punto de inflexión",
+              "en": "Not just another gameweek: a turning point"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw31-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 31",
+        "en": "Gameweek 31"
+      },
+      "description": {
+        "es": "El blank del City deja fuera a Haaland y rompe la decisión automática: ¿vender, aguantar o planear su regreso?",
+        "en": "City's blank sidelines Haaland and breaks the auto-pick: sell, hold or plan for his return?"
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw31-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 31,
+        "season": "2025-26",
+        "playerName": "Beto",
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · EVE",
+          "en": "2 goals, 1 assist, 3 bonus points · EVE"
+        },
+        "points": 16
+      },
+      "slides": [
+        {
+          "id": "s2526-gw31-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Haaland fuera y el caos total de la jornada en blanco",
+            "en": "Haaland out and total blank-week chaos"
+          },
+          "description": {
+            "es": "El blank del City deja fuera a Haaland y rompe la decisión automática: ¿vender, aguantar o planear su regreso?",
+            "en": "City's blank sidelines Haaland and breaks the auto-pick: sell, hold or plan for his return?"
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw31-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "xiRz8cu_r5Y",
+            "duration": "1:01:14"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw32-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 32",
+        "en": "Gameweek 32"
+      },
+      "description": {
+        "es": "Todo gira alrededor de una pregunta: cómo navegar las dobles, los blanks y los chips que quedan hasta el final.",
+        "en": "Everything hinges on one question: how to navigate the remaining doubles, blanks and chips through the finish."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw32-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 32,
+        "season": "2025-26",
+        "playerName": "Mavropanos",
+        "statLine": {
+          "es": "2 goles, portería a cero, 9 contribuciones defensivas, 3 puntos de bonificación · WHU",
+          "en": "2 goals, clean sheet, 9 defensive contributions, 3 bonus points · WHU"
+        },
+        "points": 21
+      },
+      "slides": [
+        {
+          "id": "s2526-gw32-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Si no planeas esto, pierdes la temporada",
+            "en": "If you don't plan this, your season is lost"
+          },
+          "description": {
+            "es": "Todo gira alrededor de una pregunta: cómo navegar las dobles, los blanks y los chips que quedan hasta el final.",
+            "en": "Everything hinges on one question: how to navigate the remaining doubles, blanks and chips through the finish."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw32-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "PAlyD5g87fc",
+            "duration": "58:28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw34-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 34",
+        "en": "Gameweek 34"
+      },
+      "description": {
+        "es": "Tras la jornada de los 100 puntos llega el reto real: una blank que puede definir tu cierre, con el Arsenal cediendo la cima.",
+        "en": "After the 100-point week comes the real test: a blank that could define your finish, with Arsenal surrendering top spot."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw34-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 34,
+        "season": "2025-26",
+        "playerName": "Igor Jesus",
+        "statLine": {
+          "es": "1 gol, 2 asistencias, 3 puntos de bonificación · NFO",
+          "en": "1 goal, 2 assists, 3 bonus points · NFO"
+        },
+        "points": 14
+      },
+      "slides": [
+        {
+          "id": "s2526-gw34-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿Free Hit? Cómo atacar la blank GW34 tras la locura de puntos",
+            "en": "Free Hit? How to attack the Gameweek 34 blank after the points madness"
+          },
+          "description": {
+            "es": "Tras la jornada de los 100 puntos llega el reto real: una blank que puede definir tu cierre, con el Arsenal cediendo la cima.",
+            "en": "After the 100-point week comes the real test: a blank that could define your finish, with Arsenal surrendering top spot."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw34-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "hhS6Vd8ZyQw",
+            "duration": "1:16:01"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw35-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 35",
+        "en": "Gameweek 35"
+      },
+      "description": {
+        "es": "El bajón tras el Free Hit y la doble de City y Palace en el radar: transfers, diferenciales y una capitanía que pesa.",
+        "en": "The post-Free-Hit lull with the City and Palace double on the radar: transfers, differentials and a weighty captaincy call."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw35-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 35,
+        "season": "2025-26",
+        "playerName": "Awoniyi",
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · NFO",
+          "en": "2 goals, 1 assist, 3 bonus points · NFO"
+        },
+        "points": 16
+      },
+      "slides": [
+        {
+          "id": "s2526-gw35-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿No gastar el transfer? La GW35 y la doble de City y Palace",
+            "en": "Save the transfer? Gameweek 35 and the City/Palace double"
+          },
+          "description": {
+            "es": "El bajón tras el Free Hit y la doble de City y Palace en el radar: transfers, diferenciales y una capitanía que pesa.",
+            "en": "The post-Free-Hit lull with the City and Palace double on the radar: transfers, differentials and a weighty captaincy call."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw35-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "p2aw5u-lXSk",
+            "duration": "1:04:43",
+            "hook": {
+              "es": "La jornada donde preparas o arruinas tu cierre",
+              "en": "The week you set up — or wreck — your finish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw36-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 36",
+        "en": "Gameweek 36"
+      },
+      "description": {
+        "es": "La última gran doble de la temporada y quizá la última oportunidad de un gran salto de rank: City, Palace y los jugadores clave.",
+        "en": "The season's last big double and perhaps the final chance for a big rank swing: City, Palace and the key players."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw36-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 36,
+        "season": "2025-26",
+        "playerName": "De Cuyper",
+        "statLine": {
+          "es": "2 asistencias, portería a cero, 2 contribuciones defensivas, 3 puntos de bonificación · BHA",
+          "en": "2 assists, clean sheet, 2 defensive contributions, 3 bonus points · BHA"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2526-gw36-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "La última doble: cómo atacar la GW36 antes del final",
+            "en": "The last double: how to attack Gameweek 36 before the end"
+          },
+          "description": {
+            "es": "La última gran doble de la temporada y quizá la última oportunidad de un gran salto de rank: City, Palace y los jugadores clave.",
+            "en": "The season's last big double and perhaps the final chance for a big rank swing: City, Palace and the key players."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw36-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "E7mltodaSSI",
+            "duration": "56:01"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw37-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 37",
+        "en": "Gameweek 37"
+      },
+      "description": {
+        "es": "Rotaciones, motivación real y diferenciales tardíos: el caos típico del cierre, con City y Palace bajo la lupa.",
+        "en": "Rotation, real motivation and late differentials: classic end-of-season chaos, with City and Palace under the microscope."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw37-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 37,
+        "season": "2025-26",
+        "playerName": "Watkins",
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · AVL",
+          "en": "2 goals, 1 assist, 3 bonus points · AVL"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2526-gw37-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "El cierre más incómodo y cómo sobrevivir la GW37",
+            "en": "The most awkward finish and how to survive Gameweek 37"
+          },
+          "description": {
+            "es": "Rotaciones, motivación real y diferenciales tardíos: el caos típico del cierre, con City y Palace bajo la lupa.",
+            "en": "Rotation, real motivation and late differentials: classic end-of-season chaos, with City and Palace under the microscope."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw37-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "77zvdw2Lte0",
+            "duration": "44:18"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2526-gw38-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 38",
+        "en": "Gameweek 38"
+      },
+      "description": {
+        "es": "Con el Arsenal ya campeón y varios equipos sin objetivos, la última jornada se vuelve difícil de leer: motivación, rotaciones y picks.",
+        "en": "With Arsenal already champions and several teams playing for nothing, the final gameweek is hard to read: motivation, rotation, picks."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2526-gw38-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 38,
+        "season": "2025-26",
+        "playerName": "Dorgu",
+        "statLine": {
+          "es": "1 gol, 1 asistencia, portería a cero, 1 contribución defensiva, 3 puntos de bonificación · MUN",
+          "en": "1 goal, 1 assist, clean sheet, 1 defensive contribution, 3 bonus points · MUN"
+        },
+        "points": 18
+      },
+      "slides": [
+        {
+          "id": "s2526-gw38-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "La fecha 38 más rara: cómo cerrar bien la temporada",
+            "en": "The strangest Gameweek 38: how to close the season well"
+          },
+          "description": {
+            "es": "Con el Arsenal ya campeón y varios equipos sin objetivos, la última jornada se vuelve difícil de leer: motivación, rotaciones y picks.",
+            "en": "With Arsenal already champions and several teams playing for nothing, the final gameweek is hard to read: motivation, rotation, picks."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2526-gw38-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "hBLkNQqVzmE",
+            "duration": "1:02:39"
+          }
+        }
+      ]
+    }
+  ]
+}

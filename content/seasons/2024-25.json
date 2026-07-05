@@ -1106,6 +1106,53 @@
       ]
     },
     {
+      "id": "s2425-gw13-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 13",
+        "en": "Gameweek 13"
+      },
+      "description": {
+        "es": "El episodio semanal de Bendito Fantasy rumbo a la fecha 13, con capitanías y análisis para tu equipo.",
+        "en": "Bendito Fantasy's weekly episode heading into Gameweek 13, with captaincy calls and analysis for your team."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw13-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 13,
+        "season": "2024-25",
+        "playerName": "Schade",
+        "statLine": {
+          "es": "3 goles, 1 asistencia, 3 puntos de bonificación · BRE",
+          "en": "3 goals, 1 assist, 3 bonus points · BRE"
+        },
+        "points": 23
+      },
+      "slides": [
+        {
+          "id": "s2425-gw13-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Joao Pedro se perfila como el mejor capitán",
+            "en": "Joao Pedro shapes up as the best captain"
+          },
+          "description": {
+            "es": "El episodio semanal de Bendito Fantasy rumbo a la fecha 13, con capitanías y análisis para tu equipo.",
+            "en": "Bendito Fantasy's weekly episode heading into Gameweek 13, with captaincy calls and analysis for your team."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw13-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "UbRQxgXneJc",
+            "duration": "51:45"
+          }
+        }
+      ]
+    },
+    {
       "id": "s2425-gw19-mvp",
       "type": "mvp",
       "title": {
@@ -1257,6 +1304,711 @@
           },
           "payload": {
             "slug": "ktnp611ol36w67f2h6gapmh01tq5p6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw23-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 23",
+        "en": "Gameweek 23"
+      },
+      "description": {
+        "es": "El repaso semanal antes de la jornada 23, con los jugadores de Bournemouth que casi nadie tiene en el radar.",
+        "en": "The weekly run-through before Gameweek 23, spotlighting the Bournemouth players hardly anyone has on the radar."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw23-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 23,
+        "season": "2024-25",
+        "playerName": "O.Dango",
+        "statLine": {
+          "es": "3 goles, portería a cero, 3 puntos de bonificación · BOU",
+          "en": "3 goals, clean sheet, 3 bonus points · BOU"
+        },
+        "points": 21
+      },
+      "slides": [
+        {
+          "id": "s2425-gw23-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Los grandes jugadores ignorados de Bournemouth",
+            "en": "Bournemouth's great ignored players"
+          },
+          "description": {
+            "es": "El repaso semanal antes de la jornada 23, con los jugadores de Bournemouth que casi nadie tiene en el radar.",
+            "en": "The weekly run-through before Gameweek 23, spotlighting the Bournemouth players hardly anyone has on the radar."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw23-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "Wmi2tqk43Lw",
+            "duration": "1:07:38"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw24-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 24",
+        "en": "Gameweek 24"
+      },
+      "description": {
+        "es": "El chip de Assistant Manager en la doble jornada 24, los jugadores necesarios para la doble y la decisión sobre Palmer.",
+        "en": "The Assistant Manager chip in Double Gameweek 24, the must-have players for the double and the Palmer decision."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw24-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 24,
+        "season": "2024-25",
+        "playerName": "Wood",
+        "statLine": {
+          "es": "3 goles, 3 puntos de bonificación · NFO",
+          "en": "3 goals, 3 bonus points · NFO"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2425-gw24-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Distorsión en la Matrix con las jornadas dobles",
+            "en": "A glitch in the Matrix with the double gameweeks"
+          },
+          "description": {
+            "es": "El chip de Assistant Manager en la doble jornada 24, los jugadores necesarios para la doble y la decisión sobre Palmer.",
+            "en": "The Assistant Manager chip in Double Gameweek 24, the must-have players for the double and the Palmer decision."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw24-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "4-wUHlipV-Q",
+            "duration": "1:01:44"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw25-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 25",
+        "en": "Gameweek 25"
+      },
+      "description": {
+        "es": "Nueva fecha doble y un calendario cargado de blanks y dobles, con las rachas que conviene aprovechar.",
+        "en": "Another double gameweek and a calendar stacked with blanks and doubles, plus the form runs worth riding."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw25-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 25,
+        "season": "2024-25",
+        "playerName": "Marmoush",
+        "statLine": {
+          "es": "3 goles, 3 puntos de bonificación · MCI",
+          "en": "3 goals, 3 bonus points · MCI"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2425-gw25-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Fiebre de jornadas dobles",
+            "en": "Double gameweek fever"
+          },
+          "description": {
+            "es": "Nueva fecha doble y un calendario cargado de blanks y dobles, con las rachas que conviene aprovechar.",
+            "en": "Another double gameweek and a calendar stacked with blanks and doubles, plus the form runs worth riding."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw25-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "bRJRYr_i2vk",
+            "duration": "58:38"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw26-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 26",
+        "en": "Gameweek 26"
+      },
+      "description": {
+        "es": "Pros y contras del movimiento de manager, el blank de la 29 y la doble de la 32, con capitanías y prospectos línea por línea.",
+        "en": "Pros and cons of the manager move, the Gameweek 29 blank and the 32 double, with captaincy and line-by-line prospects."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw26-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 26,
+        "season": "2024-25",
+        "playerName": "M.Asensio",
+        "statLine": {
+          "es": "2 goles, 3 puntos de bonificación · AVL",
+          "en": "2 goals, 3 bonus points · AVL"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2425-gw26-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "La oportunidad clara de capitanía está a media tabla",
+            "en": "The clear captaincy opportunity sits mid-table"
+          },
+          "description": {
+            "es": "Pros y contras del movimiento de manager, el blank de la 29 y la doble de la 32, con capitanías y prospectos línea por línea.",
+            "en": "Pros and cons of the manager move, the Gameweek 29 blank and the 32 double, with captaincy and line-by-line prospects."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw26-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "2aOWBVdYqow",
+            "duration": "58:05"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw28-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 28",
+        "en": "Gameweek 28"
+      },
+      "description": {
+        "es": "El episodio semanal antes de la jornada 28, con las opciones del West Ham para cubrir el blank.",
+        "en": "The weekly episode before Gameweek 28, with West Ham's options for covering the blank."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw28-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 28,
+        "season": "2024-25",
+        "playerName": "M.Salah",
+        "statLine": {
+          "es": "2 goles, 3 puntos de bonificación · LIV",
+          "en": "2 goals, 3 bonus points · LIV"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2425-gw28-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "El West Ham tiene respuestas para el blank",
+            "en": "West Ham has answers for the blank"
+          },
+          "description": {
+            "es": "El episodio semanal antes de la jornada 28, con las opciones del West Ham para cubrir el blank.",
+            "en": "The weekly episode before Gameweek 28, with West Ham's options for covering the blank."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw28-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "Hjv2G1WmZnA",
+            "duration": "1:03:45"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw29-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 29",
+        "en": "Gameweek 29"
+      },
+      "description": {
+        "es": "Todo lo que hay que saber antes de decidir el Free Hit en la jornada 29.",
+        "en": "Everything you need to know before deciding on the Free Hit in Gameweek 29."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw29-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 29,
+        "season": "2024-25",
+        "playerName": "B.Fernandes",
+        "statLine": {
+          "es": "1 gol, 2 asistencias, portería a cero, 3 puntos de bonificación · MUN",
+          "en": "1 goal, 2 assists, clean sheet, 3 bonus points · MUN"
+        },
+        "points": 17
+      },
+      "slides": [
+        {
+          "id": "s2425-gw29-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Si quieres usar tu free hit, aquí está toda la información",
+            "en": "If you want to play your Free Hit, here's all the info"
+          },
+          "description": {
+            "es": "Todo lo que hay que saber antes de decidir el Free Hit en la jornada 29.",
+            "en": "Everything you need to know before deciding on the Free Hit in Gameweek 29."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw29-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "DV6ej7oeb-o",
+            "duration": "1:00:23"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw30-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 30",
+        "en": "Gameweek 30"
+      },
+      "description": {
+        "es": "La fecha 30 tras el parón: dudas de transferencias, capitanía y el uso de los chips, a fondo.",
+        "en": "Gameweek 30 after the long break: transfer doubts, captaincy and chip usage, in depth."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw30-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 30,
+        "season": "2024-25",
+        "playerName": "M.Asensio",
+        "statLine": {
+          "es": "1 gol, 1 asistencia, 3 puntos de bonificación · AVL",
+          "en": "1 goal, 1 assist, 3 bonus points · AVL"
+        },
+        "points": 12
+      },
+      "slides": [
+        {
+          "id": "s2425-gw30-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Haaland enfrenta a Salah en la capitanía",
+            "en": "Haaland takes on Salah for the captaincy"
+          },
+          "description": {
+            "es": "La fecha 30 tras el parón: dudas de transferencias, capitanía y el uso de los chips, a fondo.",
+            "en": "Gameweek 30 after the long break: transfer doubts, captaincy and chip usage, in depth."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw30-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "nozwZv3OwQk",
+            "duration": "1:03:48"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw31-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 31",
+        "en": "Gameweek 31"
+      },
+      "description": {
+        "es": "Dos jornadas muy pegadas y noticias de dobles: estrategias de chips y los jugadores clave de la fecha 31.",
+        "en": "Two gameweeks back to back and double-gameweek news: chip strategy and the key players for Gameweek 31."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw31-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 31,
+        "season": "2024-25",
+        "playerName": "Johnson",
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · TOT",
+          "en": "2 goals, 1 assist, 3 bonus points · TOT"
+        },
+        "points": 18
+      },
+      "slides": [
+        {
+          "id": "s2425-gw31-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Breaking news: ¡el Profe concuerda con Gary Neville!",
+            "en": "Breaking news: El Profe agrees with Gary Neville!"
+          },
+          "description": {
+            "es": "Dos jornadas muy pegadas y noticias de dobles: estrategias de chips y los jugadores clave de la fecha 31.",
+            "en": "Two gameweeks back to back and double-gameweek news: chip strategy and the key players for Gameweek 31."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw31-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "JjNYnlliQ7Q",
+            "duration": "59:12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw32-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 32",
+        "en": "Gameweek 32"
+      },
+      "description": {
+        "es": "La doble jornada 32 con el eco de la Champions: los puntos débiles del Palace, diferenciales de fecha sencilla y qué chip usar.",
+        "en": "Double Gameweek 32 in the Champions League's shadow: Palace's weak spots, single-week differentials and which chip to play."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw32-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 32,
+        "season": "2024-25",
+        "playerName": "Ramsdale",
+        "statLine": {
+          "es": "7 atajadas, 3 puntos de bonificación · SOU",
+          "en": "7 saves, 3 bonus points · SOU"
+        },
+        "points": 16
+      },
+      "slides": [
+        {
+          "id": "s2425-gw32-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Es hora de usar un chip y tenemos uno favorito",
+            "en": "It's chip time, and we have a favourite"
+          },
+          "description": {
+            "es": "La doble jornada 32 con el eco de la Champions: los puntos débiles del Palace, diferenciales de fecha sencilla y qué chip usar.",
+            "en": "Double Gameweek 32 in the Champions League's shadow: Palace's weak spots, single-week differentials and which chip to play."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw32-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "UmRPCGjrRhM",
+            "duration": "1:07:24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw33-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 33",
+        "en": "Gameweek 33"
+      },
+      "description": {
+        "es": "Nueva fecha doble a la vista: los mejores jugadores, los diferenciales y la capitanía para navegarla.",
+        "en": "Another double gameweek on the horizon: the best players, differentials and captaincy to navigate it."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw33-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 33,
+        "season": "2024-25",
+        "playerName": "Mbeumo",
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · BRE",
+          "en": "2 goals, 1 assist, 3 bonus points · BRE"
+        },
+        "points": 18
+      },
+      "slides": [
+        {
+          "id": "s2425-gw33-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Glasner es un bocón",
+            "en": "Glasner is a loudmouth"
+          },
+          "description": {
+            "es": "Nueva fecha doble a la vista: los mejores jugadores, los diferenciales y la capitanía para navegarla.",
+            "en": "Another double gameweek on the horizon: the best players, differentials and captaincy to navigate it."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw33-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "ThXUPt9x99I",
+            "duration": "1:02:49"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw34-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 34",
+        "en": "Gameweek 34"
+      },
+      "description": {
+        "es": "La guía del episodio semanal para plantear el Free Hit y cubrir el blank de la jornada 34.",
+        "en": "The weekly episode's guide to planning the Free Hit and covering the Gameweek 34 blank."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw34-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 34,
+        "season": "2024-25",
+        "playerName": "Trippier",
+        "statLine": {
+          "es": "2 asistencias, portería a cero, 3 puntos de bonificación · NEW",
+          "en": "2 assists, clean sheet, 3 bonus points · NEW"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2425-gw34-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Todo sobre el Free Hit para cubrir el blank",
+            "en": "Everything about the Free Hit to cover the blank"
+          },
+          "description": {
+            "es": "La guía del episodio semanal para plantear el Free Hit y cubrir el blank de la jornada 34.",
+            "en": "The weekly episode's guide to planning the Free Hit and covering the Gameweek 34 blank."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw34-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "LcJCVF6Qqsw",
+            "duration": "1:17:23"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw35-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 35",
+        "en": "Gameweek 35"
+      },
+      "description": {
+        "es": "¿Sigue la fiesta en Liverpool? El repaso semanal antes de la jornada 35.",
+        "en": "Is the party still going at Liverpool? The weekly run-through before Gameweek 35."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw35-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 35,
+        "season": "2024-25",
+        "playerName": "Schade",
+        "statLine": {
+          "es": "2 goles, 2 puntos de bonificación · BRE",
+          "en": "2 goals, 2 bonus points · BRE"
+        },
+        "points": 14
+      },
+      "slides": [
+        {
+          "id": "s2425-gw35-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿Seguirán enfiestados en Liverpool para esta fecha?",
+            "en": "Will Liverpool still be partying this week?"
+          },
+          "description": {
+            "es": "¿Sigue la fiesta en Liverpool? El repaso semanal antes de la jornada 35.",
+            "en": "Is the party still going at Liverpool? The weekly run-through before Gameweek 35."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw35-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "jFiK0hNT8ks",
+            "duration": "1:03:50"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw36-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 36",
+        "en": "Gameweek 36"
+      },
+      "description": {
+        "es": "Las últimas tres jornadas: la gira del adiós de De Bruyne, recomendaciones de chips y el partido de Champions más épico en mucho tiempo.",
+        "en": "The final three gameweeks: De Bruyne's farewell tour, chip recommendations and the most epic Champions League match in ages."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw36-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 36,
+        "season": "2024-25",
+        "playerName": "Eze",
+        "statLine": {
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · CRY",
+          "en": "2 goals, clean sheet, 3 bonus points · CRY"
+        },
+        "points": 16
+      },
+      "slides": [
+        {
+          "id": "s2425-gw36-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Con ustedes la presentación gráfica del guayabazo",
+            "en": "Presenting the hangover, in chart form"
+          },
+          "description": {
+            "es": "Las últimas tres jornadas: la gira del adiós de De Bruyne, recomendaciones de chips y el partido de Champions más épico en mucho tiempo.",
+            "en": "The final three gameweeks: De Bruyne's farewell tour, chip recommendations and the most epic Champions League match in ages."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw36-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "0B9qZXuI2Ls",
+            "duration": "1:04:16"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw37-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 37",
+        "en": "Gameweek 37"
+      },
+      "description": {
+        "es": "Penúltima jornada: puestos europeos en juego y finales de copa que pueden condicionar las alineaciones de la 37.",
+        "en": "The penultimate gameweek: European spots at stake and cup finals that could shape Gameweek 37 line-ups."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw37-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 37,
+        "season": "2024-25",
+        "playerName": "Konsa",
+        "statLine": {
+          "es": "1 gol, portería a cero, 3 puntos de bonificación · AVL",
+          "en": "1 goal, clean sheet, 3 bonus points · AVL"
+        },
+        "points": 15
+      },
+      "slides": [
+        {
+          "id": "s2425-gw37-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Atención a la final de copa entre el Palace y el City",
+            "en": "Eyes on the cup final between Palace and City"
+          },
+          "description": {
+            "es": "Penúltima jornada: puestos europeos en juego y finales de copa que pueden condicionar las alineaciones de la 37.",
+            "en": "The penultimate gameweek: European spots at stake and cup finals that could shape Gameweek 37 line-ups."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw37-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "ENip7gB1tWQ",
+            "duration": "56:35"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2425-gw38-mvp",
+      "type": "mvp",
+      "title": {
+        "es": "Jornada 38",
+        "en": "Gameweek 38"
+      },
+      "description": {
+        "es": "La última jornada de la temporada, con Newcastle, Forest, Chelsea y Aston Villa jugándoselo todo.",
+        "en": "The final gameweek of the season, with Newcastle, Forest, Chelsea and Aston Villa playing for everything."
+      },
+      "tag": "mvp",
+      "cover": "/media/s2425-gw38-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 38,
+        "season": "2024-25",
+        "playerName": "Semenyo",
+        "statLine": {
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · BOU",
+          "en": "2 goals, clean sheet, 3 bonus points · BOU"
+        },
+        "points": 16
+      },
+      "slides": [
+        {
+          "id": "s2425-gw38-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Newcastle, Forest, Chelsea y Aston Villa se lo juegan todo",
+            "en": "Newcastle, Forest, Chelsea and Aston Villa play for everything"
+          },
+          "description": {
+            "es": "La última jornada de la temporada, con Newcastle, Forest, Chelsea y Aston Villa jugándoselo todo.",
+            "en": "The final gameweek of the season, with Newcastle, Forest, Chelsea and Aston Villa playing for everything."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw38-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "9IO9CGK87xo",
+            "duration": "1:13:37"
           }
         }
       ]
