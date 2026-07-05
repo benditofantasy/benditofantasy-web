@@ -17,6 +17,22 @@ import { TypeIcon } from "./icons";
  * The cover carries a framer-motion layoutId so opening the lightbox is a
  * shared-element "explode": this image travels into the slide's media slot.
  */
+/**
+ * YouTube podcast thumbnails share the channel's 16:9 layout: the player
+ * illustration sits against the right edge, branding/text on the left. Cropping
+ * that into the tile's 3:4 portrait keeps ~42% of the width, so a centered crop
+ * slices the player in half. Right-anchoring the crop frames the player instead
+ * (and cleanly isolates the right subject on older two-player covers).
+ *
+ * These covers are named `…-podcast.jpg` by the weekly gameweek sync
+ * (`scripts/sync-latest-podcast.mjs`) and `…-podcast-e323.jpg` for the World
+ * Cup specials, so match `-podcast` with an optional episode suffix. Article
+ * art and the `/media/players/*` portraits keep the default centered crop.
+ */
+function isYoutubeThumb(cover: string): boolean {
+  return /-podcast(-[a-z0-9]+)?\.(jpe?g|png|webp)$/i.test(cover);
+}
+
 export default function TileCard({ tile }: { tile: Tile }) {
   const { l } = useLang();
   const width = tile.featured
@@ -41,7 +57,9 @@ export default function TileCard({ tile }: { tile: Tile }) {
             alt={l(tile.title)}
             fill
             sizes="(max-width: 640px) 80vw, (max-width: 1024px) 46vw, 420px"
-            className="object-cover transition-transform duration-slow ease-brand motion-safe:group-hover:scale-105"
+            className={`object-cover transition-transform duration-slow ease-brand motion-safe:group-hover:scale-105 ${
+              isYoutubeThumb(tile.cover) ? "object-right" : "object-center"
+            }`}
           />
         </motion.div>
         {tile.featured && (
