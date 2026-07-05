@@ -113,6 +113,9 @@ export interface Tile {
   tag: TagKey;
   cover: string;
   credit: string;
+  /** short label overlaid on the homepage tile-card cover (e.g. a country
+   *  name over a player illustration) — not shown anywhere else. */
+  badge?: Localized;
   link?: TileLink;
   payload: TilePayload;
   /**

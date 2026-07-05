@@ -62,6 +62,7 @@ const config: Config = {
       fontFamily: {
         display: "var(--font-display)",
         sans: "var(--font-sans)",
+        badge: "var(--font-montserrat)",
       },
       letterSpacing: {
         kicker: "var(--tracking-kicker)",

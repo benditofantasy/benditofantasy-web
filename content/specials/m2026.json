@@ -16,6 +16,7 @@
       },
       "tag": "article",
       "cover": "/media/players/rahimi-morocco.png",
+      "badge": { "es": "Marruecos", "en": "Morocco" },
       "credit": "Bendito Fantasy",
       "link": {
         "href": "/articulo/canada-marruecos",
@@ -36,6 +37,7 @@
       },
       "tag": "article",
       "cover": "/media/players/martinez-argentina.png",
+      "badge": { "es": "Argentina", "en": "Argentina" },
       "credit": "Bendito Fantasy",
       "link": {
         "href": "/articulo/argentina-cabo-verde",

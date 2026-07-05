@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Providers from "@/components/Providers";
 import Header from "@/components/Header";
-import { anton, barlow } from "./fonts";
+import { anton, barlow, montserrat } from "./fonts";
 import "./globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
@@ -30,7 +30,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" className={`${anton.variable} ${barlow.variable}`}>
+    <html
+      lang="es"
+      className={`${anton.variable} ${barlow.variable} ${montserrat.variable}`}
+    >
       <body>
         <Providers>
           <Header />

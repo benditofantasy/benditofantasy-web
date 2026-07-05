@@ -1,4 +1,4 @@
-import { Anton, Barlow } from "next/font/google";
+import { Anton, Barlow, Montserrat } from "next/font/google";
 
 /**
  * Anton is a PLACEHOLDER for the ultra-bold condensed display face (SPEC
@@ -16,5 +16,13 @@ export const barlow = Barlow({
   weight: ["300", "400", "500", "700", "900"],
   subsets: ["latin"],
   variable: "--font-barlow",
+  display: "swap",
+});
+
+/** Used only for the tile-card badge label overlay (e.g. player-image country name). */
+export const montserrat = Montserrat({
+  weight: ["600", "700"],
+  subsets: ["latin"],
+  variable: "--font-montserrat",
   display: "swap",
 });

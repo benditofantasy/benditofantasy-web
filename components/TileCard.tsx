@@ -49,6 +49,11 @@ export default function TileCard({ tile }: { tile: Tile }) {
             {l(TAG_NAMES.podcast)}
           </span>
         )}
+        {tile.badge && (
+          <span className="absolute bottom-3 left-3 font-badge text-sm font-bold uppercase tracking-wide text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">
+            {l(tile.badge)}
+          </span>
+        )}
         <span className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-pill bg-surface/90 px-2.5 py-1 text-[11px] font-bold text-ink backdrop-blur-sm">
           01
           <TypeIcon type={tile.type} className="h-3.5 w-3.5" />
