@@ -36,6 +36,9 @@ const SLIDE_RENDERERS: Record<Slide["layout"], (props: SlideProps) => JSX.Elemen
 };
 
 const SWIPE_THRESHOLD = 60;
+const WHEEL_THRESHOLD = 24;
+/** cooldown after a wheel-triggered nav so one scroll gesture doesn't fire it repeatedly */
+const WHEEL_LOCK_MS = 500;
 
 /**
  * The exploded lightbox (SPEC §9–§10): a history-based overlay over `/`
@@ -64,6 +67,7 @@ export default function Lightbox({
   const returnFocusIdRef = useRef<string | null>(null);
   const wasOpenRef = useRef(false);
   const touchStartX = useRef<number | null>(null);
+  const wheelLockedRef = useRef(false);
 
   const lookup = useMemo(() => {
     const map = new Map<
@@ -262,6 +266,24 @@ export default function Lightbox({
           const delta = event.changedTouches[0].clientX - startX;
           if (delta <= -SWIPE_THRESHOLD) goNext();
           else if (delta >= SWIPE_THRESHOLD) goPrev();
+        }}
+        onWheel={(event) => {
+          // scroll-wheel/trackpad navigation, same mapping as swipe: down/right
+          // advances, up/left goes back. Locked briefly after firing so one
+          // scroll gesture (which fires dozens of wheel events) doesn't page
+          // through several slides at once.
+          if (wheelLockedRef.current) return;
+          const delta =
+            Math.abs(event.deltaY) > Math.abs(event.deltaX)
+              ? event.deltaY
+              : event.deltaX;
+          if (Math.abs(delta) < WHEEL_THRESHOLD) return;
+          wheelLockedRef.current = true;
+          if (delta > 0) goNext();
+          else goPrev();
+          window.setTimeout(() => {
+            wheelLockedRef.current = false;
+          }, WHEEL_LOCK_MS);
         }}
       >
         {/* slide content — keyed so entrance animations replay per slide */}
