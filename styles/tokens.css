@@ -30,6 +30,15 @@
   /* ---- Page-level palette — LIGHT THEME (scoped per owner, page never goes dark) ---- */
   --color-bg: #ffffff;          /* page background, pure white               */
   --color-surface: #ffffff;     /* lightbox / overlay surface                */
+  /* RGB-triplet twins so Tailwind's bg-bg/NN and bg-surface/NN opacity
+     modifiers actually work — a plain hex custom property can't be
+     recombined with an alpha value by Tailwind's `rgb(var(...) / <alpha-value>)`
+     mechanism, so those modifiers were silently resolving to fully
+     transparent (found via the Header's translucent controls over the new
+     hero photo — the lightbox close button and TileCard's type-icon pill
+     had the exact same latent bug). */
+  --color-bg-rgb: 255 255 255;
+  --color-surface-rgb: 255 255 255;
   --color-ink: var(--bf-navy-deep); /* near-black-equivalent: quotes, body   */
   --color-ink-mid: var(--bf-navy);     /* mid-tone: stat/description lines   */
   --color-ink-soft: var(--bf-gray);    /* light: kickers, metadata           */

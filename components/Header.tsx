@@ -37,14 +37,14 @@ export default function Header() {
           <button
             type="button"
             aria-label={t("search")}
-            className="hidden h-9 w-9 items-center justify-center rounded-pill border border-line text-ink transition-colors duration-fast hover:border-ink sm:inline-flex"
+            className="hidden h-9 w-9 items-center justify-center rounded-pill border border-line bg-surface/80 text-ink backdrop-blur-sm transition-colors duration-fast hover:border-ink sm:inline-flex"
           >
             <SearchIcon className="h-4 w-4" />
           </button>
           <button
             type="button"
             aria-label={t("menu")}
-            className="hidden h-9 w-9 items-center justify-center rounded-pill border border-line text-ink transition-colors duration-fast hover:border-ink sm:inline-flex"
+            className="hidden h-9 w-9 items-center justify-center rounded-pill border border-line bg-surface/80 text-ink backdrop-blur-sm transition-colors duration-fast hover:border-ink sm:inline-flex"
           >
             <MenuIcon className="h-4 w-4" />
           </button>

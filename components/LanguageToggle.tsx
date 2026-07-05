@@ -11,7 +11,7 @@ export default function LanguageToggle() {
     <div
       role="group"
       aria-label={t("languageToggle")}
-      className="flex items-center rounded-pill border border-line p-0.5"
+      className="flex items-center rounded-pill border border-line bg-surface/80 p-0.5 backdrop-blur-sm"
     >
       {OPTIONS.map((option) => (
         <button

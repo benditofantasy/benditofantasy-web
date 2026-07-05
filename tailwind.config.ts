@@ -13,8 +13,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "var(--color-bg)",
-        surface: "var(--color-surface)",
+        bg: "rgb(var(--color-bg-rgb) / <alpha-value>)",
+        surface: "rgb(var(--color-surface-rgb) / <alpha-value>)",
         ink: "var(--color-ink)",
         "ink-mid": "var(--color-ink-mid)",
         "ink-soft": "var(--color-ink-soft)",

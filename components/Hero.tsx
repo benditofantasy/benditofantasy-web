@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useLang } from "@/lib/i18n";
 import type { Gameweek } from "@/lib/types";
@@ -15,11 +16,30 @@ export default function Hero({ currentWeek }: { currentWeek: Gameweek }) {
 
   return (
     /* SPEC §12: condensed hero on mobile, medium on tablet, full oversized on desktop */
-    <section className="mx-auto max-w-[1600px] px-4 pb-8 pt-24 sm:px-8 sm:pb-10 sm:pt-32 lg:pt-40">
-      <p className="text-[11px] font-semibold uppercase tracking-kicker text-ink-soft sm:text-xs">
+    <section className="relative mx-auto max-w-[1600px] overflow-hidden px-4 pb-8 pt-24 sm:px-8 sm:pb-10 sm:pt-32 lg:pt-40">
+      {/* banner photo to the right of the headline — fades to transparent on
+          its left edge so it blends into the page instead of a hard crop */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 lg:block"
+        style={{
+          maskImage: "linear-gradient(to right, transparent, black 45%)",
+          WebkitMaskImage: "linear-gradient(to right, transparent, black 45%)",
+        }}
+      >
+        <Image
+          src="/brand/hero-banner.jpg"
+          alt=""
+          fill
+          sizes="50vw"
+          className="object-cover"
+          priority
+        />
+      </div>
+      <p className="relative z-10 text-[11px] font-semibold uppercase tracking-kicker text-ink-soft sm:text-xs">
         {t("tagline")}
       </p>
-      <h1 className="mt-3 font-display uppercase leading-[0.9] tracking-display text-accent [font-size:17vw] sm:[font-size:12vw] lg:[font-size:10rem] xl:[font-size:11rem]">
+      <h1 className="relative z-10 mt-3 font-display uppercase leading-[0.9] tracking-display text-accent [font-size:17vw] sm:[font-size:12vw] lg:[font-size:10rem] xl:[font-size:11rem]">
         Bendito
         <br />
         Fantasy
