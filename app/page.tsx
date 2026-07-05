@@ -46,8 +46,8 @@ export default function HomePage() {
         {specials.map((special) => (
           <SpecialRow key={special.id} special={special} />
         ))}
-        {seasons.map((season) => (
-          <SeasonRow key={season.season} season={season} />
+        {seasons.map((season, index) => (
+          <SeasonRow key={season.season} season={season} age={index} />
         ))}
       </div>
       <footer className="mx-auto max-w-[1600px] px-4 py-14 text-xs uppercase tracking-kicker text-ink-soft sm:px-8">

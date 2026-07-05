@@ -13,7 +13,27 @@ import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
  * `mvp` tile whose `slides[]` hold the week's real content). Lives below the
  * live gameweek rows once a season ends; the live timeline never breaks.
  */
-export default function SeasonRow({ season }: { season: Season }) {
+/**
+ * Two sizes only: the active (newest) season's year label is full size; every
+ * older/inactive season shares one smaller size. Left-anchored, so the smaller
+ * inactive years retract toward the gutter — only a fraction of the last digit
+ * bleeds onto the strip, per the Body Issue reference.
+ */
+const YEAR_SCALE_ACTIVE = 1;
+const YEAR_SCALE_INACTIVE = 0.7;
+
+function ageScale(age: number): number {
+  return age === 0 ? YEAR_SCALE_ACTIVE : YEAR_SCALE_INACTIVE;
+}
+
+export default function SeasonRow({
+  season,
+  age = 0,
+}: {
+  season: Season;
+  /** Position among seasons, newest first (0 = newest). Drives label sizing. */
+  age?: number;
+}) {
   const { t, l } = useLang();
   const stripRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -79,23 +99,27 @@ export default function SeasonRow({ season }: { season: Season }) {
     >
       <div className="relative mx-auto max-w-[1600px]">
         <div className="pointer-events-none absolute left-4 top-1/2 z-20 -translate-y-1/2 sm:left-6 lg:left-8">
-          <h2 className="font-display uppercase tracking-display">
-            <span className="block text-lg leading-none text-accent drop-shadow-[0_1px_2px_rgba(1,35,64,0.2)] sm:text-2xl xl:text-3xl">
-              {t("season")}
-            </span>
-            <span className="block leading-[0.82] text-ink drop-shadow-[0_1px_2px_rgba(255,255,255,0.25)] [font-size:clamp(2.5rem,6vw,5rem)] lg:[font-size:6rem] xl:[font-size:7rem]">
-              {labelWord}
-              {labelRest.length > 0 && (
-                <span className="text-[0.55em] text-accent">/{labelRest.join("/")}</span>
-              )}
-            </span>
-          </h2>
-          <p className="mt-2 text-[11px] font-semibold uppercase tracking-kicker text-accent drop-shadow-[0_1px_1px_rgba(1,35,64,0.18)]">
-            {season.tiles.length} {t("entries")}
-          </p>
+          <div
+            style={{ transform: `scale(${ageScale(age)})`, transformOrigin: "left center" }}
+          >
+            <h2 className="font-display uppercase tracking-display">
+              <span className="block text-lg leading-none text-accent drop-shadow-[0_1px_2px_rgba(1,35,64,0.2)] sm:text-2xl xl:text-3xl">
+                {t("season")}
+              </span>
+              <span className="block leading-[0.82] text-accent drop-shadow-[0_1px_3px_rgba(1,35,64,0.2)] [font-size:clamp(2.5rem,6vw,5rem)] lg:[font-size:6rem] xl:[font-size:7rem]">
+                {labelWord}
+                {labelRest.length > 0 && (
+                  <span className="text-[0.55em] text-brand-salmon">/{labelRest.join("/")}</span>
+                )}
+              </span>
+            </h2>
+            <p className="mt-2 text-[11px] font-semibold uppercase tracking-kicker text-accent drop-shadow-[0_1px_1px_rgba(1,35,64,0.18)]">
+              {season.tiles.length} {t("entries")}
+            </p>
+          </div>
         </div>
 
-        <div className="group/strip relative z-10 ml-10 sm:ml-16 lg:ml-28 xl:ml-32">
+        <div className="group/strip relative z-10 ml-14 sm:ml-24 lg:ml-40 xl:ml-48">
           <div
             ref={stripRef}
             onScroll={updateArrows}

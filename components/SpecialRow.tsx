@@ -91,7 +91,7 @@ export default function SpecialRow({ special }: { special: Special }) {
           </p>
         </div>
 
-        <div className="group/strip relative z-10 ml-10 sm:ml-16 lg:ml-28 xl:ml-32">
+        <div className="group/strip relative z-10 ml-14 sm:ml-24 lg:ml-40 xl:ml-48">
           <div
             ref={stripRef}
             onScroll={updateArrows}
