@@ -32,6 +32,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw1-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿Crees que Palmer le pueda ganar a Haaland en esta jornada?",
+            "en": "Gameweek 1"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com//benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 1 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw1-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "lF0qVeSf1wg",
+            "duration": "59:51"
+          }
+        },
+        {
           "id": "s2425-gw1-a1",
           "type": "article",
           "title": {
@@ -54,7 +74,8 @@
           },
           "payload": {
             "slug": "de-mario-kart-al-fpl-lecciones-de-juego-para-un-fantasy-ms-emocionante"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw1-a2",
@@ -79,7 +100,8 @@
           },
           "payload": {
             "slug": "de-mario-kart-al-fpl-lecciones-de-juego-para-un-fantasy-ms-emocionante-7yz4c"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw1-a3",
@@ -104,7 +126,8 @@
           },
           "payload": {
             "slug": "10-consejos-principiantes-fpl-fantasy-premier-league"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw1-a4",
@@ -129,7 +152,8 @@
           },
           "payload": {
             "slug": "que-son-los-chips-en-fantasy-premier-league-fpl"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw1-a5",
@@ -154,7 +178,8 @@
           },
           "payload": {
             "slug": "mejores-porteros-fantasy-premier-league-fpl-gw1-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw1-a6",
@@ -179,7 +204,8 @@
           },
           "payload": {
             "slug": "mejores-defensores-fantasy-premier-league-fpl-gw1-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw1-a7",
@@ -204,7 +230,8 @@
           },
           "payload": {
             "slug": "mejores-mediocampistas-fantasy-premier-league-fpl-gw1-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw1-a8",
@@ -229,7 +256,8 @@
           },
           "payload": {
             "slug": "delanteros-fantasy-premier-league-fpl-gw1-2024-2025"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -259,6 +287,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw2-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Duelo en la cima nos deja con dilemas en la capitanía",
+            "en": "Gameweek 2"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com//benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 2 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw2-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "GveST3DH-jA",
+            "duration": "1:02:49"
+          }
+        },
+        {
           "id": "s2425-gw2-a1",
           "type": "article",
           "title": {
@@ -281,7 +329,8 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-2-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw2-a2",
@@ -306,7 +355,8 @@
           },
           "payload": {
             "slug": "triple-capitan-haaland-fantasy-premier-league-gameweek-2-2024-2025"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -336,6 +386,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw3-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Haaland se asienta en los wildcards pero hay otros jugadores clave",
+            "en": "Gameweek 3"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com//benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 3 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw3-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "2wpv90GO2TI",
+            "duration": "1:05:03"
+          }
+        },
+        {
           "id": "s2425-gw3-a1",
           "type": "article",
           "title": {
@@ -358,7 +428,8 @@
           },
           "payload": {
             "slug": "eleccion-capitan-effective-ownership-fpl"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw3-a2",
@@ -383,7 +454,8 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-3-2024-2025"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -413,6 +485,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw4-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Este diferencial tiene el mejor calendario",
+            "en": "Gameweek 4"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com/benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 4 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw4-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "0xjkWqz9-R8",
+            "duration": "54:46"
+          }
+        },
+        {
           "id": "s2425-gw4-a1",
           "type": "article",
           "title": {
@@ -435,7 +527,8 @@
           },
           "payload": {
             "slug": "nuevas-reglas-fpl-fantasy-premier-league-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw4-a2",
@@ -460,7 +553,8 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek4-2024-2025"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -490,6 +584,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw5-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "El mediocampista más codiciado no es Palmer",
+            "en": "Gameweek 5"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com//benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 5 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw5-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "3J7qfvdtsIo",
+            "duration": "58:36"
+          }
+        },
+        {
           "id": "s2425-gw5-a1",
           "type": "article",
           "title": {
@@ -512,7 +626,8 @@
           },
           "payload": {
             "slug": "perma-captain-fpl-parte-1"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw5-a2",
@@ -537,7 +652,8 @@
           },
           "payload": {
             "slug": "perma-captain-fpl-parte-2"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw5-a3",
@@ -562,7 +678,8 @@
           },
           "payload": {
             "slug": "fantasy-premier-league-fpl-titan-vs-muralla-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw5-a4",
@@ -587,7 +704,8 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-5-2024-2025"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -617,6 +735,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw6-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿Es Jimenez buena inversión?",
+            "en": "Gameweek 6"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com//benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 6 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw6-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "O4UBgHAohSI",
+            "duration": "1:00:11"
+          }
+        },
+        {
           "id": "s2425-gw6-a1",
           "type": "article",
           "title": {
@@ -639,7 +777,8 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-6-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw6-a2",
@@ -664,7 +803,8 @@
           },
           "payload": {
             "slug": "cronica-jornada-fantasy-premier-league-gw6-24-25"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -694,6 +834,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw7-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "¿Porqué tanta gente está comprando a jugadores de Wolves?",
+            "en": "Gameweek 7"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com//benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 7 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw7-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "PO09cDqZXNc",
+            "duration": "58:08"
+          }
+        },
+        {
           "id": "s2425-gw7-a1",
           "type": "article",
           "title": {
@@ -716,7 +876,8 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-7-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw7-a2",
@@ -741,7 +902,8 @@
           },
           "payload": {
             "slug": "cronica-jornada-fantasy-premier-league-gw7-24-25"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -771,6 +933,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw8-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Pros y contras de vender a Haaland en tu equipo de FPL",
+            "en": "Gameweek 8"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com//benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 8 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw8-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "w4UZ-9mb6Cg",
+            "duration": "57:41"
+          }
+        },
+        {
           "id": "s2425-gw8-a1",
           "type": "article",
           "title": {
@@ -793,7 +975,8 @@
           },
           "payload": {
             "slug": "cronica-jornada-fantasy-premier-league-gw8-24-25"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -823,6 +1006,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw9-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Hay más de 10 jugadores con más puntos que Haaland en las últimas 6 jornadas",
+            "en": "Gameweek 9"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com//benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 9 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw9-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "h_yr-T2cVU4",
+            "duration": "59:43"
+          }
+        },
+        {
           "id": "s2425-gw9-a1",
           "type": "article",
           "title": {
@@ -845,7 +1048,8 @@
           },
           "payload": {
             "slug": "cronica-jornada-fantasy-premier-league-gw9-24-25"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -875,6 +1079,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw10-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Además de Palmer ¿quién más de Chelsea vale la pena?",
+            "en": "Gameweek 10"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com//benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 10 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw10-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "BLaIvTTmQNs",
+            "duration": "1:05:58"
+          }
+        },
+        {
           "id": "s2425-gw10-a1",
           "type": "article",
           "title": {
@@ -897,7 +1121,8 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-10-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw10-a2",
@@ -922,7 +1147,8 @@
           },
           "payload": {
             "slug": "cronica-jornada-fantasy-premier-league-gw10-24-25"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -952,6 +1178,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw11-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Una escoba nueva siempre barre bien y el United lo empieza a reflejar en FPL",
+            "en": "Gameweek 11"
+          },
+          "description": {
+            "es": "Si les gusta lo que escucharon en este podcast/video, considera apoyarnos en Patreon y conviértete en miembro de la comunidad: https://www.patreon.com//benditofantasy ",
+            "en": "Bendito Fantasy's Gameweek 11 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw11-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "fxvqjQOhps0",
+            "duration": "1:00:35"
+          }
+        },
+        {
           "id": "s2425-gw11-a1",
           "type": "article",
           "title": {
@@ -974,7 +1220,8 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-11-2024-2025"
-          }
+          },
+          "featured": false
         }
       ]
     },
@@ -1004,6 +1251,26 @@
       },
       "slides": [
         {
+          "id": "s2425-gw12-podcast",
+          "type": "podcast",
+          "featured": true,
+          "title": {
+            "es": "Jugadores de bajo costo y buen rendimiento",
+            "en": "Gameweek 12"
+          },
+          "description": {
+            "es": "Hola gente bonita que juega FPL. En el episodio de hoy hablamos de muchos jugadores de menos de 6 millones que están destacando con sus equipos, además vemos cuales de ellos tienen un porcentaje de se",
+            "en": "Bendito Fantasy's Gameweek 12 podcast episode."
+          },
+          "tag": "podcast",
+          "cover": "/media/s2425-gw12-podcast.jpg",
+          "credit": "Bendito Fantasy",
+          "payload": {
+            "youtubeId": "DZPw4vp58pc",
+            "duration": "1:02:04"
+          }
+        },
+        {
           "id": "s2425-gw12-a1",
           "type": "article",
           "title": {
@@ -1026,7 +1293,8 @@
           },
           "payload": {
             "slug": "fantasy-premier-league-saka-martinelli-arsenal-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw12-a2",
@@ -1051,7 +1319,8 @@
           },
           "payload": {
             "slug": "yq6ggg17bilutklqf27voxakxxk7t4"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw12-a3",
@@ -1076,7 +1345,8 @@
           },
           "payload": {
             "slug": "fantasy-premier-league-calendario-chelsea-fpl-2024-2025"
-          }
+          },
+          "featured": false
         },
         {
           "id": "s2425-gw12-a4",
@@ -1101,7 +1371,8 @@
           },
           "payload": {
             "slug": "mejor-capitan-fantasy-premier-league-capitan-gameweek-12-2024-2025"
-          }
+          },
+          "featured": false
         }
       ]
     },
