@@ -1,0 +1,4 @@
+{
+  "_comment": "Update currentSeasonPlaylistUrl once a year, right after the new season's YouTube playlist goes up on the channel. Leave it empty (\"\") when there is no current-season playlist yet (e.g. during preseason) -- the sync script no-ops safely in that case instead of pulling from the wrong season.",
+  "currentSeasonPlaylistUrl": ""
+}

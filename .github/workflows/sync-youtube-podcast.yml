@@ -1,0 +1,58 @@
+name: Sync latest podcast episode
+
+# Daily check for a new podcast episode on the current season's YouTube
+# playlist. Steady-state case only (see scripts/sync-latest-podcast.mjs) —
+# the one-time historical backfill was a separate, hand-reviewed pass.
+on:
+  schedule:
+    - cron: "0 13 * * *" # once a day
+  workflow_dispatch: {} # manual trigger from the Actions tab, for testing
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install yt-dlp
+        run: pip install --user yt-dlp
+
+      - name: Run sync script
+        run: node scripts/sync-latest-podcast.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet && git status --porcelain | grep -q '^??' ; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif ! git diff --quiet; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open PR with the new episode
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="content/podcast-sync-$(date +%Y%m%d)"
+          git checkout -b "$BRANCH"
+          git config user.name "bendito-bot"
+          git config user.email "actions@github.com"
+          git add content/gameweeks public/media
+          git commit -m "Sync latest podcast episode"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --title "Sync latest podcast episode" \
+            --body "Automated: new episode found on the current season's YouTube playlist. Review the gameweek file + thumbnail, then merge to publish." \
+            --base main \
+            --head "$BRANCH"
