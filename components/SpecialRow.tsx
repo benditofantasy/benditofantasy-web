@@ -82,7 +82,7 @@ export default function SpecialRow({ special }: { special: Special }) {
             <span className="block text-lg leading-none text-accent drop-shadow-[0_1px_2px_rgba(1,35,64,0.2)] sm:text-2xl xl:text-3xl">
               {labelWord}
             </span>
-            <span className="block leading-[0.82] text-accent drop-shadow-[0_1px_3px_rgba(1,35,64,0.2)] [font-size:clamp(2.5rem,6vw,5rem)] lg:[font-size:6rem] xl:[font-size:7rem]">
+            <span className="block leading-[0.82] text-accent drop-shadow-[0_1px_3px_rgba(1,35,64,0.2)] [font-size:clamp(5rem,12vw,6rem)] lg:[font-size:6rem] xl:[font-size:7rem]">
               {labelRest.join(" ")}
             </span>
           </h2>
@@ -91,7 +91,7 @@ export default function SpecialRow({ special }: { special: Special }) {
           </p>
         </div>
 
-        <div className="group/strip relative z-10 ml-14 sm:ml-24 lg:ml-40 xl:ml-48">
+        <div className="group/strip relative z-10 ml-36 sm:ml-36 lg:ml-40 xl:ml-48">
           <div
             ref={stripRef}
             onScroll={updateArrows}

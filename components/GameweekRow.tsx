@@ -98,7 +98,7 @@ export default function GameweekRow({ gameweek }: { gameweek: Gameweek }) {
             <span className="block text-lg leading-none text-accent drop-shadow-[0_1px_2px_rgba(1,35,64,0.2)] sm:text-2xl xl:text-3xl">
               {labelWord}
             </span>
-            <span className="block leading-[0.82] text-accent drop-shadow-[0_1px_3px_rgba(1,35,64,0.2)] [font-size:clamp(3.5rem,9.7vw,8.3rem)] lg:[font-size:11rem] xl:[font-size:12.5rem]">
+            <span className="block leading-[0.82] text-accent drop-shadow-[0_1px_3px_rgba(1,35,64,0.2)] [font-size:clamp(11rem,20vw,12rem)] lg:[font-size:11rem] xl:[font-size:12.5rem]">
               {labelRest.join(" ") || gameweek.gw}
             </span>
           </h2>
@@ -108,7 +108,7 @@ export default function GameweekRow({ gameweek }: { gameweek: Gameweek }) {
         </div>
 
         {/* strip starts inside the label zone so the number overlays the first tile */}
-        <div className="group/strip relative z-10 ml-14 sm:ml-24 lg:ml-40 xl:ml-48">
+        <div className="group/strip relative z-10 ml-36 sm:ml-36 lg:ml-40 xl:ml-48">
           <div
             ref={stripRef}
             onScroll={updateArrows}
