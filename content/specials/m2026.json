@@ -4,7 +4,7 @@
     "es": "Mundial 2026",
     "en": "World Cup 2026"
   },
-  "date": "2026-07-04",
+  "date": "2026-07-05",
   "tiles": [
     {
       "id": "m2026-podcast-e325",
@@ -64,6 +64,35 @@
       "payload": {
         "youtubeId": "fS-uRrpGcuU",
         "duration": "1:05:59"
+      }
+    },
+    {
+      "id": "m2026-un-androide-mata-gigantes",
+      "type": "article",
+      "title": {
+        "es": "Un androide mata gigantes",
+        "en": "An android topples giants"
+      },
+      "description": {
+        "es": "Noruega elimina a Brasil con una actuación monumental de Haaland y Nyland para confirmar que ya no es la revelación del Mundial, sino uno de sus candidatos.",
+        "en": "Norway eliminates Brazil with a monumental performance from Haaland and Nyland, confirming it is no longer the World Cup revelation but one of its contenders."
+      },
+      "tag": "article",
+      "cover": "/media/players/Halland%20Norway.png",
+      "badge": {
+        "es": "Noruega",
+        "en": "Norway"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/un-androide-mata-gigantes",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "un-androide-mata-gigantes"
       }
     },
     {
