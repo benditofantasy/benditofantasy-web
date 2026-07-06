@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import ArticleLanguageView from "@/components/ArticleLanguageView";
 import { getArticle, getArticleSlugs } from "@/lib/content";
 
 interface PageProps {
@@ -33,42 +32,19 @@ export async function generateMetadata({
   };
 }
 
-/** Full article page (SPEC §3): MDX body with editorial styling. */
+/** Full article page (SPEC section 3): MDX body with editorial styling. */
 export default async function ArticlePage({ params }: PageProps) {
   const { slug } = await params;
   const article = getArticle(slug);
+  const englishArticle = getArticle(slug, "en");
   if (!article) notFound();
 
   return (
-    <main className="mx-auto max-w-4xl px-4 pb-20 pt-28 sm:px-8 sm:pt-36">
-      <p className="text-xs font-semibold uppercase tracking-kicker text-ink-soft">
-        {article.section ?? `Jornada ${article.gw}`} · {article.author}
-      </p>
-      <h1 className="mt-4 font-display uppercase leading-[0.9] tracking-display text-accent [font-size:clamp(2.5rem,7vw,5.5rem)]">
-        {article.title}
-      </h1>
-      <p className="mt-5 max-w-2xl text-lg text-ink-mid">{article.description}</p>
-      {article.cover && (
-        <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-tile bg-line">
-          <Image
-            src={article.cover}
-            alt={article.title}
-            fill
-            sizes="(max-width: 896px) 100vw, 896px"
-            className="object-cover object-[center_25%]"
-            priority
-          />
-        </div>
-      )}
-      <article className="prose-editorial mt-10">
-        <MDXRemote source={article.body} />
-      </article>
-      <Link
-        href="/"
-        className="mt-14 inline-block text-sm font-semibold uppercase tracking-kicker text-ink-mid underline underline-offset-4 hover:text-accent"
-      >
-        ← Bendito Fantasy
-      </Link>
-    </main>
+    <ArticleLanguageView
+      es={article}
+      en={englishArticle}
+      esBody={<MDXRemote source={article.body} />}
+      enBody={englishArticle ? <MDXRemote source={englishArticle.body} /> : undefined}
+    />
   );
 }

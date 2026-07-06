@@ -94,12 +94,13 @@ export interface Article {
 export function getArticleSlugs(): string[] {
   return fs
     .readdirSync(ARTICLES_DIR)
-    .filter((f) => f.endsWith(".mdx"))
+    .filter((f) => f.endsWith(".mdx") && !f.endsWith(".en.mdx"))
     .map((f) => f.replace(/\.mdx$/, ""));
 }
 
-export function getArticle(slug: string): Article | undefined {
-  const file = path.join(ARTICLES_DIR, `${slug}.mdx`);
+export function getArticle(slug: string, lang: "es" | "en" = "es"): Article | undefined {
+  const suffix = lang === "en" ? ".en" : "";
+  const file = path.join(ARTICLES_DIR, `${slug}${suffix}.mdx`);
   if (!fs.existsSync(file)) return undefined;
   const { data, content } = matter(fs.readFileSync(file, "utf8"));
   return {
