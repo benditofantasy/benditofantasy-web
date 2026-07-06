@@ -113,6 +113,14 @@ export interface Tile {
   tag: TagKey;
   cover: string;
   credit: string;
+  /**
+   * ISO publish date for this specific tile (podcast upload date, social post
+   * timestamp, article publish date...). Drives `orderTilesByRecency` below —
+   * tiles without one fall back to the row's date, so older hand-authored
+   * content keeps its original order. Not shown anywhere in the UI; the
+   * visible date is still the row's.
+   */
+  date?: string;
   /** short label overlaid on the homepage tile-card cover (e.g. a country
    *  name over a player illustration) — not shown anywhere else. */
   badge?: Localized;
@@ -194,4 +202,23 @@ export function getSlides(tile: Tile): Slide[] {
     return [own, ...tile.slides.flatMap(getSlides)];
   }
   return [own];
+}
+
+/**
+ * Live rows (gameweeks, specials) read newest-first: whatever last went live
+ * — a social post, an article, the podcast — leads the strip as the
+ * `featured` (larger) tile, the rest trail behind in publish order.
+ *
+ * Tiles without their own `date` (older hand-authored content, predating this
+ * field) fall back to the row's date and all tie — a stable sort keeps them
+ * in their original relative order, so nothing existing reshuffles.
+ */
+export function orderTilesByRecency(tiles: Tile[], rowDate: string): Tile[] {
+  return tiles
+    .map((tile, index) => ({ tile, index, date: tile.date ?? rowDate }))
+    .sort((a, b) => {
+      if (a.date !== b.date) return a.date < b.date ? 1 : -1;
+      return a.index - b.index;
+    })
+    .map(({ tile }, i) => ({ ...tile, featured: i === 0 }));
 }

@@ -2,7 +2,7 @@ import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { getSlides, type Gameweek, type Row, type Season, type Special, type Tile } from "./types";
+import { getSlides, orderTilesByRecency, type Gameweek, type Row, type Season, type Special, type Tile } from "./types";
 
 const GAMEWEEKS_DIR = path.join(process.cwd(), "content", "gameweeks");
 const SEASONS_DIR = path.join(process.cwd(), "content", "seasons");
@@ -16,7 +16,8 @@ export function getGameweeks(): Gameweek[] {
     .filter((f) => f.endsWith(".json") && !f.includes("template"));
   const weeks = files.map((file) => {
     const raw = fs.readFileSync(path.join(GAMEWEEKS_DIR, file), "utf8");
-    return JSON.parse(raw) as Gameweek;
+    const week = JSON.parse(raw) as Gameweek;
+    return { ...week, tiles: orderTilesByRecency(week.tiles, week.date) };
   });
   return weeks.sort((a, b) => b.gw - a.gw);
 }
@@ -33,7 +34,8 @@ export function getSpecialRows(): Special[] {
     .filter((f) => f.endsWith(".json") && !f.includes("template"));
   return files.map((file) => {
     const raw = fs.readFileSync(path.join(SPECIALS_DIR, file), "utf8");
-    return JSON.parse(raw) as Special;
+    const special = JSON.parse(raw) as Special;
+    return { ...special, tiles: orderTilesByRecency(special.tiles, special.date) };
   });
 }
 
