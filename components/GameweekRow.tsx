@@ -63,18 +63,27 @@ export default function GameweekRow({ gameweek }: { gameweek: Gameweek }) {
     const tileRect = tileEl.getBoundingClientRect();
     const fullyVisible =
       tileRect.left >= stripRect.left - 4 && tileRect.right <= stripRect.right + 4;
-    if (!fullyVisible) {
-      event.preventDefault();
-      event.stopPropagation();
-      // Scroll the tile to the strip start (its snap-start position) —
-      // scrollIntoView can't be used here: the container's scroll-snap pulls
-      // the minimal-reveal position straight back to the previous snap point.
-      const padLeft = parseFloat(getComputedStyle(strip).paddingLeft) || 0;
-      strip.scrollTo({
-        left: strip.scrollLeft + (tileRect.left - stripRect.left) - padLeft,
-        behavior: "smooth",
-      });
-    }
+    if (fullyVisible) return;
+
+    // The tile is peeking off an edge. Scroll it to the strip start (its
+    // snap-start position) so the tap reveals it instead of opening it —
+    // scrollIntoView can't be used here: the container's scroll-snap pulls
+    // the minimal-reveal position straight back to the previous snap point.
+    // But when the tile is already at its maximal-reveal position and simply
+    // wider than the strip viewport (portrait phones, where one tile can be
+    // wider than the visible strip), scrolling can't reveal any more of it —
+    // so let the tap open the tile instead of swallowing it forever.
+    const padLeft = parseFloat(getComputedStyle(strip).paddingLeft) || 0;
+    const maxScroll = strip.scrollWidth - strip.clientWidth;
+    const target = Math.max(
+      0,
+      Math.min(strip.scrollLeft + (tileRect.left - stripRect.left) - padLeft, maxScroll),
+    );
+    if (Math.abs(target - strip.scrollLeft) <= 4) return; // can't reveal more → open
+
+    event.preventDefault();
+    event.stopPropagation();
+    strip.scrollTo({ left: target, behavior: "smooth" });
   };
 
   const [labelWord, ...labelRest] = l(gameweek.label).split(" ");
