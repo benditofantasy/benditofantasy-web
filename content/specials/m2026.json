@@ -67,6 +67,35 @@
       }
     },
     {
+      "id": "m2026-saber-sufrir",
+      "type": "article",
+      "title": {
+        "es": "Saber sufrir",
+        "en": "Knowing how to suffer"
+      },
+      "description": {
+        "es": "México cayó ante Inglaterra en uno de los mejores partidos del Mundial, obligando a los ingleses a resistir hasta el último segundo.",
+        "en": "Mexico fell to England in one of the World Cup's best matches, forcing the English to resist until the final second."
+      },
+      "tag": "article",
+      "cover": "/media/players/Bellingham-England.png",
+      "badge": {
+        "es": "Inglaterra",
+        "en": "England"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/saber-sufrir",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "saber-sufrir"
+      }
+    },
+    {
       "id": "m2026-un-androide-mata-gigantes",
       "type": "article",
       "title": {
