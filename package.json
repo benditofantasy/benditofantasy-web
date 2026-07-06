@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-placeholder-media.mjs",
+    "prebuild": "node scripts/generate-placeholder-media.mjs && node scripts/validate-content.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

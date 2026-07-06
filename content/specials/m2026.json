@@ -9,7 +9,8 @@
     {
       "id": "m2026-podcast-e325",
       "type": "podcast",
-      "featured": true,
+      "date": "2026-07-03",
+      "featured": false,
       "title": {
         "es": "Inglaterra preocupa y estos son los jugadores que debes tener",
         "en": "England worry, and these are the players you need"
@@ -29,6 +30,7 @@
     {
       "id": "m2026-podcast-e324",
       "type": "podcast",
+      "date": "2026-06-19",
       "featured": false,
       "title": {
         "es": "México clasifica, Haaland explota y se viene la Wildcard",
@@ -49,6 +51,7 @@
     {
       "id": "m2026-podcast-e323",
       "type": "podcast",
+      "date": "2026-06-10",
       "featured": false,
       "title": {
         "es": "Prepara tu equipo para la primera ronda del Mundial",
@@ -69,6 +72,7 @@
     {
       "id": "m2026-saber-sufrir",
       "type": "article",
+      "date": "2026-07-05",
       "title": {
         "es": "Saber sufrir",
         "en": "Knowing how to suffer"
@@ -98,6 +102,7 @@
     {
       "id": "m2026-un-androide-mata-gigantes",
       "type": "article",
+      "date": "2026-07-05",
       "title": {
         "es": "Un androide mata gigantes",
         "en": "An android topples giants"
@@ -127,6 +132,7 @@
     {
       "id": "m2026-canada-marruecos",
       "type": "article",
+      "date": "2026-07-04",
       "title": {
         "es": "Marruecos ya no es el caballo negro: es un candidato que impone respeto",
         "en": "Morocco is no longer the dark horse: it is a candidate that commands respect"
@@ -156,6 +162,7 @@
     {
       "id": "m2026-argentina-cabo-verde",
       "type": "article",
+      "date": "2026-07-04",
       "title": {
         "es": "Argentina sufrió mucho más de lo esperado, pero terminó eliminando a Cabo Verde",
         "en": "Argentina suffered far more than expected, but still eliminated Cabo Verde"
