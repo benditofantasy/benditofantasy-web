@@ -83,6 +83,33 @@ export function WhatsAppIcon({ className }: IconProps) {
   );
 }
 
+export function ThreadsIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 16 16" className={className} aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round">
+      <path d="M8.1 15c-2 0-4.9-1.1-5-4.9C3 6.6 5 4.9 8 4.9c2.7 0 4.2 1.3 4.6 2.9.4 1.6-.2 3.4-2.4 3.9-1.6.4-2.8-.2-3-1.2-.2-1 .6-1.6 1.7-1.8.9-.2 2.2-.2 3.1 0" />
+      <path d="M10.3 3.4C9.5 2 8.2 1.5 6.9 1.7 4.7 2 3 3.9 3 7.2v1.6c0 3.5 1.8 5.4 4.1 5.7" />
+    </svg>
+  );
+}
+
+export function BlueskyIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 16 16" className={className} aria-hidden="true" fill="currentColor">
+      <path d="M8 6.2C7.2 4.6 5 2.2 3.1 1.5c-.8-.3-1.5 0-1.5 1 0 .5.2 3.6.4 4.2.5 1.8 2.2 2.3 3.8 2.1-2.7.4-5.1 1.5-2 4.2 3.5 3 4.8-.9 5.2-2.3.4 1.4 1.3 5.3 4.9 2.3 3-2.7.6-3.8-2.1-4.2 1.6.2 3.3-.3 3.8-2.1.2-.6.4-3.7.4-4.2 0-1-.7-1.3-1.5-1-1.9.7-4.1 3.1-4.9 4.7Z" />
+    </svg>
+  );
+}
+
+export function InstagramIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 16 16" className={className} aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.3">
+      <rect x="1.5" y="1.5" width="13" height="13" rx="3.5" />
+      <circle cx="8" cy="8" r="3.2" />
+      <circle cx="11.7" cy="4.3" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export function LinkIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 16 16" className={className} aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
@@ -150,6 +177,7 @@ const TYPE_ICONS: Record<TileType, (props: IconProps) => JSX.Element> = {
   data: TableIcon,
   chart: ChartIcon,
   tweet: XSocialIcon,
+  social: ThreadsIcon,
   image: ImageIcon,
   quote: QuoteIcon,
   mvp: TrophyIcon,

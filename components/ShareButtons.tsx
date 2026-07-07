@@ -3,9 +3,14 @@
 import { useEffect, useState } from "react";
 import { useLang } from "@/lib/i18n";
 import type { Tile } from "@/lib/types";
-import { LinkIcon, WhatsAppIcon, XSocialIcon } from "./icons";
+import { BlueskyIcon, LinkIcon, ThreadsIcon, WhatsAppIcon, XSocialIcon } from "./icons";
 
-/** Copy link / X / WhatsApp — deep-linking to /?item=<id> (SPEC §9). */
+/**
+ * Copy link / Bluesky / Threads / X / WhatsApp — deep-linking to /?item=<id>
+ * (SPEC §9). Order reflects the owner's actual platform priority: Bluesky and
+ * Threads are where Bendito Fantasy is actually growing, X stays (too
+ * popular to drop) but trails them.
+ */
 export default function ShareButtons({ tile }: { tile: Tile }) {
   const { t, l } = useLang();
   const [copied, setCopied] = useState(false);
@@ -46,6 +51,26 @@ export default function ShareButtons({ tile }: { tile: Tile }) {
       >
         <LinkIcon className="h-4 w-4" />
       </button>
+      <a
+        href={`https://bsky.app/intent/compose?text=${shareText}%20${encodedUrl}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={t("shareOnBluesky")}
+        title={t("shareOnBluesky")}
+        className={buttonClass}
+      >
+        <BlueskyIcon className="h-4 w-4" />
+      </a>
+      <a
+        href={`https://www.threads.net/intent/post?text=${shareText}%20${encodedUrl}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={t("shareOnThreads")}
+        title={t("shareOnThreads")}
+        className={buttonClass}
+      >
+        <ThreadsIcon className="h-4 w-4" />
+      </a>
       <a
         href={`https://x.com/intent/post?text=${shareText}&url=${encodedUrl}`}
         target="_blank"

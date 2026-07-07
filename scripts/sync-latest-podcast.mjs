@@ -241,6 +241,7 @@ function main() {
       tag: "podcast",
       cover: `/media/${tileId}.jpg`,
       credit: "Bendito Fantasy",
+      date: isoDate,
       payload: {
         youtubeId: winner.id,
         duration: formatDuration(winner.duration),

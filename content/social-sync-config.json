@@ -1,0 +1,6 @@
+{
+  "_comment": "Threads/Instagram user IDs (numeric, NOT the @handle) — get these once from the Graph API Explorer after linking your account to a Meta developer app. Access tokens themselves are never stored here: they're read from THREADS_ACCESS_TOKEN / IG_ACCESS_TOKEN env vars (repo secrets in CI). Leave a field blank to skip that platform.",
+  "handle": "@benditofantasy",
+  "threadsUserId": "",
+  "instagramUserId": ""
+}

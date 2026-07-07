@@ -12,6 +12,7 @@ export type TileType =
   | "chart"
   | "video"
   | "tweet"
+  | "social"
   | "image"
   | "quote"
   | "mvp";
@@ -66,6 +67,15 @@ export interface TweetPayload {
   handle: string;
 }
 
+/** A Threads or Instagram post, rendered as the platform's real embed widget. */
+export interface SocialPayload {
+  platform: "threads" | "instagram";
+  postUrl: string;
+  handle: string;
+  /** fallback rendering if the embed script fails/doesn't load */
+  text: Localized;
+}
+
 export interface ImagePayload {
   src: string;
   caption: Localized;
@@ -98,6 +108,7 @@ export type TilePayload =
   | DataPayload
   | ChartPayload
   | TweetPayload
+  | SocialPayload
   | ImagePayload
   | QuotePayload
   | MvpPayload;
@@ -179,7 +190,7 @@ export type Row = Gameweek | Season | Special;
  */
 export interface Slide {
   /** which §9 layout renders this slide */
-  layout: "cover" | "media" | "video" | "data" | "chart" | "quote" | "tweet" | "mvp";
+  layout: "cover" | "media" | "video" | "data" | "chart" | "quote" | "tweet" | "social" | "mvp";
   tile: Tile;
 }
 
@@ -192,6 +203,7 @@ const LAYOUT_BY_TYPE: Record<TileType, Slide["layout"]> = {
   chart: "chart",
   quote: "quote",
   tweet: "tweet",
+  social: "social",
   mvp: "mvp",
 };
 

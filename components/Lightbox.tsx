@@ -12,6 +12,7 @@ import DataSlide from "./slides/DataSlide";
 import MediaSlide from "./slides/MediaSlide";
 import MvpSlide from "./slides/MvpSlide";
 import QuoteSlide from "./slides/QuoteSlide";
+import SocialSlide from "./slides/SocialSlide";
 import TweetSlide from "./slides/TweetSlide";
 import VideoSlide from "./slides/VideoSlide";
 import { ChevronLeftIcon, ChevronRightIcon, CloseIcon } from "./icons";
@@ -32,6 +33,7 @@ const SLIDE_RENDERERS: Record<Slide["layout"], (props: SlideProps) => JSX.Elemen
   chart: ChartSlide,
   quote: QuoteSlide,
   tweet: TweetSlide,
+  social: SocialSlide,
   mvp: MvpSlide,
 };
 
