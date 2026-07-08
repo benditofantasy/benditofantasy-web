@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import Providers from "@/components/Providers";
 import Header from "@/components/Header";
 import { anton, barlow, montserrat } from "./fonts";
@@ -39,6 +40,7 @@ export default function RootLayout({
           <Header />
           {children}
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
