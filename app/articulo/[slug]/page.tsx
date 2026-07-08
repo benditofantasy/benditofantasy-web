@@ -20,10 +20,12 @@ export async function generateMetadata({
   if (!article) return {};
 
   // Prefer the article tile cover for share previews; fall back to the default brand card.
-  const shareImage: string =
-    article.cover && /\.(jpe?g|png|webp|gif|avif)$/i.test(article.cover)
-      ? article.cover
+  const shareImage = (() => {
+    const cover = article.cover;
+    return cover && /\.(jpe?g|png|webp|gif|avif)$/i.test(cover)
+      ? cover
       : "/brand/social-share.jpg";
+  })();
 
   return {
     title: article.title,
