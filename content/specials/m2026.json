@@ -4,7 +4,7 @@
     "es": "Mundial 2026",
     "en": "World Cup 2026"
   },
-  "date": "2026-07-05",
+  "date": "2026-07-08",
   "tiles": [
     {
       "id": "m2026-podcast-e325",
@@ -67,6 +67,36 @@
       "payload": {
         "youtubeId": "fS-uRrpGcuU",
         "duration": "1:05:59"
+      }
+    },
+    {
+      "id": "m2026-crisis-credibilidad-mundial",
+      "type": "article",
+      "date": "2026-07-08",
+      "title": {
+        "es": "La crisis de credibilidad del Mundial",
+        "en": "The World Cup's credibility crisis"
+      },
+      "description": {
+        "es": "El verdadero problema de este Mundial no son únicamente los errores arbitrales, sino la pérdida de confianza de millones de aficionados en que todos compiten bajo las mismas reglas.",
+        "en": "The real problem at this World Cup is not only refereeing errors, but the loss of trust among millions of fans that everyone is competing under the same rules."
+      },
+      "tag": "article",
+      "cover": "/media/players/arbitro-var.png",
+      "badge": {
+        "es": "Columna",
+        "en": "Column"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/crisis-credibilidad-mundial",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "crisis-credibilidad-mundial"
       }
     },
     {
@@ -169,7 +199,7 @@
       },
       "description": {
         "es": "Argentina venció 3-2 a Cabo Verde en un partido mucho más complicado de lo previsto, con Messi como protagonista y Cabo Verde como una de las revelaciones del Mundial.",
-        "en": "Argentina beat Cabo Verde 3-2 in a match far tougher than expected, with Messi as the protagonist and Cabo Verde as one of the World Cup's revelations."
+        "en": "Argentina beat Cabo Verde 3-2 in a match far tougher than expected, with Messi as the protagonist and Cape Verde as one of the World Cup's revelations."
       },
       "tag": "article",
       "cover": "/media/players/martinez-argentina.png",
