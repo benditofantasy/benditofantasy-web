@@ -18,6 +18,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = getArticle(slug);
   if (!article) return {};
+
+  // Prefer the article tile cover for share previews; fall back to the default brand card.
+  const hasShareCompatibleCover =
+    !!article.cover && /\.(jpe?g|png|webp|gif|avif)$/i.test(article.cover);
+  const shareImage = hasShareCompatibleCover
+    ? article.cover
+    : "/brand/social-share.jpg";
+
   return {
     title: article.title,
     description: article.description,
@@ -26,8 +34,16 @@ export async function generateMetadata({
       type: "article",
       title: article.title,
       description: article.description,
+      url: `/articulo/${article.slug}`,
+      images: [{ url: shareImage, alt: article.title }],
       publishedTime: article.date,
       authors: [article.author],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.description,
+      images: [shareImage],
     },
   };
 }
