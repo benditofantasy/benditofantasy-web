@@ -9,7 +9,8 @@ import { TypeIcon } from "./icons";
 
 /**
  * A strip tile (SPEC §7A): tall ~3:4 image card, hover zoom, pill badge
- * bottom-right, gray UPPERCASE title beneath. Featured (podcast) = larger.
+ * bottom-right, gray UPPERCASE title beneath. Featured (newest in the row,
+ * whatever its type) = larger, with its category tag pill top-left.
  *
  * Breakpoint widths (SPEC §12): mobile ≈1.3 tiles visible (swipe), tablet
  * 2–3 visible, desktop fixed-width tiles with edge arrows.
@@ -64,7 +65,7 @@ export default function TileCard({ tile }: { tile: Tile }) {
         </motion.div>
         {tile.featured && (
           <span className="absolute left-3 top-3 rounded-pill bg-accent px-2.5 py-1 text-[10px] font-bold uppercase tracking-kicker text-accent-ink">
-            {l(TAG_NAMES.podcast)}
+            {l(TAG_NAMES[tile.tag])}
           </span>
         )}
         {tile.badge && (
