@@ -75,7 +75,9 @@ export default function SpecialRow({ special }: { special: Special }) {
     strip.scrollTo({ left: target, behavior: "smooth" });
   };
 
-  const [labelWord, ...labelRest] = l(special.label).split(" ");
+  const labelParts = l(special.label).split(" ");
+  const labelYear = labelParts[labelParts.length - 1];
+  const labelName = labelParts.slice(0, -1).join(" ");
 
   return (
     <section
@@ -90,10 +92,10 @@ export default function SpecialRow({ special }: { special: Special }) {
         <div className="pointer-events-none absolute left-4 top-1/2 z-20 -translate-y-1/2 sm:left-6 lg:left-8">
           <h2 className="font-display uppercase tracking-display">
             <span className="block text-lg leading-none text-accent drop-shadow-[0_1px_2px_rgba(1,35,64,0.2)] sm:text-2xl xl:text-3xl">
-              {labelWord}
+              {labelName}
             </span>
             <span className="block leading-[0.82] text-accent drop-shadow-[0_1px_3px_rgba(1,35,64,0.2)] [font-size:clamp(5rem,12vw,6rem)] lg:[font-size:6rem] xl:[font-size:7rem]">
-              {labelRest.join(" ")}
+              {labelYear}
             </span>
           </h2>
           <p className="mt-2 text-[11px] font-semibold uppercase tracking-kicker text-accent drop-shadow-[0_1px_1px_rgba(1,35,64,0.18)]">
