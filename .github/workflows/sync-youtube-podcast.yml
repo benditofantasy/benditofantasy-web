@@ -1,8 +1,10 @@
 name: Sync latest podcast episode
 
 # Daily check for a new podcast episode on the current season's YouTube
-# playlist. Steady-state case only (see scripts/sync-latest-podcast.mjs) —
-# the one-time historical backfill was a separate, hand-reviewed pass.
+# playlist, plus any one-off tournament playlists (e.g. a World Cup) listed
+# under "specials" in content/youtube-sync-config.json. Steady-state case
+# only (see scripts/sync-latest-podcast.mjs) — the one-time historical
+# backfill was a separate, hand-reviewed pass.
 on:
   schedule:
     - cron: "0 13 * * *" # once a day
@@ -48,11 +50,11 @@ jobs:
           git checkout -b "$BRANCH"
           git config user.name "bendito-bot"
           git config user.email "actions@github.com"
-          git add content/gameweeks public/media
+          git add content/gameweeks content/specials public/media
           git commit -m "Sync latest podcast episode"
           git push -u origin "$BRANCH"
           gh pr create \
             --title "Sync latest podcast episode" \
-            --body "Automated: new episode found on the current season's YouTube playlist. Review the gameweek file + thumbnail, then merge to publish." \
+            --body "Automated: new episode found on a synced YouTube playlist. Review the content file + thumbnail, then merge to publish." \
             --base main \
             --head "$BRANCH"

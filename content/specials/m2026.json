@@ -7,6 +7,27 @@
   "date": "2026-07-08",
   "tiles": [
     {
+      "id": "m2026-podcast-e326",
+      "type": "podcast",
+      "date": "2026-07-09",
+      "featured": false,
+      "title": {
+        "es": "Se acabó el sueño: cuartos de final y estrategia Fantasy",
+        "en": "The dream is over: quarter-finals and Fantasy strategy"
+      },
+      "description": {
+        "es": "El Mundial entra en su recta final y también lo hace el Fantasy.",
+        "en": "The World Cup enters its final stretch, and so does Fantasy."
+      },
+      "tag": "podcast",
+      "cover": "/media/m2026-podcast-e326.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "kOYOvFssgOs",
+        "duration": "56:48"
+      }
+    },
+    {
       "id": "m2026-podcast-e325",
       "type": "podcast",
       "date": "2026-07-03",

@@ -1,17 +1,23 @@
 /**
- * Recurring YouTube -> gameweek sync (SPEC follow-up: automate the podcast
- * import once the historical backfill is done).
+ * Recurring YouTube -> gameweek/special sync (SPEC follow-up: automate the
+ * podcast import once the historical backfill is done).
  *
  * Steady-state case is much simpler than the historical backfill: one new
  * episode a week, its title says "GW<N>" directly, and live gameweek files
  * (content/gameweeks/*.json) aren't mvp-wrapped like closed seasons — no
  * MVP-stat lookup needed here at all.
  *
+ * Alongside the current-season gameweek playlist, content/youtube-sync-config.json
+ * can also list one-off tournament playlists (e.g. a World Cup) under
+ * "specials" — those sync into content/specials/<id>.json instead, keyed off
+ * an episode-number prefix in the title ("326 - ...") rather than a GW number.
+ *
  *   node scripts/sync-latest-podcast.mjs [--dry-run]
  *
  * Requires `yt-dlp` on PATH. Reads/writes content/gameweeks/*.json and
- * downloads real thumbnails into public/media/ — never hotlinks (this repo
- * has no remote image domains configured in next.config.mjs).
+ * content/specials/*.json, and downloads real thumbnails into public/media/
+ * — never hotlinks (this repo has no remote image domains configured in
+ * next.config.mjs).
  *
  * Intentionally does NOT touch git (branch/commit/PR) — that's the CI
  * workflow's job (.github/workflows/sync-youtube-podcast.yml), so this
@@ -35,16 +41,7 @@ function log(...args) {
 }
 
 function loadConfig() {
-  const config = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
-  if (!config.currentSeasonPlaylistUrl) {
-    log(
-      "No currentSeasonPlaylistUrl set in content/youtube-sync-config.json " +
-        "(expected once a year, right after a new season's playlist goes up " +
-        "on the channel) — nothing to sync, exiting cleanly.",
-    );
-    process.exit(0);
-  }
-  return config;
+  return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
 }
 
 function ytDlpJsonLines(args) {
@@ -165,15 +162,123 @@ function upsertPodcastTile(gw, tile, isoDate) {
   return true;
 }
 
-function main() {
-  const config = loadConfig();
-  log(`Checking playlist: ${config.currentSeasonPlaylistUrl}`);
+/**
+ * Strip the episode-number prefix ("326 - "), the trailing " | ..." tag
+ * suffix, and any emoji from a special-playlist title. These playlists
+ * (e.g. a World Cup) aren't GW-numbered, so titles look like
+ * "326 - Se acabó el sueño 😢 ... | Fantasy Mundial en español".
+ */
+function cleanSpecialTitle(rawTitle) {
+  return rawTitle
+    .replace(/^\d{1,4}\s*[-–]\s*/, "")
+    .split(/\s*\|\s*/)[0]
+    .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, "")
+    .trim()
+    .replace(/\s+/g, " ");
+}
 
-  const entries = ytDlpJsonLines([
-    "--flat-playlist",
-    "--dump-json",
-    config.currentSeasonPlaylistUrl,
-  ]);
+function upsertSpecialTile(filePath, tile) {
+  const special = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const alreadyThere = special.tiles.some((t) => t.payload?.youtubeId === tile.payload.youtubeId);
+  if (alreadyThere) return false;
+  special.tiles.unshift(tile);
+  if (!DRY_RUN) fs.writeFileSync(filePath, JSON.stringify(special, null, 2) + "\n");
+  log(`Updated ${path.basename(filePath)}: prepended podcast tile.`);
+  return true;
+}
+
+function syncSpecial(special) {
+  const filePath = path.join(ROOT, special.file);
+  log(`Checking special "${special.id}" playlist: ${special.playlistUrl}`);
+
+  const entries = ytDlpJsonLines(["--flat-playlist", "--dump-json", special.playlistUrl]);
+
+  const existing = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const synced = new Set();
+  const collect = (tile) => {
+    if (tile.payload?.youtubeId) synced.add(tile.payload.youtubeId);
+    (tile.slides ?? []).forEach(collect);
+  };
+  existing.tiles.forEach(collect);
+
+  const candidates = entries.filter(
+    (e) => !synced.has(e.id) && (e.duration ?? 0) >= MIN_EPISODE_SECONDS,
+  );
+  if (candidates.length === 0) {
+    log(`No new full-length episodes found for "${special.id}". Nothing to do.`);
+    return false;
+  }
+
+  const byEpisode = new Map();
+  const skipped = [];
+  for (const entry of candidates) {
+    const match = entry.title.match(/^(\d{1,4})\s*[-–]\s*/);
+    if (!match) {
+      skipped.push(entry.title);
+      continue;
+    }
+    const ep = match[1];
+    if (!byEpisode.has(ep)) byEpisode.set(ep, []);
+    byEpisode.get(ep).push(entry);
+  }
+
+  if (skipped.length > 0) {
+    log(`Skipped ${skipped.length} entr${skipped.length === 1 ? "y" : "ies"} (no episode number in title):`);
+    skipped.forEach((title) => log(`  - ${title}`));
+  }
+
+  let changed = false;
+  for (const [ep, group] of byEpisode) {
+    const winner = pickWinner(group);
+    if (group.length > 1) {
+      log(`Episode ${ep}: ${group.length} candidates, picked "${winner.title}" (${winner.id}).`);
+    }
+
+    const full = ytDlpJsonLines(["--dump-json", `https://www.youtube.com/watch?v=${winner.id}`])[0];
+    const isoDate = full.upload_date
+      ? `${full.upload_date.slice(0, 4)}-${full.upload_date.slice(4, 6)}-${full.upload_date.slice(6, 8)}`
+      : new Date().toISOString().slice(0, 10);
+    const descriptionLine = (full.description ?? "").split("\n").find((l) => l.trim().length > 0) ?? "";
+
+    const tileId = `${special.id}-podcast-e${ep}`;
+    const coverPath = path.join(MEDIA_DIR, `${tileId}.jpg`);
+    if (!DRY_RUN) {
+      const ok = downloadThumbnail(winner.id, coverPath);
+      if (!ok) log(`WARNING: couldn't download a thumbnail for ${winner.id}, leaving cover unset.`);
+    }
+
+    const tile = {
+      id: tileId,
+      type: "podcast",
+      date: isoDate,
+      featured: false,
+      title: {
+        es: cleanSpecialTitle(winner.title),
+        en: `Bendito Fantasy's World Cup podcast, episode ${ep}.`,
+      },
+      description: {
+        es: descriptionLine.slice(0, 200),
+        en: `Bendito Fantasy's World Cup podcast, episode ${ep}.`,
+      },
+      tag: "podcast",
+      cover: `/media/${tileId}.jpg`,
+      credit: "Bendito Fantasy",
+      payload: {
+        youtubeId: winner.id,
+        duration: formatDuration(winner.duration),
+      },
+    };
+
+    changed = upsertSpecialTile(filePath, tile) || changed;
+  }
+
+  return changed;
+}
+
+function syncGameweeks(playlistUrl) {
+  log(`Checking playlist: ${playlistUrl}`);
+
+  const entries = ytDlpJsonLines(["--flat-playlist", "--dump-json", playlistUrl]);
 
   const synced = existingYoutubeIds();
   const candidates = entries.filter(
@@ -182,7 +287,7 @@ function main() {
 
   if (candidates.length === 0) {
     log("No new full-length episodes found. Nothing to do.");
-    return;
+    return false;
   }
 
   // group new candidates by parsed gameweek number, same duplicate tie-break
@@ -249,6 +354,27 @@ function main() {
     };
 
     changed = upsertPodcastTile(gw, tile, isoDate) || changed;
+  }
+
+  return changed;
+}
+
+function main() {
+  const config = loadConfig();
+  let changed = false;
+
+  if (config.currentSeasonPlaylistUrl) {
+    changed = syncGameweeks(config.currentSeasonPlaylistUrl) || changed;
+  } else {
+    log(
+      "No currentSeasonPlaylistUrl set in content/youtube-sync-config.json " +
+        "(expected once a year, right after a new season's playlist goes up " +
+        "on the channel) — nothing to sync there.",
+    );
+  }
+
+  for (const special of config.specials ?? []) {
+    changed = syncSpecial(special) || changed;
   }
 
   if (!changed) log("Everything found was already synced.");
