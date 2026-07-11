@@ -1,6 +1,6 @@
 name: Sync latest social posts
 
-# Daily check for new @benditofantasy posts (see scripts/sync-social-posts.mjs).
+# Hourly check for new @benditofantasy posts (see scripts/sync-social-posts.mjs).
 # Bluesky is the live source and needs no secret — just `blueskyHandle` in
 # content/social-sync-config.json. Threads/Instagram stay dormant until their
 # THREADS_ACCESS_TOKEN / IG_ACCESS_TOKEN repo secrets and matching user ids are
@@ -8,7 +8,7 @@ name: Sync latest social posts
 # run import nothing and each later run pick up only genuinely new posts.
 on:
   schedule:
-    - cron: "0 13 * * *" # once a day
+    - cron: "0 * * * *" # every hour, on the hour (UTC)
   workflow_dispatch: {} # manual trigger from the Actions tab, for testing
 
 permissions:
