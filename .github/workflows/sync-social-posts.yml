@@ -13,7 +13,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   sync:
@@ -42,20 +41,15 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Open PR with the new post(s)
+      - name: Commit new post(s) straight to main
         if: steps.diff.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
-          BRANCH="content/social-sync-$(date +%Y%m%d)"
-          git checkout -b "$BRANCH"
+          # No PR (owner decision): a post on Bluesky should appear on the site
+          # without a manual re-post/merge round-trip. The sync only ever adds
+          # already-published social posts + advances the watermark, so pushing
+          # to main directly is safe and self-limiting.
           git config user.name "bendito-bot"
           git config user.email "actions@github.com"
           git add content/gameweeks content/social-sync-state.json public/media
           git commit -m "Sync latest social posts"
-          git push -u origin "$BRANCH"
-          gh pr create \
-            --title "Sync latest social posts" \
-            --body "Automated: new post(s) found for @benditofantasy. Each lands as a social card with the branded placeholder cover; the lightbox renders the real embed (post text + any image). Review, then merge to publish." \
-            --base main \
-            --head "$BRANCH"
+          git push origin HEAD:main

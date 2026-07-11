@@ -105,8 +105,45 @@ async function fetchBlueskyPosts(handle) {
         cid: post.cid,
         text: post.record?.text ?? "",
         timestamp: post.record?.createdAt ?? post.indexedAt,
+        // Every outbound link the post carries — the link-card embed, rich-text
+        // link facets, and bare URLs in the text — so we can skip posts that
+        // just point back to our own site (see linksToSite).
+        links: outboundLinks(post),
       };
     });
+}
+
+/** All URLs a Bluesky post references: link-card embed + facets + text. */
+function outboundLinks(post) {
+  const links = [];
+  const embed = post.embed;
+  if (embed?.external?.uri) links.push(embed.external.uri);
+  // recordWithMedia nests the external card one level down.
+  if (embed?.media?.external?.uri) links.push(embed.media.external.uri);
+  for (const facet of post.record?.facets ?? []) {
+    for (const feature of facet.features ?? []) {
+      if (feature.uri) links.push(feature.uri);
+    }
+  }
+  for (const match of (post.record?.text ?? "").matchAll(/https?:\/\/[^\s]+/g)) {
+    links.push(match[0]);
+  }
+  return links;
+}
+
+/** True if any of the post's links points at one of our own domains. */
+function linksToSite(post, siteDomains) {
+  if (!siteDomains?.length || !post.links?.length) return false;
+  const needles = siteDomains.map((d) => d.replace(/^https?:\/\//, "").replace(/^www\./, "").toLowerCase());
+  return post.links.some((link) => {
+    let host;
+    try {
+      host = new URL(link).hostname.replace(/^www\./, "").toLowerCase();
+    } catch {
+      return false;
+    }
+    return needles.some((n) => host === n || host.endsWith(`.${n}`));
+  });
 }
 
 async function fetchThreadsPosts(userId, accessToken) {
@@ -137,6 +174,28 @@ async function fetchInstagramPosts(userId, accessToken) {
     text: post.caption ?? "",
     timestamp: post.timestamp,
   }));
+}
+
+const DEFAULT_COVERS = [
+  "/media/thumbnails/social-card-1.png",
+  "/media/thumbnails/social-card-2.png",
+];
+
+/** How many social tiles already live in content — the rotation offset so a
+ *  run picks up the cover sequence where the last one left off. */
+function existingSocialTileCount() {
+  let count = 0;
+  if (!fs.existsSync(GAMEWEEKS_DIR)) return count;
+  const walk = (tile) => {
+    if (tile.type === "social") count += 1;
+    (tile.slides ?? []).forEach(walk);
+  };
+  for (const file of fs.readdirSync(GAMEWEEKS_DIR)) {
+    if (!file.endsWith(".json") || file.includes("template")) continue;
+    const week = JSON.parse(fs.readFileSync(path.join(GAMEWEEKS_DIR, file), "utf8"));
+    week.tiles.forEach(walk);
+  }
+  return count;
 }
 
 function upsertSocialTile(tile, isoDate) {
@@ -188,13 +247,31 @@ async function syncPlatform(platform, config, synced, watermark) {
     log(`${platform}: baseline established at ${newest || "(no posts)"} — importing nothing.`);
     return { changed: false, newest };
   }
-  const newPosts = posts.filter(
+  const fresh = posts.filter(
     (p) => p.timestamp && p.timestamp > watermark && !synced.has(p.postUrl),
   );
+  // Drop our own site-promo posts: whenever we publish, we tend to post the
+  // link on social to spread the word — surfacing those here would be a
+  // circular, redundant loop (owner rule). A post is a promo if it links back
+  // to one of our own domains (config.siteDomains).
+  const newPosts = fresh.filter((p) => {
+    if (linksToSite(p, config.siteDomains)) {
+      log(`${platform}: skipping self-promo post ${p.id} (links to our own site).`);
+      return false;
+    }
+    return true;
+  });
   if (newPosts.length === 0) {
     log(`${platform}: nothing new.`);
     return { changed: false, newest };
   }
+
+  // Rotate the branded cover cards so a strip of several posts doesn't look
+  // identical (owner decision). card-1 (BF colors) is the preferred/first in
+  // the list; the offset continues the sequence across runs. The real post —
+  // text and any image — always renders in the lightbox embed regardless.
+  const covers = config.socialCardCovers?.length ? config.socialCardCovers : DEFAULT_COVERS;
+  let coverIndex = existingSocialTileCount();
 
   let changed = false;
   for (const post of newPosts) {
@@ -206,9 +283,7 @@ async function syncPlatform(platform, config, synced, watermark) {
       title: { es: "Nueva publicación", en: "New post" },
       description: { es: post.text.slice(0, 200), en: post.text.slice(0, 200) },
       tag: "social",
-      // One branded placeholder for every social card (owner decision): the
-      // real post — text and any image — renders in the lightbox embed.
-      cover: "/media/thumbnails/social-card.svg",
+      cover: covers[coverIndex % covers.length],
       credit: "Bendito Fantasy",
       payload: {
         platform,
@@ -219,7 +294,10 @@ async function syncPlatform(platform, config, synced, watermark) {
         text: { es: post.text, en: post.text },
       },
     };
-    changed = upsertSocialTile(tile, isoDate) || changed;
+    if (upsertSocialTile(tile, isoDate)) {
+      changed = true;
+      coverIndex += 1; // advance the rotation only when a tile was actually added
+    }
   }
   return { changed, newest };
 }

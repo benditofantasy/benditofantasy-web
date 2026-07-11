@@ -2,6 +2,12 @@
   "_comment": "Bluesky is the live source and needs no token — just the account handle (e.g. 'benditofantasy.bsky.social', or a custom-domain handle). Threads/Instagram are optional: fill their numeric user IDs (from the Meta Graph API Explorer) and set THREADS_ACCESS_TOKEN / IG_ACCESS_TOKEN env vars (repo secrets in CI) to enable them. Leave any field blank to skip that platform.",
   "handle": "@benditofantasy",
   "blueskyHandle": "benditofantasy.bsky.social",
+  "socialCardCovers": [
+    "/media/thumbnails/social-card-1.png",
+    "/media/thumbnails/social-card-2.png"
+  ],
+  "siteDomains_comment": "Posts linking to any of these domains are skipped as self-promo (we post our own article links to spread the word; surfacing them here would loop). Add every domain the site is served from.",
+  "siteDomains": ["benditofantasy.com"],
   "threadsUserId": "",
   "instagramUserId": ""
 }
