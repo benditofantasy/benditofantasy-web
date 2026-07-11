@@ -19,12 +19,30 @@ export async function generateMetadata({
   if (item) {
     const found = findTile(item);
     if (found) {
+      const title = found.tile.title.es;
+      const description = found.tile.description.es;
+      // Prefer the tile's own cover for share previews; social platforms don't
+      // render SVG, so fall back to the default brand card for non-raster covers.
+      const cover = found.tile.cover;
+      const shareImage =
+        cover && /\.(jpe?g|png|webp|gif|avif)$/i.test(cover)
+          ? cover
+          : "/brand/social-share.jpg";
       return {
-        title: found.tile.title.es,
-        description: found.tile.description.es,
+        title,
+        description,
+        alternates: { canonical: `/?item=${item}` },
         openGraph: {
-          title: found.tile.title.es,
-          description: found.tile.description.es,
+          title,
+          description,
+          url: `/?item=${item}`,
+          images: [{ url: shareImage, alt: title }],
+        },
+        twitter: {
+          card: "summary_large_image",
+          title,
+          description,
+          images: [shareImage],
         },
       };
     }
