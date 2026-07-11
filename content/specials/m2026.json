@@ -19,7 +19,7 @@
         "en": "Vote for who you think will be the next World Cup 2026 champion."
       },
       "tag": "poll",
-      "cover": "/media/m2026-campeon-mundial.svg",
+      "cover": "/media/thumbnails/poll-card.png",
       "credit": "Bendito Fantasy",
       "payload": {
         "question": {
