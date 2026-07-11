@@ -92,7 +92,18 @@ async function fetchBlueskyPosts(handle) {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Bluesky API error ${res.status}: ${await res.text()}`);
   const body = await res.json();
-  return (body.feed ?? [])
+  const feed = body.feed ?? [];
+  // A 200 with an empty feed for a configured, active account is a broken source
+  // (renamed handle, actor-not-found soft error, API shape change) — not the
+  // normal "nothing new" state. Fail loudly so the run goes red and the workflow
+  // opens an alert issue. Check the raw feed, not the post-filter result: an
+  // account whose recent window is all reposts filters to empty legitimately.
+  if (feed.length === 0) {
+    throw new Error(
+      `Bluesky returned an empty feed for ${handle} — treating as a broken source, not "nothing new".`,
+    );
+  }
+  return feed
     // Skip reposts of other people's content — we only surface our own posts.
     .filter((item) => !item.reason && item.post?.author?.handle === handle)
     .map(({ post }) => {
