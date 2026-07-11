@@ -69,11 +69,18 @@ export interface TweetPayload {
   handle: string;
 }
 
-/** A Threads or Instagram post, rendered as the platform's real embed widget. */
+/** A Bluesky, Threads or Instagram post, rendered as the platform's real embed widget. */
 export interface SocialPayload {
-  platform: "threads" | "instagram";
+  platform: "bluesky" | "threads" | "instagram";
   postUrl: string;
   handle: string;
+  /**
+   * Bluesky's embed widget keys off the post's at:// URI (and, optionally, its
+   * CID) rather than the web permalink the way Threads/Instagram do. Unused for
+   * the other platforms.
+   */
+  atUri?: string;
+  cid?: string;
   /** fallback rendering if the embed script fails/doesn't load */
   text: Localized;
 }

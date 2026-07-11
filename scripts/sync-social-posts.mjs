@@ -1,17 +1,22 @@
 /**
- * Recurring Threads/Instagram -> gameweek sync, same spirit as
- * sync-latest-podcast.mjs: a deterministic, non-AI script a cron workflow
- * runs on a schedule, never guessing at content.
+ * Recurring social -> gameweek sync, same spirit as sync-latest-podcast.mjs:
+ * a deterministic, non-AI script a cron workflow runs on a schedule, never
+ * guessing at content.
  *
  *   node scripts/sync-social-posts.mjs [--dry-run]
  *
- * Unlike YouTube (yt-dlp needs no auth), Threads and Instagram require a
- * real access token from a Meta developer app linked to @benditofantasy —
- * there is no open/anonymous way to list either account's posts. Until
+ * Bluesky is the live source and needs no auth at all: its AT Protocol public
+ * AppView (public.api.bsky.app) lists a public account's posts from just the
+ * handle, like yt-dlp does for YouTube. Set `blueskyHandle` in
+ * content/social-sync-config.json and it runs.
+ *
+ * Threads and Instagram are optional and dormant until configured: unlike
+ * Bluesky they require a real access token from a Meta developer app linked to
+ * @benditofantasy — there is no open way to list either account's posts. Until
  * THREADS_ACCESS_TOKEN / IG_ACCESS_TOKEN are set (as repo secrets in CI, or
- * local env vars for a manual run) and content/social-sync-config.json has
- * the matching numeric user id, this script no-ops cleanly for that
- * platform, same as the podcast script does when no playlist is configured.
+ * local env vars for a manual run) and social-sync-config.json has the matching
+ * numeric user id, this script no-ops cleanly for that platform, same as the
+ * podcast script does when no playlist is configured.
  *
  * A social post has no gameweek number to parse out of it the way a podcast
  * title does, so new posts are always attached to the current (most recent)
@@ -26,6 +31,7 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const CONFIG_PATH = path.join(ROOT, "content", "social-sync-config.json");
+const STATE_PATH = path.join(ROOT, "content", "social-sync-state.json");
 const GAMEWEEKS_DIR = path.join(ROOT, "content", "gameweeks");
 
 const DRY_RUN = process.argv.includes("--dry-run");
@@ -36,6 +42,21 @@ function log(...args) {
 
 function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
+}
+
+/**
+ * The watermark: an ISO timestamp; only posts created strictly after it are
+ * imported. Seeded once (see scripts note / `lastSyncedAt`) to the newest
+ * existing post so history is treated as already-seen, then advanced each run.
+ */
+function loadState() {
+  if (!fs.existsSync(STATE_PATH)) return { lastSyncedAt: "" };
+  return JSON.parse(fs.readFileSync(STATE_PATH, "utf8"));
+}
+
+function saveState(state) {
+  if (DRY_RUN) return;
+  fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2) + "\n");
 }
 
 function existingPostUrls() {
@@ -59,6 +80,33 @@ function latestGameweekFile() {
     .filter((f) => f.endsWith(".json") && !f.includes("template"));
   if (files.length === 0) return null;
   return files.sort().at(-1);
+}
+
+async function fetchBlueskyPosts(handle) {
+  // AT Protocol's public AppView needs no app, login or token to read a
+  // public account's posts — just the handle. `posts_no_replies` keeps the
+  // feed to the account's own posts + reposts, not its reply chatter.
+  const url = `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(
+    handle,
+  )}&limit=15&filter=posts_no_replies`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Bluesky API error ${res.status}: ${await res.text()}`);
+  const body = await res.json();
+  return (body.feed ?? [])
+    // Skip reposts of other people's content — we only surface our own posts.
+    .filter((item) => !item.reason && item.post?.author?.handle === handle)
+    .map(({ post }) => {
+      const rkey = post.uri.split("/").pop();
+      return {
+        platform: "bluesky",
+        id: rkey,
+        postUrl: `https://bsky.app/profile/${post.author.handle}/post/${rkey}`,
+        atUri: post.uri,
+        cid: post.cid,
+        text: post.record?.text ?? "",
+        timestamp: post.record?.createdAt ?? post.indexedAt,
+      };
+    });
 }
 
 async function fetchThreadsPosts(userId, accessToken) {
@@ -105,19 +153,47 @@ function upsertSocialTile(tile, isoDate) {
   return true;
 }
 
-async function syncPlatform(platform, userId, accessToken, synced) {
-  if (!userId || !accessToken) {
-    log(`${platform}: not configured (missing user id or access token) — skipping.`);
-    return false;
+async function syncPlatform(platform, config, synced, watermark) {
+  let posts;
+  if (platform === "bluesky") {
+    if (!config.blueskyHandle) {
+      log(`bluesky: not configured (missing blueskyHandle) — skipping.`);
+      return { changed: false, newest: watermark };
+    }
+    posts = await fetchBlueskyPosts(config.blueskyHandle);
+  } else {
+    const userId = platform === "threads" ? config.threadsUserId : config.instagramUserId;
+    const accessToken =
+      platform === "threads" ? process.env.THREADS_ACCESS_TOKEN : process.env.IG_ACCESS_TOKEN;
+    if (!userId || !accessToken) {
+      log(`${platform}: not configured (missing user id or access token) — skipping.`);
+      return { changed: false, newest: watermark };
+    }
+    posts =
+      platform === "threads"
+        ? await fetchThreadsPosts(userId, accessToken)
+        : await fetchInstagramPosts(userId, accessToken);
   }
-  const posts =
-    platform === "threads"
-      ? await fetchThreadsPosts(userId, accessToken)
-      : await fetchInstagramPosts(userId, accessToken);
-  const newPosts = posts.filter((p) => !synced.has(p.postUrl));
+  // The newest timestamp seen advances the watermark even for posts we skip,
+  // so "start fresh" stays fresh: everything up to now is considered seen.
+  const newest = posts.reduce(
+    (max, p) => (p.timestamp && p.timestamp > max ? p.timestamp : max),
+    watermark,
+  );
+  // First ever run (no watermark yet): establish the baseline and import
+  // nothing — the account's whole existing history is treated as already-seen
+  // (owner decision: start fresh). Every later run then imports only posts
+  // made strictly after the watermark, and not already present in content.
+  if (!watermark) {
+    log(`${platform}: baseline established at ${newest || "(no posts)"} — importing nothing.`);
+    return { changed: false, newest };
+  }
+  const newPosts = posts.filter(
+    (p) => p.timestamp && p.timestamp > watermark && !synced.has(p.postUrl),
+  );
   if (newPosts.length === 0) {
     log(`${platform}: nothing new.`);
-    return false;
+    return { changed: false, newest };
   }
 
   let changed = false;
@@ -130,42 +206,42 @@ async function syncPlatform(platform, userId, accessToken, synced) {
       title: { es: "Nueva publicación", en: "New post" },
       description: { es: post.text.slice(0, 200), en: post.text.slice(0, 200) },
       tag: "social",
-      cover: `/media/${tileId}.jpg`,
+      // One branded placeholder for every social card (owner decision): the
+      // real post — text and any image — renders in the lightbox embed.
+      cover: "/media/thumbnails/social-card.svg",
       credit: "Bendito Fantasy",
       payload: {
         platform,
         postUrl: post.postUrl,
         handle: "@benditofantasy",
+        // Bluesky's embed widget keys off the at:// URI + CID, not the web link.
+        ...(post.atUri ? { atUri: post.atUri, cid: post.cid } : {}),
         text: { es: post.text, en: post.text },
       },
     };
-    // No open thumbnail endpoint for Threads/Instagram posts (unlike YouTube's
-    // i.ytimg.com) — the cover path above is left for a human to fill in via
-    // the PR this opens; the lightbox itself renders the real embed widget
-    // regardless, so a missing tile-grid cover doesn't block the post reading fine.
     changed = upsertSocialTile(tile, isoDate) || changed;
   }
-  return changed;
+  return { changed, newest };
 }
 
 async function main() {
   const config = loadConfig();
   const synced = existingPostUrls();
+  const state = loadState();
+  let watermark = state.lastSyncedAt || "";
 
-  const threadsChanged = await syncPlatform(
-    "threads",
-    config.threadsUserId,
-    process.env.THREADS_ACCESS_TOKEN,
-    synced,
-  );
-  const instagramChanged = await syncPlatform(
-    "instagram",
-    config.instagramUserId,
-    process.env.IG_ACCESS_TOKEN,
-    synced,
-  );
+  let anyChanged = false;
+  for (const platform of ["bluesky", "threads", "instagram"]) {
+    const { changed, newest } = await syncPlatform(platform, config, synced, watermark);
+    anyChanged = anyChanged || changed;
+    if (newest && newest > watermark) watermark = newest;
+  }
 
-  if (!threadsChanged && !instagramChanged) log("Everything found was already synced.");
+  saveState({ lastSyncedAt: watermark });
+
+  if (!anyChanged) {
+    log("Everything found was already synced.");
+  }
 }
 
 main().catch((err) => {

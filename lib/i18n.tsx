@@ -32,6 +32,7 @@ export const STRINGS = {
   shareOnThreads: { es: "Compartir en Threads", en: "Share on Threads" },
   shareOnWhatsApp: { es: "Compartir en WhatsApp", en: "Share on WhatsApp" },
   viewOnX: { es: "Ver en X", en: "View on X" },
+  viewOnBluesky: { es: "Ver en Bluesky", en: "View on Bluesky" },
   viewOnThreads: { es: "Ver en Threads", en: "View on Threads" },
   viewOnInstagram: { es: "Ver en Instagram", en: "View on Instagram" },
   backHome: { es: "Volver al inicio", en: "Back to home" },

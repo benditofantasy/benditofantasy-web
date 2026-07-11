@@ -4,14 +4,21 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { TAG_NAMES, useLang } from "@/lib/i18n";
 import type { SocialPayload } from "@/lib/types";
-import { InstagramIcon, ThreadsIcon } from "../icons";
+import { BlueskyIcon, InstagramIcon, ThreadsIcon } from "../icons";
 import type { SlideProps } from "../Lightbox";
 import SlideMeta from "./SlideMeta";
 
 const EMBED_SCRIPT_SRC: Record<SocialPayload["platform"], string> = {
+  bluesky: "https://embed.bsky.app/static/embed.js",
   threads: "https://www.threads.net/embed.js",
   instagram: "https://www.instagram.com/embed.js",
 };
+
+const PLATFORM_ICON = {
+  bluesky: BlueskyIcon,
+  threads: ThreadsIcon,
+  instagram: InstagramIcon,
+} as const;
 
 const EMBED_TIMEOUT_MS = 4000;
 
@@ -51,8 +58,13 @@ export default function SocialSlide({ tile, gameweek, shared }: SlideProps) {
     };
   }, [payload.platform, payload.postUrl]);
 
-  const Icon = payload.platform === "threads" ? ThreadsIcon : InstagramIcon;
-  const viewLabel = payload.platform === "threads" ? t("viewOnThreads") : t("viewOnInstagram");
+  const Icon = PLATFORM_ICON[payload.platform];
+  const viewLabel =
+    payload.platform === "bluesky"
+      ? t("viewOnBluesky")
+      : payload.platform === "threads"
+        ? t("viewOnThreads")
+        : t("viewOnInstagram");
 
   return (
     <motion.div
@@ -66,7 +78,17 @@ export default function SocialSlide({ tile, gameweek, shared }: SlideProps) {
         {l(TAG_NAMES[tile.tag])}
       </p>
       <div ref={containerRef} className="w-full max-w-xl">
-        {payload.platform === "threads" ? (
+        {payload.platform === "bluesky" ? (
+          <blockquote
+            className="bluesky-embed"
+            data-bluesky-uri={payload.atUri}
+            data-bluesky-cid={payload.cid}
+          >
+            <a href={payload.postUrl} target="_blank" rel="noopener noreferrer">
+              {payload.handle}
+            </a>
+          </blockquote>
+        ) : payload.platform === "threads" ? (
           <blockquote
             className="text-post-media"
             data-text-post-permalink={payload.postUrl}

@@ -1,9 +1,11 @@
-name: Sync latest Threads/Instagram posts
+name: Sync latest social posts
 
-# Daily check for new @benditofantasy posts on Threads/Instagram (see
-# scripts/sync-social-posts.mjs). No-ops cleanly per-platform until
-# THREADS_ACCESS_TOKEN / IG_ACCESS_TOKEN repo secrets and the matching user
-# ids in content/social-sync-config.json are set up.
+# Daily check for new @benditofantasy posts (see scripts/sync-social-posts.mjs).
+# Bluesky is the live source and needs no secret — just `blueskyHandle` in
+# content/social-sync-config.json. Threads/Instagram stay dormant until their
+# THREADS_ACCESS_TOKEN / IG_ACCESS_TOKEN repo secrets and matching user ids are
+# set. A watermark in content/social-sync-state.json (committed) makes the first
+# run import nothing and each later run pick up only genuinely new posts.
 on:
   schedule:
     - cron: "0 13 * * *" # once a day
@@ -49,11 +51,11 @@ jobs:
           git checkout -b "$BRANCH"
           git config user.name "bendito-bot"
           git config user.email "actions@github.com"
-          git add content/gameweeks public/media
-          git commit -m "Sync latest Threads/Instagram posts"
+          git add content/gameweeks content/social-sync-state.json public/media
+          git commit -m "Sync latest social posts"
           git push -u origin "$BRANCH"
           gh pr create \
-            --title "Sync latest Threads/Instagram posts" \
-            --body "Automated: new post(s) found for @benditofantasy. The tile cover is left unset for a human to fill in (there's no open thumbnail endpoint like YouTube's) — the lightbox itself renders the real embed regardless. Review, then merge to publish." \
+            --title "Sync latest social posts" \
+            --body "Automated: new post(s) found for @benditofantasy. Each lands as a social card with the branded placeholder cover; the lightbox renders the real embed (post text + any image). Review, then merge to publish." \
             --base main \
             --head "$BRANCH"

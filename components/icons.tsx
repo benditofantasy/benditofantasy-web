@@ -187,7 +187,7 @@ const TYPE_ICONS: Record<TileType, (props: IconProps) => JSX.Element> = {
   data: TableIcon,
   chart: ChartIcon,
   tweet: XSocialIcon,
-  social: ThreadsIcon,
+  social: BlueskyIcon,
   image: ImageIcon,
   quote: QuoteIcon,
   mvp: TrophyIcon,

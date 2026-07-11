@@ -1,6 +1,7 @@
 {
-  "_comment": "Threads/Instagram user IDs (numeric, NOT the @handle) — get these once from the Graph API Explorer after linking your account to a Meta developer app. Access tokens themselves are never stored here: they're read from THREADS_ACCESS_TOKEN / IG_ACCESS_TOKEN env vars (repo secrets in CI). Leave a field blank to skip that platform.",
+  "_comment": "Bluesky is the live source and needs no token — just the account handle (e.g. 'benditofantasy.bsky.social', or a custom-domain handle). Threads/Instagram are optional: fill their numeric user IDs (from the Meta Graph API Explorer) and set THREADS_ACCESS_TOKEN / IG_ACCESS_TOKEN env vars (repo secrets in CI) to enable them. Leave any field blank to skip that platform.",
   "handle": "@benditofantasy",
+  "blueskyHandle": "benditofantasy.bsky.social",
   "threadsUserId": "",
   "instagramUserId": ""
 }
