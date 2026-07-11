@@ -104,10 +104,13 @@ export default function PollEmbed({
             const pct = totalVotes > 0 ? Math.round((votes / totalVotes) * 100) : 0;
             const isMine = option.id === selectedOption;
             return (
-              <div key={option.id} className="relative overflow-hidden rounded-pill border border-line">
+              <div
+                key={option.id}
+                className={`relative overflow-hidden rounded-pill border ${isMine ? "border-accent" : "border-line"}`}
+              >
                 <div
-                  className="absolute inset-y-0 left-0 bg-accent/20 transition-[width] duration-slow ease-brand"
-                  style={{ width: `${pct}%` }}
+                  className="absolute inset-y-0 left-0 bg-accent opacity-25 transition-[width] duration-slow ease-brand"
+                  style={{ width: `${Math.max(pct, votes > 0 ? 4 : 0)}%` }}
                 />
                 <div className="relative flex items-center justify-between px-3 py-2 text-sm">
                   <span className={isMine ? "font-semibold text-ink" : "text-ink-mid"}>
