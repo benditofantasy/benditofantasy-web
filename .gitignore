@@ -30,5 +30,10 @@ next-env.d.ts
 # raw Squarespace export source (not site content, kept locally only)
 /Exports
 
+# generated placeholder covers — recreated on every build by
+# scripts/generate-placeholder-media.mjs (runs in prebuild). Real photography
+# (.jpg/.png overrides) is still tracked.
+/public/media/*.svg
+
 .vercel
 .env*.local
