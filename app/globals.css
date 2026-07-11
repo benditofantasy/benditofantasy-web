@@ -156,8 +156,13 @@ body {
   line-height: 1.8;
   color: var(--color-ink);
 }
-.prose-editorial > * + * {
-  margin-top: 1.25em;
+/*
+ * The MDX body is wrapped in an extra <div> by ArticleLanguageView (one per
+ * language, toggled via `hidden`), so the spacing rule targets that div's
+ * children rather than .prose-editorial's own direct children.
+ */
+.prose-editorial > div > * + * {
+  margin-top: 1.75em;
 }
 .prose-editorial h2 {
   font-family: var(--font-display);
@@ -165,12 +170,42 @@ body {
   line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: var(--tracking-display);
-  margin-top: 2em;
+  margin-top: 2.25em;
 }
 .prose-editorial h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-accent);
+  margin-top: 2.25em;
+  margin-bottom: 0.15em;
+}
+/*
+ * Most articles mark a subtitle as a standalone bold line (**¿Cómo llegamos
+ * hasta aquí?**) rather than a real Markdown heading — the writer's actual
+ * convention, not something worth rewriting 100+ MDX files to match. Give
+ * that paragraph shape the same "break the rhythm" treatment as an h3 so the
+ * typography reflects the structure the writer already intended.
+ */
+.prose-editorial p:has(> strong:only-child):not(:has(> strong ~ *)) {
+  margin-top: 2.25em;
+  margin-bottom: 0.15em;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-accent);
+}
+.prose-editorial p:has(> strong:only-child):not(:has(> strong ~ *)) strong {
   font-weight: 700;
-  font-size: 1.25rem;
-  margin-top: 1.75em;
+}
+.prose-editorial hr {
+  margin: 2.75em 0;
+  border: none;
+  border-top: 1px solid var(--color-line);
 }
 .prose-editorial a {
   color: var(--color-ink-mid);
