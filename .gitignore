@@ -29,3 +29,6 @@ next-env.d.ts
 
 # raw Squarespace export source (not site content, kept locally only)
 /Exports
+
+.vercel
+.env*.local

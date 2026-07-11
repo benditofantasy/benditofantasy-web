@@ -2,7 +2,7 @@ import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { getSlides, orderTilesByRecency, type Gameweek, type Row, type Season, type Special, type Tile } from "./types";
+import { getSlides, orderTilesByRecency, type Gameweek, type PollPayload, type Row, type Season, type Special, type Tile } from "./types";
 
 const GAMEWEEKS_DIR = path.join(process.cwd(), "content", "gameweeks");
 const SEASONS_DIR = path.join(process.cwd(), "content", "seasons");
@@ -78,6 +78,18 @@ export function findTile(
     if (index !== -1) return { gameweek: season, tile: slides[index].tile, index };
   }
   return undefined;
+}
+
+/**
+ * Look up a poll tile's payload by its own tile id, for the `<Poll id="..." />`
+ * MDX embed (SPEC follow-up: interactive tools inline in article bodies).
+ * Reuses `findTile`, so a poll can live in any gameweek/special/season row and
+ * still be referenced from any article.
+ */
+export function getPollPayload(tileId: string): PollPayload | undefined {
+  const found = findTile(tileId);
+  if (!found || found.tile.type !== "poll") return undefined;
+  return found.tile.payload as PollPayload;
 }
 
 export interface Article {

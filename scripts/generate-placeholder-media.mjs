@@ -27,6 +27,7 @@ const TAG_HEX = {
   social: "#02ebae", // --bf-turquoise
   quote: "#8c5e26", // --bf-brown
   mvp: "#f2c572", // --bf-gold
+  poll: "#bf8d30", // --bf-mustard
 };
 
 const TYPE_WORD = {
@@ -39,6 +40,7 @@ const TYPE_WORD = {
   image: "IMAGEN",
   quote: "CITA",
   mvp: "MVP",
+  poll: "ENCUESTA",
 };
 
 function esc(text) {

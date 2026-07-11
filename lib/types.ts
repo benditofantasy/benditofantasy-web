@@ -15,7 +15,8 @@ export type TileType =
   | "social"
   | "image"
   | "quote"
-  | "mvp";
+  | "mvp"
+  | "poll";
 
 /** Category tag keys — display names are localized via the i18n dictionary. */
 export type TagKey =
@@ -26,7 +27,8 @@ export type TagKey =
   | "video"
   | "social"
   | "quote"
-  | "mvp";
+  | "mvp"
+  | "poll";
 
 export interface TileLink {
   href: string;
@@ -102,6 +104,24 @@ export interface MvpPayload {
   statLine: Localized;
 }
 
+export interface PollOption {
+  /** stable option key — also the Redis hash field and vote payload's optionId */
+  id: string;
+  label: Localized;
+}
+
+/** A weekly opinion poll (e.g. "best captain"), voted on standalone or inline
+ *  in an article body via `<Poll id="..." />`. Votes live in Redis, keyed by
+ *  the tile's own `id` — see app/api/polls/[pollId]/route.ts. */
+export interface PollPayload {
+  question: Localized;
+  options: PollOption[];
+  /** ISO — after this, both surfaces go results-only (no voting). */
+  closesAt: string;
+  /** informational only; the real expiry is the Redis key TTL. */
+  expiresAt?: string;
+}
+
 export type TilePayload =
   | VideoPayload
   | ArticlePayload
@@ -111,7 +131,8 @@ export type TilePayload =
   | SocialPayload
   | ImagePayload
   | QuotePayload
-  | MvpPayload;
+  | MvpPayload
+  | PollPayload;
 
 export interface Tile {
   /** stable id, used in the ?item= deep link */
@@ -190,7 +211,7 @@ export type Row = Gameweek | Season | Special;
  */
 export interface Slide {
   /** which §9 layout renders this slide */
-  layout: "cover" | "media" | "video" | "data" | "chart" | "quote" | "tweet" | "social" | "mvp";
+  layout: "cover" | "media" | "video" | "data" | "chart" | "quote" | "tweet" | "social" | "mvp" | "poll";
   tile: Tile;
 }
 
@@ -205,6 +226,7 @@ const LAYOUT_BY_TYPE: Record<TileType, Slide["layout"]> = {
   tweet: "tweet",
   social: "social",
   mvp: "mvp",
+  poll: "poll",
 };
 
 /** A tile's ordered slides: itself, then its nested tiles' own slides (recursively). */

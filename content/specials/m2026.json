@@ -7,6 +7,38 @@
   "date": "2026-07-10",
   "tiles": [
     {
+      "id": "m2026-campeon-mundial",
+      "type": "poll",
+      "date": "2026-07-10",
+      "title": {
+        "es": "Encuesta: campeón del Mundial",
+        "en": "Poll: World Cup champion"
+      },
+      "description": {
+        "es": "Vota por quién crees que será el próximo campeón del Mundial 2026.",
+        "en": "Vote for who you think will be the next World Cup 2026 champion."
+      },
+      "tag": "poll",
+      "cover": "/media/m2026-campeon-mundial.svg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "question": {
+          "es": "¿Quién crees que será el próximo campeón del Mundial?",
+          "en": "Who do you think will be the next World Cup champion?"
+        },
+        "options": [
+          { "id": "france", "label": { "es": "Francia", "en": "France" } },
+          { "id": "spain", "label": { "es": "España", "en": "Spain" } },
+          { "id": "norway", "label": { "es": "Noruega", "en": "Norway" } },
+          { "id": "england", "label": { "es": "Inglaterra", "en": "England" } },
+          { "id": "argentina", "label": { "es": "Argentina", "en": "Argentina" } },
+          { "id": "switzerland", "label": { "es": "Suiza", "en": "Switzerland" } }
+        ],
+        "closesAt": "2026-07-19T15:00:00Z",
+        "expiresAt": "2026-07-26T15:00:00Z"
+      }
+    },
+    {
       "id": "m2026-tenemos-final-adelantada",
       "type": "article",
       "date": "2026-07-10",

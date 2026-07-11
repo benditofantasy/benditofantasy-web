@@ -154,6 +154,16 @@ export function TrophyIcon({ className }: IconProps) {
   );
 }
 
+export function PollIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 16 16" className={className} aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+      <rect x="2.5" y="3" width="3" height="3" rx="0.5" />
+      <path d="m3.2 4.5.6.6L5 3.8" strokeWidth="1" />
+      <path d="M7.5 4.5h6M2.5 10h3v3h-3zM7.5 11.5h6" />
+    </svg>
+  );
+}
+
 export function ChevronLeftIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 16 16" className={className} aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -181,6 +191,7 @@ const TYPE_ICONS: Record<TileType, (props: IconProps) => JSX.Element> = {
   image: ImageIcon,
   quote: QuoteIcon,
   mvp: TrophyIcon,
+  poll: PollIcon,
 };
 
 export function TypeIcon({ type, className }: IconProps & { type: TileType }) {

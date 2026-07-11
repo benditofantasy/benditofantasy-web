@@ -46,6 +46,15 @@ export const STRINGS = {
   dataTable: { es: "Tabla de datos", en: "Data table" },
   chartFigure: { es: "Gráfico", en: "Chart" },
   season: { es: "Temporada", en: "Season" },
+  pollVote: { es: "Votar", en: "Vote" },
+  pollVoted: { es: "Ya votaste", en: "You voted" },
+  pollClosed: { es: "Encuesta cerrada", en: "Poll closed" },
+  pollVotes: { es: "votos", en: "votes" },
+  pollError: {
+    es: "No se pudo registrar tu voto. Intenta de nuevo.",
+    en: "Your vote couldn't be recorded. Try again.",
+  },
+  pollUnavailable: { es: "Encuesta no disponible.", en: "Poll unavailable." },
 } satisfies Record<string, Localized>;
 
 export type StringKey = keyof typeof STRINGS;
@@ -60,6 +69,7 @@ export const TAG_NAMES: Record<TagKey, Localized> = {
   social: { es: "Social", en: "Social" },
   quote: { es: "Cita", en: "Quote" },
   mvp: { es: "MVP", en: "MVP" },
+  poll: { es: "Encuesta", en: "Poll" },
 };
 
 const STORAGE_KEY = "bendito-lang";

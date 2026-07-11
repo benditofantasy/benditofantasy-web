@@ -11,6 +11,7 @@ import CoverSlide from "./slides/CoverSlide";
 import DataSlide from "./slides/DataSlide";
 import MediaSlide from "./slides/MediaSlide";
 import MvpSlide from "./slides/MvpSlide";
+import PollSlide from "./slides/PollSlide";
 import QuoteSlide from "./slides/QuoteSlide";
 import SocialSlide from "./slides/SocialSlide";
 import TweetSlide from "./slides/TweetSlide";
@@ -35,6 +36,7 @@ const SLIDE_RENDERERS: Record<Slide["layout"], (props: SlideProps) => JSX.Elemen
   tweet: TweetSlide,
   social: SocialSlide,
   mvp: MvpSlide,
+  poll: PollSlide,
 };
 
 const SWIPE_THRESHOLD = 60;

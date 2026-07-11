@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import ArticleLanguageView from "@/components/ArticleLanguageView";
+import PollEmbedFromId from "@/components/PollEmbedFromId";
 import { getArticle, getArticleSlugs } from "@/lib/content";
+
+/** Custom tags usable inside an article's MDX body. General infra for any
+ *  future embeddable tool, not poll-specific — add more entries here. */
+const mdxComponents = {
+  Poll: ({ id }: { id: string }) => <PollEmbedFromId id={id} />,
+};
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -60,8 +67,12 @@ export default async function ArticlePage({ params }: PageProps) {
     <ArticleLanguageView
       es={article}
       en={englishArticle}
-      esBody={<MDXRemote source={article.body} />}
-      enBody={englishArticle ? <MDXRemote source={englishArticle.body} /> : undefined}
+      esBody={<MDXRemote source={article.body} components={mdxComponents} />}
+      enBody={
+        englishArticle ? (
+          <MDXRemote source={englishArticle.body} components={mdxComponents} />
+        ) : undefined
+      }
     />
   );
 }
