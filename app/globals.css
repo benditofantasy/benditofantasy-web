@@ -183,24 +183,27 @@ body {
   margin-bottom: 0.15em;
 }
 /*
- * Most articles mark a subtitle as a standalone bold line (**¿Cómo llegamos
- * hasta aquí?**) rather than a real Markdown heading — the writer's actual
- * convention, not something worth rewriting 100+ MDX files to match. Give
- * that paragraph shape the same "break the rhythm" treatment as an h3 so the
- * typography reflects the structure the writer already intended.
+ * A standalone bold line (**…**) is the writers' inline convention for a
+ * highlighted aside — sometimes a short subtitle, but just as often a full
+ * emphasized sentence. Rendering all of them as loud all-caps orange headers
+ * was hard to read and stole the "header" signal from real headings. Orange
+ * is reserved for real ##/### headings now; a bold line instead gets a subtle
+ * highlighted panel — a faint warm tint that breaks the rhythm without
+ * shouting. (A genuine section header should be authored as ##/### to get the
+ * orange display treatment.)
  */
 .prose-editorial > div > p:has(> strong:only-child):not(:has(> strong ~ *)) {
-  margin-top: 2.25em;
-  margin-bottom: 0.15em;
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  line-height: 1.15;
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-display);
-  color: var(--color-accent);
+  margin: 2em 0;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+  background: rgba(242, 89, 75, 0.07); /* --bf-coral at 7% — a warm highlight, not orange text */
+  border: 1px solid rgba(242, 89, 75, 0.13);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--color-ink);
 }
 .prose-editorial > div > p:has(> strong:only-child):not(:has(> strong ~ *)) strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 .prose-editorial hr {
   margin: 2.75em 0;
