@@ -28,12 +28,13 @@ Most of the FPL-intelligence ideas share one backbone and two reusable patterns:
 
 ---
 
-## Phase 0 — Foundation & safety (small, do first)
+## Phase 0 — Foundation & safety ✅ done
 
-- [ ] **Sync reliability net** — the hourly Bluesky bot pushes straight to `main`
-  unattended. One quiet failure (branch protection, API hiccup) and posts stop
-  with no signal. Add a "last successful sync" check / alert.
-  _Protects everything already shipped._
+- [x] **Sync reliability net** — a broken Bluesky feed (empty API response,
+  blocked push) now fails the run loudly and opens a self-healing GitHub Issue
+  (auto-closed on the next success), instead of a silently-green no-op. Also
+  confirmed `main` has no branch protection/rulesets. Shipped in PR #15;
+  alert cycle verified live. See [Done](#done).
 
 ## Phase 1 — The data backbone (unlocks most of what follows)
 
@@ -125,6 +126,12 @@ Unsorted ideas. Add freely; triage into a phase later.
 
 Shipped work, newest first.
 
+- **Phase 0 — sync reliability net** (2026-07-11, PR #15) — the hourly social sync
+  fails loudly on a broken feed and opens/auto-closes a "Social sync failing"
+  GitHub Issue; push rebases onto `main` first. Full alert cycle verified live.
+- **Art-direction prompt system** (2026-07-11) — Fable-hardened player-card +
+  collage-card prompt templates (parametrized, palette-reconciled, 3:4-locked)
+  under `art-direction/`, for Phase 3 automation.
 - **Bluesky social live feed** (2026-07-10) — homepage social cards from Bluesky
   (no token), hourly sync straight to `main`, rotating branded covers, self-promo
   filter, real embed in lightbox. Smoke-tested end-to-end.
