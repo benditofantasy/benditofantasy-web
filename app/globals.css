@@ -189,7 +189,7 @@ body {
  * that paragraph shape the same "break the rhythm" treatment as an h3 so the
  * typography reflects the structure the writer already intended.
  */
-.prose-editorial p:has(> strong:only-child):not(:has(> strong ~ *)) {
+.prose-editorial > div > p:has(> strong:only-child):not(:has(> strong ~ *)) {
   margin-top: 2.25em;
   margin-bottom: 0.15em;
   font-family: var(--font-display);
@@ -199,7 +199,7 @@ body {
   letter-spacing: var(--tracking-display);
   color: var(--color-accent);
 }
-.prose-editorial p:has(> strong:only-child):not(:has(> strong ~ *)) strong {
+.prose-editorial > div > p:has(> strong:only-child):not(:has(> strong ~ *)) strong {
   font-weight: 700;
 }
 .prose-editorial hr {
@@ -216,9 +216,9 @@ body {
   color: var(--color-accent);
 }
 .prose-editorial blockquote {
-  border-left: 3px solid var(--color-accent);
+  border-left: 3px solid var(--bf-teal);
   padding-left: 1.25rem;
-  color: var(--color-ink-mid);
+  color: var(--bf-teal);
   font-size: 1.35rem;
   line-height: 1.5;
 }
