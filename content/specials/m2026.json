@@ -4,8 +4,38 @@
     "es": "Mundial 2026",
     "en": "World Cup 2026"
   },
-  "date": "2026-07-08",
+  "date": "2026-07-10",
   "tiles": [
+    {
+      "id": "m2026-tenemos-final-adelantada",
+      "type": "article",
+      "date": "2026-07-10",
+      "title": {
+        "es": "Tenemos final adelantada",
+        "en": "An Early Final"
+      },
+      "description": {
+        "es": "España y Francia chocan en una semifinal que enfrenta dos filosofías opuestas: el control absoluto del balón contra la presión y la contundencia del equipo favorito al título.",
+        "en": "Spain and France meet in a semifinal between two opposing philosophies: absolute control of the ball against the pressing and ruthless efficiency of the tournament favorites."
+      },
+      "tag": "article",
+      "cover": "/media/players/yamal-spain.png",
+      "badge": {
+        "es": "España",
+        "en": "Spain"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/tenemos-final-adelantada",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "tenemos-final-adelantada"
+      }
+    },
     {
       "id": "m2026-podcast-e326",
       "type": "podcast",
