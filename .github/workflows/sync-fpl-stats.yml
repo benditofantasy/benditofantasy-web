@@ -1,0 +1,106 @@
+name: Sync FPL stats chart
+
+# Snapshots the FPL engine's published team-stats JSON (darutto/FPL-Platform
+# data/stats.json) into the latest gameweek as a chart tile — see
+# scripts/sync-fpl-stats.mjs. Runs after the engine's weekly publish job.
+# statsUrl lives in content/fpl-stats-config.json; no secret needed (public raw).
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC (after the engine's 05:00 publish)
+  workflow_dispatch: {} # manual trigger from the Actions tab
+
+permissions:
+  contents: write
+  issues: write # so a failed run can open/close the "stats sync failing" alert issue
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run stats sync
+        run: node scripts/sync-fpl-stats.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- content/gameweeks; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit refreshed stats tile straight to main
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "bendito-bot"
+          git config user.email "actions@github.com"
+          git add content/gameweeks
+          git commit -m "Sync FPL stats chart"
+          # Rebase onto latest main first so a concurrent human push doesn't reject it.
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Open/update alert issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "⚠️ FPL stats sync failing";
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100,
+            });
+            const existing = open.find((i) => i.title === title && !i.pull_request);
+            const body = `The FPL stats sync run failed.\n\nFailed run: ${runUrl}\n\nLikely causes: the engine's stats.json wasn't reachable (404 before the engine publishes, or a bad statsUrl), an empty teams array, or a blocked push. This issue auto-closes on the next successful run.`;
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: `Still failing. ${runUrl}`,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+              });
+            }
+
+      - name: Close alert issue on success
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "⚠️ FPL stats sync failing";
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100,
+            });
+            const existing = open.find((i) => i.title === title && !i.pull_request);
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: "Sync succeeded again — closing.",
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                state: "closed",
+              });
+            }

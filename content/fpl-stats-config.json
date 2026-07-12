@@ -1,0 +1,5 @@
+{
+  "_comment": "Team stats feed from the FPL engine (darutto/FPL-Platform). statsUrl is the raw JSON that repo's publish_stats.py workflow commits; the site snapshots it into the latest gameweek as a chart tile. topN caps how many teams show in the bar chart. For local testing without the live URL, run: node scripts/sync-fpl-stats.mjs --file <path-to-stats.json> --dry-run.",
+  "statsUrl": "https://raw.githubusercontent.com/darutto/FPL-Platform/main/data/stats.json",
+  "topN": 10
+}
