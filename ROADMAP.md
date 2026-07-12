@@ -36,14 +36,16 @@ Most of the FPL-intelligence ideas share one backbone and two reusable patterns:
   confirmed `main` has no branch protection/rulesets. Shipped in PR #15;
   alert cycle verified live. See [Done](#done).
 
-## Phase 1 — The data backbone (unlocks most of what follows)
+## Phase 1 — The data backbone ✅ done
 
-- [ ] **#6 — Connect the external FPL engine.** A separate repo already has
-  scripts that extract most common FPL data (player info, team stats, fixtures,
-  etc.). Wire it to this repo as the **shared data source** feeding stats/charts
-  (#2), the GW card automation (#4), player hyperlinks (#5.1), and the analytics
-  app. Decide the integration shape: shared package, generated data files in
-  `content/`, or a small service. _Foundational — sequence early._
+- [x] **#6 — Connect the external FPL engine.** Established the engine↔site
+  **data contract**: `darutto/FPL-Platform` publishes a static `data/stats.json`
+  (raw URL, tokenless, decoupled from its gated Railway API), and the site
+  snapshots it into a chart tile via `scripts/sync-fpl-stats.mjs` + the existing
+  `ChartSlide`. Both sides carry the Phase-0 reliability net. First slice shipped:
+  **team attack/defense leaderboard**; verified live in CI end-to-end. This is now
+  the reusable backbone — #2/#4/#5.1 extend the same published-file→snapshot path.
+  Engine `darutto/FPL-Platform#15`, site PR #18. See [Done](#done).
 
 ## Phase 2 — Turn data into on-page content
 
@@ -126,6 +128,11 @@ Unsorted ideas. Add freely; triage into a phase later.
 
 Shipped work, newest first.
 
+- **Phase 1 — FPL engine data backbone** (2026-07-12, engine `FPL-Platform#15` +
+  site PR #18) — engine publishes `data/stats.json`; site snapshots it into a
+  brand-tokened bar-chart tile (top-scoring teams) via the existing `ChartSlide`.
+  Data-derived season/GW, upsert-in-place, reliability net both sides. Verified
+  live in CI. The reusable engine↔site contract for all future FPL stats.
 - **Phase 0 — sync reliability net** (2026-07-11, PR #15) — the hourly social sync
   fails loudly on a broken feed and opens/auto-closes a "Social sync failing"
   GitHub Issue; push rebases onto `main` first. Full alert cycle verified live.
