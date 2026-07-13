@@ -1,0 +1,72 @@
+name: Generate collage cover art
+
+# Manual only for now: this calls a paid OpenAI image-generation API per tile
+# and the output needs a human look (see art-direction/qa-checklist.md) before
+# it's trusted enough to run on a schedule. Trigger from the Actions tab, with
+# an optional --limit to cap cost per run.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max number of tiles to generate this run"
+        required: false
+        default: "5"
+      tile:
+        description: "Generate a single tile by id (optional)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Run collage-art generator
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          ARGS="--limit ${{ inputs.limit }}"
+          if [ -n "${{ inputs.tile }}" ]; then
+            ARGS="$ARGS --tile ${{ inputs.tile }}"
+          fi
+          node scripts/generate-collage-art.mjs $ARGS
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet && git status --porcelain | grep -q '^??' ; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif ! git diff --quiet; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open PR with the generated art
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="content/collage-art-$(date +%Y%m%d%H%M%S)"
+          git checkout -b "$BRANCH"
+          git config user.name "bendito-bot"
+          git config user.email "actions@github.com"
+          git add content/gameweeks content/specials content/seasons public/media
+          git commit -m "Generate collage cover art"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --title "Generate collage cover art" \
+            --body "Automated: AI-generated collage covers via scripts/generate-collage-art.mjs. Review each image against art-direction/qa-checklist.md (zero-branding is a hard fail) before merging." \
+            --base main \
+            --head "$BRANCH"
