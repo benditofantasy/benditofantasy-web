@@ -13,10 +13,15 @@ import SlideMeta from "./SlideMeta";
 export default function DataSlide({ tile, gameweek }: SlideProps) {
   const { l } = useLang();
   const payload = tile.payload as DataPayload;
+  // A slim table (≤4 columns, e.g. the xG/xA leaders) fits any phone, so it
+  // shouldn't be pinned to a 480px min-width that forces a sideways drag on
+  // mobile. Only wide tables keep the min-width + horizontal scroll; narrow
+  // ones fill the width and let long cells (e.g. a long player name) wrap.
+  const compact = payload.columns.length <= 4;
   return (
     <motion.div
       data-backdrop="true"
-      className="flex h-full flex-col items-center justify-center gap-6 px-4 py-20 sm:px-16"
+      className="flex min-h-full flex-col items-center justify-center gap-6 px-4 py-20 sm:px-16"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
@@ -29,8 +34,10 @@ export default function DataSlide({ tile, gameweek }: SlideProps) {
           {l(tile.title)}
         </h2>
         <p className="mt-2 text-sm text-ink-mid">{l(tile.description)}</p>
-        <div className="mt-6 overflow-x-auto">
-          <table className="w-full min-w-[480px] border-collapse text-left text-sm">
+        <div className={`mt-6 ${compact ? "" : "overflow-x-auto"}`}>
+          <table
+            className={`w-full border-collapse text-left text-sm ${compact ? "" : "min-w-[480px]"}`}
+          >
             <thead>
               <tr>
                 {payload.columns.map((column) => (
