@@ -1,8 +1,8 @@
 {
-  "gw": 1,
+  "gw": 0,
   "label": {
-    "es": "Jornada 1",
-    "en": "Gameweek 1"
+    "es": "Pretemporada",
+    "en": "Preseason"
   },
   "date": "2026-07-04",
   "tiles": [
