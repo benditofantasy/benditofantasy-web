@@ -6,7 +6,7 @@ name: Sync FPL stats chart
 # statsUrl lives in content/fpl-stats-config.json; no secret needed (public raw).
 on:
   schedule:
-    - cron: "0 6 * * 1" # Mondays 06:00 UTC (after the engine's 05:00 publish)
+    - cron: "0 6 * * *" # daily 06:00 UTC (after the engine's 05:00 publish) — lands a GW's stats within ~a day of it ending; idempotent so no-op when nothing advanced
   workflow_dispatch: {} # manual trigger from the Actions tab
 
 permissions:
