@@ -56,6 +56,10 @@ export const STRINGS = {
     en: "Your vote couldn't be recorded. Try again.",
   },
   pollUnavailable: { es: "Encuesta no disponible.", en: "Poll unavailable." },
+  editorialArtNotice: {
+    es: "Aviso de ilustración editorial: las imágenes de tarjeta son collages generados digitalmente para Bendito Fantasy como apoyo visual a nuestro análisis de Fantasy Premier League. Son ilustraciones digitales y no representan ni implican apoyo oficial de jugadores, clubes o ligas.",
+    en: "Editorial illustration notice: card images are digitally generated collages created for Bendito Fantasy as visual support for our Fantasy Premier League analysis. They are digital illustrations and do not represent or imply official endorsement by players, clubs, or leagues.",
+  },
 } satisfies Record<string, Localized>;
 
 export type StringKey = keyof typeof STRINGS;

@@ -238,9 +238,12 @@ function buildPrompt(tile) {
     `area and all important elements away from the edges. Content type: ${contentType}. ` +
     `Core concept (context only — NEVER render this sentence as text in the image): ` +
     `${coreConcept}.\n\n` +
-    `Hero object: ${emblem}. The hero is LARGE — it fills roughly half the frame and may ` +
-    `bleed off one edge, with its key detail (face, mic capsule, chart) kept inside the safe ` +
-    `area. Secondary cutouts: ${secondary}.\n\n` +
+    `Hero object: ${emblem}. If the core concept names specific footballers, managers, or ` +
+    `public figures, depict their recognizable likeness instead of an anonymous figure — as a ` +
+    `digitally generated editorial illustration (never an actual photograph or an altered ` +
+    `photo), wearing plain unbranded kits. The hero is LARGE — it fills roughly half the ` +
+    `frame and may bleed off one edge, with its key detail (face, mic capsule, chart) kept ` +
+    `inside the safe area. Secondary cutouts: ${secondary}.\n\n` +
     `TEXT RULE: the main title is "${title}", typeset in an ultra-bold condensed sans-serif ` +
     `display face, stacked in two or three short lines, with one word or line in the accent ` +
     `color ${accent} and the rest in ${base === "dark" ? "crisp off-white" : "deep editorial ink"}; ` +
@@ -335,10 +338,15 @@ async function cropToTileFrame(buffer) {
     .toBuffer();
 }
 
+// Shown in every slide's meta row; the full bilingual aviso lives in the site
+// footer (components/Footer.tsx, i18n key editorialArtNotice).
+const GENERATED_CREDIT = "Ilustración digital · Bendito Fantasy";
+
 function writeCover(filePath, doc, tile, cover) {
   const parent = (doc.tiles ?? []).flatMap((t) => [t, ...(t.slides ?? [])]);
   const target = parent.find((t) => t.id === tile.id);
   target.cover = cover;
+  target.credit = GENERATED_CREDIT;
   if (!DRY_RUN) {
     fs.writeFileSync(filePath, JSON.stringify(doc, null, 2) + "\n");
   }

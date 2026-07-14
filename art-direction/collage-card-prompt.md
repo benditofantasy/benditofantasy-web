@@ -200,7 +200,7 @@ cutouts por la lista de objetos táctiles del tipo.
 | E3 | **Sin `{reference_image_path}`** | Generar sin referencia — el collage no depende de una foto (a diferencia del player card). |
 | E4 | **Tipo no listado** (`tweet`, `image`…) | Mapear al pariente más cercano: `tweet`→`social`, `image`→`article`; si no hay pariente, tratar como `article`. |
 | E5 | **Contenido bilingüe** | El `{title}` llega en un solo idioma elegido por el pipeline; la imagen nunca lleva texto duplicado ES+EN. |
-| E6 | **Personas reales** | Estilizar como recorte editorial; nunca fotorealismo que parezca foto oficial de la liga. |
+| E6 | **Personas reales** | **Permitido usar la semejanza reconocible** de futbolistas/managers nombrados en el concepto (decisión del owner, 2026-07-13) — siempre como ilustración editorial generada digitalmente, nunca una fotografía real ni una foto alterada, y siempre en kits sin marca. El aviso de ilustración editorial vive en el footer del sitio (`components/Footer.tsx`) y el `credit` del tile queda como "Ilustración digital · Bendito Fantasy". |
 
 ## Negative constraints (never do)
 

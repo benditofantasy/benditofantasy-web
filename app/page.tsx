@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 import GameweekRow from "@/components/GameweekRow";
 import Hero from "@/components/Hero";
 import Lightbox from "@/components/Lightbox";
@@ -68,9 +69,7 @@ export default function HomePage() {
           <SeasonRow key={season.season} season={season} age={index} />
         ))}
       </div>
-      <footer className="mx-auto max-w-[1600px] px-4 py-14 text-xs uppercase tracking-kicker text-ink-soft sm:px-8">
-        © {new Date().getFullYear()} Bendito Fantasy
-      </footer>
+      <Footer />
       <Suspense fallback={null}>
         <Lightbox gameweeks={[...gameweeks, ...specials]} seasons={seasons} />
       </Suspense>
