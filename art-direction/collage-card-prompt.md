@@ -137,23 +137,41 @@ independiente que pueda convivir con las existentes.
 
 ### 8. Plantilla interna de generación (la que se envía al generador)
 
+*(Endurecida 2026-07-13 tras comparar salida de la API contra la referencia de ChatGPT:
+se añadieron regla de texto único, dirección tipográfica, física del papel por capas, fondo
+técnico y disciplina de color — los detalles que marcaban la diferencia de acabado.)*
+
 > Produce a high-fidelity Bendito Fantasy collage thumbnail following BF-UCSG standards.
 > Format: **`{aspect_ratio}` (default 3:4 vertical) editorial card**; keep the focal point
 > inside a centered ~85% safe area and all important elements away from the edges.
-> Content type: `{content_type}`. Core concept: `{core_concept}`. Hero object:
-> `{hero_object}`. Secondary cutouts: `{secondary_cutouts}`. Digital overlay: one subtle
-> theme-related layer. Tactile sports objects: one or two. Main title: `{title}` (1–4 words).
-> Supporting text: `{supporting_text}` (optional). Visual tone: `{visual_tone}`.
-> Use the official Bendito Fantasy palette, prioritizing `{selected_palette}` over a base of
-> paper neutrals, off-white, editorial black, and textured grays. Mixed-media editorial collage
-> with cut-out objects, torn-paper textures, matte grain, soft shadows, tactile depth, negative
-> space, and asymmetrical balance. Include up to three subtle hand-drawn arrows, circles,
-> underlines, or annotations to guide attention. One dominant focal point, clear hierarchy,
-> text minimal and legible at thumbnail size. **Do not use real-time data, excessive text,
-> platform logos, team logos or shields, league logos, sponsor marks, watermarks, or unrelated
-> decorative elements — zero branding at all times.** The result must feel like a polished
-> Bendito Fantasy website card, not a poster, webpage mockup, generic social template, or full
-> interface screenshot.
+> Content type: `{content_type}`. Core concept (context only — NEVER render this sentence as
+> text in the image): `{core_concept}`. Hero object: `{hero_object}` (prefer a torn-edge
+> **photographic** cutout over clip-art symbols). Secondary cutouts: `{secondary_cutouts}`.
+>
+> **TEXT RULE:** the ONLY text in the image is the main title `{title}` (1–4 words) — no other
+> words, sentences, captions, or labels anywhere (plus `{supporting_text}` if explicitly
+> provided). Typeset the title in an ultra-bold condensed sans-serif display face, stacked in
+> two or three short lines, with one word or line in the accent color and the rest in deep
+> editorial ink; give it a single hand-drawn underline or circled emphasis in marker.
+>
+> Build the collage in physical layers: every cutout has torn or scissor-cut paper edges, a
+> visible soft drop shadow lifting it off the layer beneath, and here and there a piece of
+> washi tape or a paperclip holding it down. Background: warm off-white paper with a subtle
+> technical texture — faint halftone dots, thin plotted grid or contour lines, and one or two
+> loose pencil scribbles — a designer's working board, never a flat empty field.
+>
+> Color discipline: paper neutrals (off-white, cream, warm gray, editorial black ink) dominate
+> the surface area; use the accent from `{selected_palette}` deliberately and sparingly — in
+> the title, one hand-drawn mark, and details inside the paper scraps — with the support and
+> navy tones as quiet supporting colors. Never flood the background with saturated color.
+>
+> Mixed-media editorial collage with matte grain, tactile depth, negative space, and
+> asymmetrical balance. One dominant focal point, clear hierarchy, legible at thumbnail size.
+> Visual tone: `{visual_tone}`. **Do not use real-time data, platform logos, team logos or
+> shields, league logos, sponsor marks, kit branding, watermarks, or unrelated decorative
+> elements — zero branding at all times; any clothing or gear shown must be plain and
+> unbranded.** The result must feel like a polished Bendito Fantasy website card, not a
+> poster, webpage mockup, generic social template, or full interface screenshot.
 
 ### 9. Variantes (`{variant_index}` ≥ 1)
 

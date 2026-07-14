@@ -46,18 +46,66 @@ function log(...args) {
 }
 
 // content_type table (art-direction/collage-card-prompt.md §6) — source of
-// truth for the emblem fallback (Edge Case E1) and the accent/support colors
-// (Palette Rule §3). Keep in sync with that doc if the mapping ever changes.
+// truth for the emblem fallback (Edge Case E1), the accent/support colors
+// (Palette Rule §3), and the per-type secondary elements. Emblems are
+// photographic-cutout descriptions (not clip-art symbols): the reference-grade
+// ChatGPT outputs the owner compared against all lead with a real photo cutout.
+// Keep in sync with that doc if the mapping ever changes.
 const CONTENT_TYPE_TABLE = {
-  article: { accent: "#025E73", support: "#F2C572", emblem: "un símbolo editorial recortado" },
-  social: { accent: "#02EBAE", support: "#204F59", emblem: "burbujas de conversación recortadas" },
-  poll: { accent: "#F2594B", support: "#04C4D9", emblem: "una papeleta con checkmarks" },
-  podcast: { accent: "#F2594B", support: "#F2C572", emblem: "un micrófono de estudio recortado" },
-  data: { accent: "#04C4D9", support: "#012340", emblem: "un gráfico de barras abstracto" },
-  chart: { accent: "#04C4D9", support: "#012340", emblem: "un gráfico de barras abstracto" },
-  video: { accent: "#F27A5E", support: "#204F59", emblem: "una claqueta de video recortada" },
-  quote: { accent: "#8C5E26", support: "#F2C572", emblem: "unas comillas grandes recortadas" },
-  mvp: { accent: "#F2594B", support: "#02EBAE", emblem: "una carta de fantasy football" },
+  article: {
+    accent: "#025E73",
+    support: "#F2C572",
+    emblem: "a torn-edge photographic cutout of an anonymous footballer in an unbranded kit, mid-action",
+    secondary: "a taped paper scrap with a tactical sketch, and a folded newspaper fragment",
+  },
+  social: {
+    accent: "#02EBAE",
+    support: "#204F59",
+    emblem: "a torn-edge photographic cutout of a fan or player celebrating",
+    secondary: "paper speech bubbles taped at angles, and a small stack of conversation cards",
+  },
+  poll: {
+    accent: "#F2594B",
+    support: "#04C4D9",
+    emblem: "a photographic cutout of a hand dropping a paper ballot",
+    secondary: "torn paper strips with hand-drawn checkboxes, and a bold question mark cut from colored paper",
+  },
+  podcast: {
+    accent: "#F2594B",
+    support: "#F2C572",
+    emblem: "a torn-edge photographic cutout of a vintage studio microphone",
+    secondary: "headphones resting on a taped paper scrap, and a strip of hand-drawn audio waveform",
+  },
+  data: {
+    accent: "#04C4D9",
+    support: "#012340",
+    emblem: "a torn-edge photographic cutout of an anonymous footballer in an unbranded white kit, mid-stride",
+    secondary: "taped paper scraps carrying a pitch heatmap, a plotted line chart, and a small radar chart",
+  },
+  chart: {
+    accent: "#04C4D9",
+    support: "#012340",
+    emblem: "a torn-edge photographic cutout of an anonymous footballer in an unbranded white kit, mid-stride",
+    secondary: "taped paper scraps carrying a pitch heatmap, a plotted line chart, and a small radar chart",
+  },
+  video: {
+    accent: "#F27A5E",
+    support: "#204F59",
+    emblem: "a torn-edge photographic film-still cutout of a match moment",
+    secondary: "a strip of film frames taped diagonally, and a paper play-button cutout",
+  },
+  quote: {
+    accent: "#8C5E26",
+    support: "#F2C572",
+    emblem: "oversized quotation marks cut from textured colored paper",
+    secondary: "a torn-edge photographic cutout of a coach or player gesturing, and a taped notebook scrap",
+  },
+  mvp: {
+    accent: "#F2594B",
+    support: "#02EBAE",
+    emblem: "a torn-edge photographic cutout of an anonymous footballer in an unbranded kit, arms raised",
+    secondary: "a fantasy-football card mockup with no logos, and paper transfer arrows",
+  },
 };
 
 // Edge Case E4 — map a TileType with no direct §6 row to its nearest relative.
@@ -73,10 +121,49 @@ function resolveContentType(tile) {
   return "article";
 }
 
-/** Title/description truncation per Edge Case E2 — title stays 1-4 words. */
+// Connector words that read as amputated when a truncation ends on them
+// ("5 consejos para tu…") — trimmed off the tail so the rendered title ends
+// on a content word. ES + EN since tiles are bilingual.
+const DANGLING_WORDS = new Set([
+  "de", "del", "para", "por", "con", "sin", "tu", "su", "mi", "el", "la",
+  "los", "las", "un", "una", "y", "o", "en", "a", "al", "que",
+  "the", "a", "an", "of", "for", "your", "my", "and", "or", "in", "to", "on",
+]);
+
+/** Title truncation per Edge Case E2 — 1-4 words, never ending on a connector. */
 function truncateWords(text, maxWords) {
-  const words = (text ?? "").trim().split(/\s+/).filter(Boolean);
-  return words.slice(0, maxWords).join(" ");
+  // Some source titles carry their own decorative quotes ("Invierno caliente")
+  // which nest badly inside the prompt's quoted title — strip them.
+  text = (text ?? "").trim().replace(/^["'«]+|["'»]+$/g, "").trim();
+  const words = text.split(/\s+/).filter(Boolean);
+  if (words.length > maxWords) {
+    // A complete opening question ("¿Darwin o Solanke?") is a natural short
+    // title; cutting mid-question ("¿Quiénes son los jugadores") is not.
+    const question = text.match(/^¿[^?]+\?/);
+    if (question) {
+      const qWords = question[0].split(/\s+/).filter(Boolean);
+      if (qWords.length <= maxWords) return question[0];
+    }
+    // Likewise a "Label: subject" title cut mid-subject reads amputated; if
+    // the pre-colon label fits on its own, it IS the natural short title.
+    const preColon = text.split(":")[0].trim();
+    const preWords = preColon.split(/\s+/).filter(Boolean);
+    if (preColon.length > 0 && preColon !== text && preWords.length <= maxWords) {
+      return preWords.join(" ");
+    }
+  }
+  const cut = words.slice(0, maxWords);
+  while (
+    cut.length > 1 &&
+    DANGLING_WORDS.has(cut[cut.length - 1].toLowerCase().replace(/[^\p{L}\p{N}]/gu, ""))
+  ) {
+    cut.pop();
+  }
+  let result = cut.join(" ");
+  // A truncated question keeps its opening ¿ — close it so the title reads
+  // as a complete question rather than an amputated one.
+  if (result.startsWith("¿") && !result.includes("?")) result += "?";
+  return result;
 }
 
 function truncateSentence(text) {
@@ -96,28 +183,39 @@ function slugify(text) {
 
 function buildPrompt(tile) {
   const contentType = resolveContentType(tile);
-  const { accent, support, emblem } = CONTENT_TYPE_TABLE[contentType];
+  const { accent, support, emblem, secondary } = CONTENT_TYPE_TABLE[contentType];
   const title = truncateWords(tile.title?.es, 4);
   const coreConcept = truncateSentence(tile.description?.es);
-  const palette = [accent, support, BASE_NAVY];
 
   const prompt =
     `Produce a high-fidelity Bendito Fantasy collage thumbnail following BF-UCSG standards. ` +
     `Format: 3:4 vertical editorial card; keep the focal point inside a centered ~85% safe ` +
     `area and all important elements away from the edges. Content type: ${contentType}. ` +
-    `Core concept: ${coreConcept}. Hero object: ${emblem}. Secondary cutouts: two supporting ` +
-    `editorial cutouts related to the concept. Digital overlay: one subtle theme-related layer. ` +
-    `Tactile sports objects: one or two. Main title: "${title}". Supporting text: none. ` +
-    `Visual tone: editorial, premium, energetic. Use the official Bendito Fantasy palette, ` +
-    `prioritizing ${palette.join(", ")} over a base of paper neutrals, off-white, editorial ` +
-    `black, and textured grays. Mixed-media editorial collage with cut-out objects, torn-paper ` +
-    `textures, matte grain, soft shadows, tactile depth, negative space, and asymmetrical ` +
-    `balance. Include up to three subtle hand-drawn arrows, circles, underlines, or annotations ` +
-    `to guide attention. One dominant focal point, clear hierarchy, text minimal and legible at ` +
-    `thumbnail size. Do not use real-time data, excessive text, platform logos, team logos or ` +
-    `shields, league logos, sponsor marks, watermarks, or unrelated decorative elements — zero ` +
-    `branding at all times. The result must feel like a polished Bendito Fantasy website card, ` +
-    `not a poster, webpage mockup, generic social template, or full interface screenshot.`;
+    `Core concept (context only — NEVER render this sentence as text in the image): ` +
+    `${coreConcept}. Hero object: ${emblem}. Secondary cutouts: ${secondary}. ` +
+    `TEXT RULE: the ONLY text in the image is the main title "${title}" — no other words, ` +
+    `sentences, captions, or labels anywhere. Typeset the title in an ultra-bold condensed ` +
+    `sans-serif display face, stacked in two or three short lines, with one word or line in ` +
+    `the accent color ${accent} and the rest in deep editorial ink; give it a single ` +
+    `hand-drawn underline or circled emphasis in marker.\n\n` +
+    `Build the collage in physical layers: every cutout has torn or scissor-cut paper edges, ` +
+    `a visible soft drop shadow lifting it off the layer beneath, and here and there a piece ` +
+    `of washi tape or a paperclip holding it down. Background: warm off-white paper with a ` +
+    `subtle technical texture — faint halftone dots, thin plotted grid or contour lines, and ` +
+    `one or two loose pencil scribbles — so it feels like a designer's working board, never a ` +
+    `flat empty field.\n\n` +
+    `Color discipline: the paper neutrals (off-white, cream, warm gray, editorial black ink) ` +
+    `dominate the surface area; use the accent ${accent} deliberately and sparingly — in the ` +
+    `title, one hand-drawn mark, and details inside the paper scraps — with ${support} and ` +
+    `${BASE_NAVY} as quiet supporting tones. Never flood the background with saturated color.\n\n` +
+    `Mixed-media editorial collage with matte grain, tactile depth, negative space, and ` +
+    `asymmetrical balance. One dominant focal point and clear hierarchy, legible at thumbnail ` +
+    `size. Visual tone: editorial, premium, energetic. Do not use real-time data, platform ` +
+    `logos, team logos or shields, league logos, sponsor marks, kit branding, watermarks, or ` +
+    `unrelated decorative elements — zero branding at all times; any clothing or gear shown ` +
+    `must be plain and unbranded. The result must feel like a polished Bendito Fantasy ` +
+    `website card, not a poster, webpage mockup, generic social template, or full interface ` +
+    `screenshot.`;
 
   return { prompt, contentType, title };
 }
@@ -160,6 +258,7 @@ async function generateImage(prompt) {
       model: "gpt-image-1",
       prompt,
       size: "1024x1536",
+      quality: "high",
       n: 1,
     }),
   });
@@ -177,9 +276,18 @@ async function generateImage(prompt) {
   return Buffer.from(b64, "base64");
 }
 
-/** Center-crop to the site's real 3:4 frame — same math as TileCard's object-cover. */
+/**
+ * Center-crop to the site's real 3:4 frame — same math as TileCard's
+ * object-cover — then re-encode as JPEG. The raw gpt-image-1 PNG output runs
+ * ~3MB per card; mozjpeg at q82 gets collage-style photographic art down to a
+ * few hundred KB with no visible loss at thumbnail size, matching the other
+ * hand-authored thumbnails already in public/media/thumbnails/ (poll-card.jpg).
+ */
 async function cropToTileFrame(buffer) {
-  return sharp(buffer).resize({ width: 1024, height: 1365, fit: "cover" }).png().toBuffer();
+  return sharp(buffer)
+    .resize({ width: 1024, height: 1365, fit: "cover" })
+    .jpeg({ quality: 82, mozjpeg: true })
+    .toBuffer();
 }
 
 function writeCover(filePath, doc, tile, cover) {
@@ -211,7 +319,7 @@ async function main() {
     }
 
     const { prompt, contentType, title } = buildPrompt(tile);
-    const filename = `${slugify(tile.id)}-card.png`;
+    const filename = `${slugify(tile.id)}-card.jpg`;
     const cover = `/media/thumbnails/${filename}`;
 
     if (DRY_RUN) {
