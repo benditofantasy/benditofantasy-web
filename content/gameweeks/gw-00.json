@@ -218,6 +218,33 @@
           ]
         ]
       }
+    },
+    {
+      "id": "bluesky-3mqn43z5uis2e",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "¡España!\n\nPrimer equipo invitado a la final de la copa del mundo. Mejores de principio a fin. 🔥",
+        "en": "¡España!\n\nPrimer equipo invitado a la final de la copa del mundo. Mejores de principio a fin. 🔥"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-1.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mqn43z5uis2e",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mqn43z5uis2e",
+        "cid": "bafyreifdebj66wpwufq7nc2nvs6d227l2zionbyfyjaisgmdjr3yrvyzlq",
+        "text": {
+          "es": "¡España!\n\nPrimer equipo invitado a la final de la copa del mundo. Mejores de principio a fin. 🔥",
+          "en": "¡España!\n\nPrimer equipo invitado a la final de la copa del mundo. Mejores de principio a fin. 🔥"
+        }
+      },
+      "date": "2026-07-14"
     }
   ]
 }
