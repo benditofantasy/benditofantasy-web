@@ -19,9 +19,11 @@
  * podcast script does when no playlist is configured.
  *
  * A social post has no gameweek number to parse out of it the way a podcast
- * title does, so new posts are always attached to the current (most recent)
- * gameweek file as a fresh `social` tile — `orderTilesByRecency` (lib/types)
- * then puts it wherever its real timestamp puts it once the site reads it.
+ * title does, so new posts are attached to the current (most recent) gameweek
+ * file as a fresh `social` tile — `orderTilesByRecency` (lib/types) then puts
+ * it wherever its real timestamp puts it once the site reads it. The exception
+ * is `specialRouting` in social-sync-config.json: a post whose text carries a
+ * routed hashtag (e.g. #Mundial2026) files into that special row instead.
  *
  * Does NOT touch git — that's the CI workflow's job
  * (.github/workflows/sync-social-posts.yml).
@@ -33,6 +35,7 @@ const ROOT = process.cwd();
 const CONFIG_PATH = path.join(ROOT, "content", "social-sync-config.json");
 const STATE_PATH = path.join(ROOT, "content", "social-sync-state.json");
 const GAMEWEEKS_DIR = path.join(ROOT, "content", "gameweeks");
+const SPECIALS_DIR = path.join(ROOT, "content", "specials");
 
 const DRY_RUN = process.argv.includes("--dry-run");
 
@@ -59,17 +62,28 @@ function saveState(state) {
   fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2) + "\n");
 }
 
+/** Every live-row file a social tile could live in: gameweeks + specials. */
+function contentRowFiles() {
+  const files = [];
+  for (const dir of [GAMEWEEKS_DIR, SPECIALS_DIR]) {
+    if (!fs.existsSync(dir)) continue;
+    for (const file of fs.readdirSync(dir)) {
+      if (!file.endsWith(".json") || file.includes("template")) continue;
+      files.push(path.join(dir, file));
+    }
+  }
+  return files;
+}
+
 function existingPostUrls() {
   const urls = new Set();
-  if (!fs.existsSync(GAMEWEEKS_DIR)) return urls;
   const collect = (tile) => {
     if (tile.payload?.postUrl) urls.add(tile.payload.postUrl);
     (tile.slides ?? []).forEach(collect);
   };
-  for (const file of fs.readdirSync(GAMEWEEKS_DIR)) {
-    if (!file.endsWith(".json") || file.includes("template")) continue;
-    const week = JSON.parse(fs.readFileSync(path.join(GAMEWEEKS_DIR, file), "utf8"));
-    week.tiles.forEach(collect);
+  for (const file of contentRowFiles()) {
+    const row = JSON.parse(fs.readFileSync(file, "utf8"));
+    row.tiles.forEach(collect);
   }
   return urls;
 }
@@ -196,30 +210,49 @@ const DEFAULT_COVERS = [
  *  run picks up the cover sequence where the last one left off. */
 function existingSocialTileCount() {
   let count = 0;
-  if (!fs.existsSync(GAMEWEEKS_DIR)) return count;
   const walk = (tile) => {
     if (tile.type === "social") count += 1;
     (tile.slides ?? []).forEach(walk);
   };
-  for (const file of fs.readdirSync(GAMEWEEKS_DIR)) {
-    if (!file.endsWith(".json") || file.includes("template")) continue;
-    const week = JSON.parse(fs.readFileSync(path.join(GAMEWEEKS_DIR, file), "utf8"));
-    week.tiles.forEach(walk);
+  for (const file of contentRowFiles()) {
+    const row = JSON.parse(fs.readFileSync(file, "utf8"));
+    row.tiles.forEach(walk);
   }
   return count;
 }
 
-function upsertSocialTile(tile, isoDate) {
+/**
+ * Where a post files: a special row when its text carries a routed hashtag
+ * (config.specialRouting, case-insensitive), else the latest gameweek. A
+ * routed target that doesn't exist on disk is broken config, not "nothing to
+ * do" — throw so the run goes red and the workflow opens the alert issue.
+ */
+function targetRowFile(post, config) {
+  const text = (post.text ?? "").toLowerCase();
+  for (const route of config.specialRouting ?? []) {
+    if (!route.hashtag || !route.file) continue;
+    if (!text.includes(route.hashtag.toLowerCase())) continue;
+    const filePath = path.join(ROOT, route.file);
+    if (!fs.existsSync(filePath)) {
+      throw new Error(
+        `specialRouting sends ${route.hashtag} posts to ${route.file}, but that file doesn't exist — fix or remove the route in social-sync-config.json.`,
+      );
+    }
+    return filePath;
+  }
   const fileName = latestGameweekFile();
-  if (!fileName) {
+  return fileName ? path.join(GAMEWEEKS_DIR, fileName) : null;
+}
+
+function upsertSocialTile(tile, isoDate, filePath) {
+  if (!filePath) {
     log("No gameweek file exists to attach a social tile to — skipping.");
     return false;
   }
-  const filePath = path.join(GAMEWEEKS_DIR, fileName);
-  const week = JSON.parse(fs.readFileSync(filePath, "utf8"));
-  week.tiles.push({ ...tile, date: isoDate });
-  if (!DRY_RUN) fs.writeFileSync(filePath, JSON.stringify(week, null, 2) + "\n");
-  log(`Updated ${fileName}: added ${tile.payload.platform} post ${tile.id}.`);
+  const row = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  row.tiles.push({ ...tile, date: isoDate });
+  if (!DRY_RUN) fs.writeFileSync(filePath, JSON.stringify(row, null, 2) + "\n");
+  log(`Updated ${path.basename(filePath)}: added ${tile.payload.platform} post ${tile.id}.`);
   return true;
 }
 
@@ -305,7 +338,7 @@ async function syncPlatform(platform, config, synced, watermark) {
         text: { es: post.text, en: post.text },
       },
     };
-    if (upsertSocialTile(tile, isoDate)) {
+    if (upsertSocialTile(tile, isoDate, targetRowFile(post, config))) {
       changed = true;
       coverIndex += 1; // advance the rotation only when a tile was actually added
     }

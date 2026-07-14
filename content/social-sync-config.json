@@ -8,6 +8,10 @@
   ],
   "siteDomains_comment": "Posts linking to any of these domains are skipped as self-promo (we post our own article links to spread the word; surfacing them here would loop). Add every domain the site is served from.",
   "siteDomains": ["benditofantasy.com"],
+  "specialRouting_comment": "Posts whose text carries one of these hashtags (case-insensitive) file into the special row instead of the latest gameweek. Remove an entry when its special is retired.",
+  "specialRouting": [
+    { "hashtag": "#Mundial2026", "file": "content/specials/m2026.json" }
+  ],
   "threadsUserId": "",
   "instagramUserId": ""
 }
