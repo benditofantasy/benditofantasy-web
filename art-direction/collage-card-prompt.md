@@ -113,16 +113,16 @@ exacto, usa solo `{title}` tal cual.
 
 ### 6. Tipos de contenido (lenguaje visual + color de tag)
 
-| `{content_type}` | Acento (tag del sitio) | Color de apoyo | Lenguaje visual |
-|---|---|---|---|
-| `article` | Teal `#025E73` | Gold `#F2C572` | Imagen protagonista fuerte, tensión narrativa, 1–2 símbolos conceptuales |
-| `social` | Turquoise `#02EBAE` | Navy `#204F59` | Burbujas, tarjetas de conversación, iconos genéricos de interacción — **sin logos de plataformas** |
-| `poll` | Coral `#F2594B` | Cyan `#04C4D9` | Signos de interrogación, papeletas, botones, checkmarks, alternativas visuales |
-| `podcast` | Coral `#F2594B` | Gold `#F2C572` | Micrófonos, ondas de audio, auriculares, cinta, libreta, elementos de estudio |
-| `data` / `chart` | Cyan `#04C4D9` | Navy deep `#012340` | Diagramas, gráficas abstractas, zonas del campo, mapas de calor abstractos |
-| `video` | Salmon `#F27A5E` | Navy `#204F59` | Fotograma protagonista, claqueta/cinta, sensación de movimiento |
-| `quote` | Brown `#8C5E26` | Gold `#F2C572` | Comillas grandes recortadas, retrato editorial, papel de periódico |
-| `mvp` / fantasy | Coral `#F2594B` | Turquoise `#02EBAE` | Cartas, chips, dados, capitanía, flechas de transferencia, tableros de selección |
+| `{content_type}` | Acento (tag del sitio) | Color de apoyo | Base | Chips genéricos | Lenguaje visual |
+|---|---|---|---|---|---|
+| `article` | Teal `#025E73` | Gold `#F2C572` | light | ANÁLISIS, CLAVES | Imagen protagonista fuerte, tensión narrativa, 1–2 símbolos conceptuales |
+| `social` | Turquoise `#02EBAE` | Navy `#204F59` | dark | SOCIAL, TRENDING | Burbujas, tarjetas de conversación, iconos genéricos de interacción — **sin logos de plataformas** |
+| `poll` | Coral `#F2594B` | Cyan `#04C4D9` | dark | ENCUESTA, VOTA | Signos de interrogación, papeletas, botones, checkmarks, alternativas visuales |
+| `podcast` | Coral `#F2594B` | Gold `#F2C572` | dark | PODCAST, AUDIO | Micrófonos, ondas de audio, auriculares, cinta, libreta, elementos de estudio |
+| `data` / `chart` | Cyan `#04C4D9` | Navy deep `#012340` | dark | DATA, TREND, XG | Diagramas, gráficas abstractas, zonas del campo, mapas de calor abstractos |
+| `video` | Salmon `#F27A5E` | Navy `#204F59` | dark | VIDEO, REPLAY | Fotograma protagonista, claqueta/cinta, sensación de movimiento |
+| `quote` | Brown `#8C5E26` | Gold `#F2C572` | light | CITA | Comillas grandes recortadas, retrato editorial, papel de periódico |
+| `mvp` / fantasy | Coral `#F2594B` | Turquoise `#02EBAE` | dark | FANTASY, CAPITÁN | Cartas, chips, dados, capitanía, flechas de transferencia, tableros de selección |
 | duelo / comparativa (modificador) | según tipo base | — | Composición dividida o dos elementos enfrentados con centro visual claro; 3 secondary cutouts |
 | placeholder / categoría permanente (modificador) | según tipo base | — | Representa el tipo sin depender de noticia, equipo, jugador o dato concreto |
 
@@ -148,22 +148,30 @@ técnico y disciplina de color — los detalles que marcaban la diferencia de ac
 > text in the image): `{core_concept}`. Hero object: `{hero_object}` (prefer a torn-edge
 > **photographic** cutout over clip-art symbols). Secondary cutouts: `{secondary_cutouts}`.
 >
-> **TEXT RULE:** the ONLY text in the image is the main title `{title}` (1–4 words) — no other
-> words, sentences, captions, or labels anywhere (plus `{supporting_text}` if explicitly
-> provided). Typeset the title in an ultra-bold condensed sans-serif display face, stacked in
-> two or three short lines, with one word or line in the accent color and the rest in deep
-> editorial ink; give it a single hand-drawn underline or circled emphasis in marker.
+> **TEXT RULE:** the main title `{title}` (1–4 words), typeset in an ultra-bold condensed
+> sans-serif display face, stacked in two or three short lines, with one word or line in the
+> accent color and the rest in deep editorial ink (crisp off-white on a dark base); give it a
+> single hand-drawn underline or circled emphasis in marker. Besides the title (and
+> `{supporting_text}` if explicitly provided), the only other text allowed is **two or three
+> tiny single-word tag chips** — torn tape strips or label chips in the accent colors carrying
+> generic type words (tabla §6) in small clean capitals. No other words, sentences, captions,
+> numbers, or labels anywhere; charts and interface elements stay abstract and unlabeled.
+>
+> The hero is **LARGE** — it fills roughly half the frame and may bleed off one edge, with its
+> key detail (face, mic capsule, chart) kept inside the safe area.
 >
 > Build the collage in physical layers: every cutout has torn or scissor-cut paper edges, a
 > visible soft drop shadow lifting it off the layer beneath, and here and there a piece of
-> washi tape or a paperclip holding it down. Background: warm off-white paper with a subtle
-> technical texture — faint halftone dots, thin plotted grid or contour lines, and one or two
-> loose pencil scribbles — a designer's working board, never a flat empty field.
+> washi tape, a paperclip, or a binder clip holding it down. Background per the type's **base
+> tone** (tabla §6): *dark* = near-black / deep-navy (`#204F59`→`#012340`) editorial board of
+> layered torn dark paper; *light* = warm off-white paper. Either way with a subtle technical
+> texture — halftone-dot clusters, thin plotted grid or contour lines, hand-drawn crosses,
+> marker strokes and pencil scribbles — a designer's working board, never a flat empty field.
 >
-> Color discipline: paper neutrals (off-white, cream, warm gray, editorial black ink) dominate
-> the surface area; use the accent from `{selected_palette}` deliberately and sparingly — in
-> the title, one hand-drawn mark, and details inside the paper scraps — with the support and
-> navy tones as quiet supporting colors. Never flood the background with saturated color.
+> Color discipline: the base tone and paper neutrals dominate the surface area; use the accent
+> from `{selected_palette}` in deliberate pops — one title word, the tag chips, one or two
+> marker strokes, details inside the paper scraps — with the support and navy tones as quiet
+> supporting colors. Saturated color stays in the details; never flood the frame.
 >
 > Mixed-media editorial collage with matte grain, tactile depth, negative space, and
 > asymmetrical balance. One dominant focal point, clear hierarchy, legible at thumbnail size.

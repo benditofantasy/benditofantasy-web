@@ -53,54 +53,72 @@ function log(...args) {
 // Keep in sync with that doc if the mapping ever changes.
 const CONTENT_TYPE_TABLE = {
   article: {
+    base: "light",
+    chips: ["ANÁLISIS","CLAVES"],
     accent: "#025E73",
     support: "#F2C572",
     emblem: "a torn-edge photographic cutout of an anonymous footballer in an unbranded kit, mid-action",
     secondary: "a taped paper scrap with a tactical sketch, and a folded newspaper fragment",
   },
   social: {
+    base: "dark",
+    chips: ["SOCIAL","TRENDING"],
     accent: "#02EBAE",
     support: "#204F59",
     emblem: "a torn-edge photographic cutout of a fan or player celebrating",
     secondary: "paper speech bubbles taped at angles, and a small stack of conversation cards",
   },
   poll: {
+    base: "dark",
+    chips: ["ENCUESTA","VOTA"],
     accent: "#F2594B",
     support: "#04C4D9",
     emblem: "a photographic cutout of a hand dropping a paper ballot",
     secondary: "torn paper strips with hand-drawn checkboxes, and a bold question mark cut from colored paper",
   },
   podcast: {
+    base: "dark",
+    chips: ["PODCAST","AUDIO"],
     accent: "#F2594B",
     support: "#F2C572",
     emblem: "a torn-edge photographic cutout of a vintage studio microphone",
     secondary: "headphones resting on a taped paper scrap, and a strip of hand-drawn audio waveform",
   },
   data: {
+    base: "dark",
+    chips: ["DATA","TREND","XG"],
     accent: "#04C4D9",
     support: "#012340",
     emblem: "a torn-edge photographic cutout of an anonymous footballer in an unbranded white kit, mid-stride",
     secondary: "taped paper scraps carrying a pitch heatmap, a plotted line chart, and a small radar chart",
   },
   chart: {
+    base: "dark",
+    chips: ["DATA","TREND","XG"],
     accent: "#04C4D9",
     support: "#012340",
     emblem: "a torn-edge photographic cutout of an anonymous footballer in an unbranded white kit, mid-stride",
     secondary: "taped paper scraps carrying a pitch heatmap, a plotted line chart, and a small radar chart",
   },
   video: {
+    base: "dark",
+    chips: ["VIDEO","REPLAY"],
     accent: "#F27A5E",
     support: "#204F59",
     emblem: "a torn-edge photographic film-still cutout of a match moment",
     secondary: "a strip of film frames taped diagonally, and a paper play-button cutout",
   },
   quote: {
+    base: "light",
+    chips: ["CITA"],
     accent: "#8C5E26",
     support: "#F2C572",
     emblem: "oversized quotation marks cut from textured colored paper",
     secondary: "a torn-edge photographic cutout of a coach or player gesturing, and a taped notebook scrap",
   },
   mvp: {
+    base: "dark",
+    chips: ["FANTASY","CAPITÁN"],
     accent: "#F2594B",
     support: "#02EBAE",
     emblem: "a torn-edge photographic cutout of an anonymous footballer in an unbranded kit, arms raised",
@@ -183,31 +201,58 @@ function slugify(text) {
 
 function buildPrompt(tile) {
   const contentType = resolveContentType(tile);
-  const { accent, support, emblem, secondary } = CONTENT_TYPE_TABLE[contentType];
+  const { accent, support, emblem, secondary, base, chips } = CONTENT_TYPE_TABLE[contentType];
   const title = truncateWords(tile.title?.es, 4);
   const coreConcept = truncateSentence(tile.description?.es);
+  const chipList = chips.map((c) => `"${c}"`).join(", ");
+
+  // Base tone per content type: dark editorial board for the energetic/techy
+  // types (matches the owner's ChatGPT reference cards), warm light paper for
+  // the newspaper-flavored ones.
+  const backgroundSpec =
+    base === "dark"
+      ? `Background: a near-black / deep-navy (${BASE_NAVY} to #012340) editorial board built ` +
+        `from layered torn dark paper, with a subtle technical texture — clusters of halftone ` +
+        `dots, thin plotted grid or contour lines, small hand-drawn crosses and marker strokes ` +
+        `in the accent colors — so it feels like a designer's working board at night, never a ` +
+        `flat empty field.`
+      : `Background: warm off-white paper with a subtle technical texture — faint halftone ` +
+        `dots, thin plotted grid or contour lines, loose pencil scribbles and small hand-drawn ` +
+        `crosses — so it feels like a designer's working board, never a flat empty field.`;
+
+  const colorSpec =
+    base === "dark"
+      ? `Color discipline: the dark board and paper neutrals (cream scraps, warm gray, ` +
+        `off-white) dominate the surface area; use the accent ${accent} in bold deliberate ` +
+        `pops — one title word, the tag chips, one or two marker strokes — with ${support} as ` +
+        `a quiet supporting tone. Saturated color stays in the details, never flooding the frame.`
+      : `Color discipline: the paper neutrals (off-white, cream, warm gray, editorial black ` +
+        `ink) dominate the surface area; use the accent ${accent} deliberately and sparingly — ` +
+        `in the title, the tag chips, one hand-drawn mark, and details inside the paper ` +
+        `scraps — with ${support} and ${BASE_NAVY} as quiet supporting tones. Never flood the ` +
+        `background with saturated color.`;
 
   const prompt =
     `Produce a high-fidelity Bendito Fantasy collage thumbnail following BF-UCSG standards. ` +
     `Format: 3:4 vertical editorial card; keep the focal point inside a centered ~85% safe ` +
     `area and all important elements away from the edges. Content type: ${contentType}. ` +
     `Core concept (context only — NEVER render this sentence as text in the image): ` +
-    `${coreConcept}. Hero object: ${emblem}. Secondary cutouts: ${secondary}. ` +
-    `TEXT RULE: the ONLY text in the image is the main title "${title}" — no other words, ` +
-    `sentences, captions, or labels anywhere. Typeset the title in an ultra-bold condensed ` +
-    `sans-serif display face, stacked in two or three short lines, with one word or line in ` +
-    `the accent color ${accent} and the rest in deep editorial ink; give it a single ` +
-    `hand-drawn underline or circled emphasis in marker.\n\n` +
+    `${coreConcept}.\n\n` +
+    `Hero object: ${emblem}. The hero is LARGE — it fills roughly half the frame and may ` +
+    `bleed off one edge, with its key detail (face, mic capsule, chart) kept inside the safe ` +
+    `area. Secondary cutouts: ${secondary}.\n\n` +
+    `TEXT RULE: the main title is "${title}", typeset in an ultra-bold condensed sans-serif ` +
+    `display face, stacked in two or three short lines, with one word or line in the accent ` +
+    `color ${accent} and the rest in ${base === "dark" ? "crisp off-white" : "deep editorial ink"}; ` +
+    `give it a single hand-drawn underline or circled emphasis in marker. Besides the title, ` +
+    `the only other text allowed is two or three tiny single-word tag chips — small torn tape ` +
+    `strips or label chips in the accent colors carrying generic words like ${chipList} in ` +
+    `small clean capitals. No other words, sentences, captions, numbers, or labels anywhere; ` +
+    `all chart and interface elements stay abstract and unlabeled.\n\n` +
     `Build the collage in physical layers: every cutout has torn or scissor-cut paper edges, ` +
     `a visible soft drop shadow lifting it off the layer beneath, and here and there a piece ` +
-    `of washi tape or a paperclip holding it down. Background: warm off-white paper with a ` +
-    `subtle technical texture — faint halftone dots, thin plotted grid or contour lines, and ` +
-    `one or two loose pencil scribbles — so it feels like a designer's working board, never a ` +
-    `flat empty field.\n\n` +
-    `Color discipline: the paper neutrals (off-white, cream, warm gray, editorial black ink) ` +
-    `dominate the surface area; use the accent ${accent} deliberately and sparingly — in the ` +
-    `title, one hand-drawn mark, and details inside the paper scraps — with ${support} and ` +
-    `${BASE_NAVY} as quiet supporting tones. Never flood the background with saturated color.\n\n` +
+    `of washi tape, a paperclip, or a binder clip holding it down. ${backgroundSpec}\n\n` +
+    `${colorSpec}\n\n` +
     `Mixed-media editorial collage with matte grain, tactile depth, negative space, and ` +
     `asymmetrical balance. One dominant focal point and clear hierarchy, legible at thumbnail ` +
     `size. Visual tone: editorial, premium, energetic. Do not use real-time data, platform ` +
