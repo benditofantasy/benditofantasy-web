@@ -218,6 +218,33 @@
           ]
         ]
       }
+    },
+    {
+      "id": "bluesky-3mqoxftxq5s2r",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Les compartimos el artículo sobre la sorprendente (o no tanto) actuación de España ayer.",
+        "en": "Les compartimos el artículo sobre la sorprendente (o no tanto) actuación de España ayer."
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mqoxftxq5s2r",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mqoxftxq5s2r",
+        "cid": "bafyreiemycbo6dmkf6ll457uzpupa4vpyluttrkpi57ex6st6scmf5skne",
+        "text": {
+          "es": "Les compartimos el artículo sobre la sorprendente (o no tanto) actuación de España ayer.",
+          "en": "Les compartimos el artículo sobre la sorprendente (o no tanto) actuación de España ayer."
+        }
+      },
+      "date": "2026-07-15"
     }
   ]
 }
