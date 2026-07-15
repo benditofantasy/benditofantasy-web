@@ -4,8 +4,38 @@
     "es": "Mundial 2026",
     "en": "World Cup 2026"
   },
-  "date": "2026-07-10",
+  "date": "2026-07-14",
   "tiles": [
+    {
+      "id": "m2026-fue-una-exhibicion",
+      "type": "article",
+      "date": "2026-07-14",
+      "title": {
+        "es": "Fue una exhibición",
+        "en": "Masterclass"
+      },
+      "description": {
+        "es": "España desarma a Francia, regresa a una final del Mundial después de 16 años y se convierte en la gran favorita al título.",
+        "en": "Spain dismantle France, return to a World Cup final after 16 years and become the clear favorites for the title."
+      },
+      "tag": "article",
+      "cover": "/media/players/oyarzabal-spain.png",
+      "badge": {
+        "es": "España",
+        "en": "Spain"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/fue-una-exhibicion",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "fue-una-exhibicion"
+      }
+    },
     {
       "id": "bluesky-3mqn43z5uis2e",
       "type": "social",
