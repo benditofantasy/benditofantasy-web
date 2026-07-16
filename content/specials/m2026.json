@@ -4,8 +4,38 @@
     "es": "Mundial 2026",
     "en": "World Cup 2026"
   },
-  "date": "2026-07-14",
+  "date": "2026-07-15",
   "tiles": [
+    {
+      "id": "m2026-auf-wiedersehen",
+      "type": "article",
+      "date": "2026-07-15",
+      "title": {
+        "es": "Auf Wiedersehen",
+        "en": "Auf Wiedersehen"
+      },
+      "description": {
+        "es": "Inglaterra se traicionó a sí misma ante Argentina, renunció a su identidad y convirtió una ventaja en una despedida que podría costarle el puesto a Thomas Tuchel.",
+        "en": "England betrayed their identity against Argentina, surrendered control and turned a World Cup semifinal lead into a defeat that could cost Thomas Tuchel his job."
+      },
+      "tag": "article",
+      "cover": "/media/players/tuchel-england.png",
+      "badge": {
+        "es": "Inglaterra",
+        "en": "England"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/auf-wiedersehen",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "auf-wiedersehen"
+      }
+    },
     {
       "id": "m2026-fue-una-exhibicion",
       "type": "article",
