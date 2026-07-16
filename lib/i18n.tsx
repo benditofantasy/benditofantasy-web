@@ -25,6 +25,17 @@ export const STRINGS = {
   play: { es: "Reproducir", en: "Play" },
   menu: { es: "Menú", en: "Menu" },
   search: { es: "Buscar", en: "Search" },
+  searchPlaceholder: {
+    es: "Busca artículos, podcasts, datos…",
+    en: "Search articles, podcasts, data…",
+  },
+  searchHint: { es: "Escribe para buscar", en: "Type to search" },
+  searchNoResults: { es: "Sin resultados", en: "No results" },
+  searchLoading: { es: "Cargando…", en: "Loading…" },
+  searchError: {
+    es: "No se pudo cargar el buscador. Intenta de nuevo.",
+    en: "Search couldn't load. Try again.",
+  },
   copyLink: { es: "Copiar enlace", en: "Copy link" },
   copied: { es: "Copiado", en: "Copied" },
   shareOnX: { es: "Compartir en X", en: "Share on X" },
