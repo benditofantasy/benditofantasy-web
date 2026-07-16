@@ -7,6 +7,27 @@
   "date": "2026-07-15",
   "tiles": [
     {
+      "id": "m2026-podcast-e327",
+      "type": "podcast",
+      "date": "2026-07-15",
+      "featured": false,
+      "title": {
+        "es": "El campeón hablará español",
+        "en": "Bendito Fantasy's World Cup podcast, episode 327."
+      },
+      "description": {
+        "es": "Analizamos las semifinales del mundial y lo que hicieron y dejaron de hacer cada uno de los protagonistas.",
+        "en": "Bendito Fantasy's World Cup podcast, episode 327."
+      },
+      "tag": "podcast",
+      "cover": "/media/m2026-podcast-e327.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "2-qkZTU5Y34",
+        "duration": "59:24"
+      }
+    },
+    {
       "id": "m2026-auf-wiedersehen",
       "type": "article",
       "date": "2026-07-15",
