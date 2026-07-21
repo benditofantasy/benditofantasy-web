@@ -245,33 +245,6 @@
         }
       },
       "date": "2026-07-15"
-    },
-    {
-      "id": "bluesky-3mr27zr7dr222",
-      "type": "social",
-      "title": {
-        "es": "Nueva publicación",
-        "en": "New post"
-      },
-      "description": {
-        "es": "Felicitaciones al campeón de la miniliga de la copa bendita 2026\n\nFPL Scott\n\nSe lleva el titulo con 720 pts, ¡superando al segundo lugar por tan solo 4 unidades!\n\n#worldcup #mundial #fantasy",
-        "en": "Felicitaciones al campeón de la miniliga de la copa bendita 2026\n\nFPL Scott\n\nSe lleva el titulo con 720 pts, ¡superando al segundo lugar por tan solo 4 unidades!\n\n#worldcup #mundial #fantasy"
-      },
-      "tag": "social",
-      "cover": "/media/thumbnails/social-card-1.png",
-      "credit": "Bendito Fantasy",
-      "payload": {
-        "platform": "bluesky",
-        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mr27zr7dr222",
-        "handle": "@benditofantasy",
-        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mr27zr7dr222",
-        "cid": "bafyreibpzu3wwkp425d3vtmhvqjbnxmyalrjths3grkcavw7fkfdoi5c6u",
-        "text": {
-          "es": "Felicitaciones al campeón de la miniliga de la copa bendita 2026\n\nFPL Scott\n\nSe lleva el titulo con 720 pts, ¡superando al segundo lugar por tan solo 4 unidades!\n\n#worldcup #mundial #fantasy",
-          "en": "Felicitaciones al campeón de la miniliga de la copa bendita 2026\n\nFPL Scott\n\nSe lleva el titulo con 720 pts, ¡superando al segundo lugar por tan solo 4 unidades!\n\n#worldcup #mundial #fantasy"
-        }
-      },
-      "date": "2026-07-20"
     }
   ]
 }
