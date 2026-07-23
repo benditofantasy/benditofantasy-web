@@ -7,6 +7,27 @@
   "date": "2026-07-04",
   "tiles": [
     {
+      "id": "gw0-preseason-podcast-e328",
+      "type": "podcast",
+      "date": "2026-07-22",
+      "featured": false,
+      "title": {
+        "es": "Haaland alcanza precio historico en el fantasy de la premier league",
+        "en": "Bendito Fantasy's preseason podcast, episode 328."
+      },
+      "description": {
+        "es": "Terminó el Mundial… y comienza oficialmente una nueva temporada de Fantasy Premier League.",
+        "en": "Bendito Fantasy's preseason podcast, episode 328."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw0-preseason-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "u4WzTLhld10",
+        "duration": "59:34"
+      }
+    },
+    {
       "id": "gw1-pretemporada",
       "type": "quote",
       "date": "2026-07-04",
@@ -43,7 +64,7 @@
       "tag": "chart",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-07-23",
+      "date": "2026-07-15",
       "payload": {
         "chartType": "bar",
         "seriesLabel": {
@@ -91,7 +112,7 @@
       "tag": "chart",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-07-23",
+      "date": "2026-07-15",
       "payload": {
         "chartType": "bar",
         "seriesLabel": {
@@ -139,7 +160,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-07-23",
+      "date": "2026-07-15",
       "payload": {
         "columns": [
           {
@@ -220,31 +241,31 @@
       }
     },
     {
-      "id": "bluesky-3mqoxftxq5s2r",
+      "id": "bluesky-3mrcx24c7dc2v",
       "type": "social",
       "title": {
         "es": "Nueva publicación",
         "en": "New post"
       },
       "description": {
-        "es": "Les compartimos el artículo sobre la sorprendente (o no tanto) actuación de España ayer.",
-        "en": "Les compartimos el artículo sobre la sorprendente (o no tanto) actuación de España ayer."
+        "es": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga",
+        "en": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga"
       },
       "tag": "social",
       "cover": "/media/thumbnails/social-card-2.png",
       "credit": "Bendito Fantasy",
       "payload": {
         "platform": "bluesky",
-        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mqoxftxq5s2r",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mrcx24c7dc2v",
         "handle": "@benditofantasy",
-        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mqoxftxq5s2r",
-        "cid": "bafyreiemycbo6dmkf6ll457uzpupa4vpyluttrkpi57ex6st6scmf5skne",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mrcx24c7dc2v",
+        "cid": "bafyreianrz2go2kp6dliqakrsvth4ejni34s6ym27ixiyuuwootc2jxzdq",
         "text": {
-          "es": "Les compartimos el artículo sobre la sorprendente (o no tanto) actuación de España ayer.",
-          "en": "Les compartimos el artículo sobre la sorprendente (o no tanto) actuación de España ayer."
+          "es": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga",
+          "en": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga"
         }
       },
-      "date": "2026-07-15"
+      "date": "2026-07-23"
     }
   ]
 }
