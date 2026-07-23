@@ -219,6 +219,12 @@ function buildXgXaTile(stats, config) {
   };
 }
 
+/** Everything about a tile except its ordering `date` — the actual content. */
+function tileWithoutDate(tile) {
+  const { date, ...rest } = tile;
+  return rest;
+}
+
 /** Replace an existing same-id tile, else append. Returns "updated"|"added"|"unchanged". */
 function upsertTile(fileName, tile) {
   const filePath = path.join(GAMEWEEKS_DIR, fileName);
@@ -229,7 +235,15 @@ function upsertTile(fileName, tile) {
   if (idx === -1) {
     week.tiles.push(tile);
     action = "added";
-  } else if (JSON.stringify(week.tiles[idx]) === JSON.stringify(tile)) {
+  } else if (
+    JSON.stringify(tileWithoutDate(week.tiles[idx])) === JSON.stringify(tileWithoutDate(tile))
+  ) {
+    // Same data, only a fresher generatedAt. Re-dating here would float
+    // unchanged stats back to the top of the row on every run — during the
+    // offseason the engine re-publishes the same final table indefinitely,
+    // which would perpetually leapfrog genuinely new content (podcasts,
+    // social posts). Keep the existing tile (and its original date); the
+    // date only advances when the underlying numbers actually change.
     action = "unchanged";
   } else {
     week.tiles[idx] = tile;
