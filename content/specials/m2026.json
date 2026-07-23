@@ -4,8 +4,38 @@
     "es": "Mundial 2026",
     "en": "World Cup 2026"
   },
-  "date": "2026-07-15",
+  "date": "2026-07-23",
   "tiles": [
+    {
+      "id": "m2026-treinta-y-dos-anos-despues",
+      "type": "article",
+      "date": "2026-07-23",
+      "title": {
+        "es": "Treinta y dos años después",
+        "en": "Thirty-Two Years Later"
+      },
+      "description": {
+        "es": "Hay gente que mide la vida en años; otros la vivimos en mundiales. Treinta y dos años después de que el fútbol le rompiera el corazón, Rafa Enciso encontró su revancha acompañando a su hijo durante el Mundial.",
+        "en": "Rafa Enciso, El Ñil, remembers how the 1994 World Cup broke his heart and how, thirty-two years later, he found an unexpected second chance by sharing the game with his children."
+      },
+      "tag": "article",
+      "cover": "/media/players/aspe-mexico.png",
+      "badge": {
+        "es": "México",
+        "en": "Mexico"
+      },
+      "credit": "Rafa Enciso · El Ñil",
+      "link": {
+        "href": "/articulo/treinta-y-dos-anos-despues",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "treinta-y-dos-anos-despues"
+      }
+    },
     {
       "id": "bluesky-3mr27zr7dr222",
       "type": "social",
