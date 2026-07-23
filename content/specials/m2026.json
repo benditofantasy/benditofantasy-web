@@ -4,7 +4,7 @@
     "es": "Mundial 2026",
     "en": "World Cup 2026"
   },
-  "date": "2026-07-14",
+  "date": "2026-07-15",
   "tiles": [
     {
       "id": "bluesky-3mr27zr7dr222",
@@ -31,6 +31,57 @@
           "es": "Felicitaciones al campeón de la miniliga de la copa bendita 2026\n\nFPL Scott\n\nSe lleva el titulo con 720 pts, ¡superando al segundo lugar por tan solo 4 unidades!\n\n#worldcup #mundial #fantasy",
           "en": "Felicitaciones al campeón de la miniliga de la copa bendita 2026\n\nFPL Scott\n\nSe lleva el titulo con 720 pts, ¡superando al segundo lugar por tan solo 4 unidades!\n\n#worldcup #mundial #fantasy"
         }
+      }
+    },
+    {
+      "id": "m2026-podcast-e327",
+      "type": "podcast",
+      "date": "2026-07-15",
+      "featured": false,
+      "title": {
+        "es": "El campeón hablará español",
+        "en": "Bendito Fantasy's World Cup podcast, episode 327."
+      },
+      "description": {
+        "es": "Analizamos las semifinales del mundial y lo que hicieron y dejaron de hacer cada uno de los protagonistas.",
+        "en": "Bendito Fantasy's World Cup podcast, episode 327."
+      },
+      "tag": "podcast",
+      "cover": "/media/m2026-podcast-e327.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "2-qkZTU5Y34",
+        "duration": "59:24"
+      }
+    },
+    {
+      "id": "m2026-auf-wiedersehen",
+      "type": "article",
+      "date": "2026-07-15",
+      "title": {
+        "es": "Auf Wiedersehen",
+        "en": "Auf Wiedersehen"
+      },
+      "description": {
+        "es": "Inglaterra se traicionó a sí misma ante Argentina, renunció a su identidad y convirtió una ventaja en una despedida que podría costarle el puesto a Thomas Tuchel.",
+        "en": "England betrayed their identity against Argentina, surrendered control and turned a World Cup semifinal lead into a defeat that could cost Thomas Tuchel his job."
+      },
+      "tag": "article",
+      "cover": "/media/players/tuchel-england.png",
+      "badge": {
+        "es": "Inglaterra",
+        "en": "England"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/auf-wiedersehen",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "auf-wiedersehen"
       }
     },
     {

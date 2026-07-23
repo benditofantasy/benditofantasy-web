@@ -44,8 +44,14 @@ function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
 }
 
+/**
+ * CI runner IPs get YouTube's "Sign in to confirm you're not a bot" wall on
+ * the web client; the android client's endpoint doesn't require that check.
+ */
+const YT_DLP_EXTRACTOR_ARGS = ["--extractor-args", "youtube:player_client=android"];
+
 function ytDlpJsonLines(args) {
-  const out = execFileSync("yt-dlp", args, {
+  const out = execFileSync("yt-dlp", [...YT_DLP_EXTRACTOR_ARGS, ...args], {
     encoding: "utf8",
     maxBuffer: 1024 * 1024 * 64,
   });

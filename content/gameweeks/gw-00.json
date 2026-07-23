@@ -64,7 +64,7 @@
       "tag": "chart",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-07-15",
+      "date": "2026-07-23",
       "payload": {
         "chartType": "bar",
         "seriesLabel": {
@@ -112,7 +112,7 @@
       "tag": "chart",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-07-15",
+      "date": "2026-07-23",
       "payload": {
         "chartType": "bar",
         "seriesLabel": {
@@ -160,7 +160,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-07-15",
+      "date": "2026-07-23",
       "payload": {
         "columns": [
           {
