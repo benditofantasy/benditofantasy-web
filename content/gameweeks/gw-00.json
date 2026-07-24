@@ -266,6 +266,33 @@
         }
       },
       "date": "2026-07-23"
+    },
+    {
+      "id": "bluesky-3mrfu6yoeis2p",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?",
+        "en": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mrfu6yoeis2p",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mrfu6yoeis2p",
+        "cid": "bafyreiessohz2hdy4zg5zux5wimtwcb6wakvlymdyd3okkp5xl7ihauhg4",
+        "text": {
+          "es": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?",
+          "en": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?"
+        }
+      },
+      "date": "2026-07-24"
     }
   ]
 }
