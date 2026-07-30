@@ -12,6 +12,13 @@
  * "specials" — those sync into content/specials/<id>.json instead, keyed off
  * an episode-number prefix in the title ("326 - ...") rather than a GW number.
  *
+ * Preseason episodes sit on the current-season playlist but have no gameweek to
+ * belong to yet, so their titles carry only the episode-number prefix
+ * ("329 - ..."). Those file into the row named by "preseason" in the config
+ * (content/gameweeks/gw-00.json). Without that fallback they were silently
+ * skipped every run, which is how a published episode could never reach the
+ * site while the workflow still went green.
+ *
  *   node scripts/sync-latest-podcast.mjs [--dry-run]
  *
  * Requires `yt-dlp` on PATH. Reads/writes content/gameweeks/*.json and
@@ -86,6 +93,15 @@ function parseGw(title) {
   if (!match) return null;
   const gw = Number(match[1]);
   return gw >= 1 && gw <= 38 ? gw : null;
+}
+
+/**
+ * The episode-number prefix every non-gameweek upload carries ("329 - ..."),
+ * used by both the specials rows and the preseason fallback.
+ */
+function parseEpisodeNumber(title) {
+  const match = title.match(/^(\d{1,4})\s*[-–]\s*/);
+  return match ? match[1] : null;
 }
 
 function formatDuration(totalSeconds) {
@@ -183,14 +199,50 @@ function cleanSpecialTitle(rawTitle) {
     .replace(/\s+/g, " ");
 }
 
-function upsertSpecialTile(filePath, tile) {
-  const special = JSON.parse(fs.readFileSync(filePath, "utf8"));
-  const alreadyThere = special.tiles.some((t) => t.payload?.youtubeId === tile.payload.youtubeId);
+/** Prepend an episode tile to any existing row file (a special, or preseason). */
+function upsertRowTile(filePath, tile) {
+  const row = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const alreadyThere = row.tiles.some((t) => t.payload?.youtubeId === tile.payload.youtubeId);
   if (alreadyThere) return false;
-  special.tiles.unshift(tile);
-  if (!DRY_RUN) fs.writeFileSync(filePath, JSON.stringify(special, null, 2) + "\n");
+  row.tiles.unshift(tile);
+  if (!DRY_RUN) fs.writeFileSync(filePath, JSON.stringify(row, null, 2) + "\n");
   log(`Updated ${path.basename(filePath)}: prepended podcast tile.`);
   return true;
+}
+
+/**
+ * The tile for an episode-numbered upload (specials + preseason). Pulls the
+ * full metadata, downloads the thumbnail, and — same rule as the gameweek
+ * path — leaves `en` an honest plain fallback rather than inventing an English
+ * rendering of the Spanish title, for a human to improve in the PR.
+ */
+function buildEpisodeTile(entry, ep, { idPrefix, labelEn }) {
+  const full = ytDlpJsonLines(["--dump-json", `https://www.youtube.com/watch?v=${entry.id}`])[0];
+  const isoDate = full.upload_date
+    ? `${full.upload_date.slice(0, 4)}-${full.upload_date.slice(4, 6)}-${full.upload_date.slice(6, 8)}`
+    : new Date().toISOString().slice(0, 10);
+  const descriptionLine = (full.description ?? "").split("\n").find((l) => l.trim().length > 0) ?? "";
+
+  const tileId = `${idPrefix}-e${ep}`;
+  const coverPath = path.join(MEDIA_DIR, `${tileId}.jpg`);
+  if (!DRY_RUN) {
+    const ok = downloadThumbnail(entry.id, coverPath);
+    if (!ok) log(`WARNING: couldn't download a thumbnail for ${entry.id}, leaving cover unset.`);
+  }
+
+  const fallbackEn = `${labelEn}, episode ${ep}.`;
+  return {
+    id: tileId,
+    type: "podcast",
+    date: isoDate,
+    featured: false, // recomputed at read time by orderTilesByRecency (lib/types)
+    title: { es: cleanSpecialTitle(entry.title), en: fallbackEn },
+    description: { es: descriptionLine.slice(0, 200), en: fallbackEn },
+    tag: "podcast",
+    cover: `/media/${tileId}.jpg`,
+    credit: "Bendito Fantasy",
+    payload: { youtubeId: entry.id, duration: formatDuration(entry.duration) },
+  };
 }
 
 function syncSpecial(special) {
@@ -218,20 +270,16 @@ function syncSpecial(special) {
   const byEpisode = new Map();
   const skipped = [];
   for (const entry of candidates) {
-    const match = entry.title.match(/^(\d{1,4})\s*[-–]\s*/);
-    if (!match) {
+    const ep = parseEpisodeNumber(entry.title);
+    if (!ep) {
       skipped.push(entry.title);
       continue;
     }
-    const ep = match[1];
     if (!byEpisode.has(ep)) byEpisode.set(ep, []);
     byEpisode.get(ep).push(entry);
   }
 
-  if (skipped.length > 0) {
-    log(`Skipped ${skipped.length} entr${skipped.length === 1 ? "y" : "ies"} (no episode number in title):`);
-    skipped.forEach((title) => log(`  - ${title}`));
-  }
+  warnUnroutable(skipped, `special "${special.id}"`, "no episode number in title");
 
   let changed = false;
   for (const [ep, group] of byEpisode) {
@@ -239,49 +287,67 @@ function syncSpecial(special) {
     if (group.length > 1) {
       log(`Episode ${ep}: ${group.length} candidates, picked "${winner.title}" (${winner.id}).`);
     }
-
-    const full = ytDlpJsonLines(["--dump-json", `https://www.youtube.com/watch?v=${winner.id}`])[0];
-    const isoDate = full.upload_date
-      ? `${full.upload_date.slice(0, 4)}-${full.upload_date.slice(4, 6)}-${full.upload_date.slice(6, 8)}`
-      : new Date().toISOString().slice(0, 10);
-    const descriptionLine = (full.description ?? "").split("\n").find((l) => l.trim().length > 0) ?? "";
-
-    const tileId = `${special.id}-podcast-e${ep}`;
-    const coverPath = path.join(MEDIA_DIR, `${tileId}.jpg`);
-    if (!DRY_RUN) {
-      const ok = downloadThumbnail(winner.id, coverPath);
-      if (!ok) log(`WARNING: couldn't download a thumbnail for ${winner.id}, leaving cover unset.`);
-    }
-
-    const tile = {
-      id: tileId,
-      type: "podcast",
-      date: isoDate,
-      featured: false,
-      title: {
-        es: cleanSpecialTitle(winner.title),
-        en: `Bendito Fantasy's World Cup podcast, episode ${ep}.`,
-      },
-      description: {
-        es: descriptionLine.slice(0, 200),
-        en: `Bendito Fantasy's World Cup podcast, episode ${ep}.`,
-      },
-      tag: "podcast",
-      cover: `/media/${tileId}.jpg`,
-      credit: "Bendito Fantasy",
-      payload: {
-        youtubeId: winner.id,
-        duration: formatDuration(winner.duration),
-      },
-    };
-
-    changed = upsertSpecialTile(filePath, tile) || changed;
+    const tile = buildEpisodeTile(winner, ep, {
+      idPrefix: `${special.id}-podcast`,
+      labelEn: special.labelEn ?? "Bendito Fantasy's podcast",
+    });
+    changed = upsertRowTile(filePath, tile) || changed;
   }
 
   return changed;
 }
 
-function syncGameweeks(playlistUrl) {
+/**
+ * Preseason uploads live on the current-season playlist but carry no GW number
+ * — only the episode-number prefix. They file into the row configured under
+ * "preseason" (content/gameweeks/gw-00.json) instead of being dropped.
+ */
+function syncPreseason(entries, preseason) {
+  const filePath = path.join(ROOT, preseason.file);
+  if (!fs.existsSync(filePath)) {
+    throw new Error(
+      `youtube-sync-config.json routes preseason episodes to ${preseason.file}, but that file doesn't exist — create it or remove the "preseason" block.`,
+    );
+  }
+
+  const byEpisode = new Map();
+  for (const entry of entries) {
+    const ep = parseEpisodeNumber(entry.title);
+    if (!byEpisode.has(ep)) byEpisode.set(ep, []);
+    byEpisode.get(ep).push(entry);
+  }
+
+  let changed = false;
+  for (const [ep, group] of byEpisode) {
+    const winner = pickWinner(group);
+    if (group.length > 1) {
+      log(`Preseason episode ${ep}: ${group.length} candidates, picked "${winner.title}" (${winner.id}).`);
+    }
+    const tile = buildEpisodeTile(winner, ep, {
+      idPrefix: preseason.idPrefix ?? "gw0-preseason-podcast",
+      labelEn: preseason.labelEn ?? "Bendito Fantasy's preseason podcast",
+    });
+    changed = upsertRowTile(filePath, tile) || changed;
+  }
+
+  return changed;
+}
+
+/**
+ * A full-length episode nothing could route is the failure mode that bit us:
+ * previously it was a plain log line on an otherwise-green run, indistinguishable
+ * from a quiet week. `::warning::` surfaces it as an annotation on the Actions
+ * run so a dropped episode is visible without a human reading the raw log.
+ */
+function warnUnroutable(titles, where, reason) {
+  if (titles.length === 0) return;
+  log(`Skipped ${titles.length} entr${titles.length === 1 ? "y" : "ies"} for ${where} (${reason}):`);
+  for (const title of titles) {
+    log(`::warning::Podcast sync skipped a full-length episode (${reason}) for ${where}: ${title}`);
+  }
+}
+
+function syncGameweeks(playlistUrl, preseason) {
   log(`Checking playlist: ${playlistUrl}`);
 
   const entries = ytDlpJsonLines(["--flat-playlist", "--dump-json", playlistUrl]);
@@ -299,23 +365,31 @@ function syncGameweeks(playlistUrl) {
   // group new candidates by parsed gameweek number, same duplicate tie-break
   // rule as the historical backfill (see FABLE_YOUTUBE_BRIEF.md)
   const byGw = new Map();
+  const preseasonEntries = [];
   const skipped = [];
   for (const entry of candidates) {
     const gw = parseGw(entry.title);
-    if (gw === null) {
-      skipped.push(entry.title);
+    if (gw !== null) {
+      if (!byGw.has(gw)) byGw.set(gw, []);
+      byGw.get(gw).push(entry);
       continue;
     }
-    if (!byGw.has(gw)) byGw.set(gw, []);
-    byGw.get(gw).push(entry);
+    // No gameweek in the title: preseason, if it at least carries an episode
+    // number and a preseason row is configured. Otherwise genuinely unroutable.
+    if (preseason?.file && parseEpisodeNumber(entry.title)) {
+      preseasonEntries.push(entry);
+      continue;
+    }
+    skipped.push(entry.title);
   }
 
-  if (skipped.length > 0) {
-    log(`Skipped ${skipped.length} entr${skipped.length === 1 ? "y" : "ies"} (no GW number in title):`);
-    skipped.forEach((title) => log(`  - ${title}`));
-  }
+  warnUnroutable(
+    skipped,
+    "the gameweek playlist",
+    preseason?.file ? "no GW number and no episode number in title" : "no GW number in title",
+  );
 
-  let changed = false;
+  let changed = preseasonEntries.length > 0 ? syncPreseason(preseasonEntries, preseason) : false;
   for (const [gw, group] of byGw) {
     const winner = pickWinner(group);
     if (group.length > 1) {
@@ -370,7 +444,7 @@ function main() {
   let changed = false;
 
   if (config.currentSeasonPlaylistUrl) {
-    changed = syncGameweeks(config.currentSeasonPlaylistUrl) || changed;
+    changed = syncGameweeks(config.currentSeasonPlaylistUrl, config.preseason) || changed;
   } else {
     log(
       "No currentSeasonPlaylistUrl set in content/youtube-sync-config.json " +
