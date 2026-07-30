@@ -1,6 +1,12 @@
 {
   "_comment": "Update currentSeasonPlaylistUrl once a year, right after the new season's YouTube playlist goes up on the channel. Leave it empty (\"\") when there is no current-season playlist yet (e.g. during preseason) -- the sync script no-ops safely in that case instead of pulling from the wrong season.",
   "currentSeasonPlaylistUrl": "https://www.youtube.com/playlist?list=PLS4bx_bBfM1s",
+  "_preseasonComment": "Where episodes on the current-season playlist go when their title has no GW number, only an episode-number prefix (\"329 - ...\") -- i.e. preseason. Without this they are skipped every run. Remove the block (or leave \"file\" empty) once the season starts and every upload is GW-numbered; a GW number in the title always wins over this fallback, so it is safe to leave in place.",
+  "preseason": {
+    "file": "content/gameweeks/gw-00.json",
+    "idPrefix": "gw0-preseason-podcast",
+    "labelEn": "Bendito Fantasy's preseason podcast"
+  },
   "_specialsComment": "One-off tournament playlists (e.g. a World Cup) that sync into content/specials/<id>.json instead of a gameweek file. Episodes on these playlists are identified by an episode number prefix in the title (\"326 - ...\"), not a GW number. Remove an entry once the tournament special is retired.",
   "specials": []
 }
