@@ -52,20 +52,68 @@ function loadConfig() {
 }
 
 /**
- * CI runner IPs get YouTube's "Sign in to confirm you're not a bot" wall on
- * the web client; the android client's endpoint doesn't require that check.
+ * CI runner IPs get YouTube's "Sign in to confirm you're not a bot" wall, so
+ * yt-dlp has to be pointed at a player client whose endpoint skips that check.
+ * Which clients work is a moving target — `android` alone worked until it
+ * started returning the wall for per-video metadata — so this is an ordered
+ * list rather than one hardcoded client: each is tried until one returns data.
+ * `default` (yt-dlp's own current pick) is last so a fresh yt-dlp release that
+ * knows better than this list still gets a turn.
+ *
+ * Override without a code change via the YT_DLP_PLAYER_CLIENTS env var
+ * (comma-separated) — the fastest lever when YouTube shifts again.
  */
-const YT_DLP_EXTRACTOR_ARGS = ["--extractor-args", "youtube:player_client=android"];
+const DEFAULT_PLAYER_CLIENTS = ["tv", "android_vr", "web_safari", "ios", "mweb", "default"];
 
+const PLAYER_CLIENTS = (process.env.YT_DLP_PLAYER_CLIENTS ?? "")
+  .split(",")
+  .map((c) => c.trim())
+  .filter(Boolean);
+
+const YT_DLP_PLAYER_CLIENTS = PLAYER_CLIENTS.length > 0 ? PLAYER_CLIENTS : DEFAULT_PLAYER_CLIENTS;
+
+/**
+ * Run yt-dlp, walking the client list until one succeeds. Throws only when
+ * every client failed — that's a real outage (or a wall we can't get past),
+ * not a "nothing new" run, so it should go red and open the alert issue.
+ */
 function ytDlpJsonLines(args) {
-  const out = execFileSync("yt-dlp", [...YT_DLP_EXTRACTOR_ARGS, ...args], {
-    encoding: "utf8",
-    maxBuffer: 1024 * 1024 * 64,
-  });
-  return out
-    .split("\n")
-    .filter(Boolean)
-    .map((line) => JSON.parse(line));
+  const failures = [];
+  for (const client of YT_DLP_PLAYER_CLIENTS) {
+    const extractorArgs =
+      client === "default" ? [] : ["--extractor-args", `youtube:player_client=${client}`];
+    try {
+      const out = execFileSync("yt-dlp", [...extractorArgs, ...args], {
+        encoding: "utf8",
+        maxBuffer: 1024 * 1024 * 64,
+        stdio: ["ignore", "pipe", "pipe"],
+      });
+      const lines = out
+        .split("\n")
+        .filter(Boolean)
+        .map((line) => JSON.parse(line));
+      // An exit-0 run with no JSON is the wall in its quiet form — keep going.
+      if (lines.length === 0) {
+        failures.push(`${client}: exited 0 but returned no JSON`);
+        continue;
+      }
+      if (client !== YT_DLP_PLAYER_CLIENTS[0]) {
+        log(`yt-dlp: fell back to player_client=${client} (earlier clients failed).`);
+      }
+      return lines;
+    } catch (err) {
+      const stderr = (err.stderr ?? err.message ?? "").toString().trim();
+      const lastLine = stderr.split("\n").filter(Boolean).at(-1) ?? "(no stderr)";
+      failures.push(`${client}: ${lastLine}`);
+    }
+  }
+  throw new Error(
+    `yt-dlp failed for every player client (${YT_DLP_PLAYER_CLIENTS.join(", ")}) on: ${args.join(" ")}\n` +
+      failures.map((f) => `  - ${f}`).join("\n") +
+      `\n\nIf YouTube has shifted again, try a different client order via the ` +
+      `YT_DLP_PLAYER_CLIENTS env var in .github/workflows/sync-youtube-podcast.yml, ` +
+      `and check https://github.com/yt-dlp/yt-dlp/wiki/Extractors for which clients currently work.`,
+  );
 }
 
 function existingYoutubeIds() {
