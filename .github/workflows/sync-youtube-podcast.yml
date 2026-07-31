@@ -7,7 +7,12 @@ name: Sync latest podcast episode
 # backfill was a separate, hand-reviewed pass.
 on:
   schedule:
-    - cron: "0 13 * * *" # once a day
+    # 07:00 UTC = 2am EST / 3am EDT — i.e. never earlier than 2am ET, which is
+    # the owner's "the episode is definitely recorded by now" mark (recording
+    # runs ~11pm ET Tue/Wed, done by ~1am ET). GitHub cron is UTC-only and does
+    # not follow DST, so this is pinned to the later of the two rather than
+    # drifting to 1am ET each winter.
+    - cron: "0 7 * * *" # once a day
   workflow_dispatch: {} # manual trigger from the Actions tab, for testing
 
 permissions:
@@ -67,9 +72,15 @@ jobs:
           git push -u origin "$BRANCH"
           gh pr create \
             --title "Sync latest podcast episode" \
-            --body "Automated: new episode found on a synced YouTube playlist. Review the content file + thumbnail, then merge to publish." \
+            --body "Automated: new episode found on a synced YouTube playlist. Auto-merged — the PR is the audit trail. The English title/description are mechanical fallbacks; edit them on main whenever you like." \
             --base main \
             --head "$BRANCH"
+          # Owner decision: keep the PR as the record of what shipped, but don't
+          # make publishing wait on a human. `--auto` is the right flag if a
+          # required check is ever added to main; today there are none, so it
+          # has nothing to queue behind and the plain merge below does the work.
+          gh pr merge "$BRANCH" --squash --delete-branch --auto \
+            || gh pr merge "$BRANCH" --squash --delete-branch
 
       # Same nudge the social sync has: a red run in the Actions tab is easy to
       # miss, and this sync only runs once a day, so a silent failure can sit
