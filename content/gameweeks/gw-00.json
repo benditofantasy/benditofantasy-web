@@ -1,100 +1,348 @@
 {
   "gw": 0,
-  "label": {"es": "Pretemporada", "en": "Preseason"},
+  "label": {
+    "es": "Pretemporada",
+    "en": "Preseason"
+  },
   "date": "2026-07-24",
   "tiles": [
+    {
+      "id": "gw0-preseason-podcast-e329",
+      "type": "podcast",
+      "date": "2026-07-30",
+      "featured": false,
+      "title": {
+        "es": "¡Ya salió el FPL! Primeras reacciones, precios para 2026/27",
+        "en": "Bendito Fantasy's preseason podcast, episode 329."
+      },
+      "description": {
+        "es": "¡La espera terminó! Fantasy Premier League 2026/27 ya está disponible y comienza oficialmente una nueva temporada de Bendito Fantasy.",
+        "en": "Bendito Fantasy's preseason podcast, episode 329."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw0-preseason-podcast-e329.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "G7sKw97PjiQ",
+        "duration": "58:17"
+      }
+    },
     {
       "id": "gw0-el-ultimo-gigante",
       "type": "article",
       "date": "2026-07-24",
-      "title": {"es": "El último gigante", "en": "The Last Giant"},
+      "title": {
+        "es": "El último gigante",
+        "en": "The Last Giant"
+      },
       "description": {
         "es": "La desaparición de los premiums ha dejado un vacío en el Fantasy Premier League. Haaland no cuesta £15.5m solamente por sus goles: también cuesta eso porque ya no existe otro jugador como él.",
         "en": "The disappearance of premium players has left a void in Fantasy Premier League. Haaland does not cost £15.5m only because of his goals, but because there is no one else like him."
       },
       "tag": "article",
       "cover": "/media/players/haaland-manchester-city.png",
-      "badge": {"es": "Pretemporada", "en": "Preseason"},
+      "badge": {
+        "es": "Pretemporada",
+        "en": "Preseason"
+      },
       "credit": "Leo Darutto",
-      "link": {"href": "/articulo/el-ultimo-gigante", "label": {"es": "Leer más", "en": "Read more"}},
-      "payload": {"slug": "el-ultimo-gigante"}
+      "link": {
+        "href": "/articulo/el-ultimo-gigante",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "el-ultimo-gigante"
+      }
     },
     {
       "id": "gw0-preseason-podcast-e328",
       "type": "podcast",
       "date": "2026-07-22",
       "featured": false,
-      "title": {"es": "Haaland alcanza precio historico en el fantasy de la premier league", "en": "Bendito Fantasy's preseason podcast, episode 328."},
-      "description": {"es": "Terminó el Mundial… y comienza oficialmente una nueva temporada de Fantasy Premier League.", "en": "Bendito Fantasy's preseason podcast, episode 328."},
+      "title": {
+        "es": "Haaland alcanza precio historico en el fantasy de la premier league",
+        "en": "Bendito Fantasy's preseason podcast, episode 328."
+      },
+      "description": {
+        "es": "Terminó el Mundial… y comienza oficialmente una nueva temporada de Fantasy Premier League.",
+        "en": "Bendito Fantasy's preseason podcast, episode 328."
+      },
       "tag": "podcast",
       "cover": "/media/gw0-preseason-podcast.jpg",
       "credit": "Bendito Fantasy",
-      "payload": {"youtubeId": "u4WzTLhld10", "duration": "59:34"}
+      "payload": {
+        "youtubeId": "u4WzTLhld10",
+        "duration": "59:34"
+      }
     },
     {
       "id": "gw1-pretemporada",
       "type": "quote",
       "date": "2026-07-04",
-      "title": {"es": "Pretemporada 2026/27", "en": "Preseason 2026/27"},
-      "description": {"es": "Estamos preparando el contenido de la nueva temporada.", "en": "We're preparing content for the new season."},
+      "title": {
+        "es": "Pretemporada 2026/27",
+        "en": "Preseason 2026/27"
+      },
+      "description": {
+        "es": "Estamos preparando el contenido de la nueva temporada.",
+        "en": "We're preparing content for the new season."
+      },
       "tag": "quote",
       "cover": "/media/gw1-pretemporada.svg",
       "credit": "Bendito Fantasy",
-      "payload": {"quote": {"es": "La pretemporada ya está en marcha. Aquí iremos publicando análisis, fichajes y guías a medida que se acerque la Jornada 1.", "en": "Preseason is under way. Analysis, transfer news, and guides will land here as Gameweek 1 approaches."}, "attribution": "Bendito Fantasy"}
+      "payload": {
+        "quote": {
+          "es": "La pretemporada ya está en marcha. Aquí iremos publicando análisis, fichajes y guías a medida que se acerque la Jornada 1.",
+          "en": "Preseason is under way. Analysis, transfer news, and guides will land here as Gameweek 1 approaches."
+        },
+        "attribution": "Bendito Fantasy"
+      }
     },
     {
       "id": "fpl-stats-attack-2025-26-gw38",
       "type": "chart",
-      "title": {"es": "GW38 — Equipos más goleadores", "en": "GW38 — Top scorers"},
-      "description": {"es": "Goles a favor por equipo hasta la GW38.", "en": "Goals for by team through GW38."},
+      "title": {
+        "es": "GW38 — Equipos más goleadores",
+        "en": "GW38 — Top scorers"
+      },
+      "description": {
+        "es": "Goles a favor por equipo hasta la GW38.",
+        "en": "Goals for by team through GW38."
+      },
       "tag": "chart",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
       "date": "2026-07-15",
-      "payload": {"chartType": "bar", "seriesLabel": {"es": "Goles a favor", "en": "Goals for"}, "labels": ["MCI","ARS","MUN","LIV","BOU","CHE","AVL","BRE","NEW","BHA"], "values": [77,71,69,63,58,58,56,55,53,52], "unit": ""}
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles a favor",
+          "en": "Goals for"
+        },
+        "labels": [
+          "MCI",
+          "ARS",
+          "MUN",
+          "LIV",
+          "BOU",
+          "CHE",
+          "AVL",
+          "BRE",
+          "NEW",
+          "BHA"
+        ],
+        "values": [
+          77,
+          71,
+          69,
+          63,
+          58,
+          58,
+          56,
+          55,
+          53,
+          52
+        ],
+        "unit": ""
+      }
     },
     {
       "id": "fpl-stats-defense-2025-26-gw38",
       "type": "chart",
-      "title": {"es": "GW38 — Peores defensas", "en": "GW38 — Most goals conceded"},
-      "description": {"es": "Goles en contra por equipo hasta la GW38.", "en": "Goals conceded by team through GW38."},
+      "title": {
+        "es": "GW38 — Peores defensas",
+        "en": "GW38 — Most goals conceded"
+      },
+      "description": {
+        "es": "Goles en contra por equipo hasta la GW38.",
+        "en": "Goals conceded by team through GW38."
+      },
       "tag": "chart",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
       "date": "2026-07-15",
-      "payload": {"chartType": "bar", "seriesLabel": {"es": "Goles en contra", "en": "Goals conceded"}, "labels": ["BUR","WOL","WHU","TOT","LEE","NEW","BOU","LIV","BRE","CHE"], "values": [75,68,65,57,56,55,54,53,52,52], "unit": ""}
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles en contra",
+          "en": "Goals conceded"
+        },
+        "labels": [
+          "BUR",
+          "WOL",
+          "WHU",
+          "TOT",
+          "LEE",
+          "NEW",
+          "BOU",
+          "LIV",
+          "BRE",
+          "CHE"
+        ],
+        "values": [
+          75,
+          68,
+          65,
+          57,
+          56,
+          55,
+          54,
+          53,
+          52,
+          52
+        ],
+        "unit": ""
+      }
     },
     {
       "id": "fpl-stats-xgxa-2025-26-gw38",
       "type": "data",
-      "title": {"es": "GW38 — Líderes de xG y xA", "en": "GW38 — xG & xA leaders"},
-      "description": {"es": "Goles y asistencias esperados hasta la GW38.", "en": "Expected goals and assists through GW38."},
+      "title": {
+        "es": "GW38 — Líderes de xG y xA",
+        "en": "GW38 — xG & xA leaders"
+      },
+      "description": {
+        "es": "Goles y asistencias esperados hasta la GW38.",
+        "en": "Expected goals and assists through GW38."
+      },
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
       "date": "2026-07-15",
-      "payload": {"columns": [{"es":"Jugador","en":"Player"},{"es":"xG","en":"xG"},{"es":"xA","en":"xA"}], "rows": [["Haaland",25.5,2.67],["Thiago",20.6,1.83],["Calvert-Lewin",15.57,1.06],["Watkins",15.4,1.18],["João Pedro",14.91,1.96],["Mateta",14.42,1.32],["Welbeck",12.36,1.4],["Gyökeres",12.26,1.94],["Schade",12.08,2.05],["Mbeumo",11.98,4.99],["Raúl",11.58,0.9],["Enzo",11.26,7.26]]}
+      "payload": {
+        "columns": [
+          {
+            "es": "Jugador",
+            "en": "Player"
+          },
+          {
+            "es": "xG",
+            "en": "xG"
+          },
+          {
+            "es": "xA",
+            "en": "xA"
+          }
+        ],
+        "rows": [
+          [
+            "Haaland",
+            25.5,
+            2.67
+          ],
+          [
+            "Thiago",
+            20.6,
+            1.83
+          ],
+          [
+            "Calvert-Lewin",
+            15.57,
+            1.06
+          ],
+          [
+            "Watkins",
+            15.4,
+            1.18
+          ],
+          [
+            "João Pedro",
+            14.91,
+            1.96
+          ],
+          [
+            "Mateta",
+            14.42,
+            1.32
+          ],
+          [
+            "Welbeck",
+            12.36,
+            1.4
+          ],
+          [
+            "Gyökeres",
+            12.26,
+            1.94
+          ],
+          [
+            "Schade",
+            12.08,
+            2.05
+          ],
+          [
+            "Mbeumo",
+            11.98,
+            4.99
+          ],
+          [
+            "Raúl",
+            11.58,
+            0.9
+          ],
+          [
+            "Enzo",
+            11.26,
+            7.26
+          ]
+        ]
+      }
     },
     {
       "id": "bluesky-3mrcx24c7dc2v",
       "type": "social",
-      "title": {"es": "Nueva publicación", "en": "New post"},
-      "description": {"es": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga", "en": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga"},
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga",
+        "en": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga"
+      },
       "tag": "social",
       "cover": "/media/thumbnails/social-card-2.png",
       "credit": "Bendito Fantasy",
-      "payload": {"platform": "bluesky", "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mrcx24c7dc2v", "handle": "@benditofantasy", "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mrcx24c7dc2v", "cid": "bafyreianrz2go2kp6dliqakrsvth4ejni34s6ym27ixiyuuwootc2jxzdq", "text": {"es": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga", "en": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga"}},
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mrcx24c7dc2v",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mrcx24c7dc2v",
+        "cid": "bafyreianrz2go2kp6dliqakrsvth4ejni34s6ym27ixiyuuwootc2jxzdq",
+        "text": {
+          "es": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga",
+          "en": "⚽🔥 Amigos de Bendito Fantasy:  \nEl juego ya fue lanzado para esta temporada.\nNuestra miniliga está lista: código 01s4ww.\nA jugar y a romperla.\n#BenditoFantasy #FantasyFutbol #Fantasy2026 #Miniliga"
+        }
+      },
       "date": "2026-07-23"
     },
     {
       "id": "bluesky-3mrfu6yoeis2p",
       "type": "social",
-      "title": {"es": "Nueva publicación", "en": "New post"},
-      "description": {"es": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?", "en": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?"},
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?",
+        "en": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?"
+      },
       "tag": "social",
       "cover": "/media/thumbnails/social-card-2.png",
       "credit": "Bendito Fantasy",
-      "payload": {"platform": "bluesky", "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mrfu6yoeis2p", "handle": "@benditofantasy", "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mrfu6yoeis2p", "cid": "bafyreiessohz2hdy4zg5zux5wimtwcb6wakvlymdyd3okkp5xl7ihauhg4", "text": {"es": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?", "en": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?"}},
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mrfu6yoeis2p",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mrfu6yoeis2p",
+        "cid": "bafyreiessohz2hdy4zg5zux5wimtwcb6wakvlymdyd3okkp5xl7ihauhg4",
+        "text": {
+          "es": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?",
+          "en": "Nada detiene a los que creen en el androide. ¿Tú lo tienes en tus primeros drafts?"
+        }
+      },
       "date": "2026-07-24"
     }
   ]
