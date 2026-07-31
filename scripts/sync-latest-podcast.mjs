@@ -247,6 +247,91 @@ function cleanSpecialTitle(rawTitle) {
     .replace(/\s+/g, " ");
 }
 
+/**
+ * Per-video metadata without the player API.
+ *
+ * The two yt-dlp calls are not equally exposed: listing a playlist
+ * (`--flat-playlist`) reads the playlist page and still works fine from runner
+ * IPs, but `--dump-json` on a single video hits YouTube's player API, which now
+ * answers "Sign in to confirm you're not a bot" for every player client we can
+ * try from CI. That call only ever supplied two things — upload date and the
+ * description's first line — and YouTube publishes both in the playlist's Atom
+ * feed, which is plain public XML with no auth, no client spoofing, and no wall
+ * (the same shape of source as Bluesky's public AppView for the social sync).
+ *
+ * The feed carries only the ~15 most recent uploads, which is ample for a
+ * daily sync but not for a backfill — so yt-dlp stays the fallback for videos
+ * the feed doesn't list.
+ */
+function playlistIdFromUrl(playlistUrl) {
+  const match = playlistUrl.match(/[?&]list=([^&]+)/);
+  return match ? match[1] : null;
+}
+
+function decodeEntities(text) {
+  return text
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, "&"); // last, so "&amp;lt;" doesn't become "<"
+}
+
+/** videoId -> { isoDate, descriptionLine } for everything in the playlist feed. */
+async function fetchPlaylistFeed(playlistUrl) {
+  const meta = new Map();
+  const playlistId = playlistIdFromUrl(playlistUrl);
+  if (!playlistId) {
+    log(`No list= id in ${playlistUrl} — falling back to yt-dlp for per-video metadata.`);
+    return meta;
+  }
+  const feedUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${playlistId}`;
+  let xml;
+  try {
+    const res = await fetch(feedUrl);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    xml = await res.text();
+  } catch (err) {
+    // Non-fatal: yt-dlp is still tried per video, and if that is walled too the
+    // run fails there with the full client-by-client diagnosis.
+    log(`::warning::Couldn't read the playlist feed (${feedUrl}): ${err.message}. Falling back to yt-dlp.`);
+    return meta;
+  }
+  for (const [, entry] of xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)) {
+    const id = entry.match(/<yt:videoId>(.*?)<\/yt:videoId>/)?.[1];
+    if (!id) continue;
+    const published = entry.match(/<published>(.*?)<\/published>/)?.[1];
+    const description = entry.match(/<media:description>([\s\S]*?)<\/media:description>/)?.[1] ?? "";
+    meta.set(id, {
+      isoDate: published ? published.slice(0, 10) : null,
+      descriptionLine:
+        decodeEntities(description)
+          .split("\n")
+          .find((l) => l.trim().length > 0) ?? "",
+    });
+  }
+  log(`Playlist feed: read metadata for ${meta.size} recent upload(s).`);
+  return meta;
+}
+
+/**
+ * Upload date + description for one video: the feed if it lists it, otherwise
+ * the (wall-prone) per-video yt-dlp call.
+ */
+function videoMetadata(videoId, feed) {
+  const fromFeed = feed?.get(videoId);
+  if (fromFeed?.isoDate) return fromFeed;
+  log(`${videoId}: not in the playlist feed — falling back to yt-dlp for its metadata.`);
+  const full = ytDlpJsonLines(["--dump-json", `https://www.youtube.com/watch?v=${videoId}`])[0];
+  return {
+    isoDate: full.upload_date
+      ? `${full.upload_date.slice(0, 4)}-${full.upload_date.slice(4, 6)}-${full.upload_date.slice(6, 8)}`
+      : new Date().toISOString().slice(0, 10),
+    descriptionLine: (full.description ?? "").split("\n").find((l) => l.trim().length > 0) ?? "",
+  };
+}
+
 /** Prepend an episode tile to any existing row file (a special, or preseason). */
 function upsertRowTile(filePath, tile) {
   const row = JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -264,12 +349,8 @@ function upsertRowTile(filePath, tile) {
  * path — leaves `en` an honest plain fallback rather than inventing an English
  * rendering of the Spanish title, for a human to improve in the PR.
  */
-function buildEpisodeTile(entry, ep, { idPrefix, labelEn }) {
-  const full = ytDlpJsonLines(["--dump-json", `https://www.youtube.com/watch?v=${entry.id}`])[0];
-  const isoDate = full.upload_date
-    ? `${full.upload_date.slice(0, 4)}-${full.upload_date.slice(4, 6)}-${full.upload_date.slice(6, 8)}`
-    : new Date().toISOString().slice(0, 10);
-  const descriptionLine = (full.description ?? "").split("\n").find((l) => l.trim().length > 0) ?? "";
+function buildEpisodeTile(entry, ep, { idPrefix, labelEn }, feed) {
+  const { isoDate, descriptionLine } = videoMetadata(entry.id, feed);
 
   const tileId = `${idPrefix}-e${ep}`;
   const coverPath = path.join(MEDIA_DIR, `${tileId}.jpg`);
@@ -293,11 +374,12 @@ function buildEpisodeTile(entry, ep, { idPrefix, labelEn }) {
   };
 }
 
-function syncSpecial(special) {
+async function syncSpecial(special) {
   const filePath = path.join(ROOT, special.file);
   log(`Checking special "${special.id}" playlist: ${special.playlistUrl}`);
 
   const entries = ytDlpJsonLines(["--flat-playlist", "--dump-json", special.playlistUrl]);
+  const feed = await fetchPlaylistFeed(special.playlistUrl);
 
   const existing = JSON.parse(fs.readFileSync(filePath, "utf8"));
   const synced = new Set();
@@ -335,10 +417,12 @@ function syncSpecial(special) {
     if (group.length > 1) {
       log(`Episode ${ep}: ${group.length} candidates, picked "${winner.title}" (${winner.id}).`);
     }
-    const tile = buildEpisodeTile(winner, ep, {
-      idPrefix: `${special.id}-podcast`,
-      labelEn: special.labelEn ?? "Bendito Fantasy's podcast",
-    });
+    const tile = buildEpisodeTile(
+      winner,
+      ep,
+      { idPrefix: `${special.id}-podcast`, labelEn: special.labelEn ?? "Bendito Fantasy's podcast" },
+      feed,
+    );
     changed = upsertRowTile(filePath, tile) || changed;
   }
 
@@ -350,7 +434,7 @@ function syncSpecial(special) {
  * — only the episode-number prefix. They file into the row configured under
  * "preseason" (content/gameweeks/gw-00.json) instead of being dropped.
  */
-function syncPreseason(entries, preseason) {
+function syncPreseason(entries, preseason, feed) {
   const filePath = path.join(ROOT, preseason.file);
   if (!fs.existsSync(filePath)) {
     throw new Error(
@@ -371,10 +455,15 @@ function syncPreseason(entries, preseason) {
     if (group.length > 1) {
       log(`Preseason episode ${ep}: ${group.length} candidates, picked "${winner.title}" (${winner.id}).`);
     }
-    const tile = buildEpisodeTile(winner, ep, {
-      idPrefix: preseason.idPrefix ?? "gw0-preseason-podcast",
-      labelEn: preseason.labelEn ?? "Bendito Fantasy's preseason podcast",
-    });
+    const tile = buildEpisodeTile(
+      winner,
+      ep,
+      {
+        idPrefix: preseason.idPrefix ?? "gw0-preseason-podcast",
+        labelEn: preseason.labelEn ?? "Bendito Fantasy's preseason podcast",
+      },
+      feed,
+    );
     changed = upsertRowTile(filePath, tile) || changed;
   }
 
@@ -395,10 +484,11 @@ function warnUnroutable(titles, where, reason) {
   }
 }
 
-function syncGameweeks(playlistUrl, preseason) {
+async function syncGameweeks(playlistUrl, preseason) {
   log(`Checking playlist: ${playlistUrl}`);
 
   const entries = ytDlpJsonLines(["--flat-playlist", "--dump-json", playlistUrl]);
+  const feed = await fetchPlaylistFeed(playlistUrl);
 
   const synced = existingYoutubeIds();
   const candidates = entries.filter(
@@ -437,23 +527,20 @@ function syncGameweeks(playlistUrl, preseason) {
     preseason?.file ? "no GW number and no episode number in title" : "no GW number in title",
   );
 
-  let changed = preseasonEntries.length > 0 ? syncPreseason(preseasonEntries, preseason) : false;
+  let changed =
+    preseasonEntries.length > 0 ? syncPreseason(preseasonEntries, preseason, feed) : false;
   for (const [gw, group] of byGw) {
     const winner = pickWinner(group);
     if (group.length > 1) {
       log(`GW${gw}: ${group.length} candidates, picked "${winner.title}" (${winner.id}).`);
     }
 
-    const full = ytDlpJsonLines(["--dump-json", `https://www.youtube.com/watch?v=${winner.id}`])[0];
     const title = cleanTitle(winner.title, gw);
-    const isoDate = full.upload_date
-      ? `${full.upload_date.slice(0, 4)}-${full.upload_date.slice(4, 6)}-${full.upload_date.slice(6, 8)}`
-      : new Date().toISOString().slice(0, 10);
     // the podcast description is Spanish-language; a mechanical script has
     // no business inventing an English translation of it (same reasoning as
     // the title above) — es gets the real teaser, en gets an honest plain
     // fallback for a human to improve in the PR before merging.
-    const descriptionLine = (full.description ?? "").split("\n").find((l) => l.trim().length > 0) ?? "";
+    const { isoDate, descriptionLine } = videoMetadata(winner.id, feed);
 
     const tileId = `gw${gw}-podcast`;
     const coverPath = path.join(MEDIA_DIR, `${tileId}.jpg`);
@@ -487,12 +574,12 @@ function syncGameweeks(playlistUrl, preseason) {
   return changed;
 }
 
-function main() {
+async function main() {
   const config = loadConfig();
   let changed = false;
 
   if (config.currentSeasonPlaylistUrl) {
-    changed = syncGameweeks(config.currentSeasonPlaylistUrl, config.preseason) || changed;
+    changed = (await syncGameweeks(config.currentSeasonPlaylistUrl, config.preseason)) || changed;
   } else {
     log(
       "No currentSeasonPlaylistUrl set in content/youtube-sync-config.json " +
@@ -502,10 +589,13 @@ function main() {
   }
 
   for (const special of config.specials ?? []) {
-    changed = syncSpecial(special) || changed;
+    changed = (await syncSpecial(special)) || changed;
   }
 
   if (!changed) log("Everything found was already synced.");
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
