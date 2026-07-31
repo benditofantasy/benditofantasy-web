@@ -37,6 +37,8 @@ import { execFileSync } from "node:child_process";
 const ROOT = process.cwd();
 const CONFIG_PATH = path.join(ROOT, "content", "youtube-sync-config.json");
 const GAMEWEEKS_DIR = path.join(ROOT, "content", "gameweeks");
+const SPECIALS_DIR = path.join(ROOT, "content", "specials");
+const SEASONS_DIR = path.join(ROOT, "content", "seasons");
 const MEDIA_DIR = path.join(ROOT, "public", "media");
 
 const DRY_RUN = process.argv.includes("--dry-run");
@@ -118,15 +120,22 @@ function ytDlpJsonLines(args) {
 
 function existingYoutubeIds() {
   const ids = new Set();
-  if (!fs.existsSync(GAMEWEEKS_DIR)) return ids;
   const collect = (tile) => {
     if (tile.payload?.youtubeId) ids.add(tile.payload.youtubeId);
     (tile.slides ?? []).forEach(collect);
   };
-  for (const file of fs.readdirSync(GAMEWEEKS_DIR)) {
-    if (!file.endsWith(".json") || file.includes("template")) continue;
-    const week = JSON.parse(fs.readFileSync(path.join(GAMEWEEKS_DIR, file), "utf8"));
-    week.tiles.forEach(collect);
+  // Every place an episode can already live — not just gameweeks. Specials hold
+  // the tournament rows and `seasons/` holds the rolled-up past seasons, which
+  // together are the large majority of episodes ever published. Scanning only
+  // gameweeks made the playlist check below cry wolf over World Cup episodes
+  // that were synced long ago, and would let a re-listed old episode sync twice.
+  for (const dir of [GAMEWEEKS_DIR, SPECIALS_DIR, SEASONS_DIR]) {
+    if (!fs.existsSync(dir)) continue;
+    for (const file of fs.readdirSync(dir)) {
+      if (!file.endsWith(".json") || file.includes("template")) continue;
+      const row = JSON.parse(fs.readFileSync(path.join(dir, file), "utf8"));
+      (row.tiles ?? []).forEach(collect);
+    }
   }
   return ids;
 }
@@ -278,13 +287,37 @@ function decodeEntities(text) {
     .replace(/&amp;/g, "&"); // last, so "&amp;lt;" doesn't become "<"
 }
 
-/** videoId -> { isoDate, descriptionLine } for everything in the playlist feed. */
+/** Parse an Atom feed's <entry> list into videoId -> { title, isoDate, descriptionLine }. */
+function parseFeedEntries(xml) {
+  const entries = new Map();
+  for (const [, entry] of xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)) {
+    const id = entry.match(/<yt:videoId>(.*?)<\/yt:videoId>/)?.[1];
+    if (!id) continue;
+    const published = entry.match(/<published>(.*?)<\/published>/)?.[1];
+    const description = entry.match(/<media:description>([\s\S]*?)<\/media:description>/)?.[1] ?? "";
+    entries.set(id, {
+      title: decodeEntities(entry.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? ""),
+      isoDate: published ? published.slice(0, 10) : null,
+      descriptionLine:
+        decodeEntities(description)
+          .split("\n")
+          .find((l) => l.trim().length > 0) ?? "",
+    });
+  }
+  return entries;
+}
+
+/**
+ * The playlist feed, as { meta, channelId }: `meta` is videoId -> metadata for
+ * everything the playlist lists, `channelId` is the owning channel (the feed
+ * declares it, so the blind-spot check below needs no extra config).
+ */
 async function fetchPlaylistFeed(playlistUrl) {
-  const meta = new Map();
+  const empty = { meta: new Map(), channelId: null };
   const playlistId = playlistIdFromUrl(playlistUrl);
   if (!playlistId) {
     log(`No list= id in ${playlistUrl} — falling back to yt-dlp for per-video metadata.`);
-    return meta;
+    return empty;
   }
   const feedUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${playlistId}`;
   let xml;
@@ -296,23 +329,48 @@ async function fetchPlaylistFeed(playlistUrl) {
     // Non-fatal: yt-dlp is still tried per video, and if that is walled too the
     // run fails there with the full client-by-client diagnosis.
     log(`::warning::Couldn't read the playlist feed (${feedUrl}): ${err.message}. Falling back to yt-dlp.`);
-    return meta;
+    return empty;
   }
-  for (const [, entry] of xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)) {
-    const id = entry.match(/<yt:videoId>(.*?)<\/yt:videoId>/)?.[1];
-    if (!id) continue;
-    const published = entry.match(/<published>(.*?)<\/published>/)?.[1];
-    const description = entry.match(/<media:description>([\s\S]*?)<\/media:description>/)?.[1] ?? "";
-    meta.set(id, {
-      isoDate: published ? published.slice(0, 10) : null,
-      descriptionLine:
-        decodeEntities(description)
-          .split("\n")
-          .find((l) => l.trim().length > 0) ?? "",
-    });
-  }
+  const meta = parseFeedEntries(xml);
   log(`Playlist feed: read metadata for ${meta.size} recent upload(s).`);
-  return meta;
+  return { meta, channelId: xml.match(/<yt:channelId>(.*?)<\/yt:channelId>/)?.[1] ?? null };
+}
+
+/**
+ * The one failure mode nothing else catches: an episode uploaded to the channel
+ * but never added to the synced playlist. The sync is playlist-scoped, so that
+ * episode is invisible and the run goes green with nothing to say — exactly the
+ * "looks like a quiet week" shape that let episode 329 sit unnoticed.
+ *
+ * The channel feed lists recent uploads whether or not they're on a playlist,
+ * so anything with an episode-number prefix ("329 - ") that the playlist
+ * doesn't have, and that isn't already in content, is worth a shout. The prefix
+ * is the filter that keeps shorts and clips out of this: every numbered episode
+ * carries it, no short does.
+ */
+async function warnEpisodesMissingFromPlaylist(feed, syncedIds) {
+  if (!feed.channelId) return;
+  const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${feed.channelId}`;
+  let xml;
+  try {
+    const res = await fetch(feedUrl);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    xml = await res.text();
+  } catch (err) {
+    log(`Couldn't read the channel feed (${feedUrl}): ${err.message} — skipping the playlist check.`);
+    return;
+  }
+  const missing = [];
+  for (const [id, entry] of parseFeedEntries(xml)) {
+    if (feed.meta.has(id) || syncedIds.has(id)) continue;
+    if (!parseEpisodeNumber(entry.title)) continue;
+    missing.push(`${entry.title} (https://www.youtube.com/watch?v=${id})`);
+  }
+  for (const title of missing) {
+    log(
+      `::warning::Episode on the channel but NOT on the synced playlist, so it will never sync — add it to the playlist: ${title}`,
+    );
+  }
 }
 
 /**
@@ -320,7 +378,7 @@ async function fetchPlaylistFeed(playlistUrl) {
  * the (wall-prone) per-video yt-dlp call.
  */
 function videoMetadata(videoId, feed) {
-  const fromFeed = feed?.get(videoId);
+  const fromFeed = feed?.meta?.get(videoId);
   if (fromFeed?.isoDate) return fromFeed;
   log(`${videoId}: not in the playlist feed — falling back to yt-dlp for its metadata.`);
   const full = ytDlpJsonLines(["--dump-json", `https://www.youtube.com/watch?v=${videoId}`])[0];
@@ -491,6 +549,11 @@ async function syncGameweeks(playlistUrl, preseason) {
   const feed = await fetchPlaylistFeed(playlistUrl);
 
   const synced = existingYoutubeIds();
+
+  // Before the "nothing new" early return — an episode missing from the
+  // playlist is precisely the case where there is nothing new to find.
+  await warnEpisodesMissingFromPlaylist(feed, synced);
+
   const candidates = entries.filter(
     (e) => !synced.has(e.id) && (e.duration ?? 0) >= MIN_EPISODE_SECONDS,
   );
