@@ -374,6 +374,33 @@
         }
       },
       "date": "2026-07-24"
+    },
+    {
+      "id": "bluesky-3msqicdwpjk2h",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Únete a la miniliga y muestra qué eres el mejor manager de habla hispana\n\nAquí 👉 fantasy.premierleague.com/leagues/auto...",
+        "en": "Únete a la miniliga y muestra qué eres el mejor manager de habla hispana\n\nAquí 👉 fantasy.premierleague.com/leagues/auto..."
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-1.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3msqicdwpjk2h",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3msqicdwpjk2h",
+        "cid": "bafyreidt73rlcozp67hq3iwr6uuifgz6w2o3sqp4thsn63vrjx3qmln2du",
+        "text": {
+          "es": "Únete a la miniliga y muestra qué eres el mejor manager de habla hispana\n\nAquí 👉 fantasy.premierleague.com/leagues/auto...",
+          "en": "Únete a la miniliga y muestra qué eres el mejor manager de habla hispana\n\nAquí 👉 fantasy.premierleague.com/leagues/auto..."
+        }
+      },
+      "date": "2026-08-10"
     }
   ]
 }
