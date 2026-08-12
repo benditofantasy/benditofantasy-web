@@ -422,6 +422,33 @@
         }
       },
       "date": "2026-08-10"
+    },
+    {
+      "id": "bluesky-3msvztlq7pk2p",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "DOS BOLETOS MÁS PARA LA COPA SANTAMARIA.\nTema: HISTORIA DE LA PREMIER LEAGUE.\nRécords, jugadores, clubes, partidos, temporadas, curiosidades… sorpréndannos.\nDejen SU pregunta con #CopaSantamaria y @be",
+        "en": "DOS BOLETOS MÁS PARA LA COPA SANTAMARIA.\nTema: HISTORIA DE LA PREMIER LEAGUE.\nRécords, jugadores, clubes, partidos, temporadas, curiosidades… sorpréndannos.\nDejen SU pregunta con #CopaSantamaria y @be"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3msvztlq7pk2p",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3msvztlq7pk2p",
+        "cid": "bafyreidcivl6n7ccaad4ibcw3bsvfxyidajv2lhxi6yc4fexsjyq72c4ue",
+        "text": {
+          "es": "DOS BOLETOS MÁS PARA LA COPA SANTAMARIA.\nTema: HISTORIA DE LA PREMIER LEAGUE.\nRécords, jugadores, clubes, partidos, temporadas, curiosidades… sorpréndannos.\nDejen SU pregunta con #CopaSantamaria y @benditofantasy. Manden la respuesta por DM.\nElegiremos una.",
+          "en": "DOS BOLETOS MÁS PARA LA COPA SANTAMARIA.\nTema: HISTORIA DE LA PREMIER LEAGUE.\nRécords, jugadores, clubes, partidos, temporadas, curiosidades… sorpréndannos.\nDejen SU pregunta con #CopaSantamaria y @benditofantasy. Manden la respuesta por DM.\nElegiremos una."
+        }
+      },
+      "date": "2026-08-12"
     }
   ]
 }
