@@ -7,6 +7,27 @@
   "date": "2026-08-09",
   "tiles": [
     {
+      "id": "gw0-preseason-podcast-e330",
+      "type": "podcast",
+      "date": "2026-08-12",
+      "featured": false,
+      "title": {
+        "es": "Es hora del United - miniliga 01s4ww",
+        "en": "Bendito Fantasy's preseason podcast, episode 330."
+      },
+      "description": {
+        "es": "",
+        "en": "Bendito Fantasy's preseason podcast, episode 330."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw0-preseason-podcast-e330.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "gKawGAnTE0w",
+        "duration": "1:10:38"
+      }
+    },
+    {
       "id": "gw0-bienvenidos-a-la-copa",
       "type": "article",
       "date": "2026-08-09",
