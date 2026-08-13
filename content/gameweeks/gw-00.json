@@ -449,6 +449,33 @@
         }
       },
       "date": "2026-08-12"
+    },
+    {
+      "id": "bluesky-3msyr43fres2y",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Únanse a la liga aquí fantasy.premierleague.com/api/leagues/...",
+        "en": "Únanse a la liga aquí fantasy.premierleague.com/api/leagues/..."
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-1.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3msyr43fres2y",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3msyr43fres2y",
+        "cid": "bafyreihd4bp2ndlkh5ph2yytisl23fwavvjdlw3oit357jpgxjjh54ylwe",
+        "text": {
+          "es": "Únanse a la liga aquí fantasy.premierleague.com/api/leagues/...",
+          "en": "Únanse a la liga aquí fantasy.premierleague.com/api/leagues/..."
+        }
+      },
+      "date": "2026-08-13"
     }
   ]
 }
