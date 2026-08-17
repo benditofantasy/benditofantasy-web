@@ -27,12 +27,48 @@
           "en": "Who should be your captain in Gameweek 1?"
         },
         "options": [
-          { "id": "bruno-fernandes", "label": { "es": "Bruno Fernandes (HUL, A)", "en": "Bruno Fernandes (HUL, A)" } },
-          { "id": "haaland", "label": { "es": "Erling Haaland (BOU, H)", "en": "Erling Haaland (BOU, H)" } },
-          { "id": "saka", "label": { "es": "Bukayo Saka (COV, H)", "en": "Bukayo Saka (COV, H)" } },
-          { "id": "gyokeres", "label": { "es": "Viktor Gyökeres (COV, H)", "en": "Viktor Gyökeres (COV, H)" } },
-          { "id": "mbeumo", "label": { "es": "Bryan Mbeumo (HUL, A)", "en": "Bryan Mbeumo (HUL, A)" } },
-          { "id": "semenyo", "label": { "es": "Antoine Semenyo (BOU, H)", "en": "Antoine Semenyo (BOU, H)" } }
+          {
+            "id": "bruno-fernandes",
+            "label": {
+              "es": "Bruno Fernandes (HUL, A)",
+              "en": "Bruno Fernandes (HUL, A)"
+            }
+          },
+          {
+            "id": "haaland",
+            "label": {
+              "es": "Erling Haaland (BOU, H)",
+              "en": "Erling Haaland (BOU, H)"
+            }
+          },
+          {
+            "id": "saka",
+            "label": {
+              "es": "Bukayo Saka (COV, H)",
+              "en": "Bukayo Saka (COV, H)"
+            }
+          },
+          {
+            "id": "gyokeres",
+            "label": {
+              "es": "Viktor Gyökeres (COV, H)",
+              "en": "Viktor Gyökeres (COV, H)"
+            }
+          },
+          {
+            "id": "mbeumo",
+            "label": {
+              "es": "Bryan Mbeumo (HUL, A)",
+              "en": "Bryan Mbeumo (HUL, A)"
+            }
+          },
+          {
+            "id": "semenyo",
+            "label": {
+              "es": "Antoine Semenyo (BOU, H)",
+              "en": "Antoine Semenyo (BOU, H)"
+            }
+          }
         ],
         "closesAt": "2026-08-22T10:00:00Z",
         "expiresAt": "2026-08-23T14:00:00Z"
@@ -616,6 +652,33 @@
         }
       },
       "date": "2026-08-16"
+    },
+    {
+      "id": "bluesky-3mtci5wy7xc2q",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Ya votaron?",
+        "en": "Ya votaron?"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtci5wy7xc2q",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtci5wy7xc2q",
+        "cid": "bafyreigjgpy4agjd4yieg2apohmx237j4sghjtf3bi5q7t4ijwkboquefy",
+        "text": {
+          "es": "Ya votaron?",
+          "en": "Ya votaron?"
+        }
+      },
+      "date": "2026-08-17"
     }
   ]
 }
