@@ -184,26 +184,15 @@ body {
 }
 /*
  * A standalone bold line (**…**) is the writers' inline convention for a
- * highlighted aside — sometimes a short subtitle, but just as often a full
- * emphasized sentence. Rendering all of them as loud all-caps orange headers
- * was hard to read and stole the "header" signal from real headings. Orange
- * is reserved for real ##/### headings now; a bold line instead gets a subtle
- * highlighted panel — a faint warm tint that breaks the rhythm without
- * shouting. (A genuine section header should be authored as ##/### to get the
- * orange display treatment.)
+ * short highlighted aside. It should read as emphasis within normal prose,
+ * not as a boxed callout — the panel treatment made long bolded paragraphs
+ * look like heavy stacked banners. Orange is reserved for real ##/###
+ * headings; this is just bold text at the paragraph's own size. (Writers
+ * should keep this convention to short sentences — a fully bolded multi-
+ * sentence paragraph is a mismatch of intent, not a container for content.)
  */
-.prose-editorial > div > p:has(> strong:only-child):not(:has(> strong ~ *)) {
-  margin: 2em 0;
-  padding: 1rem 1.3rem;
-  border-radius: 0.5rem;
-  background: rgba(242, 89, 75, 0.07); /* --bf-coral at 7% — a warm highlight, not orange text */
-  border: 1px solid rgba(242, 89, 75, 0.13);
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  color: var(--color-ink);
-}
 .prose-editorial > div > p:has(> strong:only-child):not(:has(> strong ~ *)) strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 .prose-editorial hr {
   margin: 2.75em 0;
