@@ -439,6 +439,33 @@
           ]
         ]
       }
+    },
+    {
+      "id": "bluesky-3mtgqt35ans2n",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "La Premier está de vuelta y antes de cerrar nuestros equipos para la GW1 nos acompaña @PepedelBosque \n\n¿Haaland sí o no? ¿Qué equipos atacar desde el inicio? ¿Quién puede ser la revelación?\nHablamos d",
+        "en": "La Premier está de vuelta y antes de cerrar nuestros equipos para la GW1 nos acompaña @PepedelBosque \n\n¿Haaland sí o no? ¿Qué equipos atacar desde el inicio? ¿Quién puede ser la revelación?\nHablamos d"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-1.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtgqt35ans2n",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtgqt35ans2n",
+        "cid": "bafyreifvqw3ilflfiqlvczckeynuos66do6cgu7r7z5xlep7gzyirmoo5u",
+        "text": {
+          "es": "La Premier está de vuelta y antes de cerrar nuestros equipos para la GW1 nos acompaña @PepedelBosque \n\n¿Haaland sí o no? ¿Qué equipos atacar desde el inicio? ¿Quién puede ser la revelación?\nHablamos de FPL, pero también de la Premier que está por comenzar.\nyoutube.com/live/_A2G8BD...",
+          "en": "La Premier está de vuelta y antes de cerrar nuestros equipos para la GW1 nos acompaña @PepedelBosque \n\n¿Haaland sí o no? ¿Qué equipos atacar desde el inicio? ¿Quién puede ser la revelación?\nHablamos de FPL, pero también de la Premier que está por comenzar.\nyoutube.com/live/_A2G8BD..."
+        }
+      },
+      "date": "2026-08-19"
     }
   ]
 }
