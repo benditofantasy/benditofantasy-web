@@ -1,0 +1,31 @@
+{
+  "gw": 1,
+  "label": {
+    "es": "Jornada 1",
+    "en": "Gameweek 1"
+  },
+  "date": "2026-08-19",
+  "tiles": [
+    {
+      "id": "gw1-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 1",
+        "en": "Gameweek 1"
+      },
+      "description": {
+        "es": "Se acabaron los borradores. La Premier League arranca este viernes y llega el momento de tomar las decisiones definitivas para GW1.",
+        "en": "Bendito Fantasy's Gameweek 1 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw1-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-08-19",
+      "payload": {
+        "youtubeId": "_A2G8BDknZ4",
+        "duration": "58:41"
+      }
+    }
+  ]
+}
