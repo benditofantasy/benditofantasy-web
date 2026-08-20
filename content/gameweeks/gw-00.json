@@ -4,7 +4,7 @@
     "es": "Pretemporada",
     "en": "Preseason"
   },
-  "date": "2026-08-17",
+  "date": "2026-08-19",
   "tiles": [
     {
       "id": "gw0-analisis-manchester-united-chelsea",
@@ -283,18 +283,7 @@
           "NEW",
           "BHA"
         ],
-        "values": [
-          77,
-          71,
-          69,
-          63,
-          58,
-          58,
-          56,
-          55,
-          53,
-          52
-        ],
+        "values": [77,71,69,63,58,58,56,55,53,52],
         "unit": ""
       }
     },
@@ -319,30 +308,8 @@
           "es": "Goles en contra",
           "en": "Goals conceded"
         },
-        "labels": [
-          "BUR",
-          "WOL",
-          "WHU",
-          "TOT",
-          "LEE",
-          "NEW",
-          "BOU",
-          "LIV",
-          "BRE",
-          "CHE"
-        ],
-        "values": [
-          75,
-          68,
-          65,
-          57,
-          56,
-          55,
-          54,
-          53,
-          52,
-          52
-        ],
+        "labels": ["BUR","WOL","WHU","TOT","LEE","NEW","BOU","LIV","BRE","CHE"],
+        "values": [75,68,65,57,56,55,54,53,52,52],
         "unit": ""
       }
     },
@@ -362,82 +329,8 @@
       "credit": "Datos: FPL oficial",
       "date": "2026-07-23",
       "payload": {
-        "columns": [
-          {
-            "es": "Jugador",
-            "en": "Player"
-          },
-          {
-            "es": "xG",
-            "en": "xG"
-          },
-          {
-            "es": "xA",
-            "en": "xA"
-          }
-        ],
-        "rows": [
-          [
-            "Haaland",
-            25.5,
-            2.67
-          ],
-          [
-            "Thiago",
-            20.6,
-            1.83
-          ],
-          [
-            "Calvert-Lewin",
-            15.57,
-            1.06
-          ],
-          [
-            "Watkins",
-            15.4,
-            1.18
-          ],
-          [
-            "João Pedro",
-            14.91,
-            1.96
-          ],
-          [
-            "Mateta",
-            14.42,
-            1.32
-          ],
-          [
-            "Welbeck",
-            12.36,
-            1.4
-          ],
-          [
-            "Gyökeres",
-            12.26,
-            1.94
-          ],
-          [
-            "Schade",
-            12.08,
-            2.05
-          ],
-          [
-            "Mbeumo",
-            11.98,
-            4.99
-          ],
-          [
-            "Raúl",
-            11.58,
-            0.9
-          ],
-          [
-            "Enzo",
-            11.26,
-            7.26
-          ]
-        ]
+        "columns": [{"es":"Jugador","en":"Player"},{"es":"xG","en":"xG"},{"es":"xA","en":"xA"}],
+        "rows": [["Haaland",25.5,2.67],["Thiago",20.6,1.83],["Calvert-Lewin",15.57,1.06],["Watkins",15.4,1.18],["João Pedro",14.91,1.96],["Mateta",14.42,1.32],["Welbeck",12.36,1.4],["Gyökeres",12.26,1.94],["Schade",12.08,2.05],["Mbeumo",11.98,4.99],["Raúl",11.58,0.9],["Enzo",11.26,7.26]]
       }
     },
     {

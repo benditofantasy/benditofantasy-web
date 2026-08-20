@@ -1,0 +1,251 @@
+{
+  "gw": 1,
+  "label": {
+    "es": "Jornada 1",
+    "en": "Gameweek 1"
+  },
+  "date": "2026-08-19",
+  "tiles": [
+    {
+      "id": "gw1-analisis-arsenal-liverpool",
+      "type": "article",
+      "date": "2026-08-19",
+      "title": {
+        "es": "Análisis de Arsenal y Liverpool de cara al inicio de temporada",
+        "en": "Arsenal and Liverpool Analysis Ahead of the New Season"
+      },
+      "description": {
+        "es": "En la segunda entrega de nuestra serie de corresponsales, analizamos Arsenal y Liverpool: tres jugadores para elegir, uno para monitorear y uno para evitar en cada equipo.",
+        "en": "In the second installment of our correspondent series, we analyze Arsenal and Liverpool: three players to pick, one to monitor and one to avoid from each team."
+      },
+      "tag": "article",
+      "cover": "/media/thumbnails/arsenal y liverpool.png",
+      "badge": {
+        "es": "Jornada 1",
+        "en": "Gameweek 1"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/analisis-arsenal-liverpool-inicio-temporada",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "analisis-arsenal-liverpool-inicio-temporada"
+      }
+    },
+    {
+      "id": "gw1-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 1",
+        "en": "Gameweek 1"
+      },
+      "description": {
+        "es": "Se acabaron los borradores. La Premier League arranca este viernes y llega el momento de tomar las decisiones definitivas para GW1.",
+        "en": "Bendito Fantasy's Gameweek 1 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw1-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-08-19",
+      "payload": {
+        "youtubeId": "_A2G8BDknZ4",
+        "duration": "58:41"
+      }
+    },
+    {
+      "id": "fpl-stats-attack-2025-26-gw38",
+      "type": "chart",
+      "title": {
+        "es": "GW38 — Equipos más goleadores",
+        "en": "GW38 — Top scorers"
+      },
+      "description": {
+        "es": "Goles a favor por equipo hasta la GW38.",
+        "en": "Goals for by team through GW38."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.png",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-07-23",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles a favor",
+          "en": "Goals for"
+        },
+        "labels": [
+          "MCI",
+          "ARS",
+          "MUN",
+          "LIV",
+          "BOU",
+          "CHE",
+          "AVL",
+          "BRE",
+          "NEW",
+          "BHA"
+        ],
+        "values": [
+          77,
+          71,
+          69,
+          63,
+          58,
+          58,
+          56,
+          55,
+          53,
+          52
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-defense-2025-26-gw38",
+      "type": "chart",
+      "title": {
+        "es": "GW38 — Peores defensas",
+        "en": "GW38 — Most goals conceded"
+      },
+      "description": {
+        "es": "Goles en contra por equipo hasta la GW38.",
+        "en": "Goals conceded by team through GW38."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.png",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-07-23",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles en contra",
+          "en": "Goals conceded"
+        },
+        "labels": [
+          "BUR",
+          "WOL",
+          "WHU",
+          "TOT",
+          "LEE",
+          "NEW",
+          "BOU",
+          "LIV",
+          "BRE",
+          "CHE"
+        ],
+        "values": [
+          75,
+          68,
+          65,
+          57,
+          56,
+          55,
+          54,
+          53,
+          52,
+          52
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-xgxa-2025-26-gw38",
+      "type": "data",
+      "title": {
+        "es": "GW38 — Líderes de xG y xA",
+        "en": "GW38 — xG & xA leaders"
+      },
+      "description": {
+        "es": "Goles y asistencias esperados hasta la GW38.",
+        "en": "Expected goals and assists through GW38."
+      },
+      "tag": "data",
+      "cover": "/media/thumbnails/stats-card.png",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-07-23",
+      "payload": {
+        "columns": [
+          {
+            "es": "Jugador",
+            "en": "Player"
+          },
+          {
+            "es": "xG",
+            "en": "xG"
+          },
+          {
+            "es": "xA",
+            "en": "xA"
+          }
+        ],
+        "rows": [
+          [
+            "Haaland",
+            25.5,
+            2.67
+          ],
+          [
+            "Thiago",
+            20.6,
+            1.83
+          ],
+          [
+            "Calvert-Lewin",
+            15.57,
+            1.06
+          ],
+          [
+            "Watkins",
+            15.4,
+            1.18
+          ],
+          [
+            "João Pedro",
+            14.91,
+            1.96
+          ],
+          [
+            "Mateta",
+            14.42,
+            1.32
+          ],
+          [
+            "Welbeck",
+            12.36,
+            1.4
+          ],
+          [
+            "Gyökeres",
+            12.26,
+            1.94
+          ],
+          [
+            "Schade",
+            12.08,
+            2.05
+          ],
+          [
+            "Mbeumo",
+            11.98,
+            4.99
+          ],
+          [
+            "Raúl",
+            11.58,
+            0.9
+          ],
+          [
+            "Enzo",
+            11.26,
+            7.26
+          ]
+        ]
+      }
+    }
+  ]
+}
