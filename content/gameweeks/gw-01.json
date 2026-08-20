@@ -276,6 +276,33 @@
           ]
         ]
       }
+    },
+    {
+      "id": "bluesky-3mtkai6uik22n",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Otro artículo cerrando con equipos \"del big six\"",
+        "en": "Otro artículo cerrando con equipos \"del big six\""
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtkai6uik22n",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtkai6uik22n",
+        "cid": "bafyreictidlymz6kgioevgdrfj3ov5jaitdebkf6fmoi7kdvz6bt3rna3a",
+        "text": {
+          "es": "Otro artículo cerrando con equipos \"del big six\"",
+          "en": "Otro artículo cerrando con equipos \"del big six\""
+        }
+      },
+      "date": "2026-08-20"
     }
   ]
 }
