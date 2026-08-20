@@ -4,8 +4,38 @@
     "es": "Jornada 1",
     "en": "Gameweek 1"
   },
-  "date": "2026-08-19",
+  "date": "2026-08-20",
   "tiles": [
+    {
+      "id": "gw1-manchester-city-aston-villa-transicion",
+      "type": "article",
+      "date": "2026-08-20",
+      "title": {
+        "es": "Manchester City y Aston Villa: certezas, apuestas y una transición que lo cambia todo",
+        "en": "Manchester City and Aston Villa: Certainties, Gambles and a Transition That Changes Everything"
+      },
+      "description": {
+        "es": "En la tercera entrega de nuestra serie de corresponsales, analizamos Manchester City y Aston Villa: tres jugadores para elegir, uno para monitorear y uno para evitar en cada equipo.",
+        "en": "In the third installment of our correspondent series, we analyze Manchester City and Aston Villa: three players to pick, one to monitor and one to avoid from each team."
+      },
+      "tag": "article",
+      "cover": "/media/thumbnails/City-Villa.png",
+      "badge": {
+        "es": "Jornada 1",
+        "en": "Gameweek 1"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/manchester-city-aston-villa-transicion",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "manchester-city-aston-villa-transicion"
+      }
+    },
     {
       "id": "gw1-analisis-arsenal-liverpool",
       "type": "article",
