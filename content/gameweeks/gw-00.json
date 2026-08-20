@@ -4,8 +4,38 @@
     "es": "Pretemporada",
     "en": "Preseason"
   },
-  "date": "2026-08-17",
+  "date": "2026-08-19",
   "tiles": [
+    {
+      "id": "gw0-analisis-arsenal-liverpool",
+      "type": "article",
+      "date": "2026-08-19",
+      "title": {
+        "es": "Análisis de Arsenal y Liverpool de cara al inicio de temporada",
+        "en": "Arsenal and Liverpool Analysis Ahead of the New Season"
+      },
+      "description": {
+        "es": "En la segunda entrega de nuestra serie de corresponsales, analizamos Arsenal y Liverpool: tres jugadores para elegir, uno para monitorear y uno para evitar en cada equipo.",
+        "en": "In the second installment of our correspondent series, we analyze Arsenal and Liverpool: three players to pick, one to monitor and one to avoid from each team."
+      },
+      "tag": "article",
+      "cover": "/media/thumbnails/arsenal y liverpool.png",
+      "badge": {
+        "es": "Pretemporada",
+        "en": "Preseason"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/analisis-arsenal-liverpool-inicio-temporada",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "analisis-arsenal-liverpool-inicio-temporada"
+      }
+    },
     {
       "id": "gw0-analisis-manchester-united-chelsea",
       "type": "article",
