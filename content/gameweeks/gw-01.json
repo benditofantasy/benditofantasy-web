@@ -330,6 +330,33 @@
         }
       },
       "date": "2026-08-21"
+    },
+    {
+      "id": "bluesky-3mtlpqm4mms2e",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Feliz dia de la Premier League\n\nPara celebrarlo tenemos una #trivia más\n\nEl actual campeón, Arsenal, es el único equipo en lograr ganar el torneo invicto. \n\n¿Qué temporada fue la de los invencibles?\n\n",
+        "en": "Feliz dia de la Premier League\n\nPara celebrarlo tenemos una #trivia más\n\nEl actual campeón, Arsenal, es el único equipo en lograr ganar el torneo invicto. \n\n¿Qué temporada fue la de los invencibles?\n\n"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtlpqm4mms2e",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtlpqm4mms2e",
+        "cid": "bafyreifrve7xxk22zkmpjranc2hcb5jzpbdxaqsv6lzedm4w5bwzuqubxm",
+        "text": {
+          "es": "Feliz dia de la Premier League\n\nPara celebrarlo tenemos una #trivia más\n\nEl actual campeón, Arsenal, es el único equipo en lograr ganar el torneo invicto. \n\n¿Qué temporada fue la de los invencibles?\n\n#Arsenal #PremierLeague #FPL",
+          "en": "Feliz dia de la Premier League\n\nPara celebrarlo tenemos una #trivia más\n\nEl actual campeón, Arsenal, es el único equipo en lograr ganar el torneo invicto. \n\n¿Qué temporada fue la de los invencibles?\n\n#Arsenal #PremierLeague #FPL"
+        }
+      },
+      "date": "2026-08-21"
     }
   ]
 }
