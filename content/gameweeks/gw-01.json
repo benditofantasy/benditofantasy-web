@@ -303,6 +303,33 @@
         }
       },
       "date": "2026-08-20"
+    },
+    {
+      "id": "bluesky-3mtktdevevs2y",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "#Trivia #Copasantamaria\n\n¿Cuantas temporadas lleva existiendo el proyecto Bendito Fantasy?",
+        "en": "#Trivia #Copasantamaria\n\n¿Cuantas temporadas lleva existiendo el proyecto Bendito Fantasy?"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-1.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtktdevevs2y",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtktdevevs2y",
+        "cid": "bafyreibcu2duffcnfwcwx3bkyjutteh2mrrvc4sltvqavdhbgfaq6vwrhq",
+        "text": {
+          "es": "#Trivia #Copasantamaria\n\n¿Cuantas temporadas lleva existiendo el proyecto Bendito Fantasy?",
+          "en": "#Trivia #Copasantamaria\n\n¿Cuantas temporadas lleva existiendo el proyecto Bendito Fantasy?"
+        }
+      },
+      "date": "2026-08-21"
     }
   ]
 }
