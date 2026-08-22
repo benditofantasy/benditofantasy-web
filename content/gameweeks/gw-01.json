@@ -384,6 +384,33 @@
         }
       },
       "date": "2026-08-22"
+    },
+    {
+      "id": "bluesky-3mtoey2f4xk22",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Hace un año Hull City evitaba el descenso a tercera… hoy le gana 2-0 al United por primera vez en su historia.   \n\nSu regreso a la Premier ya tiene capítulo épico.\n\nLas sorpresas empezaron y nosotros ",
+        "en": "Hace un año Hull City evitaba el descenso a tercera… hoy le gana 2-0 al United por primera vez en su historia.   \n\nSu regreso a la Premier ya tiene capítulo épico.\n\nLas sorpresas empezaron y nosotros "
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtoey2f4xk22",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtoey2f4xk22",
+        "cid": "bafyreig2ojoba5wktc2ypv4ltw65nesm4etmbibvgkamg7jp6jjkberwta",
+        "text": {
+          "es": "Hace un año Hull City evitaba el descenso a tercera… hoy le gana 2-0 al United por primera vez en su historia.   \n\nSu regreso a la Premier ya tiene capítulo épico.\n\nLas sorpresas empezaron y nosotros vivimos para esto. #BenditoFantasy #PremierLeague #HullCity",
+          "en": "Hace un año Hull City evitaba el descenso a tercera… hoy le gana 2-0 al United por primera vez en su historia.   \n\nSu regreso a la Premier ya tiene capítulo épico.\n\nLas sorpresas empezaron y nosotros vivimos para esto. #BenditoFantasy #PremierLeague #HullCity"
+        }
+      },
+      "date": "2026-08-22"
     }
   ]
 }
