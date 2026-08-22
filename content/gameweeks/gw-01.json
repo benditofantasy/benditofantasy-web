@@ -357,6 +357,33 @@
         }
       },
       "date": "2026-08-21"
+    },
+    {
+      "id": "bluesky-3mtoeaqasxs22",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Lo llamamos loco, nos reimos de el, pero una vez más \n@BitacoraFantasy nos demostró porque es uno de los mas grandes jugadores de FPL de habla hispana\n\nAquí el momento cuando habló de McBurnie:\nyoutub",
+        "en": "Lo llamamos loco, nos reimos de el, pero una vez más \n@BitacoraFantasy nos demostró porque es uno de los mas grandes jugadores de FPL de habla hispana\n\nAquí el momento cuando habló de McBurnie:\nyoutub"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-1.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtoeaqasxs22",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtoeaqasxs22",
+        "cid": "bafyreigk5zjqiey757hgmemww4a2sy4pvkblx4h6zmfizwwxcut5etjppe",
+        "text": {
+          "es": "Lo llamamos loco, nos reimos de el, pero una vez más \n@BitacoraFantasy nos demostró porque es uno de los mas grandes jugadores de FPL de habla hispana\n\nAquí el momento cuando habló de McBurnie:\nyoutube.com/shorts/Naq4l...",
+          "en": "Lo llamamos loco, nos reimos de el, pero una vez más \n@BitacoraFantasy nos demostró porque es uno de los mas grandes jugadores de FPL de habla hispana\n\nAquí el momento cuando habló de McBurnie:\nyoutube.com/shorts/Naq4l..."
+        }
+      },
+      "date": "2026-08-22"
     }
   ]
 }
