@@ -7,6 +7,36 @@
   "date": "2026-08-20",
   "tiles": [
     {
+      "id": "gw1-se-rompio-la-burbuja",
+      "type": "article",
+      "date": "2026-08-23",
+      "title": {
+        "es": "Se rompió la burbuja",
+        "en": "The Bubble Burst"
+      },
+      "description": {
+        "es": "Hull y Brentford rompieron las primeras certezas de la temporada. Qué nos enseñó la Jornada 1 y qué nombres de Fantasy debemos empezar a vigilar.",
+        "en": "Hull and Brentford broke the first certainties of the season. What Gameweek 1 taught us and which Fantasy names we should start watching."
+      },
+      "tag": "article",
+      "cover": "/media/thumbnails/manchester-united-y-tottenham-pierden.png",
+      "badge": {
+        "es": "Jornada 1",
+        "en": "Gameweek 1"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/se-rompio-la-burbuja",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "se-rompio-la-burbuja"
+      }
+    },
+    {
       "id": "gw1-manchester-city-aston-villa-transicion",
       "type": "article",
       "date": "2026-08-20",
@@ -377,94 +407,13 @@
         "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtoeaqasxs22",
         "handle": "@benditofantasy",
         "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtoeaqasxs22",
-        "cid": "bafyreigk5zjqiey757hgmemww4a2sy4pvkblx4h6zmfizwwxcut5etjppe",
+        "cid": "bafyreighxqag3bw64vuhh7tzp6hfnvl3gzcgny4sxspmayc6b5rm3dq3da",
         "text": {
-          "es": "Lo llamamos loco, nos reimos de el, pero una vez más \n@BitacoraFantasy nos demostró porque es uno de los mas grandes jugadores de FPL de habla hispana\n\nAquí el momento cuando habló de McBurnie:\nyoutube.com/shorts/Naq4l...",
-          "en": "Lo llamamos loco, nos reimos de el, pero una vez más \n@BitacoraFantasy nos demostró porque es uno de los mas grandes jugadores de FPL de habla hispana\n\nAquí el momento cuando habló de McBurnie:\nyoutube.com/shorts/Naq4l..."
+          "es": "Lo llamamos loco, nos reimos de el, pero una vez más \n@BitacoraFantasy nos demostró porque es uno de los mas grandes jugadores de FPL de habla hispana\n\nAquí el momento cuando habló de McBurnie:\nyoutube.com/shorts/9T0Fd...",
+          "en": "Lo llamamos loco, nos reimos de el, pero una vez más \n@BitacoraFantasy nos demostró porque es uno de los mas grandes jugadores de FPL de habla hispana\n\nAquí el momento cuando habló de McBurnie:\nyoutube.com/shorts/9T0Fd..."
         }
       },
       "date": "2026-08-22"
-    },
-    {
-      "id": "bluesky-3mtoey2f4xk22",
-      "type": "social",
-      "title": {
-        "es": "Nueva publicación",
-        "en": "New post"
-      },
-      "description": {
-        "es": "Hace un año Hull City evitaba el descenso a tercera… hoy le gana 2-0 al United por primera vez en su historia.   \n\nSu regreso a la Premier ya tiene capítulo épico.\n\nLas sorpresas empezaron y nosotros ",
-        "en": "Hace un año Hull City evitaba el descenso a tercera… hoy le gana 2-0 al United por primera vez en su historia.   \n\nSu regreso a la Premier ya tiene capítulo épico.\n\nLas sorpresas empezaron y nosotros "
-      },
-      "tag": "social",
-      "cover": "/media/thumbnails/social-card-2.png",
-      "credit": "Bendito Fantasy",
-      "payload": {
-        "platform": "bluesky",
-        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtoey2f4xk22",
-        "handle": "@benditofantasy",
-        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtoey2f4xk22",
-        "cid": "bafyreig2ojoba5wktc2ypv4ltw65nesm4etmbibvgkamg7jp6jjkberwta",
-        "text": {
-          "es": "Hace un año Hull City evitaba el descenso a tercera… hoy le gana 2-0 al United por primera vez en su historia.   \n\nSu regreso a la Premier ya tiene capítulo épico.\n\nLas sorpresas empezaron y nosotros vivimos para esto. #BenditoFantasy #PremierLeague #HullCity",
-          "en": "Hace un año Hull City evitaba el descenso a tercera… hoy le gana 2-0 al United por primera vez en su historia.   \n\nSu regreso a la Premier ya tiene capítulo épico.\n\nLas sorpresas empezaron y nosotros vivimos para esto. #BenditoFantasy #PremierLeague #HullCity"
-        }
-      },
-      "date": "2026-08-22"
-    },
-    {
-      "id": "bluesky-3mtqw7l37z222",
-      "type": "social",
-      "title": {
-        "es": "Nueva publicación",
-        "en": "New post"
-      },
-      "description": {
-        "es": "🔵🔥 Roja para Gomes y el Villa ya pierde 4-0.  \nBrighton está pasando por encima y esto huele a goleada histórica.\n\n¿Cuántos creen que caen hoy?\n#BenditoFantasy #PremierLeague",
-        "en": "🔵🔥 Roja para Gomes y el Villa ya pierde 4-0.  \nBrighton está pasando por encima y esto huele a goleada histórica.\n\n¿Cuántos creen que caen hoy?\n#BenditoFantasy #PremierLeague"
-      },
-      "tag": "social",
-      "cover": "/media/thumbnails/social-card-1.png",
-      "credit": "Bendito Fantasy",
-      "payload": {
-        "platform": "bluesky",
-        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtqw7l37z222",
-        "handle": "@benditofantasy",
-        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtqw7l37z222",
-        "cid": "bafyreiazgg2s3jcj7f2adoepevjwljk4b7ofohq3o37hwfeoxuwwmsrc6i",
-        "text": {
-          "es": "🔵🔥 Roja para Gomes y el Villa ya pierde 4-0.  \nBrighton está pasando por encima y esto huele a goleada histórica.\n\n¿Cuántos creen que caen hoy?\n#BenditoFantasy #PremierLeague",
-          "en": "🔵🔥 Roja para Gomes y el Villa ya pierde 4-0.  \nBrighton está pasando por encima y esto huele a goleada histórica.\n\n¿Cuántos creen que caen hoy?\n#BenditoFantasy #PremierLeague"
-        }
-      },
-      "date": "2026-08-23"
-    },
-    {
-      "id": "bluesky-3mtqvnxfqs222",
-      "type": "social",
-      "title": {
-        "es": "Nueva publicación",
-        "en": "New post"
-      },
-      "description": {
-        "es": "Media hora y ya tenemos dos sorpresas gigantes.  🔵 Brighton vapulea 3-0 al Villa. 🍒 Bournemouth gana 1-0 al City con gol de Tavernier.\nLa Premier no espera… y el caos ya empezó. ¿Qué lectura te deja",
-        "en": "Media hora y ya tenemos dos sorpresas gigantes.  🔵 Brighton vapulea 3-0 al Villa. 🍒 Bournemouth gana 1-0 al City con gol de Tavernier.\nLa Premier no espera… y el caos ya empezó. ¿Qué lectura te deja"
-      },
-      "tag": "social",
-      "cover": "/media/thumbnails/social-card-2.png",
-      "credit": "Bendito Fantasy",
-      "payload": {
-        "platform": "bluesky",
-        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtqvnxfqs222",
-        "handle": "@benditofantasy",
-        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtqvnxfqs222",
-        "cid": "bafyreidsawujqbghxh7ba6ayun53jvpxeisq3jgmysdyj6mncp5vf2qvty",
-        "text": {
-          "es": "Media hora y ya tenemos dos sorpresas gigantes.  🔵 Brighton vapulea 3-0 al Villa. 🍒 Bournemouth gana 1-0 al City con gol de Tavernier.\nLa Premier no espera… y el caos ya empezó. ¿Qué lectura te deja esto rumbo a la GW1? #BenditoFantasy #PremierLeague",
-          "en": "Media hora y ya tenemos dos sorpresas gigantes.  🔵 Brighton vapulea 3-0 al Villa. 🍒 Bournemouth gana 1-0 al City con gol de Tavernier.\nLa Premier no espera… y el caos ya empezó. ¿Qué lectura te deja esto rumbo a la GW1? #BenditoFantasy #PremierLeague"
-        }
-      },
-      "date": "2026-08-23"
     }
   ]
 }
