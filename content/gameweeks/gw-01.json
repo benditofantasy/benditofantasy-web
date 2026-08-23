@@ -414,6 +414,33 @@
         }
       },
       "date": "2026-08-22"
+    },
+    {
+      "id": "bluesky-3mtrajpsgdc2a",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "⚽🔥 Golazo de Willock y conducción brutal de Wissa para el 2-1.  \nPartido abierto, frenético y con pinta de que no termina acá.\n\n¿Se viene la remontada?\n#BenditoFantasy #PremierLeague",
+        "en": "⚽🔥 Golazo de Willock y conducción brutal de Wissa para el 2-1.  \nPartido abierto, frenético y con pinta de que no termina acá.\n\n¿Se viene la remontada?\n#BenditoFantasy #PremierLeague"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mtrajpsgdc2a",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mtrajpsgdc2a",
+        "cid": "bafyreiawh53kbw66bmdurfwn5nczjka7etmc3vdomcfw4m6n2aurl5vgqy",
+        "text": {
+          "es": "⚽🔥 Golazo de Willock y conducción brutal de Wissa para el 2-1.  \nPartido abierto, frenético y con pinta de que no termina acá.\n\n¿Se viene la remontada?\n#BenditoFantasy #PremierLeague",
+          "en": "⚽🔥 Golazo de Willock y conducción brutal de Wissa para el 2-1.  \nPartido abierto, frenético y con pinta de que no termina acá.\n\n¿Se viene la remontada?\n#BenditoFantasy #PremierLeague"
+        }
+      },
+      "date": "2026-08-23"
     }
   ]
 }
