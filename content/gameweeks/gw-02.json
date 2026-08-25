@@ -1,0 +1,78 @@
+{
+  "gw": 2,
+  "label": {
+    "es": "Jornada 2",
+    "en": "Gameweek 2"
+  },
+  "date": "2026-08-23",
+  "tiles": [
+    {
+      "id": "gw2-capitan-jornada2",
+      "type": "poll",
+      "date": "2026-08-23",
+      "title": {
+        "es": "Encuesta: capitán de la Jornada 2",
+        "en": "Poll: Gameweek 2 captain"
+      },
+      "description": {
+        "es": "Terminó la Jornada 1 con más de una sorpresa. Vota por quién crees que debe llevar el brazalete en la Jornada 2.",
+        "en": "Gameweek 1 wrapped up with more than one surprise. Vote for who you think should wear the armband in Gameweek 2."
+      },
+      "tag": "poll",
+      "cover": "/media/thumbnails/poll-card.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "question": {
+          "es": "¿Quién debería ser tu capitán en la Jornada 2?",
+          "en": "Who should be your captain in Gameweek 2?"
+        },
+        "options": [
+          {
+            "id": "haaland",
+            "label": {
+              "es": "Erling Haaland (CRY, A)",
+              "en": "Erling Haaland (CRY, A)"
+            }
+          },
+          {
+            "id": "bruno-fernandes",
+            "label": {
+              "es": "Bruno Fernandes (IPS, H)",
+              "en": "Bruno Fernandes (IPS, H)"
+            }
+          },
+          {
+            "id": "joao-pedro",
+            "label": {
+              "es": "João Pedro (BHA, H)",
+              "en": "João Pedro (BHA, H)"
+            }
+          },
+          {
+            "id": "saka",
+            "label": {
+              "es": "Bukayo Saka (AVL, A)",
+              "en": "Bukayo Saka (AVL, A)"
+            }
+          },
+          {
+            "id": "isak",
+            "label": {
+              "es": "Alexander Isak (NFO, H)",
+              "en": "Alexander Isak (NFO, H)"
+            }
+          },
+          {
+            "id": "szoboszlai",
+            "label": {
+              "es": "Dominik Szoboszlai (NFO, H)",
+              "en": "Dominik Szoboszlai (NFO, H)"
+            }
+          }
+        ],
+        "closesAt": "2026-08-29T10:00:00Z",
+        "expiresAt": "2026-08-31T21:00:00Z"
+      }
+    }
+  ]
+}

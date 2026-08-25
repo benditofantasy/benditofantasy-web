@@ -7,6 +7,74 @@
   "date": "2026-08-20",
   "tiles": [
     {
+      "id": "gw0-capitan-jornada1",
+      "type": "poll",
+      "date": "2026-08-16",
+      "title": {
+        "es": "Encuesta: capitán de la Jornada 1",
+        "en": "Poll: Gameweek 1 captain"
+      },
+      "description": {
+        "es": "Arranca la temporada 2026/27. Vota por quién crees que debe llevar el brazalete en la Jornada 1.",
+        "en": "The 2026/27 season kicks off. Vote for who you think should wear the armband in Gameweek 1."
+      },
+      "tag": "poll",
+      "cover": "/media/thumbnails/poll-card.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "question": {
+          "es": "¿Quién debería ser tu capitán en la Jornada 1?",
+          "en": "Who should be your captain in Gameweek 1?"
+        },
+        "options": [
+          {
+            "id": "bruno-fernandes",
+            "label": {
+              "es": "Bruno Fernandes (HUL, A)",
+              "en": "Bruno Fernandes (HUL, A)"
+            }
+          },
+          {
+            "id": "haaland",
+            "label": {
+              "es": "Erling Haaland (BOU, H)",
+              "en": "Erling Haaland (BOU, H)"
+            }
+          },
+          {
+            "id": "saka",
+            "label": {
+              "es": "Bukayo Saka (COV, H)",
+              "en": "Bukayo Saka (COV, H)"
+            }
+          },
+          {
+            "id": "gyokeres",
+            "label": {
+              "es": "Viktor Gyökeres (COV, H)",
+              "en": "Viktor Gyökeres (COV, H)"
+            }
+          },
+          {
+            "id": "mbeumo",
+            "label": {
+              "es": "Bryan Mbeumo (HUL, A)",
+              "en": "Bryan Mbeumo (HUL, A)"
+            }
+          },
+          {
+            "id": "semenyo",
+            "label": {
+              "es": "Antoine Semenyo (BOU, H)",
+              "en": "Antoine Semenyo (BOU, H)"
+            }
+          }
+        ],
+        "closesAt": "2026-08-22T10:00:00Z",
+        "expiresAt": "2026-08-23T14:00:00Z"
+      }
+    },
+    {
       "id": "gw1-se-rompio-la-burbuja",
       "type": "article",
       "date": "2026-08-23",
