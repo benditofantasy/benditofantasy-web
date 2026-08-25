@@ -75,6 +75,32 @@
       }
     },
     {
+      "id": "gw1-mvp",
+      "type": "mvp",
+      "date": "2026-08-24",
+      "title": {
+        "es": "Rey de la Jornada 1",
+        "en": "King of Gameweek 1"
+      },
+      "description": {
+        "es": "Maxim De Cuyper fue la gran sorpresa de la Jornada 1: gol, asistencia y portería a cero en la goleada 4-0 de Brighton sobre Aston Villa.",
+        "en": "Maxim De Cuyper was Gameweek 1's biggest surprise: a goal, an assist and a clean sheet in Brighton's 4-0 rout of Aston Villa."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/De-Cuyper.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 1,
+        "season": "2026-27",
+        "playerName": "De Cuyper",
+        "points": 17,
+        "statLine": {
+          "es": "1 gol, 1 asistencia, portería a cero, 2 puntos de bonificación · BHA 4-0 AVL",
+          "en": "1 goal, 1 assist, clean sheet, 2 bonus points · BHA 4-0 AVL"
+        }
+      }
+    },
+    {
       "id": "gw1-se-rompio-la-burbuja",
       "type": "article",
       "date": "2026-08-23",

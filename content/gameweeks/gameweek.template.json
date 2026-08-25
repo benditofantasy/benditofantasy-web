@@ -21,6 +21,23 @@
       }
     },
     {
+      "_comment": "MVP — \"king of the gameweek\", optional, add once the winner is confirmed. points omitted = no verified score, slide hides the trophy/points and falls back to a plain recap label (owner rule: never fabricate a number). cover goes in /public/media/players/.",
+      "id": "gw6-mvp",
+      "type": "mvp",
+      "title": { "es": "Rey de la Jornada 6", "en": "King of Gameweek 6" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "mvp",
+      "cover": "/media/players/apellido.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 6,
+        "season": "2026-27",
+        "playerName": "…",
+        "points": 0,
+        "statLine": { "es": "…", "en": "…" }
+      }
+    },
+    {
       "_comment": "ARTICLE — link.href must match the MDX slug",
       "id": "gw6-articulo",
       "type": "article",
