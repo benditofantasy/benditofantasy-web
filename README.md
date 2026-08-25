@@ -37,7 +37,10 @@ npm run build    # build de producción
 3. **Medios:** añade las portadas a `public/media/` y referencia la ruta en `cover`.
    (Para maquetas rápidas: `node scripts/generate-placeholder-media.mjs` genera portadas
    placeholder para cualquier tile que exista en los JSON.)
-4. `git add -A && git commit -m "Jornada NN" && git push` → Vercel despliega solo.
+4. **Rey de la jornada (opcional):** en cuanto se confirme el ganador, añade un tile
+   `type: "mvp"` (ver ejemplo en el template) con su retrato en `public/media/players/`.
+   Sin `points` no aparece el trofeo — nunca inventes una cifra sin verificar.
+5. `git add -A && git commit -m "Jornada NN" && git push` → Vercel despliega solo.
 
 La jornada nueva aparece arriba automáticamente (se ordena por `gw` descendente).
 
