@@ -7,6 +7,27 @@
   "date": "2026-08-23",
   "tiles": [
     {
+      "id": "gw2-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 2",
+        "en": "Gameweek 2"
+      },
+      "description": {
+        "es": "Una jornada. Eso es todo lo que hemos visto… y ya comenzaron las ventas, las compras y las primeras dudas de la temporada.",
+        "en": "Bendito Fantasy's Gameweek 2 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw2-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-08-26",
+      "payload": {
+        "youtubeId": "glnZTjfxVug",
+        "duration": "1:01:35"
+      }
+    },
+    {
       "id": "gw2-capitan-jornada2",
       "type": "poll",
       "date": "2026-08-23",
@@ -72,7 +93,8 @@
         ],
         "closesAt": "2026-08-29T10:00:00Z",
         "expiresAt": "2026-08-31T21:00:00Z"
-      }
+      },
+      "featured": false
     },
     {
       "id": "fpl-stats-attack-2025-26-gw38",
@@ -120,7 +142,8 @@
           52
         ],
         "unit": ""
-      }
+      },
+      "featured": false
     },
     {
       "id": "fpl-stats-defense-2025-26-gw38",
@@ -168,7 +191,8 @@
           52
         ],
         "unit": ""
-      }
+      },
+      "featured": false
     },
     {
       "id": "fpl-stats-xgxa-2025-26-gw38",
@@ -262,7 +286,8 @@
             7.26
           ]
         ]
-      }
+      },
+      "featured": false
     }
   ]
 }
