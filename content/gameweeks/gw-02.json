@@ -285,6 +285,33 @@
           ]
         ]
       }
+    },
+    {
+      "id": "bluesky-3mu5it77xfk2o",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Ya se movió la encuesta y parece haber un claro ganador ahora. Aprobécho para recordarles que El deadline es hoy!",
+        "en": "Ya se movió la encuesta y parece haber un claro ganador ahora. Aprobécho para recordarles que El deadline es hoy!"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-1.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mu5it77xfk2o",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mu5it77xfk2o",
+        "cid": "bafyreiapfgj2vf3cchbhmgsjcsszg2vnd27bqhhwy5upoiv2p5spdbsz4u",
+        "text": {
+          "es": "Ya se movió la encuesta y parece haber un claro ganador ahora. Aprobécho para recordarles que El deadline es hoy!",
+          "en": "Ya se movió la encuesta y parece haber un claro ganador ahora. Aprobécho para recordarles que El deadline es hoy!"
+        }
+      },
+      "date": "2026-08-28"
     }
   ]
 }
