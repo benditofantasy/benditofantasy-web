@@ -206,7 +206,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-08-26",
+      "date": "2026-08-29",
       "payload": {
         "columns": [
           {
@@ -234,6 +234,11 @@
             0.02
           ],
           [
+            "Haaland",
+            1.4,
+            0.02
+          ],
+          [
             "Isak",
             1.09,
             0.01
@@ -249,6 +254,16 @@
             0.02
           ],
           [
+            "Foden",
+            0.99,
+            0.85
+          ],
+          [
+            "Nketiah",
+            0.96,
+            0.58
+          ],
+          [
             "Rogers",
             0.96,
             0.1
@@ -256,7 +271,7 @@
           [
             "Guéhi",
             0.89,
-            0.32
+            0.36
           ],
           [
             "Szoboszlai",
@@ -267,21 +282,6 @@
             "Emersonn",
             0.82,
             0.06
-          ],
-          [
-            "Lewis-Potter",
-            0.77,
-            0.12
-          ],
-          [
-            "Haaland",
-            0.74,
-            0.02
-          ],
-          [
-            "Gonzalo",
-            0.73,
-            0.01
           ]
         ]
       }
