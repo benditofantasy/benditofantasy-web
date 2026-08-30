@@ -312,6 +312,33 @@
         }
       },
       "date": "2026-08-28"
+    },
+    {
+      "id": "bluesky-3mucw2c35rs23",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "🔴🌟 Levanta la mano si estás viendo esto en tu equipo.  \nBruno Fernandes en modo capitán total: puntos, impacto y jornada explosiva.\n\nSus managers están volando.\n#BenditoFantasy #FPL #BrunoFernandes",
+        "en": "🔴🌟 Levanta la mano si estás viendo esto en tu equipo.  \nBruno Fernandes en modo capitán total: puntos, impacto y jornada explosiva.\n\nSus managers están volando.\n#BenditoFantasy #FPL #BrunoFernandes"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mucw2c35rs23",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mucw2c35rs23",
+        "cid": "bafyreihwerr4bm3ox4fiea3cxw7gq7277ixohfihijbhy2wzo44l2evznm",
+        "text": {
+          "es": "🔴🌟 Levanta la mano si estás viendo esto en tu equipo.  \nBruno Fernandes en modo capitán total: puntos, impacto y jornada explosiva.\n\nSus managers están volando.\n#BenditoFantasy #FPL #BrunoFernandes",
+          "en": "🔴🌟 Levanta la mano si estás viendo esto en tu equipo.  \nBruno Fernandes en modo capitán total: puntos, impacto y jornada explosiva.\n\nSus managers están volando.\n#BenditoFantasy #FPL #BrunoFernandes"
+        }
+      },
+      "date": "2026-08-30"
     }
   ]
 }
