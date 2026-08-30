@@ -206,7 +206,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-08-29",
+      "date": "2026-08-30",
       "payload": {
         "columns": [
           {
@@ -224,6 +224,16 @@
         ],
         "rows": [
           [
+            "Isak",
+            2.08,
+            0.01
+          ],
+          [
+            "Barry",
+            1.93,
+            0.09
+          ],
+          [
             "De Cuyper",
             1.47,
             0.21
@@ -239,19 +249,24 @@
             0.02
           ],
           [
-            "Isak",
-            1.09,
-            0.01
+            "Wissa",
+            1.35,
+            0.02
+          ],
+          [
+            "Igor Jesus",
+            1.29,
+            0.06
+          ],
+          [
+            "Szoboszlai",
+            1.01,
+            0.44
           ],
           [
             "Thiago",
             1,
             0.08
-          ],
-          [
-            "Wissa",
-            1,
-            0.02
           ],
           [
             "Foden",
@@ -267,21 +282,6 @@
             "Rogers",
             0.96,
             0.1
-          ],
-          [
-            "Guéhi",
-            0.89,
-            0.36
-          ],
-          [
-            "Szoboszlai",
-            0.85,
-            0.27
-          ],
-          [
-            "Emersonn",
-            0.82,
-            0.06
           ]
         ]
       }
