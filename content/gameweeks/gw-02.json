@@ -206,7 +206,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-08-30",
+      "date": "2026-08-31",
       "payload": {
         "columns": [
           {
@@ -224,9 +224,19 @@
         ],
         "rows": [
           [
+            "Mbeumo",
+            2.13,
+            0.44
+          ],
+          [
             "Isak",
             2.08,
             0.01
+          ],
+          [
+            "B.Fernandes",
+            2.03,
+            0.53
           ],
           [
             "Barry",
@@ -234,9 +244,19 @@
             0.09
           ],
           [
+            "João Pedro",
+            1.86,
+            0.1
+          ],
+          [
+            "Thiago",
+            1.8,
+            0.09
+          ],
+          [
             "De Cuyper",
-            1.47,
-            0.21
+            1.5,
+            0.26
           ],
           [
             "Hinshelwood",
@@ -249,39 +269,19 @@
             0.02
           ],
           [
+            "Isidor",
+            1.39,
+            0
+          ],
+          [
             "Wissa",
             1.35,
             0.02
           ],
           [
-            "Igor Jesus",
-            1.29,
-            0.06
-          ],
-          [
-            "Szoboszlai",
-            1.01,
-            0.44
-          ],
-          [
-            "Thiago",
-            1,
-            0.08
-          ],
-          [
-            "Foden",
-            0.99,
-            0.85
-          ],
-          [
-            "Nketiah",
-            0.96,
-            0.58
-          ],
-          [
             "Rogers",
-            0.96,
-            0.1
+            1.1,
+            1.11
           ]
         ]
       }
