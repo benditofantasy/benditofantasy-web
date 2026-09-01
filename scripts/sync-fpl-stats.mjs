@@ -53,12 +53,44 @@ async function loadStats(config) {
   return res.json();
 }
 
-function latestGameweekFile() {
+/**
+ * Every gameweek file carries a `gw` number (0 = preseason, 1 = Jornada 1, ...).
+ * Editorial content for the NEXT gameweek is often committed ahead of the
+ * engine's stats for the CURRENT one (e.g. a GW2 captain poll goes up while
+ * the engine is still reporting GW1) — so "the file with the highest name"
+ * is not the same file as "the gameweek these stats are for." Resolve the
+ * target by matching stats.gameweek against each file's own `gw` field.
+ */
+function resolveTargetFile(stats) {
   const files = fs
     .readdirSync(GAMEWEEKS_DIR)
     .filter((f) => f.endsWith(".json") && !f.includes("template"));
   if (files.length === 0) return null;
-  return files.sort().at(-1);
+
+  const byGw = files
+    .map((f) => {
+      const gw = JSON.parse(fs.readFileSync(path.join(GAMEWEEKS_DIR, f), "utf8")).gw;
+      return { file: f, gw };
+    })
+    .filter((x) => typeof x.gw === "number")
+    .sort((a, b) => a.gw - b.gw);
+  if (byGw.length === 0) return null;
+
+  // Offseason: the engine's final table belongs on the last gameweek played.
+  if (stats.seasonStatus === "offseason" || typeof stats.gameweek !== "number") {
+    return byGw.at(-1).file;
+  }
+
+  const exact = byGw.find((x) => x.gw === stats.gameweek);
+  if (exact) return exact.file;
+
+  // Engine is ahead of (or behind) any file we have a `gw` match for — fall
+  // back to the closest gameweek at or before it rather than crashing.
+  const fallback = [...byGw].reverse().find((x) => x.gw <= stats.gameweek) ?? byGw.at(-1);
+  log(
+    `No gameweek file has gw=${stats.gameweek}; falling back to ${fallback.file} (gw=${fallback.gw}).`,
+  );
+  return fallback.file;
 }
 
 /** Season "2025/26" -> slug "2025-26" for a filesystem/id-safe key. */
@@ -268,7 +300,7 @@ async function main() {
     throw new Error("Stats payload has no teams — treating as a broken source.");
   }
 
-  const fileName = latestGameweekFile();
+  const fileName = resolveTargetFile(stats);
   if (!fileName) {
     throw new Error("No gameweek file exists to attach a stats tile to.");
   }
