@@ -456,7 +456,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-08-31",
+      "date": "2026-09-01",
       "payload": {
         "columns": [
           {
@@ -475,18 +475,18 @@
         "rows": [
           [
             "Mbeumo",
-            2.13,
+            2.26,
             0.44
+          ],
+          [
+            "B.Fernandes",
+            2.1,
+            0.74
           ],
           [
             "Isak",
             2.08,
             0.01
-          ],
-          [
-            "B.Fernandes",
-            2.03,
-            0.53
           ],
           [
             "Barry",
@@ -529,9 +529,9 @@
             0.02
           ],
           [
-            "Rogers",
-            1.1,
-            1.11
+            "Saka",
+            1.27,
+            0.12
           ]
         ]
       }
