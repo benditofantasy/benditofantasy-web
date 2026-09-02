@@ -28,6 +28,32 @@
       }
     },
     {
+      "id": "gw2-mvp",
+      "type": "mvp",
+      "date": "2026-09-01",
+      "title": {
+        "es": "Rey de la Jornada 2",
+        "en": "King of Gameweek 2"
+      },
+      "description": {
+        "es": "Bruno Fernandes firmó un hat-trick y una asistencia en la goleada 5-2 del Manchester United sobre Ipswich Town, coronándose Rey de la Jornada 2.",
+        "en": "Bruno Fernandes scored a hat-trick and added an assist in Manchester United's 5-2 rout of Ipswich Town, crowning him King of Gameweek 2."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/bruno-fernandes.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 2,
+        "season": "2026-27",
+        "playerName": "Bruno Fernandes",
+        "points": 23,
+        "statLine": {
+          "es": "Hat-trick, asistencia, 3 puntos de bonificación · MUN 5-2 IPS",
+          "en": "Hat-trick, an assist, 3 bonus points · MUN 5-2 IPS"
+        }
+      }
+    },
+    {
       "id": "gw2-capitan-jornada2",
       "type": "poll",
       "date": "2026-08-23",
