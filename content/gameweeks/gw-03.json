@@ -1,0 +1,78 @@
+{
+  "gw": 3,
+  "label": {
+    "es": "Jornada 3",
+    "en": "Gameweek 3"
+  },
+  "date": "2026-09-01",
+  "tiles": [
+    {
+      "id": "gw3-capitan-jornada3",
+      "type": "poll",
+      "date": "2026-09-01",
+      "title": {
+        "es": "Encuesta: capitán de la Jornada 3",
+        "en": "Poll: Gameweek 3 captain"
+      },
+      "description": {
+        "es": "La Jornada 2 dejó ganadores claros. Vota por quién crees que debe llevar el brazalete en la Jornada 3.",
+        "en": "Gameweek 2 produced some clear winners. Vote for who you think should wear the armband in Gameweek 3."
+      },
+      "tag": "poll",
+      "cover": "/media/thumbnails/poll-card.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "question": {
+          "es": "¿Quién debería ser tu capitán en la Jornada 3?",
+          "en": "Who should be your captain in Gameweek 3?"
+        },
+        "options": [
+          {
+            "id": "bruno-fernandes",
+            "label": {
+              "es": "Bruno Fernandes (EVE, A)",
+              "en": "Bruno Fernandes (EVE, A)"
+            }
+          },
+          {
+            "id": "cherki",
+            "label": {
+              "es": "Rayan Cherki (COV, H)",
+              "en": "Rayan Cherki (COV, H)"
+            }
+          },
+          {
+            "id": "saka",
+            "label": {
+              "es": "Bukayo Saka (CHE, H)",
+              "en": "Bukayo Saka (CHE, H)"
+            }
+          },
+          {
+            "id": "joao-pedro",
+            "label": {
+              "es": "João Pedro (ARS, A)",
+              "en": "João Pedro (ARS, A)"
+            }
+          },
+          {
+            "id": "palmer",
+            "label": {
+              "es": "Cole Palmer (ARS, A)",
+              "en": "Cole Palmer (ARS, A)"
+            }
+          },
+          {
+            "id": "haaland",
+            "label": {
+              "es": "Erling Haaland (COV, H)",
+              "en": "Erling Haaland (COV, H)"
+            }
+          }
+        ],
+        "closesAt": "2026-09-05T10:00:00Z",
+        "expiresAt": "2026-09-07T21:00:00Z"
+      }
+    }
+  ]
+}
