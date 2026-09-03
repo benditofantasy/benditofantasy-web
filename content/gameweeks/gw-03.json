@@ -95,6 +95,33 @@
         "expiresAt": "2026-09-07T21:00:00Z"
       },
       "featured": false
+    },
+    {
+      "id": "bluesky-3munf46uess25",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "¿Es momento de gastar el Triple Capitán? 👀\n\nHaaland recibe a Coventry después de marcar dos en GW2, Bruno viene de una jornada monstruosa + cierre del mercado. Te esperamos\n\nGW3\nChips\nDeadline Day\nCa",
+        "en": "¿Es momento de gastar el Triple Capitán? 👀\n\nHaaland recibe a Coventry después de marcar dos en GW2, Bruno viene de una jornada monstruosa + cierre del mercado. Te esperamos\n\nGW3\nChips\nDeadline Day\nCa"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-1.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3munf46uess25",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3munf46uess25",
+        "cid": "bafyreift67eq2m2i3llzcibfgharfzrmsa7zicutzynkztumwkgvvhbvfe",
+        "text": {
+          "es": "¿Es momento de gastar el Triple Capitán? 👀\n\nHaaland recibe a Coventry después de marcar dos en GW2, Bruno viene de una jornada monstruosa + cierre del mercado. Te esperamos\n\nGW3\nChips\nDeadline Day\nCapitanía\n🎙️ Ep. 333 de Bendito Fantasy.\n\nyoutube.com/live/kJCYljK...",
+          "en": "¿Es momento de gastar el Triple Capitán? 👀\n\nHaaland recibe a Coventry después de marcar dos en GW2, Bruno viene de una jornada monstruosa + cierre del mercado. Te esperamos\n\nGW3\nChips\nDeadline Day\nCapitanía\n🎙️ Ep. 333 de Bendito Fantasy.\n\nyoutube.com/live/kJCYljK..."
+        }
+      },
+      "date": "2026-09-03"
     }
   ]
 }
