@@ -286,7 +286,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-09-05",
+      "date": "2026-09-06",
       "payload": {
         "columns": [
           {
@@ -303,6 +303,16 @@
           }
         ],
         "rows": [
+          [
+            "Haaland",
+            2.46,
+            0.5
+          ],
+          [
+            "Thiago",
+            2.3,
+            0.1
+          ],
           [
             "Isak",
             2.29,
@@ -329,39 +339,29 @@
             0.1
           ],
           [
-            "Thiago",
-            1.8,
-            0.09
+            "Foden",
+            1.61,
+            0.86
+          ],
+          [
+            "Calvert-Lewin",
+            1.61,
+            0.08
           ],
           [
             "De Cuyper",
             1.5,
-            0.26
+            0.4
           ],
           [
-            "Hinshelwood",
-            1.41,
-            0.02
-          ],
-          [
-            "Haaland",
-            1.4,
-            0.02
+            "Tavernier",
+            1.5,
+            0.34
           ],
           [
             "Isidor",
-            1.39,
-            0
-          ],
-          [
-            "Wissa",
-            1.35,
-            0.02
-          ],
-          [
-            "Saka",
-            1.27,
-            0.12
+            1.49,
+            0.01
           ]
         ]
       }
