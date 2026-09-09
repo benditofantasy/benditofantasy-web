@@ -28,6 +28,32 @@
       }
     },
     {
+      "id": "gw3-mvp",
+      "type": "mvp",
+      "date": "2026-09-09",
+      "title": {
+        "es": "Rey de la Jornada 3",
+        "en": "King of Gameweek 3"
+      },
+      "description": {
+        "es": "Tyrick Mitchell sorprendió con un doblete en la victoria 3-2 de Crystal Palace sobre Fulham, coronándose Rey de la Jornada 3.",
+        "en": "Tyrick Mitchell scored a surprise brace in Crystal Palace's 3-2 win over Fulham, crowning him King of Gameweek 3."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/mitchell.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 3,
+        "season": "2026-27",
+        "playerName": "Mitchell",
+        "points": 15,
+        "statLine": {
+          "es": "2 goles, 2 puntos de bonificación · FUL 2-3 CRY",
+          "en": "2 goals, 2 bonus points · FUL 2-3 CRY"
+        }
+      }
+    },
+    {
       "id": "gw3-capitan-jornada3",
       "type": "poll",
       "date": "2026-09-01",
