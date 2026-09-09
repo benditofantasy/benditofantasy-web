@@ -1,0 +1,78 @@
+{
+  "gw": 4,
+  "label": {
+    "es": "Jornada 4",
+    "en": "Gameweek 4"
+  },
+  "date": "2026-09-08",
+  "tiles": [
+    {
+      "id": "gw4-capitan-jornada4",
+      "type": "poll",
+      "date": "2026-09-08",
+      "title": {
+        "es": "Encuesta: capitán de la Jornada 4",
+        "en": "Poll: Gameweek 4 captain"
+      },
+      "description": {
+        "es": "La Jornada 3 dejó nuevos candidatos al brazalete. Vota por quién crees que debe ser el capitán en la Jornada 4.",
+        "en": "Gameweek 3 produced new armband contenders. Vote for who you think should be the captain in Gameweek 4."
+      },
+      "tag": "poll",
+      "cover": "/media/thumbnails/poll-card.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "question": {
+          "es": "¿Quién debería ser tu capitán en la Jornada 4?",
+          "en": "Who should be your captain in Gameweek 4?"
+        },
+        "options": [
+          {
+            "id": "palmer",
+            "label": {
+              "es": "Cole Palmer (HUL, H)",
+              "en": "Cole Palmer (HUL, H)"
+            }
+          },
+          {
+            "id": "joao-pedro",
+            "label": {
+              "es": "João Pedro (HUL, H)",
+              "en": "João Pedro (HUL, H)"
+            }
+          },
+          {
+            "id": "haaland",
+            "label": {
+              "es": "Erling Haaland (MUN, A)",
+              "en": "Erling Haaland (MUN, A)"
+            }
+          },
+          {
+            "id": "isak",
+            "label": {
+              "es": "Alexander Isak (FUL, H)",
+              "en": "Alexander Isak (FUL, H)"
+            }
+          },
+          {
+            "id": "rogers",
+            "label": {
+              "es": "Morgan Rogers (HUL, H)",
+              "en": "Morgan Rogers (HUL, H)"
+            }
+          },
+          {
+            "id": "gakpo",
+            "label": {
+              "es": "Cody Gakpo (FUL, H)",
+              "en": "Cody Gakpo (FUL, H)"
+            }
+          }
+        ],
+        "closesAt": "2026-09-12T10:00:00Z",
+        "expiresAt": "2026-09-14T21:00:00Z"
+      }
+    }
+  ]
+}
