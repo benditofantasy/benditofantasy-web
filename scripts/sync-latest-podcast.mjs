@@ -272,6 +272,22 @@ function cleanSpecialTitle(rawTitle) {
  * daily sync but not for a backfill — so yt-dlp stays the fallback for videos
  * the feed doesn't list.
  */
+/**
+ * yt-dlp's --flat-playlist title is fetched via a player client, and YouTube
+ * has been seen to hand a player client a locale-shifted, auto-translated (or
+ * otherwise garbled) title instead of the real one — e.g. stripping the "GW4"
+ * out of a Spanish title entirely — which then fails every downstream title
+ * parse (GW number, episode number, the display title itself) silently rather
+ * than erroring. The Atom feed's <title> is plain public XML with no player
+ * client involved, so prefer it wherever the feed lists the video.
+ */
+function preferFeedTitles(entries, feed) {
+  return entries.map((entry) => {
+    const fromFeed = feed?.meta?.get(entry.id);
+    return fromFeed?.title ? { ...entry, title: fromFeed.title } : entry;
+  });
+}
+
 function playlistIdFromUrl(playlistUrl) {
   const match = playlistUrl.match(/[?&]list=([^&]+)/);
   return match ? match[1] : null;
@@ -436,8 +452,11 @@ async function syncSpecial(special) {
   const filePath = path.join(ROOT, special.file);
   log(`Checking special "${special.id}" playlist: ${special.playlistUrl}`);
 
-  const entries = ytDlpJsonLines(["--flat-playlist", "--dump-json", special.playlistUrl]);
   const feed = await fetchPlaylistFeed(special.playlistUrl);
+  const entries = preferFeedTitles(
+    ytDlpJsonLines(["--flat-playlist", "--dump-json", special.playlistUrl]),
+    feed,
+  );
 
   const existing = JSON.parse(fs.readFileSync(filePath, "utf8"));
   const synced = new Set();
@@ -545,8 +564,11 @@ function warnUnroutable(titles, where, reason) {
 async function syncGameweeks(playlistUrl, preseason) {
   log(`Checking playlist: ${playlistUrl}`);
 
-  const entries = ytDlpJsonLines(["--flat-playlist", "--dump-json", playlistUrl]);
   const feed = await fetchPlaylistFeed(playlistUrl);
+  const entries = preferFeedTitles(
+    ytDlpJsonLines(["--flat-playlist", "--dump-json", playlistUrl]),
+    feed,
+  );
 
   const synced = existingYoutubeIds();
 

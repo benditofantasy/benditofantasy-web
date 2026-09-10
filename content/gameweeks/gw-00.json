@@ -7,27 +7,6 @@
   "date": "2026-08-19",
   "tiles": [
     {
-      "id": "gw0-preseason-podcast-e334",
-      "type": "podcast",
-      "date": "2026-09-10",
-      "featured": false,
-      "title": {
-        "es": "Triple ataque de Chelsea? - miniliga 01s4ww",
-        "en": "Bendito Fantasy's preseason podcast, episode 334."
-      },
-      "description": {
-        "es": "",
-        "en": "Bendito Fantasy's preseason podcast, episode 334."
-      },
-      "tag": "podcast",
-      "cover": "/media/gw0-preseason-podcast-e334.jpg",
-      "credit": "Bendito Fantasy",
-      "payload": {
-        "youtubeId": "zltRy86vw9s",
-        "duration": "1:12:39"
-      }
-    },
-    {
       "id": "gw0-analisis-manchester-united-chelsea",
       "type": "article",
       "date": "2026-08-17",
