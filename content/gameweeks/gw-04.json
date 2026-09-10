@@ -7,9 +7,31 @@
   "date": "2026-09-08",
   "tiles": [
     {
+      "id": "gw4-podcast",
+      "type": "podcast",
+      "date": "2026-09-10",
+      "featured": true,
+      "title": {
+        "es": "Jornada 4",
+        "en": "Gameweek 4"
+      },
+      "description": {
+        "es": "La Champions League regresó, la rotación empieza a complicarnos la vida y GW4 llega con varios calendarios que pueden cambiar nuestros equipos.",
+        "en": "Bendito Fantasy's Gameweek 4 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw4-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "zltRy86vw9s",
+        "duration": "1:12:39"
+      }
+    },
+    {
       "id": "gw4-capitan-jornada4",
       "type": "poll",
       "date": "2026-09-08",
+      "featured": false,
       "title": {
         "es": "Encuesta: capitán de la Jornada 4",
         "en": "Poll: Gameweek 4 captain"
