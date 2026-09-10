@@ -29,6 +29,14 @@
  * Intentionally does NOT touch git (branch/commit/PR) — that's the CI
  * workflow's job (.github/workflows/sync-youtube-podcast.yml), so this
  * script stays testable on its own via --dry-run.
+ *
+ * Every run also refreshes already-synced episodes still in the playlist
+ * feed's ~15-item recent window (see refreshSyncedTiles): the owner routinely
+ * A/B-tests a title or swaps a thumbnail on YouTube after an episode is
+ * already on the site, and without this pass that edit would never reach it.
+ * Only `title.es` and the thumbnail are ever overwritten this way — `title.en`
+ * and `description` stay untouched, since those are the mechanical fallbacks
+ * the owner hand-edits after sync.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -138,6 +146,99 @@ function existingYoutubeIds() {
     }
   }
   return ids;
+}
+
+/**
+ * Same directory sweep as existingYoutubeIds(), but keyed by id and pointing
+ * back at where the tile lives, so refreshSyncedTiles() below can write to
+ * it. Deliberately top-level tiles only (not nested `slides`): those live
+ * only in the mvp-wrapped `seasons/` rollups of past, closed seasons, which
+ * are long off the playlist feed's ~15-item recent window anyway.
+ */
+function indexSyncedTiles() {
+  const index = new Map();
+  for (const [dir, dirKind] of [
+    [GAMEWEEKS_DIR, "gameweeks"],
+    [SPECIALS_DIR, "specials"],
+    [SEASONS_DIR, "seasons"],
+  ]) {
+    if (!fs.existsSync(dir)) continue;
+    for (const file of fs.readdirSync(dir)) {
+      if (!file.endsWith(".json") || file.includes("template")) continue;
+      const filePath = path.join(dir, file);
+      const row = JSON.parse(fs.readFileSync(filePath, "utf8"));
+      for (const tile of row.tiles ?? []) {
+        if (tile.payload?.youtubeId) {
+          index.set(tile.payload.youtubeId, { filePath, dirKind, fileName: file, gw: row.gw });
+        }
+      }
+    }
+  }
+  return index;
+}
+
+/**
+ * The owner routinely A/B-tests a title or swaps a thumbnail on YouTube
+ * *after* an episode is already synced — the "already synced" check exists
+ * so a re-run doesn't re-add it, which otherwise means a post-publish edit
+ * on YouTube would never reach the site. This re-checks every video the
+ * playlist feed currently lists (its ~15 most recent uploads — already
+ * fetched by the caller, no extra requests) against what is on disk, and
+ * overwrites `title.es` and the thumbnail file in place when they differ.
+ *
+ * Bounded to the feed's recent window on purpose: an old episode's title is
+ * expected to stay put once it has scrolled off, so this never sweeps full
+ * history. And it only ever touches `title.es` + the thumbnail — never
+ * `title.en` or `description` — because those are mechanical fallbacks the
+ * owner hand-edits after sync (see cleanTitle/buildEpisodeTile), and a
+ * refresh must not silently clobber that editorial work.
+ */
+function refreshSyncedTiles(feed) {
+  if (!feed?.meta || feed.meta.size === 0) return false;
+  const index = indexSyncedTiles();
+  const dirtyFiles = new Map(); // filePath -> parsed row, pending a write
+  let changed = false;
+
+  for (const [id, meta] of feed.meta) {
+    const loc = index.get(id);
+    if (!loc) continue; // not synced (yet) — the normal new-episode path handles it
+
+    if (!dirtyFiles.has(loc.filePath)) {
+      dirtyFiles.set(loc.filePath, JSON.parse(fs.readFileSync(loc.filePath, "utf8")));
+    }
+    const row = dirtyFiles.get(loc.filePath);
+    const tile = row.tiles.find((t) => t.payload?.youtubeId === id);
+    if (!tile || !meta.title) continue;
+
+    const isPreseasonOrSpecial = loc.dirKind !== "gameweeks" || loc.fileName === "gw-00.json";
+    const newEs = isPreseasonOrSpecial ? cleanSpecialTitle(meta.title) : cleanTitle(meta.title, loc.gw).es;
+
+    if (newEs && tile.title.es !== newEs) {
+      log(`${id}: title changed on YouTube — "${tile.title.es}" -> "${newEs}".`);
+      tile.title.es = newEs;
+      changed = true;
+    }
+
+    if (tile.cover && !DRY_RUN) {
+      const coverPath = path.join(ROOT, tile.cover.replace(/^\//, ""));
+      const before = fs.existsSync(coverPath) ? fs.readFileSync(coverPath) : null;
+      if (downloadThumbnail(id, coverPath)) {
+        const after = fs.readFileSync(coverPath);
+        if (!before || !before.equals(after)) {
+          log(`${id}: thumbnail changed on YouTube — re-downloaded.`);
+          changed = true;
+        }
+      }
+    }
+  }
+
+  if (!DRY_RUN) {
+    for (const [filePath, row] of dirtyFiles) {
+      fs.writeFileSync(filePath, JSON.stringify(row, null, 2) + "\n");
+    }
+  }
+
+  return changed;
 }
 
 function parseGw(title) {
@@ -466,12 +567,14 @@ async function syncSpecial(special) {
   };
   existing.tiles.forEach(collect);
 
+  let changed = refreshSyncedTiles(feed);
+
   const candidates = entries.filter(
     (e) => !synced.has(e.id) && (e.duration ?? 0) >= MIN_EPISODE_SECONDS,
   );
   if (candidates.length === 0) {
-    log(`No new full-length episodes found for "${special.id}". Nothing to do.`);
-    return false;
+    log(`No new full-length episodes found for "${special.id}".` + (changed ? "" : " Nothing to do."));
+    return changed;
   }
 
   const byEpisode = new Map();
@@ -487,8 +590,6 @@ async function syncSpecial(special) {
   }
 
   warnUnroutable(skipped, `special "${special.id}"`, "no episode number in title");
-
-  let changed = false;
   for (const [ep, group] of byEpisode) {
     const winner = pickWinner(group);
     if (group.length > 1) {
@@ -576,13 +677,15 @@ async function syncGameweeks(playlistUrl, preseason) {
   // playlist is precisely the case where there is nothing new to find.
   await warnEpisodesMissingFromPlaylist(feed, synced);
 
+  const refreshed = refreshSyncedTiles(feed);
+
   const candidates = entries.filter(
     (e) => !synced.has(e.id) && (e.duration ?? 0) >= MIN_EPISODE_SECONDS,
   );
 
   if (candidates.length === 0) {
-    log("No new full-length episodes found. Nothing to do.");
-    return false;
+    log("No new full-length episodes found." + (refreshed ? "" : " Nothing to do."));
+    return refreshed;
   }
 
   // group new candidates by parsed gameweek number, same duplicate tie-break
@@ -613,7 +716,8 @@ async function syncGameweeks(playlistUrl, preseason) {
   );
 
   let changed =
-    preseasonEntries.length > 0 ? syncPreseason(preseasonEntries, preseason, feed) : false;
+    (preseasonEntries.length > 0 ? syncPreseason(preseasonEntries, preseason, feed) : false) ||
+    refreshed;
   for (const [gw, group] of byGw) {
     const winner = pickWinner(group);
     if (group.length > 1) {
