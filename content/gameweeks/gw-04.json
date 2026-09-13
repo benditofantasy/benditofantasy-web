@@ -95,6 +95,33 @@
         "closesAt": "2026-09-12T10:00:00Z",
         "expiresAt": "2026-09-14T21:00:00Z"
       }
+    },
+    {
+      "id": "bluesky-3mvfy4td4ic2l",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "¿Roja a Foden por actitud antideportiva?   \n\nOk… pero entonces ¿qué me dicen de la patada de Bruno en la espalda cuando Foden está en el suelo?\n\nMisma jugada, dos acciones, dos criterios. \n\nPolémicas ",
+        "en": "¿Roja a Foden por actitud antideportiva?   \n\nOk… pero entonces ¿qué me dicen de la patada de Bruno en la espalda cuando Foden está en el suelo?\n\nMisma jugada, dos acciones, dos criterios. \n\nPolémicas "
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mvfy4td4ic2l",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mvfy4td4ic2l",
+        "cid": "bafyreigaqfluv33dydv6ko6t3j2p6lppocr7tblb45qdw7y5whhd4eqmdq",
+        "text": {
+          "es": "¿Roja a Foden por actitud antideportiva?   \n\nOk… pero entonces ¿qué me dicen de la patada de Bruno en la espalda cuando Foden está en el suelo?\n\nMisma jugada, dos acciones, dos criterios. \n\nPolémicas decisiones del árbitro y del VAR. \n#BenditoFantasy #PremierLeague #MUMCI",
+          "en": "¿Roja a Foden por actitud antideportiva?   \n\nOk… pero entonces ¿qué me dicen de la patada de Bruno en la espalda cuando Foden está en el suelo?\n\nMisma jugada, dos acciones, dos criterios. \n\nPolémicas decisiones del árbitro y del VAR. \n#BenditoFantasy #PremierLeague #MUMCI"
+        }
+      },
+      "date": "2026-09-13"
     }
   ]
 }
