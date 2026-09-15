@@ -259,7 +259,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-09-14",
+      "date": "2026-09-15",
       "payload": {
         "columns": [
           {
@@ -302,6 +302,11 @@
             0.06
           ],
           [
+            "Calvert-Lewin",
+            2.48,
+            0.08
+          ],
+          [
             "Thiago",
             2.41,
             0.13
@@ -330,11 +335,6 @@
             "Groß",
             1.66,
             0.61
-          ],
-          [
-            "Gonzalo",
-            1.64,
-            0.25
           ]
         ]
       }
