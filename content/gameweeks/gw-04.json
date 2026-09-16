@@ -28,6 +28,32 @@
       }
     },
     {
+      "id": "gw4-mvp",
+      "type": "mvp",
+      "date": "2026-09-15",
+      "title": {
+        "es": "Rey de la Jornada 4",
+        "en": "King of Gameweek 4"
+      },
+      "description": {
+        "es": "Pascal Groß firmó un gol, dos asistencias y portería a cero en la goleada 5-0 de Brighton sobre Coventry, coronándose Rey de la Jornada 4.",
+        "en": "Pascal Groß scored a goal and added two assists with a clean sheet in Brighton's 5-0 rout of Coventry, crowning him King of Gameweek 4."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/gross.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 4,
+        "season": "2026-27",
+        "playerName": "Groß",
+        "points": 17,
+        "statLine": {
+          "es": "1 gol, 2 asistencias, portería a cero, 3 puntos de bonificación · COV 0-5 BHA",
+          "en": "1 goal, 2 assists, clean sheet, 3 bonus points · COV 0-5 BHA"
+        }
+      }
+    },
+    {
       "id": "gw4-capitan-jornada4",
       "type": "poll",
       "date": "2026-09-08",
