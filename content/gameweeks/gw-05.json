@@ -1,0 +1,78 @@
+{
+  "gw": 5,
+  "label": {
+    "es": "Jornada 5",
+    "en": "Gameweek 5"
+  },
+  "date": "2026-09-15",
+  "tiles": [
+    {
+      "id": "gw5-capitan-jornada5",
+      "type": "poll",
+      "date": "2026-09-15",
+      "title": {
+        "es": "Encuesta: capitán de la Jornada 5",
+        "en": "Poll: Gameweek 5 captain"
+      },
+      "description": {
+        "es": "La Jornada 4 dejó nuevas pistas. Vota por quién crees que debe llevar el brazalete en la Jornada 5.",
+        "en": "Gameweek 4 gave us a few new clues. Vote for who you think should wear the armband in Gameweek 5."
+      },
+      "tag": "poll",
+      "cover": "/media/thumbnails/poll-card.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "question": {
+          "es": "¿Quién debería ser tu capitán en la Jornada 5?",
+          "en": "Who should be your captain in Gameweek 5?"
+        },
+        "options": [
+          {
+            "id": "haaland",
+            "label": {
+              "es": "Erling Haaland (SUN, H)",
+              "en": "Erling Haaland (SUN, H)"
+            }
+          },
+          {
+            "id": "joao-pedro",
+            "label": {
+              "es": "João Pedro (BRE, A)",
+              "en": "João Pedro (BRE, A)"
+            }
+          },
+          {
+            "id": "gibbs-white",
+            "label": {
+              "es": "Morgan Gibbs-White (COV, H)",
+              "en": "Morgan Gibbs-White (COV, H)"
+            }
+          },
+          {
+            "id": "bruno-fernandes",
+            "label": {
+              "es": "Bruno Fernandes (FUL, A)",
+              "en": "Bruno Fernandes (FUL, A)"
+            }
+          },
+          {
+            "id": "saka",
+            "label": {
+              "es": "Bukayo Saka (BHA, A)",
+              "en": "Bukayo Saka (BHA, A)"
+            }
+          },
+          {
+            "id": "gross",
+            "label": {
+              "es": "Pascal Groß (ARS, H)",
+              "en": "Pascal Groß (ARS, H)"
+            }
+          }
+        ],
+        "closesAt": "2026-09-19T10:00:00Z",
+        "expiresAt": "2026-09-21T21:00:00Z"
+      }
+    }
+  ]
+}
