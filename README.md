@@ -29,9 +29,11 @@ npm run build    # build de producción
 
 1. **Copia** `content/gameweeks/gameweek.template.json` → `content/gameweeks/gw-NN.json`.
    Rellena `gw`, `label`, `date` y los tiles (borra los que no uses y las claves `_comment`).
-   El pódcast va **primero** con `"featured": true` — salvo que ya exista el tile `mvp` de esa
-   jornada, en cuyo caso el MVP pasa al frente (ver regla en el paso 4). Los `id` deben ser
-   únicos (`gwNN-…`) — son los deep-links (`/?item=<id>`).
+   El orden que escribas en el JSON es solo un punto de partida: `orderTilesByRecency`
+   (`lib/types.ts`) reordena la fila en runtime por `date` (o la fecha de la jornada si el tile
+   no tiene una propia), así que el tile más reciente siempre lidera — salvo el `mvp`, que tiene
+   prioridad fija (ver paso 4). Los `id` deben ser únicos (`gwNN-…`) — son los deep-links
+   (`/?item=<id>`).
 2. **Artículos:** crea `content/articles/<slug>.mdx` con frontmatter
    (`title`, `description`, `date`, `gw`, `author`, `cover`) y apunta el tile
    (`payload.slug` y `link.href: /articulo/<slug>`).
@@ -41,9 +43,10 @@ npm run build    # build de producción
 4. **Rey de la jornada (opcional):** en cuanto se confirme el ganador (típicamente al cierre de
    la jornada), añade un tile `type: "mvp"` (ver ejemplo en el template) con su retrato en
    `public/media/players/`. Sin `points` no aparece el trofeo — nunca inventes una cifra sin
-   verificar. **Regla fija: el tile `mvp` siempre va primero en el array `tiles` de esa jornada**
-   (desplaza al pódcast y a cualquier otro tile) — el orden del JSON es el orden de la fila, así
-   que si el MVP se añade después de otros tiles hay que reordenar el array, no solo insertarlo.
+   verificar. **Regla fija: el tile `mvp` siempre lidera la fila**, sin importar su `date` ni el
+   de ningún otro tile (incluidos los charts que un sync posterior fecha más tarde) — lo aplica
+   `orderTilesByRecency` en `lib/types.ts`, no el orden en que escribas el JSON, así que no hace
+   falta reordenar el array a mano.
 5. `git add -A && git commit -m "Jornada NN" && git push` → Vercel despliega solo.
 
 La jornada nueva aparece arriba automáticamente (se ordena por `gw` descendente).

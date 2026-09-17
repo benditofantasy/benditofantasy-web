@@ -238,12 +238,15 @@ Every layout also carries: **date + `Jornada N` + colored category tag**, **auth
 
 All embeddable in both the strip tile (thumbnail/preview) and the exploded view (full render).
 
-- **Podcast** (`featured: true`, first tile each week): YouTube embed of the weekly show. Larger tile
-  treatment. `payload: { youtubeId }`. **Exception:** once the gameweek's `mvp` (King of the
-  Gameweek) tile is added — usually at the end of the gameweek — it always takes the first slot
-  instead, ahead of the podcast and every other tile. Tile order is just JSON array order (no
-  featured/date sort in the renderer — see `components/GameweekRow.tsx`), so this means physically
-  moving the `mvp` object to the front of that gameweek's `tiles` array.
+- **Podcast** (`featured: true`, first tile each week by default): YouTube embed of the weekly show.
+  Larger tile treatment. `payload: { youtubeId }`. **Exception:** once the gameweek's `mvp` (King of
+  the Gameweek) tile is added — usually at the end of the gameweek — it always takes the first slot
+  instead, ahead of the podcast and every other tile, regardless of date. Row order isn't JSON array
+  order: `orderTilesByRecency` (`lib/types.ts`), called from `getGameweeks`/`getSpecialRows` in
+  `lib/content.ts`, sorts every row's tiles by `date` (newest first) before `GameweekRow` renders
+  them — with a fixed exception that pins any `mvp` tile to the front ahead of that date sort, so a
+  same-day stats-chart sync can't outrank it. Authoring the JSON tile order still matters only as the
+  tiebreaker for tiles that share an identical date.
 - **Article** (`Artículo`): cover image tile → exploded shows title/description/credit + "Leer más"
   to the MDX page. `payload: { slug }`.
 - **Data table** (`Datos`): styled responsive stats table (e.g. top performers, points).

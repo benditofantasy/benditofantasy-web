@@ -253,11 +253,19 @@ export function getSlides(tile: Tile): Slide[] {
  * Tiles without their own `date` (older hand-authored content, predating this
  * field) fall back to the row's date and all tie — a stable sort keeps them
  * in their original relative order, so nothing existing reshuffles.
+ *
+ * Fixed exception: an `mvp` tile (King of the Gameweek) always leads the row,
+ * ahead of every other tile regardless of date — even a same-day stats sync
+ * that would otherwise outrank it. Owner rule: the MVP is the week's closing
+ * headline once it's confirmed, so it never gets buried by a later sync.
  */
 export function orderTilesByRecency(tiles: Tile[], rowDate: string): Tile[] {
   return tiles
     .map((tile, index) => ({ tile, index, date: tile.date ?? rowDate }))
     .sort((a, b) => {
+      const aMvp = a.tile.type === "mvp";
+      const bMvp = b.tile.type === "mvp";
+      if (aMvp !== bMvp) return aMvp ? -1 : 1;
       if (a.date !== b.date) return a.date < b.date ? 1 : -1;
       return a.index - b.index;
     })
