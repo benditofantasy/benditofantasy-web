@@ -7,27 +7,6 @@
   "date": "2026-09-01",
   "tiles": [
     {
-      "id": "gw3-podcast",
-      "type": "podcast",
-      "featured": true,
-      "title": {
-        "es": "Jornada 3",
-        "en": "Gameweek 3"
-      },
-      "description": {
-        "es": "Dos jornadas fueron suficientes para poner a prueba nuestra paciencia… y GW3 llega con una de esas decisiones que pueden perseguirnos durante toda la temporada.",
-        "en": "Bendito Fantasy's Gameweek 3 podcast episode."
-      },
-      "tag": "podcast",
-      "cover": "/media/gw3-podcast.jpg",
-      "credit": "Bendito Fantasy",
-      "date": "2026-09-02",
-      "payload": {
-        "youtubeId": "kJCYljKFrrM",
-        "duration": "1:19:36"
-      }
-    },
-    {
       "id": "gw3-mvp",
       "type": "mvp",
       "date": "2026-09-09",
@@ -51,6 +30,27 @@
           "es": "2 goles, 2 puntos de bonificación · FUL 2-3 CRY",
           "en": "2 goals, 2 bonus points · FUL 2-3 CRY"
         }
+      }
+    },
+    {
+      "id": "gw3-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 3",
+        "en": "Gameweek 3"
+      },
+      "description": {
+        "es": "Dos jornadas fueron suficientes para poner a prueba nuestra paciencia… y GW3 llega con una de esas decisiones que pueden perseguirnos durante toda la temporada.",
+        "en": "Bendito Fantasy's Gameweek 3 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw3-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-09-02",
+      "payload": {
+        "youtubeId": "kJCYljKFrrM",
+        "duration": "1:19:36"
       }
     },
     {

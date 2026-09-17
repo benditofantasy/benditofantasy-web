@@ -7,27 +7,6 @@
   "date": "2026-09-08",
   "tiles": [
     {
-      "id": "gw4-podcast",
-      "type": "podcast",
-      "date": "2026-09-10",
-      "featured": true,
-      "title": {
-        "es": "Jornada 4",
-        "en": "Gameweek 4"
-      },
-      "description": {
-        "es": "La Champions League regresó, la rotación empieza a complicarnos la vida y GW4 llega con varios calendarios que pueden cambiar nuestros equipos.",
-        "en": "Bendito Fantasy's Gameweek 4 podcast episode."
-      },
-      "tag": "podcast",
-      "cover": "/media/gw4-podcast.jpg",
-      "credit": "Bendito Fantasy",
-      "payload": {
-        "youtubeId": "zltRy86vw9s",
-        "duration": "1:12:39"
-      }
-    },
-    {
       "id": "gw4-mvp",
       "type": "mvp",
       "date": "2026-09-15",
@@ -51,6 +30,27 @@
           "es": "1 gol, 2 asistencias, portería a cero, 3 puntos de bonificación · COV 0-5 BHA",
           "en": "1 goal, 2 assists, clean sheet, 3 bonus points · COV 0-5 BHA"
         }
+      }
+    },
+    {
+      "id": "gw4-podcast",
+      "type": "podcast",
+      "date": "2026-09-10",
+      "featured": true,
+      "title": {
+        "es": "Jornada 4",
+        "en": "Gameweek 4"
+      },
+      "description": {
+        "es": "La Champions League regresó, la rotación empieza a complicarnos la vida y GW4 llega con varios calendarios que pueden cambiar nuestros equipos.",
+        "en": "Bendito Fantasy's Gameweek 4 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw4-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "zltRy86vw9s",
+        "duration": "1:12:39"
       }
     },
     {

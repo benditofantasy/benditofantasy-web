@@ -239,7 +239,11 @@ Every layout also carries: **date + `Jornada N` + colored category tag**, **auth
 All embeddable in both the strip tile (thumbnail/preview) and the exploded view (full render).
 
 - **Podcast** (`featured: true`, first tile each week): YouTube embed of the weekly show. Larger tile
-  treatment. `payload: { youtubeId }`.
+  treatment. `payload: { youtubeId }`. **Exception:** once the gameweek's `mvp` (King of the
+  Gameweek) tile is added — usually at the end of the gameweek — it always takes the first slot
+  instead, ahead of the podcast and every other tile. Tile order is just JSON array order (no
+  featured/date sort in the renderer — see `components/GameweekRow.tsx`), so this means physically
+  moving the `mvp` object to the front of that gameweek's `tiles` array.
 - **Article** (`Artículo`): cover image tile → exploded shows title/description/credit + "Leer más"
   to the MDX page. `payload: { slug }`.
 - **Data table** (`Datos`): styled responsive stats table (e.g. top performers, points).

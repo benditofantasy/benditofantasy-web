@@ -29,17 +29,21 @@ npm run build    # build de producción
 
 1. **Copia** `content/gameweeks/gameweek.template.json` → `content/gameweeks/gw-NN.json`.
    Rellena `gw`, `label`, `date` y los tiles (borra los que no uses y las claves `_comment`).
-   El pódcast va **primero** con `"featured": true`. Los `id` deben ser únicos (`gwNN-…`) —
-   son los deep-links (`/?item=<id>`).
+   El pódcast va **primero** con `"featured": true` — salvo que ya exista el tile `mvp` de esa
+   jornada, en cuyo caso el MVP pasa al frente (ver regla en el paso 4). Los `id` deben ser
+   únicos (`gwNN-…`) — son los deep-links (`/?item=<id>`).
 2. **Artículos:** crea `content/articles/<slug>.mdx` con frontmatter
    (`title`, `description`, `date`, `gw`, `author`, `cover`) y apunta el tile
    (`payload.slug` y `link.href: /articulo/<slug>`).
 3. **Medios:** añade las portadas a `public/media/` y referencia la ruta en `cover`.
    (Para maquetas rápidas: `node scripts/generate-placeholder-media.mjs` genera portadas
    placeholder para cualquier tile que exista en los JSON.)
-4. **Rey de la jornada (opcional):** en cuanto se confirme el ganador, añade un tile
-   `type: "mvp"` (ver ejemplo en el template) con su retrato en `public/media/players/`.
-   Sin `points` no aparece el trofeo — nunca inventes una cifra sin verificar.
+4. **Rey de la jornada (opcional):** en cuanto se confirme el ganador (típicamente al cierre de
+   la jornada), añade un tile `type: "mvp"` (ver ejemplo en el template) con su retrato en
+   `public/media/players/`. Sin `points` no aparece el trofeo — nunca inventes una cifra sin
+   verificar. **Regla fija: el tile `mvp` siempre va primero en el array `tiles` de esa jornada**
+   (desplaza al pódcast y a cualquier otro tile) — el orden del JSON es el orden de la fila, así
+   que si el MVP se añade después de otros tiles hay que reordenar el array, no solo insertarlo.
 5. `git add -A && git commit -m "Jornada NN" && git push` → Vercel despliega solo.
 
 La jornada nueva aparece arriba automáticamente (se ordena por `gw` descendente).

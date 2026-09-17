@@ -7,27 +7,6 @@
   "date": "2026-08-23",
   "tiles": [
     {
-      "id": "gw2-podcast",
-      "type": "podcast",
-      "featured": true,
-      "title": {
-        "es": "Jornada 2",
-        "en": "Gameweek 2"
-      },
-      "description": {
-        "es": "Una jornada. Eso es todo lo que hemos visto… y ya comenzaron las ventas, las compras y las primeras dudas de la temporada.",
-        "en": "Bendito Fantasy's Gameweek 2 podcast episode."
-      },
-      "tag": "podcast",
-      "cover": "/media/gw2-podcast.jpg",
-      "credit": "Bendito Fantasy",
-      "date": "2026-08-26",
-      "payload": {
-        "youtubeId": "glnZTjfxVug",
-        "duration": "1:01:35"
-      }
-    },
-    {
       "id": "gw2-mvp",
       "type": "mvp",
       "date": "2026-09-01",
@@ -51,6 +30,27 @@
           "es": "Hat-trick, asistencia, 3 puntos de bonificación · MUN 5-2 IPS",
           "en": "Hat-trick, an assist, 3 bonus points · MUN 5-2 IPS"
         }
+      }
+    },
+    {
+      "id": "gw2-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 2",
+        "en": "Gameweek 2"
+      },
+      "description": {
+        "es": "Una jornada. Eso es todo lo que hemos visto… y ya comenzaron las ventas, las compras y las primeras dudas de la temporada.",
+        "en": "Bendito Fantasy's Gameweek 2 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw2-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-08-26",
+      "payload": {
+        "youtubeId": "glnZTjfxVug",
+        "duration": "1:01:35"
       }
     },
     {

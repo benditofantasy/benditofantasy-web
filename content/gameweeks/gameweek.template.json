@@ -1,27 +1,11 @@
 {
-  "_recipe": "COPY THIS FILE to gw-NN.json, fill it in, delete every _comment/_recipe key. Tile order = strip order; the podcast goes first with featured: true. Cover images go in /public/media/. Article bodies go in /content/articles/<slug>.mdx. See README.md §'Añadir una jornada'.",
+  "_recipe": "COPY THIS FILE to gw-NN.json, fill it in, delete every _comment/_recipe key. Tile order = strip order (no featured/date sort in the renderer). The podcast goes first with featured: true — UNTIL the mvp tile exists for this gameweek, at which point mvp ALWAYS takes the first slot instead (fixed rule, not just for the week it's added). Cover images go in /public/media/. Article bodies go in /content/articles/<slug>.mdx. See README.md §'Añadir una jornada'.",
   "gw": 6,
   "label": { "es": "Jornada 6", "en": "Gameweek 6" },
   "date": "2025-09-27",
   "tiles": [
     {
-      "_comment": "PODCAST — always first, always featured",
-      "id": "gw6-podcast",
-      "type": "podcast",
-      "featured": true,
-      "title": { "es": "…", "en": "…" },
-      "description": { "es": "…", "en": "…" },
-      "tag": "podcast",
-      "cover": "/media/gw6-podcast.jpg",
-      "credit": "Bendito Fantasy",
-      "payload": {
-        "youtubeId": "XXXXXXXXXXX",
-        "duration": "50:00",
-        "hook": { "es": "\"…\"", "en": "\"…\"" }
-      }
-    },
-    {
-      "_comment": "MVP — \"king of the gameweek\", optional, add once the winner is confirmed. points omitted = no verified score, slide hides the trophy/points and falls back to a plain recap label (owner rule: never fabricate a number). cover goes in /public/media/players/.",
+      "_comment": "MVP — \"king of the gameweek\", optional, add once the winner is confirmed (usually at the end of the gameweek). FIXED RULE: whenever this tile exists, it must be the FIRST item in the tiles array — ahead of the podcast and everything else — even though it's typically added after the other tiles already exist, so reorder the array, don't just append. points omitted = no verified score, slide hides the trophy/points and falls back to a plain recap label (owner rule: never fabricate a number). cover goes in /public/media/players/.",
       "id": "gw6-mvp",
       "type": "mvp",
       "title": { "es": "Rey de la Jornada 6", "en": "King of Gameweek 6" },
@@ -35,6 +19,22 @@
         "playerName": "…",
         "points": 0,
         "statLine": { "es": "…", "en": "…" }
+      }
+    },
+    {
+      "_comment": "PODCAST — first tile of the gameweek, unless the mvp tile above exists (then mvp leads instead). Always featured.",
+      "id": "gw6-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": { "es": "…", "en": "…" },
+      "description": { "es": "…", "en": "…" },
+      "tag": "podcast",
+      "cover": "/media/gw6-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "XXXXXXXXXXX",
+        "duration": "50:00",
+        "hook": { "es": "\"…\"", "en": "\"…\"" }
       }
     },
     {
