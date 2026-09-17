@@ -7,27 +7,6 @@
   "date": "2026-08-19",
   "tiles": [
     {
-      "id": "gw0-preseason-podcast-e335",
-      "type": "podcast",
-      "date": "2026-09-17",
-      "featured": false,
-      "title": {
-        "es": "¿Vender a Bruno? El calendario empieza a cambiar",
-        "en": "Bendito Fantasy's preseason podcast, episode 335."
-      },
-      "description": {
-        "es": "",
-        "en": "Bendito Fantasy's preseason podcast, episode 335."
-      },
-      "tag": "podcast",
-      "cover": "/media/gw0-preseason-podcast-e335.jpg",
-      "credit": "Bendito Fantasy",
-      "payload": {
-        "youtubeId": "O_uj0PaqLIg",
-        "duration": "1:13:33"
-      }
-    },
-    {
       "id": "gw0-analisis-manchester-united-chelsea",
       "type": "article",
       "date": "2026-08-17",
