@@ -7,9 +7,31 @@
   "date": "2026-09-15",
   "tiles": [
     {
+      "id": "gw5-podcast",
+      "type": "podcast",
+      "date": "2026-09-17",
+      "featured": true,
+      "title": {
+        "es": "Jornada 5",
+        "en": "Gameweek 5"
+      },
+      "description": {
+        "es": "GW5 llega con una pregunta que puede cambiar por completo la estructura de nuestros equipos: ¿seguimos pagando por los premiums que tenemos o ha llegado el momento de repartir mejor el presupuesto?",
+        "en": "Bendito Fantasy's Gameweek 5 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw5-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "youtubeId": "O_uj0PaqLIg",
+        "duration": "1:13:33"
+      }
+    },
+    {
       "id": "gw5-capitan-jornada5",
       "type": "poll",
       "date": "2026-09-15",
+      "featured": false,
       "title": {
         "es": "Encuesta: capitán de la Jornada 5",
         "en": "Poll: Gameweek 5 captain"

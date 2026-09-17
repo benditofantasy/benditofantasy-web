@@ -241,6 +241,20 @@ function refreshSyncedTiles(feed) {
   return changed;
 }
 
+/**
+ * Whether the season is already underway, i.e. at least one real gameweek
+ * file (gw-01.json..gw-38.json) exists. The preseason fallback below exists
+ * only for the gap before GW1, when an upload has no GW number to parse yet
+ * — once the season has started, an episode whose title simply omits "GW<N>"
+ * (a title-writing slip, not a preseason upload) must not silently fall into
+ * that same bucket, which is exactly what buried episode 335 in gw-00.json
+ * instead of gw-05.json.
+ */
+function seasonHasStarted() {
+  if (!fs.existsSync(GAMEWEEKS_DIR)) return false;
+  return fs.readdirSync(GAMEWEEKS_DIR).some((file) => /^gw-(0[1-9]|[12]\d|3[0-8])\.json$/.test(file));
+}
+
 function parseGw(title) {
   // Matches plain "GW25" as well as FPL's "DGW25"/"BGW25" (double/blank
   // gameweek) notation — those are real gameweek numbers, not a different
@@ -717,8 +731,10 @@ async function syncGameweeks(playlistUrl, preseason) {
       continue;
     }
     // No gameweek in the title: preseason, if it at least carries an episode
-    // number and a preseason row is configured. Otherwise genuinely unroutable.
-    if (preseason?.file && parseEpisodeNumber(entry.title)) {
+    // number, a preseason row is configured, AND the season hasn't started
+    // yet — once it has, a title missing "GW<N>" is a mistake to flag loudly,
+    // not a preseason upload to file away quietly.
+    if (preseason?.file && parseEpisodeNumber(entry.title) && !seasonHasStarted()) {
       preseasonEntries.push(entry);
       continue;
     }
@@ -728,7 +744,11 @@ async function syncGameweeks(playlistUrl, preseason) {
   warnUnroutable(
     skipped,
     "the gameweek playlist",
-    preseason?.file ? "no GW number and no episode number in title" : "no GW number in title",
+    seasonHasStarted()
+      ? "no GW number in title, and the season has already started so the preseason fallback no longer applies — add a GW<N> to the title or route it by hand"
+      : preseason?.file
+        ? "no GW number and no episode number in title"
+        : "no GW number in title",
   );
 
   let changed =
