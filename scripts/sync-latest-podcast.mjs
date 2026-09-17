@@ -493,18 +493,34 @@ async function warnEpisodesMissingFromPlaylist(feed, syncedIds) {
 /**
  * Upload date + description for one video: the feed if it lists it, otherwise
  * the (wall-prone) per-video yt-dlp call.
+ *
+ * That per-video call is the one YouTube walls hardest — it's been seen to
+ * fail on every player client for a video that's only minutes old, even when
+ * the lighter --flat-playlist listing (which is all the caller strictly
+ * needs: video id, title, duration) worked fine. Date/description are
+ * enrichment, not routing-critical, so a wall here must not block the whole
+ * episode from publishing — same mechanical-fallback-now-fix-later shape as
+ * the `en` title/description fields the owner already hand-edits after sync.
  */
 function videoMetadata(videoId, feed) {
   const fromFeed = feed?.meta?.get(videoId);
   if (fromFeed?.isoDate) return fromFeed;
   log(`${videoId}: not in the playlist feed — falling back to yt-dlp for its metadata.`);
-  const full = ytDlpJsonLines(["--dump-json", `https://www.youtube.com/watch?v=${videoId}`])[0];
-  return {
-    isoDate: full.upload_date
-      ? `${full.upload_date.slice(0, 4)}-${full.upload_date.slice(4, 6)}-${full.upload_date.slice(6, 8)}`
-      : new Date().toISOString().slice(0, 10),
-    descriptionLine: (full.description ?? "").split("\n").find((l) => l.trim().length > 0) ?? "",
-  };
+  try {
+    const full = ytDlpJsonLines(["--dump-json", `https://www.youtube.com/watch?v=${videoId}`])[0];
+    return {
+      isoDate: full.upload_date
+        ? `${full.upload_date.slice(0, 4)}-${full.upload_date.slice(4, 6)}-${full.upload_date.slice(6, 8)}`
+        : new Date().toISOString().slice(0, 10),
+      descriptionLine: (full.description ?? "").split("\n").find((l) => l.trim().length > 0) ?? "",
+    };
+  } catch (err) {
+    log(
+      `::warning::${videoId}: couldn't fetch upload date/description (feed down and yt-dlp walled) — ` +
+        `publishing with today's date and no description; fix by hand in the PR. ${err.message}`,
+    );
+    return { isoDate: new Date().toISOString().slice(0, 10), descriptionLine: "" };
+  }
 }
 
 /** Prepend an episode tile to any existing row file (a special, or preseason). */
