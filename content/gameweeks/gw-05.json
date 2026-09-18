@@ -95,6 +95,37 @@
         "closesAt": "2026-09-19T10:00:00Z",
         "expiresAt": "2026-09-21T21:00:00Z"
       }
+    },
+    {
+      "id": "gw5-la-guerra-de-los-clones",
+      "type": "article",
+      "date": "2026-09-17",
+      "featured": false,
+      "title": {
+        "es": "La guerra de los clones",
+        "en": "The Clone Wars"
+      },
+      "description": {
+        "es": "La conversación sobre los clones en FPL vuelve a encenderse: qué significa copiar equipos, cómo afecta al ranking y qué podría hacer el juego para premiar decisiones propias.",
+        "en": "The debate around FPL clones is heating up again: what copying teams means, how it can affect rankings, and what the game could do to reward independent decisions."
+      },
+      "tag": "article",
+      "cover": "/media/players/fpl-harry.png",
+      "badge": {
+        "es": "Jornada 5",
+        "en": "Gameweek 5"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/la-guerra-de-los-clones",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "la-guerra-de-los-clones"
+      }
     }
   ]
 }

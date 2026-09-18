@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import ArticleLanguageView from "@/components/ArticleLanguageView";
+import BlueskyPost from "@/components/BlueskyPost";
 import PollEmbedFromId from "@/components/PollEmbedFromId";
 import { getArticle, getArticleSlugs } from "@/lib/content";
 
@@ -9,6 +10,7 @@ import { getArticle, getArticleSlugs } from "@/lib/content";
  *  future embeddable tool, not poll-specific — add more entries here. */
 const mdxComponents = {
   Poll: ({ id }: { id: string }) => <PollEmbedFromId id={id} />,
+  BlueskyPost,
 };
 
 interface PageProps {
