@@ -259,7 +259,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.png",
       "credit": "Datos: FPL oficial",
-      "date": "2026-09-16",
+      "date": "2026-09-19",
       "payload": {
         "columns": [
           {
@@ -280,6 +280,11 @@
             "Haaland",
             3.33,
             0.51
+          ],
+          [
+            "Thiago",
+            3.13,
+            0.16
           ],
           [
             "Barry",
@@ -307,11 +312,6 @@
             0.08
           ],
           [
-            "Thiago",
-            2.41,
-            0.13
-          ],
-          [
             "B.Fernandes",
             2.28,
             1.13
@@ -327,14 +327,14 @@
             0.82
           ],
           [
+            "Rogers",
+            1.72,
+            1.23
+          ],
+          [
             "Tavernier",
             1.7,
             0.81
-          ],
-          [
-            "Groß",
-            1.66,
-            0.61
           ]
         ]
       }
