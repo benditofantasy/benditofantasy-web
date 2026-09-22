@@ -126,6 +126,196 @@
       "payload": {
         "slug": "la-guerra-de-los-clones"
       }
+    },
+    {
+      "id": "fpl-stats-attack-2026-27-gw5",
+      "type": "chart",
+      "title": {
+        "es": "GW5 — Equipos más goleadores",
+        "en": "GW5 — Top scorers"
+      },
+      "description": {
+        "es": "Goles a favor por equipo hasta la GW5.",
+        "en": "Goals for by team through GW5."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.png",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-09-22",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles a favor",
+          "en": "Goals for"
+        },
+        "labels": [
+          "BHA",
+          "MCI",
+          "BRE",
+          "CHE",
+          "NEW",
+          "ARS",
+          "MUN",
+          "IPS",
+          "LEE",
+          "LIV"
+        ],
+        "values": [
+          16,
+          13,
+          10,
+          10,
+          9,
+          8,
+          8,
+          7,
+          7,
+          7
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-defense-2026-27-gw5",
+      "type": "chart",
+      "title": {
+        "es": "GW5 — Peores defensas",
+        "en": "GW5 — Most goals conceded"
+      },
+      "description": {
+        "es": "Goles en contra por equipo hasta la GW5.",
+        "en": "Goals conceded by team through GW5."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.png",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-09-22",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles en contra",
+          "en": "Goals conceded"
+        },
+        "labels": [
+          "CHE",
+          "CRY",
+          "IPS",
+          "COV",
+          "SUN",
+          "AVL",
+          "NEW",
+          "BOU",
+          "FUL",
+          "MUN"
+        ],
+        "values": [
+          12,
+          11,
+          11,
+          10,
+          10,
+          9,
+          9,
+          8,
+          8,
+          8
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-xgxa-2026-27-gw5",
+      "type": "data",
+      "title": {
+        "es": "GW5 — Líderes de xG y xA",
+        "en": "GW5 — xG & xA leaders"
+      },
+      "description": {
+        "es": "Goles y asistencias esperados hasta la GW5.",
+        "en": "Expected goals and assists through GW5."
+      },
+      "tag": "data",
+      "cover": "/media/thumbnails/stats-card.png",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-09-22",
+      "payload": {
+        "columns": [
+          {
+            "es": "Jugador",
+            "en": "Player"
+          },
+          {
+            "es": "xG",
+            "en": "xG"
+          },
+          {
+            "es": "xA",
+            "en": "xA"
+          }
+        ],
+        "rows": [
+          [
+            "Haaland",
+            4.42,
+            0.53
+          ],
+          [
+            "Isak",
+            3.54,
+            0.08
+          ],
+          [
+            "Barry",
+            3.5,
+            0.15
+          ],
+          [
+            "Saka",
+            3.22,
+            0.98
+          ],
+          [
+            "Thiago",
+            3.13,
+            0.16
+          ],
+          [
+            "Mbeumo",
+            3.07,
+            0.8
+          ],
+          [
+            "Calvert-Lewin",
+            3,
+            0.08
+          ],
+          [
+            "Brobbey",
+            2.94,
+            0.11
+          ],
+          [
+            "B.Fernandes",
+            2.56,
+            1.32
+          ],
+          [
+            "Wissa",
+            2.35,
+            0.06
+          ],
+          [
+            "Gonzalo",
+            2.33,
+            0.58
+          ],
+          [
+            "João Pedro",
+            2.17,
+            0.19
+          ]
+        ]
+      }
     }
   ]
 }
