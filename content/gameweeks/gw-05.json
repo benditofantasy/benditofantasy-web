@@ -7,6 +7,32 @@
   "date": "2026-09-15",
   "tiles": [
     {
+      "id": "gw5-mvp",
+      "type": "mvp",
+      "date": "2026-09-22",
+      "title": {
+        "es": "Rey de la Jornada 5",
+        "en": "King of Gameweek 5"
+      },
+      "description": {
+        "es": "Brian Brobbey firmó un hat-trick en el Etihad en la derrota 5-3 de Sunderland ante el Manchester City, coronándose Rey de la Jornada 5.",
+        "en": "Brian Brobbey scored a hat-trick at the Etihad in Sunderland's 5-3 defeat to Manchester City, crowning him King of Gameweek 5."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/brobbey.png",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 5,
+        "season": "2026-27",
+        "playerName": "Brobbey",
+        "points": 17,
+        "statLine": {
+          "es": "Hat-trick, 3 puntos de bonificación · MCI 5-3 SUN",
+          "en": "Hat-trick, 3 bonus points · MCI 5-3 SUN"
+        }
+      }
+    },
+    {
       "id": "gw5-podcast",
       "type": "podcast",
       "date": "2026-09-17",
