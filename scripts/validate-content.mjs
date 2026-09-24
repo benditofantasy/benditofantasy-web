@@ -96,10 +96,33 @@ function checkArticleDates() {
   }
 }
 
+// Every deployment stores a full copy of public/, and Vercel bills Deployment
+// Storage per GB-month (Hobby cap: 10 GB). next/image resizes on the fly, so
+// originals only need ~2000px; export photos/opaque art as JPEG, not PNG.
+const MEDIA = path.join(ROOT, "public", "media");
+const MAX_MEDIA_BYTES = 1024 * 1024;
+const mediaErrors = [];
+
+function checkMediaSizes(dir) {
+  if (!fs.existsSync(dir)) return;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      checkMediaSizes(full);
+    } else {
+      const size = fs.statSync(full).size;
+      if (size > MAX_MEDIA_BYTES) {
+        mediaErrors.push(`${path.relative(ROOT, full)} is ${(size / 1048576).toFixed(1)} MB`);
+      }
+    }
+  }
+}
+
 checkRowFiles(GAMEWEEKS, true);
 checkRowFiles(SPECIALS, true);
 checkRowFiles(SEASONS, REQUIRE_SEASON_DATES);
 checkArticleDates();
+checkMediaSizes(MEDIA);
 
 if (errors.length > 0) {
   console.error(
@@ -109,7 +132,16 @@ if (errors.length > 0) {
   console.error(
     "\nEvery tile in a live row (gameweeks, specials) must carry its own publish date so\nthe homepage can order it by recency. Add a \"date\": \"YYYY-MM-DD\" to each tile above.\n",
   );
-  process.exit(1);
 }
 
-console.log("✓ Content validation passed — all live-row tiles carry a date.");
+if (mediaErrors.length > 0) {
+  console.error(`\n✗ ${mediaErrors.length} media file(s) over 1 MB:\n`);
+  for (const e of mediaErrors) console.error(`  • ${e}`);
+  console.error(
+    "\nResize to max 2000px on the long side and save as JPEG (quality ~85) unless the\nimage needs transparency. Large originals inflate every Vercel deployment.\n",
+  );
+}
+
+if (errors.length > 0 || mediaErrors.length > 0) process.exit(1);
+
+console.log("✓ Content validation passed — all live-row tiles carry a date, media under 1 MB.");

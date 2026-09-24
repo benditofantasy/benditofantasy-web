@@ -19,7 +19,7 @@
         "en": "Bruno Fernandes scored a hat-trick and added an assist in Manchester United's 5-2 rout of Ipswich Town, crowning him King of Gameweek 2."
       },
       "tag": "mvp",
-      "cover": "/media/players/bruno-fernandes.png",
+      "cover": "/media/players/bruno-fernandes.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "gw": 2,
@@ -134,7 +134,7 @@
         "en": "Ya se movió la encuesta y parece haber un claro ganador ahora. Aprobécho para recordarles que El deadline es hoy!"
       },
       "tag": "social",
-      "cover": "/media/thumbnails/social-card-1.png",
+      "cover": "/media/thumbnails/social-card-1.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "platform": "bluesky",
@@ -161,7 +161,7 @@
         "en": "🔴🌟 Levanta la mano si estás viendo esto en tu equipo.  \nBruno Fernandes en modo capitán total: puntos, impacto y jornada explosiva.\n\nSus managers están volando.\n#BenditoFantasy #FPL #BrunoFernandes"
       },
       "tag": "social",
-      "cover": "/media/thumbnails/social-card-2.png",
+      "cover": "/media/thumbnails/social-card-2.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "platform": "bluesky",
@@ -188,7 +188,7 @@
         "en": "Goals for by team through GW2."
       },
       "tag": "chart",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-09-02",
       "payload": {
@@ -236,7 +236,7 @@
         "en": "Goals conceded by team through GW2."
       },
       "tag": "chart",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-09-02",
       "payload": {
@@ -284,7 +284,7 @@
         "en": "Expected goals and assists through GW2."
       },
       "tag": "data",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-09-07",
       "payload": {

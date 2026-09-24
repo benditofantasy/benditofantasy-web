@@ -277,11 +277,11 @@ La referencia dentro del artículo y de la tarjeta debe comenzar en:
 
 Ejemplo:
 
-`public/media/players/aspe-mexico.png`
+`public/media/players/aspe-mexico.jpg`
 
 se referencia como:
 
-`/media/players/aspe-mexico.png`
+`/media/players/aspe-mexico.jpg`
 
 Antes del merge se debe confirmar:
 

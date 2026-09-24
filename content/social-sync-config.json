@@ -3,8 +3,8 @@
   "handle": "@benditofantasy",
   "blueskyHandle": "benditofantasy.bsky.social",
   "socialCardCovers": [
-    "/media/thumbnails/social-card-1.png",
-    "/media/thumbnails/social-card-2.png"
+    "/media/thumbnails/social-card-1.jpg",
+    "/media/thumbnails/social-card-2.jpg"
   ],
   "siteDomains_comment": "Posts linking to any of these domains are skipped as self-promo (we post our own article links to spread the word; surfacing them here would loop). Add every domain the site is served from.",
   "siteDomains": ["benditofantasy.com"],

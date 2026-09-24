@@ -19,7 +19,7 @@
         "en": "Maxim De Cuyper was Gameweek 1's biggest surprise: a goal, an assist and a clean sheet in Brighton's 4-0 rout of Aston Villa."
       },
       "tag": "mvp",
-      "cover": "/media/players/De-Cuyper.png",
+      "cover": "/media/players/De-Cuyper.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "gw": 1,
@@ -113,7 +113,7 @@
         "en": "Hull and Brentford broke the first certainties of the season. What Gameweek 1 taught us and which Fantasy names we should start watching."
       },
       "tag": "article",
-      "cover": "/media/thumbnails/manchester-united-y-tottenham-pierden.png",
+      "cover": "/media/thumbnails/manchester-united-y-tottenham-pierden.jpg",
       "badge": {
         "es": "Jornada 1",
         "en": "Gameweek 1"
@@ -143,7 +143,7 @@
         "en": "In the third installment of our correspondent series, we analyze Manchester City and Aston Villa: three players to pick, one to monitor and one to avoid from each team."
       },
       "tag": "article",
-      "cover": "/media/thumbnails/City-Villa.png",
+      "cover": "/media/thumbnails/City-Villa.jpg",
       "badge": {
         "es": "Jornada 1",
         "en": "Gameweek 1"
@@ -173,7 +173,7 @@
         "en": "In the second installment of our correspondent series, we analyze Arsenal and Liverpool: three players to pick, one to monitor and one to avoid from each team."
       },
       "tag": "article",
-      "cover": "/media/thumbnails/arsenal y liverpool.png",
+      "cover": "/media/thumbnails/arsenal y liverpool.jpg",
       "badge": {
         "es": "Jornada 1",
         "en": "Gameweek 1"
@@ -223,7 +223,7 @@
         "en": "Otro artículo cerrando con equipos \"del big six\""
       },
       "tag": "social",
-      "cover": "/media/thumbnails/social-card-2.png",
+      "cover": "/media/thumbnails/social-card-2.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "platform": "bluesky",
@@ -250,7 +250,7 @@
         "en": "#Trivia #Copasantamaria\n\n¿Cuantas temporadas lleva existiendo el proyecto Bendito Fantasy?"
       },
       "tag": "social",
-      "cover": "/media/thumbnails/social-card-1.png",
+      "cover": "/media/thumbnails/social-card-1.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "platform": "bluesky",
@@ -277,7 +277,7 @@
         "en": "Feliz dia de la Premier League\n\nPara celebrarlo tenemos una #trivia más\n\nEl actual campeón, Arsenal, es el único equipo en lograr ganar el torneo invicto. \n\n¿Qué temporada fue la de los invencibles?\n\n"
       },
       "tag": "social",
-      "cover": "/media/thumbnails/social-card-2.png",
+      "cover": "/media/thumbnails/social-card-2.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "platform": "bluesky",
@@ -304,7 +304,7 @@
         "en": "Lo llamamos loco, nos reimos de el, pero una vez más \n@BitacoraFantasy nos demostró porque es uno de los mas grandes jugadores de FPL de habla hispana\n\nAquí el momento cuando habló de McBurnie:\nyoutub"
       },
       "tag": "social",
-      "cover": "/media/thumbnails/social-card-1.png",
+      "cover": "/media/thumbnails/social-card-1.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "platform": "bluesky",
@@ -331,7 +331,7 @@
         "en": "⚽🔥 Golazo de Willock y conducción brutal de Wissa para el 2-1.  \nPartido abierto, frenético y con pinta de que no termina acá.\n\n¿Se viene la remontada?\n#BenditoFantasy #PremierLeague"
       },
       "tag": "social",
-      "cover": "/media/thumbnails/social-card-2.png",
+      "cover": "/media/thumbnails/social-card-2.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "platform": "bluesky",
@@ -358,7 +358,7 @@
         "en": "Goals for by team through GW1."
       },
       "tag": "chart",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-08-31",
       "payload": {
@@ -406,7 +406,7 @@
         "en": "Goals conceded by team through GW1."
       },
       "tag": "chart",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-08-31",
       "payload": {
@@ -454,7 +454,7 @@
         "en": "Expected goals and assists through GW1."
       },
       "tag": "data",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-09-01",
       "payload": {
