@@ -202,8 +202,8 @@ async function fetchInstagramPosts(userId, accessToken) {
 }
 
 const DEFAULT_COVERS = [
-  "/media/thumbnails/social-card-1.png",
-  "/media/thumbnails/social-card-2.png",
+  "/media/thumbnails/social-card-1.jpg",
+  "/media/thumbnails/social-card-2.jpg",
 ];
 
 /** How many social tiles already live in content — the rotation offset so a

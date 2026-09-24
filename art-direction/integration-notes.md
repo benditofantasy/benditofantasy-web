@@ -40,8 +40,10 @@ existing `poll-card.jpg` precedent). Exact 3:4 pixel ratio; recommend **1200×16
 
 | Kind | Folder | Pattern | Today's precedent |
 |---|---|---|---|
-| Player card | `public/media/players/` | `{player-slug}-{team-or-country-slug}.png` | `haaland-norway.png`, `messi-argentina.png` |
-| Collage card | `public/media/thumbnails/` | `{content-slug}-card[-{n}].png` | `poll-card.jpg`, `stats-card.png`, `social-card-1.png` |
+| Player card | `public/media/players/` | `{player-slug}-{team-or-country-slug}.jpg` | `haaland-norway.jpg`, `messi-argentina.jpg` |
+| Collage card | `public/media/thumbnails/` | `{content-slug}-card[-{n}].jpg` | `poll-card.jpg`, `stats-card.jpg`, `social-card-1.jpg` |
+
+Export as JPEG (max 2000px long side) unless the image needs transparency; the build fails on any file in `public/media` over 1 MB.
 
 Slugs: lowercase, ASCII-folded (é→e, ñ→n), spaces→hyphens; long names keep last name only
 (`{player-slug}` = last name, per existing files). `-{n}` suffix = `variant_index` when > 0.

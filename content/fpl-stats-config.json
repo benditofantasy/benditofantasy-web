@@ -4,7 +4,7 @@
   "topN": 10,
   "playersTopN": 12,
   "covers": {
-    "attack": "/media/thumbnails/stats-card.png",
+    "attack": "/media/thumbnails/stats-card.jpg",
     "defense": "/media/thumbnails/defense-card.png",
     "xgxa": "/media/thumbnails/xgxa-card.png"
   }

@@ -138,11 +138,11 @@ choice with no brand token** — not drift; do not "fix" them to the palette.
 
 ## Worked example (filled)
 
-Slots: `player_name=Erling Haaland`, `reference_image_path=public/media/players/haaland-norway.png`
+Slots: `player_name=Erling Haaland`, `reference_image_path=public/media/players/haaland-norway.jpg`
 (kit: dark red base → L ≈ 0.2 → **rule 1 → gold `#F2C572`**), `backdrop_shape=semicircle`,
 `aspect_ratio=3:4`.
 
-> Mid-century art. Input: the reference photo at `public/media/players/haaland-norway.png`
+> Mid-century art. Input: the reference photo at `public/media/players/haaland-norway.jpg`
 > with a main character. Output: an illustration following these instructions, composed for a
 > **3:4 portrait frame**. … *(style/character/jersey/linework/shading/color paragraphs as
 > above, verbatim)* … **Backdrop:** Large minimalist **semicircle** in **#F2C572** directly

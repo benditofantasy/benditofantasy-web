@@ -19,7 +19,7 @@
         "en": "Brian Brobbey scored a hat-trick at the Etihad in Sunderland's 5-3 defeat to Manchester City, crowning him King of Gameweek 5."
       },
       "tag": "mvp",
-      "cover": "/media/players/brobbey.png",
+      "cover": "/media/players/brobbey.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "gw": 5,
@@ -136,7 +136,7 @@
         "en": "The debate around FPL clones is heating up again: what copying teams means, how it can affect rankings, and what the game could do to reward independent decisions."
       },
       "tag": "article",
-      "cover": "/media/players/fpl-harry.png",
+      "cover": "/media/players/fpl-harry.jpg",
       "badge": {
         "es": "Jornada 5",
         "en": "Gameweek 5"
@@ -165,7 +165,7 @@
         "en": "Goals for by team through GW5."
       },
       "tag": "chart",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-09-22",
       "payload": {
@@ -213,7 +213,7 @@
         "en": "Goals conceded by team through GW5."
       },
       "tag": "chart",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-09-22",
       "payload": {
@@ -261,7 +261,7 @@
         "en": "Expected goals and assists through GW5."
       },
       "tag": "data",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-09-22",
       "payload": {

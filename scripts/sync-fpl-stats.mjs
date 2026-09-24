@@ -25,7 +25,7 @@ import path from "node:path";
 const ROOT = process.cwd();
 const CONFIG_PATH = path.join(ROOT, "content", "fpl-stats-config.json");
 const GAMEWEEKS_DIR = path.join(ROOT, "content", "gameweeks");
-const DEFAULT_COVER = "/media/thumbnails/stats-card.png";
+const DEFAULT_COVER = "/media/thumbnails/stats-card.jpg";
 
 const DRY_RUN = process.argv.includes("--dry-run");
 const FILE_ARG = (() => {

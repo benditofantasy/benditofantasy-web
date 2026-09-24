@@ -19,7 +19,7 @@
         "en": "With the Premier League season just days away, we review some of the key takeaways from Planet FPL correspondents on Manchester United and Chelsea: three players to consider, one to monitor and one to avoid."
       },
       "tag": "article",
-      "cover": "/media/thumbnails/manchester-united-y-chelsea.png",
+      "cover": "/media/thumbnails/manchester-united-y-chelsea.jpg",
       "badge": {
         "es": "Pretemporada",
         "en": "Preseason"
@@ -70,7 +70,7 @@
         "en": "The Copa Santamaria returns for a new season with only 20 spots available and a new dynamic: this time, the community will also have to come up with the questions."
       },
       "tag": "article",
-      "cover": "/media/thumbnails/copa-santamaria.png",
+      "cover": "/media/thumbnails/copa-santamaria.jpg",
       "badge": {
         "es": "Pretemporada",
         "en": "Preseason"
@@ -121,7 +121,7 @@
         "en": "The disappearance of premium players has left a void in Fantasy Premier League. Haaland does not cost £15.5m only because of his goals, but because there is no one else like him."
       },
       "tag": "article",
-      "cover": "/media/players/haaland-manchester-city.png",
+      "cover": "/media/players/haaland-manchester-city.jpg",
       "badge": {
         "es": "Pretemporada",
         "en": "Preseason"
@@ -194,7 +194,7 @@
         "en": "Goals for by team through GW38."
       },
       "tag": "chart",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-07-23",
       "payload": {
@@ -242,7 +242,7 @@
         "en": "Goals conceded by team through GW38."
       },
       "tag": "chart",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-07-23",
       "payload": {
@@ -290,7 +290,7 @@
         "en": "Expected goals and assists through GW38."
       },
       "tag": "data",
-      "cover": "/media/thumbnails/stats-card.png",
+      "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
       "date": "2026-07-23",
       "payload": {
@@ -384,7 +384,7 @@
         "en": "La Premier está de vuelta y antes de cerrar nuestros equipos para la GW1 nos acompaña @PepedelBosque \n\n¿Haaland sí o no? ¿Qué equipos atacar desde el inicio? ¿Quién puede ser la revelación?\nHablamos d"
       },
       "tag": "social",
-      "cover": "/media/thumbnails/social-card-1.png",
+      "cover": "/media/thumbnails/social-card-1.jpg",
       "credit": "Bendito Fantasy",
       "payload": {
         "platform": "bluesky",
