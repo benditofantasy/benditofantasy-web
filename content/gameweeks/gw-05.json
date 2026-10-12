@@ -263,7 +263,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-10-11",
+      "date": "2026-10-12",
       "payload": {
         "columns": [
           {
@@ -282,8 +282,13 @@
         "rows": [
           [
             "Haaland",
-            4.42,
-            0.53
+            4.82,
+            0.54
+          ],
+          [
+            "Barry",
+            4.4,
+            0.16
           ],
           [
             "Saka",
@@ -294,11 +299,6 @@
             "Isak",
             3.54,
             0.08
-          ],
-          [
-            "Barry",
-            3.5,
-            0.15
           ],
           [
             "Mbeumo",
