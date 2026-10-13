@@ -263,7 +263,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-10-12",
+      "date": "2026-10-13",
       "payload": {
         "columns": [
           {
@@ -337,8 +337,8 @@
           ],
           [
             "Wissa",
-            2.35,
-            0.06
+            2.5,
+            0.07
           ]
         ]
       }
