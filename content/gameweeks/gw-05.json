@@ -342,6 +342,196 @@
           ]
         ]
       }
+    },
+    {
+      "id": "fpl-stats-attack-2026-27-gw6",
+      "type": "chart",
+      "title": {
+        "es": "GW6 — Equipos más goleadores",
+        "en": "GW6 — Top scorers"
+      },
+      "description": {
+        "es": "Goles a favor por equipo hasta la GW6.",
+        "en": "Goals for by team through GW6."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-14",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles a favor",
+          "en": "Goals for"
+        },
+        "labels": [
+          "BHA",
+          "MCI",
+          "CHE",
+          "BRE",
+          "ARS",
+          "NEW",
+          "CRY",
+          "IPS",
+          "MUN",
+          "EVE"
+        ],
+        "values": [
+          18,
+          16,
+          15,
+          12,
+          10,
+          10,
+          9,
+          9,
+          9,
+          8
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-defense-2026-27-gw6",
+      "type": "chart",
+      "title": {
+        "es": "GW6 — Peores defensas",
+        "en": "GW6 — Most goals conceded"
+      },
+      "description": {
+        "es": "Goles en contra por equipo hasta la GW6.",
+        "en": "Goals conceded by team through GW6."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-14",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles en contra",
+          "en": "Goals conceded"
+        },
+        "labels": [
+          "BOU",
+          "CHE",
+          "NEW",
+          "CRY",
+          "IPS",
+          "SUN",
+          "AVL",
+          "COV",
+          "FUL",
+          "MUN"
+        ],
+        "values": [
+          13,
+          13,
+          13,
+          12,
+          12,
+          12,
+          11,
+          11,
+          10,
+          9
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-xgxa-2026-27-gw6",
+      "type": "data",
+      "title": {
+        "es": "GW6 — Líderes de xG y xA",
+        "en": "GW6 — xG & xA leaders"
+      },
+      "description": {
+        "es": "Goles y asistencias esperados hasta la GW6.",
+        "en": "Expected goals and assists through GW6."
+      },
+      "tag": "data",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-14",
+      "payload": {
+        "columns": [
+          {
+            "es": "Jugador",
+            "en": "Player"
+          },
+          {
+            "es": "xG",
+            "en": "xG"
+          },
+          {
+            "es": "xA",
+            "en": "xA"
+          }
+        ],
+        "rows": [
+          [
+            "Haaland",
+            4.82,
+            0.54
+          ],
+          [
+            "Barry",
+            4.4,
+            0.16
+          ],
+          [
+            "Saka",
+            3.63,
+            1.04
+          ],
+          [
+            "Isak",
+            3.54,
+            0.08
+          ],
+          [
+            "Mbeumo",
+            3.31,
+            0.9
+          ],
+          [
+            "Thiago",
+            3.2,
+            0.29
+          ],
+          [
+            "Gonzalo",
+            3,
+            0.59
+          ],
+          [
+            "Calvert-Lewin",
+            3,
+            0.08
+          ],
+          [
+            "Brobbey",
+            2.94,
+            0.11
+          ],
+          [
+            "João Pedro",
+            2.77,
+            0.29
+          ],
+          [
+            "B.Fernandes",
+            2.58,
+            1.46
+          ],
+          [
+            "Wissa",
+            2.5,
+            0.07
+          ]
+        ]
+      }
     }
   ]
 }
