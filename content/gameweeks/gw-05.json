@@ -453,7 +453,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-10-14",
+      "date": "2026-10-18",
       "payload": {
         "columns": [
           {
@@ -472,13 +472,23 @@
         "rows": [
           [
             "Haaland",
-            4.82,
-            0.54
+            5.67,
+            0.91
           ],
           [
             "Barry",
-            4.4,
+            4.7,
             0.16
+          ],
+          [
+            "Isak",
+            3.87,
+            0.1
+          ],
+          [
+            "Thiago",
+            3.69,
+            0.48
           ],
           [
             "Saka",
@@ -486,9 +496,9 @@
             1.04
           ],
           [
-            "Isak",
-            3.54,
-            0.08
+            "Gonzalo",
+            3.46,
+            0.73
           ],
           [
             "Mbeumo",
@@ -496,14 +506,9 @@
             0.9
           ],
           [
-            "Thiago",
-            3.2,
-            0.29
-          ],
-          [
-            "Gonzalo",
-            3,
-            0.59
+            "João Pedro",
+            3.05,
+            0.31
           ],
           [
             "Calvert-Lewin",
@@ -511,24 +516,19 @@
             0.08
           ],
           [
+            "Wissa",
+            2.97,
+            0.14
+          ],
+          [
             "Brobbey",
             2.94,
             0.11
           ],
           [
-            "João Pedro",
-            2.77,
-            0.29
-          ],
-          [
             "B.Fernandes",
             2.58,
             1.46
-          ],
-          [
-            "Wissa",
-            2.5,
-            0.07
           ]
         ]
       }
