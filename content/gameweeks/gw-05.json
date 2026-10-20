@@ -453,7 +453,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-10-19",
+      "date": "2026-10-20",
       "payload": {
         "columns": [
           {
@@ -472,8 +472,8 @@
         "rows": [
           [
             "Haaland",
-            5.67,
-            0.91
+            5.69,
+            0.77
           ],
           [
             "Barry",
