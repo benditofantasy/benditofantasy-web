@@ -26,6 +26,33 @@
         "youtubeId": "7L5lG1QwHP0",
         "duration": "1:10:38"
       }
+    },
+    {
+      "id": "bluesky-3mygia6yun22k",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "¿Para qué queremos tanto presupuesto si los jugadores baratos están dominando el FPL?\n\nBrighton no deja de sumar, los premiums siguen decepcionando y aparecen diferenciales interesantes para GW8.\n\nEp.",
+        "en": "¿Para qué queremos tanto presupuesto si los jugadores baratos están dominando el FPL?\n\nBrighton no deja de sumar, los premiums siguen decepcionando y aparecen diferenciales interesantes para GW8.\n\nEp."
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-1.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mygia6yun22k",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mygia6yun22k",
+        "cid": "bafyreihdra66ch6u625jxw7divmi3igbfcdfue474pnkyjfwcr4mf6w7ly",
+        "text": {
+          "es": "¿Para qué queremos tanto presupuesto si los jugadores baratos están dominando el FPL?\n\nBrighton no deja de sumar, los premiums siguen decepcionando y aparecen diferenciales interesantes para GW8.\n\nEp. 338 de Bendito Fantasy.\nyoutube.com/live/7L5lG1Q...",
+          "en": "¿Para qué queremos tanto presupuesto si los jugadores baratos están dominando el FPL?\n\nBrighton no deja de sumar, los premiums siguen decepcionando y aparecen diferenciales interesantes para GW8.\n\nEp. 338 de Bendito Fantasy.\nyoutube.com/live/7L5lG1Q..."
+        }
+      },
+      "date": "2026-10-22"
     }
   ]
 }
