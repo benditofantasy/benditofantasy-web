@@ -7,6 +7,32 @@
   "date": "2026-10-15",
   "tiles": [
     {
+      "id": "gw7-mvp",
+      "type": "mvp",
+      "date": "2026-10-21",
+      "title": {
+        "es": "Rey de la Jornada 7",
+        "en": "King of Gameweek 7"
+      },
+      "description": {
+        "es": "Pedro Neto firmó un doblete y portería a cero en la victoria 2-0 de Chelsea en casa del Everton, coronándose Rey de la Jornada 7.",
+        "en": "Pedro Neto scored twice and kept a clean sheet in Chelsea's 2-0 win at Everton, crowning him King of Gameweek 7."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/pedro-neto.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 7,
+        "season": "2026-27",
+        "playerName": "Neto",
+        "points": 15,
+        "statLine": {
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · EVE 0-2 CHE",
+          "en": "2 goals, clean sheet, 3 bonus points · EVE 0-2 CHE"
+        }
+      }
+    },
+    {
       "id": "gw7-podcast",
       "type": "podcast",
       "featured": true,
@@ -25,6 +51,196 @@
       "payload": {
         "youtubeId": "sGxjERnGWag",
         "duration": "1:02:04"
+      }
+    },
+    {
+      "id": "fpl-stats-attack-2026-27-gw7",
+      "type": "chart",
+      "title": {
+        "es": "GW7 — Equipos más goleadores",
+        "en": "GW7 — Top scorers"
+      },
+      "description": {
+        "es": "Goles a favor por equipo hasta la GW7.",
+        "en": "Goals for by team through GW7."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-21",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles a favor",
+          "en": "Goals for"
+        },
+        "labels": [
+          "BHA",
+          "MCI",
+          "CHE",
+          "BRE",
+          "ARS",
+          "IPS",
+          "MUN",
+          "NEW",
+          "BOU",
+          "CRY"
+        ],
+        "values": [
+          23,
+          19,
+          17,
+          13,
+          11,
+          11,
+          10,
+          10,
+          9,
+          9
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-defense-2026-27-gw7",
+      "type": "chart",
+      "title": {
+        "es": "GW7 — Peores defensas",
+        "en": "GW7 — Most goals conceded"
+      },
+      "description": {
+        "es": "Goles en contra por equipo hasta la GW7.",
+        "en": "Goals conceded by team through GW7."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-21",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles en contra",
+          "en": "Goals conceded"
+        },
+        "labels": [
+          "CRY",
+          "IPS",
+          "COV",
+          "NEW",
+          "SUN",
+          "BOU",
+          "CHE",
+          "AVL",
+          "FUL",
+          "MUN"
+        ],
+        "values": [
+          17,
+          15,
+          14,
+          14,
+          14,
+          13,
+          13,
+          11,
+          10,
+          10
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-xgxa-2026-27-gw7",
+      "type": "data",
+      "title": {
+        "es": "GW7 — Líderes de xG y xA",
+        "en": "GW7 — xG & xA leaders"
+      },
+      "description": {
+        "es": "Goles y asistencias esperados hasta la GW7.",
+        "en": "Expected goals and assists through GW7."
+      },
+      "tag": "data",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-21",
+      "payload": {
+        "columns": [
+          {
+            "es": "Jugador",
+            "en": "Player"
+          },
+          {
+            "es": "xG",
+            "en": "xG"
+          },
+          {
+            "es": "xA",
+            "en": "xA"
+          }
+        ],
+        "rows": [
+          [
+            "Haaland",
+            5.69,
+            0.77
+          ],
+          [
+            "Barry",
+            4.7,
+            0.16
+          ],
+          [
+            "Mbeumo",
+            3.96,
+            0.9
+          ],
+          [
+            "Isak",
+            3.87,
+            0.1
+          ],
+          [
+            "Thiago",
+            3.69,
+            0.48
+          ],
+          [
+            "Saka",
+            3.63,
+            1.2
+          ],
+          [
+            "Calvert-Lewin",
+            3.6,
+            0.13
+          ],
+          [
+            "Gonzalo",
+            3.46,
+            0.73
+          ],
+          [
+            "João Pedro",
+            3.05,
+            0.31
+          ],
+          [
+            "Wissa",
+            2.97,
+            0.14
+          ],
+          [
+            "Brobbey",
+            2.94,
+            0.11
+          ],
+          [
+            "Tavernier",
+            2.89,
+            1.12
+          ]
+        ]
       }
     }
   ]

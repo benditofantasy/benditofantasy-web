@@ -7,6 +7,32 @@
   "date": "2026-10-07",
   "tiles": [
     {
+      "id": "gw6-mvp",
+      "type": "mvp",
+      "date": "2026-10-14",
+      "title": {
+        "es": "Rey de la Jornada 6",
+        "en": "King of Gameweek 6"
+      },
+      "description": {
+        "es": "Jordan Henderson firmó un doblete y una asistencia en la goleada 5-1 de Chelsea sobre Bournemouth, coronándose Rey de la Jornada 6.",
+        "en": "Jordan Henderson scored twice and added an assist in Chelsea's 5-1 rout of Bournemouth, crowning him King of Gameweek 6."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/henderson.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 6,
+        "season": "2026-27",
+        "playerName": "Henderson",
+        "points": 18,
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · CHE 5-1 BOU",
+          "en": "2 goals, 1 assist, 3 bonus points · CHE 5-1 BOU"
+        }
+      }
+    },
+    {
       "id": "gw6-podcast",
       "type": "podcast",
       "featured": true,
@@ -25,6 +51,196 @@
       "payload": {
         "youtubeId": "DF4DdFa-Hhc",
         "duration": "1:16:28"
+      }
+    },
+    {
+      "id": "fpl-stats-attack-2026-27-gw6",
+      "type": "chart",
+      "title": {
+        "es": "GW6 — Equipos más goleadores",
+        "en": "GW6 — Top scorers"
+      },
+      "description": {
+        "es": "Goles a favor por equipo hasta la GW6.",
+        "en": "Goals for by team through GW6."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-14",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles a favor",
+          "en": "Goals for"
+        },
+        "labels": [
+          "BHA",
+          "MCI",
+          "CHE",
+          "BRE",
+          "ARS",
+          "NEW",
+          "CRY",
+          "IPS",
+          "MUN",
+          "EVE"
+        ],
+        "values": [
+          18,
+          16,
+          15,
+          12,
+          10,
+          10,
+          9,
+          9,
+          9,
+          8
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-defense-2026-27-gw6",
+      "type": "chart",
+      "title": {
+        "es": "GW6 — Peores defensas",
+        "en": "GW6 — Most goals conceded"
+      },
+      "description": {
+        "es": "Goles en contra por equipo hasta la GW6.",
+        "en": "Goals conceded by team through GW6."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-14",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles en contra",
+          "en": "Goals conceded"
+        },
+        "labels": [
+          "BOU",
+          "CHE",
+          "NEW",
+          "CRY",
+          "IPS",
+          "SUN",
+          "AVL",
+          "COV",
+          "FUL",
+          "MUN"
+        ],
+        "values": [
+          13,
+          13,
+          13,
+          12,
+          12,
+          12,
+          11,
+          11,
+          10,
+          9
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-xgxa-2026-27-gw6",
+      "type": "data",
+      "title": {
+        "es": "GW6 — Líderes de xG y xA",
+        "en": "GW6 — xG & xA leaders"
+      },
+      "description": {
+        "es": "Goles y asistencias esperados hasta la GW6.",
+        "en": "Expected goals and assists through GW6."
+      },
+      "tag": "data",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-20",
+      "payload": {
+        "columns": [
+          {
+            "es": "Jugador",
+            "en": "Player"
+          },
+          {
+            "es": "xG",
+            "en": "xG"
+          },
+          {
+            "es": "xA",
+            "en": "xA"
+          }
+        ],
+        "rows": [
+          [
+            "Haaland",
+            5.69,
+            0.77
+          ],
+          [
+            "Barry",
+            4.7,
+            0.16
+          ],
+          [
+            "Mbeumo",
+            3.96,
+            0.9
+          ],
+          [
+            "Isak",
+            3.87,
+            0.1
+          ],
+          [
+            "Thiago",
+            3.69,
+            0.48
+          ],
+          [
+            "Saka",
+            3.63,
+            1.2
+          ],
+          [
+            "Calvert-Lewin",
+            3.6,
+            0.13
+          ],
+          [
+            "Gonzalo",
+            3.46,
+            0.73
+          ],
+          [
+            "João Pedro",
+            3.05,
+            0.31
+          ],
+          [
+            "Wissa",
+            2.97,
+            0.14
+          ],
+          [
+            "Brobbey",
+            2.94,
+            0.11
+          ],
+          [
+            "Tavernier",
+            2.89,
+            1.12
+          ]
+        ]
       }
     }
   ]
