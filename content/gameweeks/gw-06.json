@@ -1,0 +1,31 @@
+{
+  "gw": 6,
+  "label": {
+    "es": "Jornada 6",
+    "en": "Gameweek 6"
+  },
+  "date": "2026-10-07",
+  "tiles": [
+    {
+      "id": "gw6-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 6",
+        "en": "Gameweek 6"
+      },
+      "description": {
+        "es": "Después de varias semanas de parón internacional, toca recordar dónde dejamos nuestros equipos y volver a pensar en FPL. GW6 llega con lesiones, dudas, calendarios que empiezan a cambiar y una capitan",
+        "en": "Bendito Fantasy's Gameweek 6 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw6-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-10-07",
+      "payload": {
+        "youtubeId": "DF4DdFa-Hhc",
+        "duration": "1:16:28"
+      }
+    }
+  ]
+}

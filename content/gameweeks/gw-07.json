@@ -1,0 +1,31 @@
+{
+  "gw": 7,
+  "label": {
+    "es": "Jornada 7",
+    "en": "Gameweek 7"
+  },
+  "date": "2026-10-15",
+  "tiles": [
+    {
+      "id": "gw7-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 7",
+        "en": "Gameweek 7"
+      },
+      "description": {
+        "es": "La Premier nos dejó un fin de semana de partidazos, polémicas y nuevas preguntas para nuestros equipos de Fantasy. Manchester City venció a Liverpool en un encuentro marcado por la expulsión, Brighton",
+        "en": "Bendito Fantasy's Gameweek 7 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw7-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-10-15",
+      "payload": {
+        "youtubeId": "sGxjERnGWag",
+        "duration": "1:02:04"
+      }
+    }
+  ]
+}
