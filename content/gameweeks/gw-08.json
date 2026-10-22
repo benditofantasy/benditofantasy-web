@@ -1,0 +1,31 @@
+{
+  "gw": 8,
+  "label": {
+    "es": "Jornada 8",
+    "en": "Gameweek 8"
+  },
+  "date": "2026-10-21",
+  "tiles": [
+    {
+      "id": "gw8-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 8",
+        "en": "Gameweek 8"
+      },
+      "description": {
+        "es": "¿Y si los jugadores más caros ya no fueran los más importantes de nuestro equipo? Después de GW7, Brighton sigue acumulando puntos, los premiums decepcionan y el presupuesto parece alcanzar para práct",
+        "en": "Bendito Fantasy's Gameweek 8 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw8-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-10-21",
+      "payload": {
+        "youtubeId": "7L5lG1QwHP0",
+        "duration": "1:10:38"
+      }
+    }
+  ]
+}
