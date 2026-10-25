@@ -163,7 +163,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-10-21",
+      "date": "2026-10-25",
       "payload": {
         "columns": [
           {
@@ -182,13 +182,13 @@
         "rows": [
           [
             "Haaland",
-            5.69,
+            6.09,
             0.77
           ],
           [
             "Barry",
-            4.7,
-            0.16
+            5.08,
+            0.17
           ],
           [
             "Mbeumo",
@@ -211,14 +211,14 @@
             1.2
           ],
           [
+            "Gonzalo",
+            3.61,
+            0.74
+          ],
+          [
             "Calvert-Lewin",
             3.6,
             0.13
-          ],
-          [
-            "Gonzalo",
-            3.46,
-            0.73
           ],
           [
             "João Pedro",
