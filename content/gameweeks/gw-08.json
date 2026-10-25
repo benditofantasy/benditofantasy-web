@@ -53,6 +53,33 @@
         }
       },
       "date": "2026-10-22"
+    },
+    {
+      "id": "bluesky-3mypfwf6sbs2n",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "La velocidad de los 3 de arriba del pool esta siendo letal. Minuto 22 y ya ganan 2-0 al poderoso Brighton",
+        "en": "La velocidad de los 3 de arriba del pool esta siendo letal. Minuto 22 y ya ganan 2-0 al poderoso Brighton"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mypfwf6sbs2n",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mypfwf6sbs2n",
+        "cid": "bafyreidwjunixp7bgnc6yvajw2gq4fuondyz53i3h7jyn3xcxxzecflqvi",
+        "text": {
+          "es": "La velocidad de los 3 de arriba del pool esta siendo letal. Minuto 22 y ya ganan 2-0 al poderoso Brighton",
+          "en": "La velocidad de los 3 de arriba del pool esta siendo letal. Minuto 22 y ya ganan 2-0 al poderoso Brighton"
+        }
+      },
+      "date": "2026-10-25"
     }
   ]
 }
