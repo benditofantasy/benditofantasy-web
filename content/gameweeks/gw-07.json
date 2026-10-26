@@ -163,7 +163,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-10-25",
+      "date": "2026-10-26",
       "payload": {
         "columns": [
           {
@@ -191,24 +191,29 @@
             0.17
           ],
           [
-            "Mbeumo",
-            3.96,
-            0.9
+            "Isak",
+            4.27,
+            0.13
           ],
           [
-            "Isak",
-            3.87,
-            0.1
+            "Mbeumo",
+            4.22,
+            0.94
           ],
           [
             "Thiago",
-            3.69,
-            0.48
+            3.78,
+            1.26
           ],
           [
             "Saka",
             3.63,
             1.2
+          ],
+          [
+            "Tavernier",
+            3.61,
+            1.33
           ],
           [
             "Gonzalo",
@@ -218,27 +223,22 @@
           [
             "Calvert-Lewin",
             3.6,
+            0.14
+          ],
+          [
+            "Brobbey",
+            3.17,
             0.13
+          ],
+          [
+            "Evanilson",
+            3.11,
+            0.98
           ],
           [
             "João Pedro",
             3.05,
             0.31
-          ],
-          [
-            "Wissa",
-            2.97,
-            0.14
-          ],
-          [
-            "Brobbey",
-            2.94,
-            0.11
-          ],
-          [
-            "Tavernier",
-            2.89,
-            1.12
           ]
         ]
       }
