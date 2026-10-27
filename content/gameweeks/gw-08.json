@@ -7,6 +7,32 @@
   "date": "2026-10-21",
   "tiles": [
     {
+      "id": "gw8-mvp",
+      "type": "mvp",
+      "date": "2026-10-26",
+      "title": {
+        "es": "Rey de la Jornada 8",
+        "en": "King of Gameweek 8"
+      },
+      "description": {
+        "es": "Gabriel Magalhães marcó y mantuvo la portería a cero en la victoria 2-0 del Arsenal sobre el Everton, coronándose Rey de la Jornada 8.",
+        "en": "Gabriel Magalhães scored and kept a clean sheet in Arsenal's 2-0 win over Everton, crowning him King of Gameweek 8."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/gabriel-magalhaes.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 8,
+        "season": "2026-27",
+        "playerName": "Gabriel",
+        "points": 17,
+        "statLine": {
+          "es": "1 gol, portería a cero, 3 puntos de bonificación · ARS 2-0 EVE",
+          "en": "1 goal, clean sheet, 3 bonus points · ARS 2-0 EVE"
+        }
+      }
+    },
+    {
       "id": "gw8-podcast",
       "type": "podcast",
       "featured": true,
