@@ -106,6 +106,37 @@
         }
       },
       "date": "2026-10-25"
+    },
+    {
+      "id": "gw8-el-verdadero-valor-de-joao-pedro",
+      "type": "article",
+      "date": "2026-10-26",
+      "featured": false,
+      "title": {
+        "es": "El verdadero valor de João Pedro no está en sus goles",
+        "en": "João Pedro's True Value Isn't in His Goals"
+      },
+      "description": {
+        "es": "Dos derrotas de Chelsea sin João Pedro abren una pregunta táctica y Fantasy: cómo su ausencia cambia el juego de Palmer y Rogers.",
+        "en": "Two Chelsea defeats without João Pedro raise a tactical and Fantasy question: how his absence changes the roles and returns of Palmer and Rogers."
+      },
+      "tag": "article",
+      "cover": "/media/players/joao-pedro.jpg",
+      "badge": {
+        "es": "Jornada 8",
+        "en": "Gameweek 8"
+      },
+      "credit": "Leo Darutto",
+      "link": {
+        "href": "/articulo/el-verdadero-valor-de-joao-pedro",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "el-verdadero-valor-de-joao-pedro"
+      }
     }
   ]
 }
