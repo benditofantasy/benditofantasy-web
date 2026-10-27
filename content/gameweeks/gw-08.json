@@ -137,6 +137,196 @@
       "payload": {
         "slug": "el-verdadero-valor-de-joao-pedro"
       }
+    },
+    {
+      "id": "fpl-stats-attack-2026-27-gw8",
+      "type": "chart",
+      "title": {
+        "es": "GW8 — Equipos más goleadores",
+        "en": "GW8 — Top scorers"
+      },
+      "description": {
+        "es": "Goles a favor por equipo hasta la GW8.",
+        "en": "Goals for by team through GW8."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-27",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles a favor",
+          "en": "Goals for"
+        },
+        "labels": [
+          "BHA",
+          "MCI",
+          "CHE",
+          "BRE",
+          "ARS",
+          "BOU",
+          "IPS",
+          "NEW",
+          "LIV",
+          "MUN"
+        ],
+        "values": [
+          23,
+          20,
+          17,
+          14,
+          13,
+          12,
+          12,
+          12,
+          11,
+          10
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-defense-2026-27-gw8",
+      "type": "chart",
+      "title": {
+        "es": "GW8 — Peores defensas",
+        "en": "GW8 — Most goals conceded"
+      },
+      "description": {
+        "es": "Goles en contra por equipo hasta la GW8.",
+        "en": "Goals conceded by team through GW8."
+      },
+      "tag": "chart",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-27",
+      "payload": {
+        "chartType": "bar",
+        "seriesLabel": {
+          "es": "Goles en contra",
+          "en": "Goals conceded"
+        },
+        "labels": [
+          "CRY",
+          "IPS",
+          "CHE",
+          "COV",
+          "NEW",
+          "SUN",
+          "BOU",
+          "MUN",
+          "AVL",
+          "FUL"
+        ],
+        "values": [
+          19,
+          16,
+          15,
+          15,
+          14,
+          14,
+          13,
+          13,
+          12,
+          10
+        ],
+        "unit": ""
+      }
+    },
+    {
+      "id": "fpl-stats-xgxa-2026-27-gw8",
+      "type": "data",
+      "title": {
+        "es": "GW8 — Líderes de xG y xA",
+        "en": "GW8 — xG & xA leaders"
+      },
+      "description": {
+        "es": "Goles y asistencias esperados hasta la GW8.",
+        "en": "Expected goals and assists through GW8."
+      },
+      "tag": "data",
+      "cover": "/media/thumbnails/stats-card.jpg",
+      "credit": "Datos: FPL oficial",
+      "date": "2026-10-27",
+      "payload": {
+        "columns": [
+          {
+            "es": "Jugador",
+            "en": "Player"
+          },
+          {
+            "es": "xG",
+            "en": "xG"
+          },
+          {
+            "es": "xA",
+            "en": "xA"
+          }
+        ],
+        "rows": [
+          [
+            "Haaland",
+            6.09,
+            0.77
+          ],
+          [
+            "Barry",
+            5.08,
+            0.17
+          ],
+          [
+            "Isak",
+            4.27,
+            0.13
+          ],
+          [
+            "Mbeumo",
+            4.22,
+            0.94
+          ],
+          [
+            "Thiago",
+            3.78,
+            1.26
+          ],
+          [
+            "Saka",
+            3.63,
+            1.2
+          ],
+          [
+            "Tavernier",
+            3.61,
+            1.33
+          ],
+          [
+            "Gonzalo",
+            3.61,
+            0.74
+          ],
+          [
+            "Calvert-Lewin",
+            3.6,
+            0.14
+          ],
+          [
+            "Brobbey",
+            3.17,
+            0.13
+          ],
+          [
+            "Evanilson",
+            3.11,
+            0.98
+          ],
+          [
+            "João Pedro",
+            3.05,
+            0.31
+          ]
+        ]
+      }
     }
   ]
 }
