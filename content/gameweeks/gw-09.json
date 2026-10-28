@@ -1,0 +1,79 @@
+{
+  "gw": 9,
+  "label": {
+    "es": "Jornada 9",
+    "en": "Gameweek 9"
+  },
+  "date": "2026-10-27",
+  "tiles": [
+    {
+      "id": "gw9-capitan-jornada9",
+      "type": "poll",
+      "date": "2026-10-27",
+      "featured": false,
+      "title": {
+        "es": "Encuesta: capitán de la Jornada 9",
+        "en": "Poll: Gameweek 9 captain"
+      },
+      "description": {
+        "es": "Haaland vuelve a ser el capitán por defecto, pero hay diferenciales con forma. Vota por quién debe llevar el brazalete en la Jornada 9.",
+        "en": "Haaland is the default armband again, but there are in-form differentials. Vote for who should wear the armband in Gameweek 9."
+      },
+      "tag": "poll",
+      "cover": "/media/thumbnails/poll-card.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "question": {
+          "es": "¿Quién debería ser tu capitán en la Jornada 9?",
+          "en": "Who should be your captain in Gameweek 9?"
+        },
+        "options": [
+          {
+            "id": "haaland",
+            "label": {
+              "es": "Erling Haaland (BHA, H)",
+              "en": "Erling Haaland (BHA, H)"
+            }
+          },
+          {
+            "id": "evanilson",
+            "label": {
+              "es": "Evanilson (LEE, H)",
+              "en": "Evanilson (LEE, H)"
+            }
+          },
+          {
+            "id": "jackson",
+            "label": {
+              "es": "Nicolas Jackson (FUL, H)",
+              "en": "Nicolas Jackson (FUL, H)"
+            }
+          },
+          {
+            "id": "tavernier",
+            "label": {
+              "es": "Marcus Tavernier (LEE, H)",
+              "en": "Marcus Tavernier (LEE, H)"
+            }
+          },
+          {
+            "id": "isak",
+            "label": {
+              "es": "Alexander Isak (ARS, H)",
+              "en": "Alexander Isak (ARS, H)"
+            }
+          },
+          {
+            "id": "cherki",
+            "label": {
+              "es": "Rayan Cherki (BHA, H)",
+              "en": "Rayan Cherki (BHA, H)"
+            }
+          }
+        ],
+        "closesAt": "2026-10-31T11:00:00Z",
+        "expiresAt": "2026-11-02T21:00:00Z"
+      }
+    }
+  ]
+}
