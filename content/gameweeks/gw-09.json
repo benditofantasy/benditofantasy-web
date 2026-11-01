@@ -74,6 +74,33 @@
         "closesAt": "2026-10-31T11:00:00Z",
         "expiresAt": "2026-11-02T21:00:00Z"
       }
+    },
+    {
+      "id": "bluesky-3mz7dslucs22n",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "⚽️🔥 Evanilson anotó. Jackson anotó.\nYour move, Mr. Isak.\nA ver si puedes seguirle el ritmo a los delanteros más populares de esta GW9.\n👀 La presión ya está puesta.\n#FPL #FantasyPremierLeague #Isak #",
+        "en": "⚽️🔥 Evanilson anotó. Jackson anotó.\nYour move, Mr. Isak.\nA ver si puedes seguirle el ritmo a los delanteros más populares de esta GW9.\n👀 La presión ya está puesta.\n#FPL #FantasyPremierLeague #Isak #"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-1.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mz7dslucs22n",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mz7dslucs22n",
+        "cid": "bafyreig6v26cnlrasrsynhfuwlv3hm6rehq7x3r6hqtiquooeunkbs2gii",
+        "text": {
+          "es": "⚽️🔥 Evanilson anotó. Jackson anotó.\nYour move, Mr. Isak.\nA ver si puedes seguirle el ritmo a los delanteros más populares de esta GW9.\n👀 La presión ya está puesta.\n#FPL #FantasyPremierLeague #Isak #Evanilson #Jackson #BenditoFantasy",
+          "en": "⚽️🔥 Evanilson anotó. Jackson anotó.\nYour move, Mr. Isak.\nA ver si puedes seguirle el ritmo a los delanteros más populares de esta GW9.\n👀 La presión ya está puesta.\n#FPL #FantasyPremierLeague #Isak #Evanilson #Jackson #BenditoFantasy"
+        }
+      },
+      "date": "2026-10-31"
     }
   ]
 }
