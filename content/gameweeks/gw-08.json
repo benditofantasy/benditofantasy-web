@@ -248,7 +248,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "payload": {
         "columns": [
           {
@@ -277,8 +277,8 @@
           ],
           [
             "Isak",
-            4.27,
-            0.13
+            4.35,
+            0.26
           ],
           [
             "Mbeumo",
