@@ -248,7 +248,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-11-02",
+      "date": "2026-11-03",
       "payload": {
         "columns": [
           {
@@ -272,8 +272,8 @@
           ],
           [
             "Barry",
-            5.08,
-            0.17
+            6.37,
+            0.38
           ],
           [
             "Isak",
@@ -321,9 +321,9 @@
             0.13
           ],
           [
-            "E.Le Fée",
-            3.04,
-            1.8
+            "Wissa",
+            3.37,
+            0.14
           ]
         ]
       }
