@@ -1,0 +1,79 @@
+{
+  "gw": 10,
+  "label": {
+    "es": "Jornada 10",
+    "en": "Gameweek 10"
+  },
+  "date": "2026-11-04",
+  "tiles": [
+    {
+      "id": "gw10-capitan-jornada10",
+      "type": "poll",
+      "date": "2026-11-04",
+      "featured": false,
+      "title": {
+        "es": "Encuesta: capitán de la Jornada 10",
+        "en": "Poll: Gameweek 10 captain"
+      },
+      "description": {
+        "es": "Haaland encabeza el ranking de capitanes, pero Evanilson y Jackson llegan con números de sobra. Vota por quién debe llevar el brazalete en la Jornada 10.",
+        "en": "Haaland tops the captain ranking, but Evanilson and Jackson arrive with numbers to match. Vote for who should wear the armband in Gameweek 10."
+      },
+      "tag": "poll",
+      "cover": "/media/thumbnails/poll-card.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "question": {
+          "es": "¿Quién debería ser tu capitán en la Jornada 10?",
+          "en": "Who should be your captain in Gameweek 10?"
+        },
+        "options": [
+          {
+            "id": "haaland",
+            "label": {
+              "es": "Erling Haaland (NFO, A)",
+              "en": "Erling Haaland (NFO, A)"
+            }
+          },
+          {
+            "id": "evanilson",
+            "label": {
+              "es": "Evanilson (IPS, A)",
+              "en": "Evanilson (IPS, A)"
+            }
+          },
+          {
+            "id": "rice",
+            "label": {
+              "es": "Declan Rice (HUL, H)",
+              "en": "Declan Rice (HUL, H)"
+            }
+          },
+          {
+            "id": "dewsbury-hall",
+            "label": {
+              "es": "Kiernan Dewsbury-Hall (COV, H)",
+              "en": "Kiernan Dewsbury-Hall (COV, H)"
+            }
+          },
+          {
+            "id": "jackson",
+            "label": {
+              "es": "Nicolas Jackson (MUN, A)",
+              "en": "Nicolas Jackson (MUN, A)"
+            }
+          },
+          {
+            "id": "mbeumo",
+            "label": {
+              "es": "Bryan Mbeumo (AVL, H)",
+              "en": "Bryan Mbeumo (AVL, H)"
+            }
+          }
+        ],
+        "closesAt": "2026-11-06T18:30:00Z",
+        "expiresAt": "2026-11-08T21:00:00Z"
+      }
+    }
+  ]
+}
