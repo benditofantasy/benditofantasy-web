@@ -7,6 +7,27 @@
   "date": "2026-10-27",
   "tiles": [
     {
+      "id": "gw9-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 9",
+        "en": "Gameweek 9"
+      },
+      "description": {
+        "es": "La lesión de João Pedro nos obliga a replantear nuestros equipos de Fantasy Premier League. ¿Buscamos un reemplazo barato, apostamos por Alexander Isak o aprovechamos el presupuesto para reforzar otra",
+        "en": "Bendito Fantasy's Gameweek 9 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw9-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-10-29",
+      "payload": {
+        "youtubeId": "jxNQdENiXcM",
+        "duration": "1:00:46"
+      }
+    },
+    {
       "id": "gw9-capitan-jornada9",
       "type": "poll",
       "date": "2026-10-27",
