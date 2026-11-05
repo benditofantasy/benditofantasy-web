@@ -7,6 +7,27 @@
   "date": "2026-11-04",
   "tiles": [
     {
+      "id": "gw10-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 10",
+        "en": "Gameweek 10"
+      },
+      "description": {
+        "es": "¿Brighton se ha convertido en un equipo al que debemos alinear sin importar el rival? Después de una GW9 en la que Haaland se quedó sin marcar y varios defensas volvieron a conseguir grandes puntuacio",
+        "en": "Bendito Fantasy's Gameweek 10 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw10-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-11-04",
+      "payload": {
+        "youtubeId": "Mi3gZL5J0B0",
+        "duration": "57:33"
+      }
+    },
+    {
       "id": "gw10-capitan-jornada10",
       "type": "poll",
       "date": "2026-11-04",
