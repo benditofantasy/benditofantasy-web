@@ -95,6 +95,33 @@
         "closesAt": "2026-11-06T18:30:00Z",
         "expiresAt": "2026-11-08T21:00:00Z"
       }
+    },
+    {
+      "id": "bluesky-3mzm4hrv3i22j",
+      "type": "social",
+      "title": {
+        "es": "Nueva publicación",
+        "en": "New post"
+      },
+      "description": {
+        "es": "Encuesta de esta semana 10",
+        "en": "Encuesta de esta semana 10"
+      },
+      "tag": "social",
+      "cover": "/media/thumbnails/social-card-2.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "platform": "bluesky",
+        "postUrl": "https://bsky.app/profile/benditofantasy.bsky.social/post/3mzm4hrv3i22j",
+        "handle": "@benditofantasy",
+        "atUri": "at://did:plc:b5jfumu2wijvw3g3mtyadlk2/app.bsky.feed.post/3mzm4hrv3i22j",
+        "cid": "bafyreihjfima6qdlqbvprvu2a2pzjsws5h7kt3qgbm4ng6bbv3liu2hu5i",
+        "text": {
+          "es": "Encuesta de esta semana 10",
+          "en": "Encuesta de esta semana 10"
+        }
+      },
+      "date": "2026-11-06"
     }
   ]
 }
