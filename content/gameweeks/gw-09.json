@@ -7,6 +7,32 @@
   "date": "2026-10-27",
   "tiles": [
     {
+      "id": "gw9-mvp",
+      "type": "mvp",
+      "date": "2026-11-06",
+      "title": {
+        "es": "Rey de la Jornada 9",
+        "en": "King of Gameweek 9"
+      },
+      "description": {
+        "es": "Van Hecke marcó y mantuvo la portería a cero en la victoria 2-0 del Tottenham sobre el Crystal Palace, coronándose Rey de la Jornada 9.",
+        "en": "Van Hecke scored and kept a clean sheet in Tottenham's 2-0 win over Crystal Palace, crowning him King of Gameweek 9."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/van-hecke.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 9,
+        "season": "2026-27",
+        "playerName": "Van Hecke",
+        "points": 15,
+        "statLine": {
+          "es": "1 gol, portería a cero, 3 puntos de bonificación · TOT 2-0 CRY",
+          "en": "1 goal, clean sheet, 3 bonus points · TOT 2-0 CRY"
+        }
+      }
+    },
+    {
       "id": "gw9-podcast",
       "type": "podcast",
       "featured": true,
