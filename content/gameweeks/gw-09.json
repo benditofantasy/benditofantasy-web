@@ -259,7 +259,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-11-07",
+      "date": "2026-11-08",
       "payload": {
         "columns": [
           {
@@ -283,13 +283,18 @@
           ],
           [
             "Haaland",
-            6.56,
-            0.85
+            7.06,
+            0.87
           ],
           [
             "Isak",
             4.35,
             0.26
+          ],
+          [
+            "Calvert-Lewin",
+            4.25,
+            0.38
           ],
           [
             "Mbeumo",
@@ -303,13 +308,8 @@
           ],
           [
             "Gonzalo",
-            3.97,
-            0.75
-          ],
-          [
-            "Calvert-Lewin",
-            3.91,
-            0.14
+            4.05,
+            0.76
           ],
           [
             "Tavernier",
@@ -333,8 +333,8 @@
           ],
           [
             "Wissa",
-            3.37,
-            0.14
+            3.41,
+            0.19
           ]
         ]
       }
