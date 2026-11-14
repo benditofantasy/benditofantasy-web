@@ -7,6 +7,32 @@
   "date": "2026-11-04",
   "tiles": [
     {
+      "id": "gw10-mvp",
+      "type": "mvp",
+      "date": "2026-11-14",
+      "title": {
+        "es": "Rey de la Jornada 10",
+        "en": "King of Gameweek 10"
+      },
+      "description": {
+        "es": "Thierno Barry marcó dos goles y dio una asistencia en la victoria 3-1 del Everton sobre el Coventry, coronándose Rey de la Jornada 10.",
+        "en": "Thierno Barry scored twice and added an assist in Everton's 3-1 win over Coventry, crowning him King of Gameweek 10."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/thierno-barry.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 10,
+        "season": "2026-27",
+        "playerName": "Barry",
+        "points": 16,
+        "statLine": {
+          "es": "2 goles, 1 asistencia, 3 puntos de bonificación · EVE 3-1 COV",
+          "en": "2 goals, 1 assist, 3 bonus points · EVE 3-1 COV"
+        }
+      }
+    },
+    {
       "id": "gw10-podcast",
       "type": "podcast",
       "featured": true,
