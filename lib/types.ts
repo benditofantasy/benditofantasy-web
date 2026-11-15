@@ -16,7 +16,8 @@ export type TileType =
   | "image"
   | "quote"
   | "mvp"
-  | "poll";
+  | "poll"
+  | "quiz";
 
 /** Category tag keys — display names are localized via the i18n dictionary. */
 export type TagKey =
@@ -28,7 +29,8 @@ export type TagKey =
   | "social"
   | "quote"
   | "mvp"
-  | "poll";
+  | "poll"
+  | "quiz";
 
 export interface TileLink {
   href: string;
@@ -234,6 +236,7 @@ const LAYOUT_BY_TYPE: Record<TileType, Slide["layout"]> = {
   social: "social",
   mvp: "mvp",
   poll: "poll",
+  quiz: "cover",
 };
 
 /** A tile's ordered slides: itself, then its nested tiles' own slides (recursively). */
