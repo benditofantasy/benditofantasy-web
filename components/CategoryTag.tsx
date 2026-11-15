@@ -13,6 +13,7 @@ const TAG_COLOR_VAR: Record<TagKey, string> = {
   quote: "var(--tag-quote)",
   mvp: "var(--tag-mvp)",
   poll: "var(--tag-poll)",
+  quiz: "var(--tag-quiz)",
 };
 
 export function tagColor(tag: TagKey): string {

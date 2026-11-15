@@ -86,6 +86,7 @@ export const TAG_NAMES: Record<TagKey, Localized> = {
   quote: { es: "Cita", en: "Quote" },
   mvp: { es: "MVP", en: "MVP" },
   poll: { es: "Encuesta", en: "Poll" },
+  quiz: { es: "Test", en: "Quiz" },
 };
 
 const STORAGE_KEY = "bendito-lang";

@@ -364,6 +364,32 @@
       "payload": {
         "slug": "que-tipo-de-manager-eres"
       }
+    },
+    {
+      "id": "gw10-test-tipo-manager",
+      "type": "quiz",
+      "date": "2026-11-15",
+      "title": {
+        "es": "Test: ¿Qué tipo de manager eres?",
+        "en": "Quiz: What Kind of FPL Manager Are You?"
+      },
+      "description": {
+        "es": "Ocho preguntas para descubrir tu manera de jugar al Fantasy. Conoce tu perfil y lee el artículo de Martin Arrieta (El Profe).",
+        "en": "Eight questions to discover how you play FPL. Find your profile and explore the full article by Martin Arrieta (El Profe)."
+      },
+      "tag": "quiz",
+      "cover": "/media/players/vangaal.jpg",
+      "credit": "Bendito Fantasy",
+      "link": {
+        "href": "/test/que-tipo-de-manager-eres",
+        "label": {
+          "es": "Hacer el test",
+          "en": "Take the quiz"
+        }
+      },
+      "payload": {
+        "slug": "que-tipo-de-manager-eres"
+      }
     }
   ]
 }
