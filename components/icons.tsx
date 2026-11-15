@@ -192,6 +192,7 @@ const TYPE_ICONS: Record<TileType, (props: IconProps) => JSX.Element> = {
   quote: QuoteIcon,
   mvp: TrophyIcon,
   poll: PollIcon,
+  quiz: PollIcon,
 };
 
 export function TypeIcon({ type, className }: IconProps & { type: TileType }) {
