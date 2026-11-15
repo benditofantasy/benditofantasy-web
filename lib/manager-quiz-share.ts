@@ -139,7 +139,7 @@ export async function createManagerCard(
     ctx.fillText(PROFILES[secondary].name[lang], 58, secondaryY + 32);
   }
 
-  // Actual approved article image, cropped to fill the 900x360 visual band.
+  // Show the upper part of the illustration rather than a center crop.\n  // The center crop cut off the character's head in shared result cards.
   const top = 730;
   const bandHeight = 365;
   const scale = Math.max(900 / image.naturalWidth, bandHeight / image.naturalHeight);
@@ -149,7 +149,7 @@ export async function createManagerCard(
   ctx.beginPath();
   ctx.rect(0, top, 900, bandHeight);
   ctx.clip();
-  ctx.drawImage(image, (900 - w) / 2, top + (bandHeight - h) / 2, w, h);
+  ctx.drawImage(image, (900 - w) / 2, top, w, h);
   ctx.restore();
 
   ctx.fillStyle = navy;
