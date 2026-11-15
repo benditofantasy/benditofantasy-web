@@ -338,6 +338,32 @@
           ]
         ]
       }
+    },
+    {
+      "id": "gw10-que-tipo-de-manager-eres",
+      "type": "article",
+      "date": "2026-11-14",
+      "title": {
+        "es": "¿Qué tipo de manager eres? Seis perfiles del Fantasy",
+        "en": "What Kind of FPL Manager Are You? Six Ways to Play Fantasy"
+      },
+      "description": {
+        "es": "Seis maneras de jugar al Fantasy, nuestras motivaciones y un bonus sobre trascender.",
+        "en": "Six ways to approach Fantasy, what drives our decisions and a bonus about going beyond the game."
+      },
+      "tag": "article",
+      "cover": "/media/players/fpl-player.jpg",
+      "credit": "Martin Arrieta (El Profe)",
+      "link": {
+        "href": "/articulo/que-tipo-de-manager-eres",
+        "label": {
+          "es": "Leer el artículo",
+          "en": "Read the article"
+        }
+      },
+      "payload": {
+        "slug": "que-tipo-de-manager-eres"
+      }
     }
   ]
 }
