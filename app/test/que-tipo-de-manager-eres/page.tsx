@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { createManagerCard, shareResultText, QUIZ_SHARE_URL } from "@/lib/manager-quiz-share";
 import { useLang } from "@/lib/i18n";
 import {
   ARTICLE_URL,
@@ -35,6 +36,13 @@ const COPY = {
     disclaimer: "Este es un test editorial para reflexionar sobre tu manera de jugar, no una evaluación científica.",
     back: "Volver al inicio",
     author: "Por Martin Arrieta (El Profe)",
+    shareTitle: "Comparte tu perfil",
+    shareIntro: "¿Qué tipo de manager son tus amigos? Comparte tu resultado y rétalos a descubrir el suyo.",
+    share: "Compartir mi resultado",
+    download: "Descargar imagen",
+    copy: "Copiar enlace del test",
+    copied: "Enlace copiado",
+    exportError: "No pudimos generar tu tarjeta. Inténtalo de nuevo.",
   },
   en: {
     eyebrow: "Bendito Fantasy · Interactive quiz",
@@ -57,6 +65,13 @@ const COPY = {
     disclaimer: "This is an editorial quiz to reflect on how you play, not a scientifically validated assessment.",
     back: "Back to home",
     author: "By Martin Arrieta (El Profe)",
+    shareTitle: "Share your profile",
+    shareIntro: "What kind of managers are your friends? Share your result and challenge them to find out.",
+    share: "Share my result",
+    download: "Download image",
+    copy: "Copy quiz link",
+    copied: "Link copied",
+    exportError: "We couldn\u0027t create your card. Please try again.",
   },
 } as const;
 
@@ -69,9 +84,75 @@ export default function ManagerQuizPage() {
     () => Array(QUESTIONS.length).fill(null),
   );
   const [completed, setCompleted] = useState(false);
+  const [exporting, setExporting] = useState(false);
+  const [shareError, setShareError] = useState(false);
+  const [copied, setCopied] = useState(false);
   const result = completed ? scoreQuiz(answers as Choice[]) : null;
   const question = QUESTIONS[step];
   const selected = answers[step];
+
+  async function getCard() {
+    if (!result) throw new Error("Missing quiz result");
+    return createManagerCard(result.primary, result.secondary, lang);
+  }
+
+  function downloadBlob(blob: Blob, filename: string) {
+    const objectURL = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = objectURL;
+    anchor.download = filename;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    window.setTimeout(() => URL.revokeObjectURL(objectURL), 1000);
+  }
+
+  async function downloadResult() {
+    if (!result || exporting) return;
+    setExporting(true);
+    setShareError(false);
+    try {
+      const blob = await getCard();
+      downloadBlob(blob, `bendito-fantasy-${result.primary.toLowerCase()}.png`);
+    } catch {
+      setShareError(true);
+    } finally {
+      setExporting(false);
+    }
+  }
+
+  async function shareResult() {
+    if (!result || exporting) return;
+    setExporting(true);
+    setShareError(false);
+    try {
+      const blob = await getCard();
+      const file = new File([blob], `bendito-fantasy-${result.primary.toLowerCase()}.png`, { type: "image/png" });
+      if (navigator.share && navigator.canShare?.({ files: [file] })) {
+        try {
+          await navigator.share({ files: [file], text: shareResultText(result.primary, lang), title: copy.title });
+          return;
+        } catch (error) {
+          if (error instanceof DOMException && error.name === "AbortError") return;
+          // Fall back to an image download when native sharing fails.
+        }
+      }
+      downloadBlob(blob, file.name);
+    } catch {
+      setShareError(true);
+    } finally {
+      setExporting(false);
+    }
+  }
+
+  async function copyQuizLink() {
+    try {
+      await navigator.clipboard.writeText(QUIZ_SHARE_URL);
+      setCopied(true);
+    } catch {
+      setShareError(true);
+    }
+  }
 
   function restart() {
     setAnswers(Array(QUESTIONS.length).fill(null));
@@ -161,6 +242,16 @@ export default function ManagerQuizPage() {
                 </Link>
               </div>
             </div>
+          </section>
+          <section className="mt-10 border-t border-line pt-8" aria-label={copy.shareTitle}>
+            <h2 className="font-display text-2xl uppercase text-accent">{copy.shareTitle}</h2>
+            <p className="mt-2 text-sm text-ink-mid">{copy.shareIntro}</p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <button type="button" onClick={shareResult} disabled={exporting} className="rounded-pill bg-accent px-5 py-3 text-sm font-bold text-accent-ink disabled:opacity-50">{copy.share}</button>
+              <button type="button" onClick={downloadResult} disabled={exporting} className="rounded-pill border border-ink px-5 py-3 text-sm font-bold disabled:opacity-50">{copy.download}</button>
+              <button type="button" onClick={copyQuizLink} className="rounded-pill border border-line px-5 py-3 text-sm font-semibold">{copied ? copy.copied : copy.copy}</button>
+            </div>
+            {shareError && <p role="alert" className="mt-3 text-sm text-accent">{copy.exportError}</p>}
           </section>
           <button
             type="button"
