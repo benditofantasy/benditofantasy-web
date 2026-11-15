@@ -75,7 +75,7 @@ async function loadPicture(): Promise<HTMLImageElement> {
 /** Generate a fresh image only when requested, never store questionnaire responses. */
 export async function createManagerCard(
   primary: ProfileId,
-  secondary: ProfileId | undefined,
+  _secondary: ProfileId | undefined,
   lang: Lang,
 ): Promise<Blob> {
   await document.fonts.ready;
@@ -88,14 +88,10 @@ export async function createManagerCard(
 
   const navy = "#012340";
   const coral = "#f2594b";
-  const muted = "#204f59";
   const label = lang === "es" ? "MI PERFIL DE MANAGER" : "MY FPL MANAGER PROFILE";
   const invite = lang === "es"
     ? "¿Y TÚ QUÉ TIPO DE MANAGER ERES?"
     : "WHAT KIND OF FPL MANAGER ARE YOU?";
-  const secondaryLabel = lang === "es"
-    ? "También me identifico con:"
-    : "I also relate to:";
 
   ctx.fillStyle = "#ffffff";
   ctx.fillRect(0, 0, 900, 1200);
@@ -110,47 +106,50 @@ export async function createManagerCard(
 
   const heading = PROFILES[primary].name[lang].toLocaleUpperCase(lang === "es" ? "es" : "en");
   let titleLines: string[] = [];
-  let fontSize = 92;
+  let fontSize = 84; // A smaller headline gives the illustration more space.
   do {
     ctx.font = `bold ${fontSize}px "Anton", Impact, "Arial Narrow", sans-serif`;
     titleLines = linesWithin(ctx, heading, 780);
     if (titleLines.length <= 3) break;
     fontSize -= 4;
-  } while (fontSize > 54);
-  printLines(ctx, titleLines, 58, 168, fontSize * 1.1);
-  const descriptionTop = 178 + titleLines.length * fontSize * 1.1 + 25;
+  } while (fontSize > 48);
+  const headingTop = 154;
+  const titleLineHeight = fontSize * 1.06;
+  printLines(ctx, titleLines, 58, headingTop, titleLineHeight);
+  const descriptionTop = headingTop + titleLines.length * titleLineHeight + 22;
 
   ctx.fillStyle = navy;
   let bodyLines: string[] = [];
-  let bodySize = 33;
+  let bodySize = 30;
+  let illustrationTop = 0;
   do {
     ctx.font = `${bodySize}px "Barlow", Arial, sans-serif`;
     bodyLines = linesWithin(ctx, CARD_DESCRIPTIONS[primary][lang], 780);
-    if (descriptionTop + bodyLines.length * bodySize * 1.35 < 642) break;
+    const descriptionBottom = descriptionTop + bodyLines.length * bodySize * 1.3;
+    illustrationTop = Math.max(490, Math.ceil(descriptionBottom + 34));
+    if (illustrationTop <= 650) break;
     bodySize -= 2;
-  } while (bodySize > 23);
-  printLines(ctx, bodyLines, 58, descriptionTop, bodySize * 1.35);
-  if (secondary && secondary !== primary) {
-    const secondaryY = Math.max(descriptionTop + bodyLines.length * bodySize * 1.35 + 25, 598);
-    ctx.font = '23px "Barlow", Arial, sans-serif';
-    ctx.fillStyle = muted;
-    ctx.fillText(secondaryLabel, 58, secondaryY);
-    ctx.font = 'bold 24px "Barlow", Arial, sans-serif';
-    ctx.fillText(PROFILES[secondary].name[lang], 58, secondaryY + 32);
-  }
+  } while (bodySize > 22);
+  printLines(ctx, bodyLines, 58, descriptionTop, bodySize * 1.3);
 
-  // Show the upper part of the illustration rather than a center crop.\n  // The center crop cut off the character's head in shared result cards.
-  const top = 730;
-  const bandHeight = 365;
-  const scale = Math.max(900 / image.naturalWidth, bandHeight / image.naturalHeight);
+  // The full portrait is scaled to FIT rather than FILL the illustration band.
+  // This keeps the hair, face, and phone visible instead of cutting the person
+  // off. Neutral side gutters match the existing article art background.
+  const imageBottom = 1095;
+  const bandHeight = imageBottom - illustrationTop;
+  const bandWidth = 900;
+  const scale = Math.min(bandWidth / image.naturalWidth, bandHeight / image.naturalHeight);
   const w = image.naturalWidth * scale;
   const h = image.naturalHeight * scale;
-  ctx.save();
-  ctx.beginPath();
-  ctx.rect(0, top, 900, bandHeight);
-  ctx.clip();
-  ctx.drawImage(image, (900 - w) / 2, top, w, h);
-  ctx.restore();
+  ctx.fillStyle = "#ececec";
+  ctx.fillRect(0, illustrationTop, bandWidth, bandHeight);
+  ctx.drawImage(
+    image,
+    (bandWidth - w) / 2,
+    illustrationTop + (bandHeight - h) / 2,
+    w,
+    h,
+  );
 
   ctx.fillStyle = navy;
   ctx.fillRect(0, 1095, 900, 105);
