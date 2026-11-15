@@ -80,6 +80,7 @@
   --tag-quote: var(--bf-brown);     /* muted editorial gravitas              */
   --tag-mvp: var(--bf-gold);        /* king of the gameweek — premium ladder */
   --tag-poll: var(--bf-mustard);    /* engagement/action — unused elsewhere  */
+  --tag-quiz: var(--bf-mustard);    /* interactive editorial quiz           */
 
   /* ---- Typography ---- */
   /* Display: ultra-bold condensed ALL-CAPS — PLACEHOLDER, no brand display
