@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createManagerCard, shareResultText, QUIZ_SHARE_URL } from "@/lib/manager-quiz-share";
 import { useLang } from "@/lib/i18n";
 import {
@@ -75,6 +75,8 @@ const COPY = {
   },
 } as const;
 
+const QUIZ_SESSION_KEY = "bendito-manager-quiz-progress-v1";
+
 export default function ManagerQuizPage() {
   const { lang } = useLang();
   const copy = COPY[lang];
@@ -87,7 +89,41 @@ export default function ManagerQuizPage() {
   const [exporting, setExporting] = useState(false);
   const [shareError, setShareError] = useState(false);
   const [copied, setCopied] = useState(false);
-  const result = completed ? scoreQuiz(answers as Choice[]) : null;
+  // Guard against incomplete or corrupted progress instead of throwing while
+  // React renders the final screen.
+  const validAnswers = answers.length === QUESTIONS.length &&
+    answers.every((value): value is Choice => value !== null && CHOICES.includes(value));
+  const result = completed && validAnswers ? scoreQuiz(answers as Choice[]) : null;
+  useEffect(() => {
+    try {
+      const stored = sessionStorage.getItem(QUIZ_SESSION_KEY);
+      if (!stored) return;
+      const saved: unknown = JSON.parse(stored);
+      if (!saved || typeof saved !== "object") return;
+      const progress = saved as { answers?: unknown; completed?: unknown; step?: unknown };
+      if (!Array.isArray(progress.answers) || progress.answers.length !== QUESTIONS.length) return;
+      if (!progress.answers.every((value) => value === null || CHOICES.includes(value))) return;
+      const restoredAnswers = progress.answers as (Choice | null)[];
+      setAnswers(restoredAnswers);
+      setStarted(true);
+      setCompleted(progress.completed === true && restoredAnswers.every((value) => value !== null));
+      if (typeof progress.step === "number" && Number.isInteger(progress.step)) {
+        setStep(Math.max(0, Math.min(QUESTIONS.length - 1, progress.step)));
+      }
+    } catch {
+      // The quiz remains usable even when browser storage is blocked.
+    }
+  }, []);
+
+  function saveProgress(nextAnswers: (Choice | null)[], nextStep: number, done: boolean) {
+    try {
+      sessionStorage.setItem(QUIZ_SESSION_KEY, JSON.stringify({
+        answers: nextAnswers, step: nextStep, completed: done,
+      }));
+    } catch {
+      // Private browsing or storage restrictions should not interrupt the quiz.
+    }
+  }
   const question = QUESTIONS[step];
   const selected = answers[step];
 
@@ -155,6 +191,7 @@ export default function ManagerQuizPage() {
   }
 
   function restart() {
+    try { sessionStorage.removeItem(QUIZ_SESSION_KEY); } catch { /* storage unavailable */ }
     setAnswers(Array(QUESTIONS.length).fill(null));
     setStep(0);
     setCompleted(false);
@@ -163,8 +200,19 @@ export default function ManagerQuizPage() {
 
   function advance() {
     if (!selected) return;
-    if (step === QUESTIONS.length - 1) setCompleted(true);
-    else setStep((previous) => previous + 1);
+    if (step === QUESTIONS.length - 1) {
+      const missingIndex = answers.findIndex((value) => value === null || !CHOICES.includes(value));
+      if (missingIndex !== -1) {
+        setStep(missingIndex);
+        saveProgress(answers, missingIndex, false);
+        return;
+      }
+      saveProgress(answers, step, true);
+      setCompleted(true);
+    } else {
+      saveProgress(answers, step + 1, false);
+      setStep((previous) => previous + 1);
+    }
   }
 
   return (
@@ -297,7 +345,11 @@ export default function ManagerQuizPage() {
                   value={choice}
                   checked={selected === choice}
                   onChange={() => {
-                    setAnswers((previous) => previous.map((value, index) => index === step ? choice : value));
+                    setAnswers((previous) => {
+                      const updated = previous.map((value, index) => index === step ? choice : value);
+                      saveProgress(updated, step, false);
+                      return updated;
+                    });
                   }}
                   className="mt-1 accent-current"
                 />
