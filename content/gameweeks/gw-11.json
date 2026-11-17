@@ -1,0 +1,79 @@
+{
+  "gw": 11,
+  "label": {
+    "es": "Jornada 11",
+    "en": "Gameweek 11"
+  },
+  "date": "2026-11-16",
+  "tiles": [
+    {
+      "id": "gw11-capitan-jornada11",
+      "type": "poll",
+      "date": "2026-11-16",
+      "featured": false,
+      "title": {
+        "es": "Encuesta: capitán de la Jornada 11",
+        "en": "Poll: Gameweek 11 captain"
+      },
+      "description": {
+        "es": "Haaland, Jackson y Evanilson juegan en casa; Barry cierra la jornada el lunes. Vota por quién debe llevar el brazalete en la Jornada 11.",
+        "en": "Haaland, Jackson and Evanilson all play at home, and Barry closes the gameweek on Monday. Vote for who should wear the armband in Gameweek 11."
+      },
+      "tag": "poll",
+      "cover": "/media/thumbnails/poll-card.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "question": {
+          "es": "¿Quién debería ser tu capitán en la Jornada 11?",
+          "en": "Who should be your captain in Gameweek 11?"
+        },
+        "options": [
+          {
+            "id": "haaland",
+            "label": {
+              "es": "Erling Haaland (FUL, H)",
+              "en": "Erling Haaland (FUL, H)"
+            }
+          },
+          {
+            "id": "jackson",
+            "label": {
+              "es": "Nicolas Jackson (SUN, H)",
+              "en": "Nicolas Jackson (SUN, H)"
+            }
+          },
+          {
+            "id": "evanilson",
+            "label": {
+              "es": "Evanilson (NFO, H)",
+              "en": "Evanilson (NFO, H)"
+            }
+          },
+          {
+            "id": "barry",
+            "label": {
+              "es": "Thierno Barry (BRE, A)",
+              "en": "Thierno Barry (BRE, A)"
+            }
+          },
+          {
+            "id": "gomez",
+            "label": {
+              "es": "Diego Gómez (HUL, A)",
+              "en": "Diego Gómez (HUL, A)"
+            }
+          },
+          {
+            "id": "wirtz",
+            "label": {
+              "es": "Florian Wirtz (MUN, H)",
+              "en": "Florian Wirtz (MUN, H)"
+            }
+          }
+        ],
+        "closesAt": "2026-11-21T11:00:00Z",
+        "expiresAt": "2026-11-24T21:00:00Z"
+      }
+    }
+  ]
+}
