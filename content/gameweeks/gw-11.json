@@ -7,6 +7,27 @@
   "date": "2026-11-18",
   "tiles": [
     {
+      "id": "gw11-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 11",
+        "en": "Gameweek 11"
+      },
+      "description": {
+        "es": "Se acabó el último parón internacional del año y la Premier League regresa con cambios importantes. Pochettino llega al Manchester United, Thomas Frank toma las riendas de Crystal Palace y varios juga",
+        "en": "Bendito Fantasy's Gameweek 11 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw11-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-11-18",
+      "payload": {
+        "youtubeId": "QCOn2WLnscw",
+        "duration": "1:02:29"
+      }
+    },
+    {
       "id": "gw11-finding-the-next-de-cuyper",
       "type": "article",
       "date": "2026-11-18",
