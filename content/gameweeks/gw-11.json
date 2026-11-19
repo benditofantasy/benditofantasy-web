@@ -4,8 +4,39 @@
     "es": "Jornada 11",
     "en": "Gameweek 11"
   },
-  "date": "2026-11-16",
+  "date": "2026-11-18",
   "tiles": [
+    {
+      "id": "gw11-finding-the-next-de-cuyper",
+      "type": "article",
+      "date": "2026-11-18",
+      "featured": false,
+      "title": {
+        "es": "Encontrar al próximo De Cuyper: cómo detectar revelaciones en FPL",
+        "en": "Finding the Next De Cuyper: Spotting FPL Breakouts Before the Bandwagon"
+      },
+      "description": {
+        "es": "Gerry, creador de Fantasy Matchup Edge, analiza a William Osula y cómo encontrar diferenciales antes de que lleguen las tendencias.",
+        "en": "Gerry, creator of Fantasy Matchup Edge, examines William Osula and how to spot overlooked FPL opportunities before the crowd."
+      },
+      "tag": "article",
+      "cover": "/media/players/william-osula.jpg",
+      "badge": {
+        "es": "Invitado",
+        "en": "Guest contributor"
+      },
+      "credit": "Gerry",
+      "link": {
+        "href": "/articulo/finding-the-next-de-cuyper",
+        "label": {
+          "es": "Leer más",
+          "en": "Read more"
+        }
+      },
+      "payload": {
+        "slug": "finding-the-next-de-cuyper"
+      }
+    },
     {
       "id": "gw11-capitan-jornada11",
       "type": "poll",
