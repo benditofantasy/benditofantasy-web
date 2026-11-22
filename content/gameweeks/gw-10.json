@@ -259,7 +259,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-11-10",
+      "date": "2026-11-22",
       "payload": {
         "columns": [
           {
@@ -277,14 +277,24 @@
         ],
         "rows": [
           [
+            "Haaland",
+            8.09,
+            0.92
+          ],
+          [
             "Barry",
             7.29,
             0.48
           ],
           [
-            "Haaland",
-            7.06,
-            0.87
+            "Calvert-Lewin",
+            5.65,
+            0.41
+          ],
+          [
+            "Evanilson",
+            5.57,
+            1.07
           ],
           [
             "Isak",
@@ -297,19 +307,9 @@
             1.29
           ],
           [
-            "Evanilson",
-            4.45,
-            1.05
-          ],
-          [
-            "Calvert-Lewin",
-            4.25,
-            0.38
-          ],
-          [
             "Tavernier",
-            4.21,
-            1.45
+            4.27,
+            2.36
           ],
           [
             "Brobbey",
@@ -324,7 +324,7 @@
           [
             "Gonzalo",
             4.05,
-            0.76
+            0.77
           ],
           [
             "B.Fernandes",
@@ -333,8 +333,8 @@
           ],
           [
             "E.Le Fée",
-            3.83,
-            1.86
+            3.92,
+            1.94
           ]
         ]
       }
