@@ -259,7 +259,7 @@
       "tag": "data",
       "cover": "/media/thumbnails/stats-card.jpg",
       "credit": "Datos: FPL oficial",
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "payload": {
         "columns": [
           {
@@ -287,6 +287,11 @@
             0.48
           ],
           [
+            "Isak",
+            6.2,
+            0.32
+          ],
+          [
             "Calvert-Lewin",
             5.65,
             0.41
@@ -297,14 +302,14 @@
             1.07
           ],
           [
-            "Isak",
-            4.88,
-            0.28
-          ],
-          [
             "Mbeumo",
             4.63,
             1.29
+          ],
+          [
+            "B.Fernandes",
+            4.35,
+            2.33
           ],
           [
             "Tavernier",
@@ -325,11 +330,6 @@
             "Gonzalo",
             4.05,
             0.77
-          ],
-          [
-            "B.Fernandes",
-            3.94,
-            2.17
           ],
           [
             "E.Le Fée",
