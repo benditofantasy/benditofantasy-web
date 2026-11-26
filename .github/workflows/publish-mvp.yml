@@ -1,0 +1,123 @@
+name: Publish gameweek MVP
+
+# Publishes the "King of the Gameweek" tile once there is a portrait for FPL's
+# official top scorer — see scripts/publish-mvp.mjs. Upload the portrait to
+# media-inbox/players/ (steps in media-inbox/players/README.md). Runs on that
+# upload, and daily in case the image arrived before FPL finished checking the
+# gameweek's data. Idempotent: a no-op when nothing is pending. No secrets.
+on:
+  push:
+    branches: [main]
+    paths: ["media-inbox/players/**"]
+  schedule:
+    - cron: "30 7 * * *" # daily 07:30 UTC, after the stats and podcast syncs
+  workflow_dispatch: {} # manual trigger from the Actions tab
+
+permissions:
+  contents: write
+  issues: write # so a failed run can open/close the "MVP publish failing" alert issue
+
+concurrency:
+  group: publish-mvp
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # A queued run must see what the run before it committed.
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Publish pending MVP tile
+        run: node scripts/publish-mvp.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if [ -n "$(git status --porcelain -- content/gameweeks public/media/players media-inbox)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Same check the Vercel build runs. A failure here stops the commit.
+      - name: Validate content
+        if: steps.diff.outputs.changed == 'true'
+        run: node scripts/validate-content.mjs
+
+      - name: Commit MVP tile straight to main
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "bendito-bot"
+          git config user.email "actions@github.com"
+          git add -A -- content/gameweeks public/media/players media-inbox
+          git commit -m "Publish gameweek MVP"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Open/update alert issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "⚠️ MVP publish failing";
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100,
+            });
+            const existing = open.find((i) => i.title === title && !i.pull_request);
+            const body = `The MVP publish run failed.\n\nFailed run: ${runUrl}\n\nOpen the run and read the "Publish pending MVP tile" step. The most common cause is an image in \`media-inbox/players/\` whose name doesn't match the MVP (the log shows the expected name). See \`media-inbox/players/README.md\`. This issue auto-closes on the next successful run.`;
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: `Still failing. ${runUrl}`,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+              });
+            }
+
+      - name: Close alert issue on success
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "⚠️ MVP publish failing";
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100,
+            });
+            const existing = open.find((i) => i.title === title && !i.pull_request);
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: "Publish succeeded again — closing.",
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                state: "closed",
+              });
+            }
