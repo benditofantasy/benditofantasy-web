@@ -1,0 +1,79 @@
+{
+  "gw": 12,
+  "label": {
+    "es": "Jornada 12",
+    "en": "Gameweek 12"
+  },
+  "date": "2026-11-25",
+  "tiles": [
+    {
+      "id": "gw12-capitan-jornada12",
+      "type": "poll",
+      "date": "2026-11-25",
+      "featured": false,
+      "title": {
+        "es": "Encuesta: capitán de la Jornada 12",
+        "en": "Poll: Gameweek 12 captain"
+      },
+      "description": {
+        "es": "Haaland visita al Arsenal en baja forma y la capitanía queda abierta. Vota por quién debe llevar el brazalete en la Jornada 12.",
+        "en": "Haaland heads to Arsenal short of form, leaving the armband up for grabs. Vote for who should wear it in Gameweek 12."
+      },
+      "tag": "poll",
+      "cover": "/media/thumbnails/poll-card.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "question": {
+          "es": "¿Quién debería ser tu capitán en la Jornada 12?",
+          "en": "Who should be your captain in Gameweek 12?"
+        },
+        "options": [
+          {
+            "id": "haaland",
+            "label": {
+              "es": "Erling Haaland (ARS, A)",
+              "en": "Erling Haaland (ARS, A)"
+            }
+          },
+          {
+            "id": "wirtz",
+            "label": {
+              "es": "Florian Wirtz (EVE, A)",
+              "en": "Florian Wirtz (EVE, A)"
+            }
+          },
+          {
+            "id": "jackson",
+            "label": {
+              "es": "Nicolas Jackson (IPS, A)",
+              "en": "Nicolas Jackson (IPS, A)"
+            }
+          },
+          {
+            "id": "evanilson",
+            "label": {
+              "es": "Evanilson (FUL, A)",
+              "en": "Evanilson (FUL, A)"
+            }
+          },
+          {
+            "id": "rogers",
+            "label": {
+              "es": "Morgan Rogers (NFO, A)",
+              "en": "Morgan Rogers (NFO, A)"
+            }
+          },
+          {
+            "id": "gross",
+            "label": {
+              "es": "Pascal Groß (NEW, H)",
+              "en": "Pascal Groß (NEW, H)"
+            }
+          }
+        ],
+        "closesAt": "2026-11-27T18:30:00Z",
+        "expiresAt": "2026-11-30T21:00:00Z"
+      }
+    }
+  ]
+}
