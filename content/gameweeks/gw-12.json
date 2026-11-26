@@ -7,6 +7,27 @@
   "date": "2026-11-25",
   "tiles": [
     {
+      "id": "gw12-podcast",
+      "type": "podcast",
+      "featured": true,
+      "title": {
+        "es": "Jornada 12",
+        "en": "Gameweek 12"
+      },
+      "description": {
+        "es": "¿Qué hacemos cuando nuestros premiums dejan de producir? Haaland acumula blanks, Palmer no encuentra su mejor versión y Liverpool empieza a ofrecer alternativas interesantes para nuestros equipos de F",
+        "en": "Bendito Fantasy's Gameweek 12 podcast episode."
+      },
+      "tag": "podcast",
+      "cover": "/media/gw12-podcast.jpg",
+      "credit": "Bendito Fantasy",
+      "date": "2026-11-26",
+      "payload": {
+        "youtubeId": "aB1TF-O_bwo",
+        "duration": "1:05:46"
+      }
+    },
+    {
       "id": "gw12-capitan-jornada12",
       "type": "poll",
       "date": "2026-11-25",
