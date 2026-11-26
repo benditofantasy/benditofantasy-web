@@ -7,6 +7,32 @@
   "date": "2026-11-18",
   "tiles": [
     {
+      "id": "gw11-mvp",
+      "type": "mvp",
+      "date": "2026-11-25",
+      "title": {
+        "es": "Rey de la Jornada 11",
+        "en": "King of Gameweek 11"
+      },
+      "description": {
+        "es": "Keane Lewis-Potter marcó un doblete en la goleada 4-0 del Brentford sobre el Everton, coronándose Rey de la Jornada 11.",
+        "en": "Keane Lewis-Potter scored twice in Brentford's 4-0 rout of Everton, crowning him King of Gameweek 11."
+      },
+      "tag": "mvp",
+      "cover": "/media/players/lewis-potter.jpg",
+      "credit": "Bendito Fantasy",
+      "payload": {
+        "gw": 11,
+        "season": "2026-27",
+        "playerName": "Lewis-Potter",
+        "points": 16,
+        "statLine": {
+          "es": "2 goles, portería a cero, 3 puntos de bonificación · BRE 4-0 EVE",
+          "en": "2 goals, clean sheet, 3 bonus points · BRE 4-0 EVE"
+        }
+      }
+    },
+    {
       "id": "gw11-podcast",
       "type": "podcast",
       "featured": true,
